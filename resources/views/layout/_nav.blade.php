@@ -6,7 +6,7 @@
             <a class="navbar-brand" href="/">
               <span><img src="/img/web/logo-bpkp.jpg" height="30px" margin-top="7px" /></span>
               <span>
-                <large class="pwk" style="border-left: solid 2px #ccc">&nbsp; Sulawesi Barat</large>
+                <span class="pwk navfont" style="">&nbsp; Sulawesi Barat</span>
               </span>
             </a>
           </div>
@@ -21,7 +21,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
           <div class="row">
-            <div class="col-xs-12 navfont">
+            <div class="col-xs-12 navfon">
               <!-- Links -->
               <ul class="nav navbar-nav navbar-right hidden-xs">
                 <li><a href="#"><i class="fa fa-info" aria-hidden="true"><small class=" navfont">&nbsp; Tentang Kami</small></i></a></li>

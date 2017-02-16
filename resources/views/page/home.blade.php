@@ -18,11 +18,26 @@
             <li><span class="label label-warning"> Pengadaan Barang Jasa </span></li>
             <li><span class="label label-warning"> Penerimaan PNS </span></li>
           </ul>
-
         </div>
-        <br>
+        <div class="input-group">
+          <input type="text" class="form-control text-center" aria-label="Search" placeholder="Cari Disini Ki ...!?">
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-search" aria-hidden="true">&nbsp; </i>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="#">Tags</a></li>
+              <li><a href="#">Berita</a></li>
+              <li><a href="#">Data</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Go to Search Page</a></li>
+            </ul>
+          </div><!-- /btn-group -->
+        </div><!-- /input-group --> <!-- Search BOX -->
+
       </div>
       <div class="col-md-4">
+        
         @if (Auth::guest())
           <div class="btn-group btn-group-justified hidden-xs">
             <a href="/#register" class="btn btn-default btn-sm">Daftar</a>
@@ -33,7 +48,7 @@
             <a href="/login" class="btn btn-info btn-sm">Login</a>
             <br>
           </div>
-        @else
+        @else
           <div class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                 <button type="button" class="btn btn-primary btn-block btn-sm " name="button">
@@ -67,7 +82,8 @@
           </div>
           <br />
         @endif
-        <hr>
+        <br>
+        Social Button
       </div>
     </div>
     <div class="row">
@@ -88,23 +104,8 @@
                 <div class="carousel-caption">
 
                   <p>\\ Selamat Datang di Website BPKP//</p>
-                  <div class="input-group">
-                    <input type="text" class="form-control" aria-label="Search" placeholder="Cari apaan sih? ">
-                    <div class="input-group-btn">
-                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-search" aria-hidden="true">&nbsp; <label class="searchbox">Cari</label></i>
-                        <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">Tags</a></li>
-                        <li><a href="#">Berita</a></li>
-                        <li><a href="#">Data</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Go to Search Page</a></li>
-                      </ul>
-                    </div><!-- /btn-group -->
-                  </div><!-- /input-group --> <!-- Search BOX -->
                   <h3>Perwakilan BPKP Sulawesi Barat</h3>
-                  <p><a class="btn btn-md btn-primary" href="#" role="button">Masuk &raquo;</a></p>
+                  <p><a class="btn btn-sm btn-primary" href="#" role="button">Masuk &raquo;</a></p>
 
                 </div>
               </div>
@@ -113,11 +114,13 @@
               <img class="second-slide" src="/img/web/gedung-prov-sulbar.jpg" style="width: 100%;height:350px" alt="Second slide">
               <div class="container">
                 <div class="carousel-caption" >
-                  <p><a class="btn btn-info" href="#" role="button">Detail</a></p>
+
                   <div style="background-color:#aaa; padding: 5px">
                     <h4>Bersama Pemerintah Daerah Sulawesi Barat</h4>
                     <p>\\ Mewujudkan Masyarakat Yang Malaqbi //</p>
                   </div>
+                  <br>
+                  <p><a class="btn btn-info btn-sm" href="#" role="button">Selengkapnya</a></p>
                 </div>
               </div>
             </div>
@@ -144,9 +147,9 @@
         </div><!-- /.carousel -->
       </div>
       <div class="col-md-2 col-xs-12 center panel panel-default">
-        <h5><strong>Apps  </strong><span class="label label-danger">Hot!</span></h5>
           <div class="col-md-12 col-xs-6">
             <div class="btn-group-vertical" role="group" aria-label="...">
+              <br>
               <a href="#" class="btn btn-default" style="box-shadow: 1px 1px 1px 2px #000" role="button">SPIP</a><br />
               <a href="#" class="btn btn-info" style="box-shadow: 1px 1px 1px 2px #000" role="button">APIP</a><br />
               <a href="#" class="btn btn-warning" style="box-shadow: 1px 1px 1px 2px #000" role="button">SisKeuDes</a><br />
@@ -154,19 +157,24 @@
           </div>
           <div class="col-md-12 col-xs-6">
             <div class="btn-group-vertical" role="group" aria-label="...">
+              <br>
               <a href="#" class="btn btn-success" style="box-shadow: 1px 1px 1px 2px #000" role="button">SIMDA</a><br />
               <a href="#" class="btn btn-primary" style="box-shadow: 1px 1px 1px 2px #000" role="button">SIA BLUD</a><br />
               <a href="#" class="btn btn-danger" style="box-shadow: 1px 1px 1px 2px #000" role="button">FCP</a><br />
             </div>
           </div>
       </div>
-      <div class="col-md-2 col-xs-12 center">
-          <p>
-            <b><u>Mendukung: </u></b>
-          </p>
-          <img class="img-rounded" src="/img/instansi/berani.png" alt="Generic placeholder image" width="150" height="150">
-            <img class="img-rounded" src="/img/instansi/kerjanyata.jpg" alt="Generic placeholder image" width="150" height="150">
-      </div>
+      <div class="col-md-2 col-xs-12 center ">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <img class="img-rounded" src="/img/instansi/berani.png" alt="Generic placeholder image" width="125" height="150">
+              <img class="img-rounded" src="/img/instansi/kerjanyata.jpg" alt="Generic placeholder image" width="125" height="150">
+            </div>
+          </div>
+
+
+
+                </div>
     </div>
     <div class="row"> <!-- The Services -->
       <div class="col-md-8">
