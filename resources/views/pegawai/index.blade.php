@@ -17,7 +17,7 @@
 <script type="text/javascript" src="js/pegawai.js"></script>
 @endsection
 
-@section('contents')
+@section('content')
 <div class="container" id="vue">
     <div class="row">
       <div class="col-md-8">

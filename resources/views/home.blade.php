@@ -8,43 +8,34 @@
     <div class="row">
       <!-- Search and Button -->
       <div class="col-md-8">
-        <div class="text-center">
-          <b><small>Hot Search:</small></b>
-          <ul class="list-inline">
-            <li><span class="label label-primary"> APIP </span></li>
-            <li><span class="label label-primary"> SPIP </span></li>
-            <li><span class="label label-success"> Dana Desa </span></li>
-            <li><span class="label label-success"> Auditor </span></li>
-            <li><span class="label label-warning"> Pengadaan Barang Jasa </span></li>
-            <li><span class="label label-warning"> Penerimaan PNS </span></li>
-          </ul>
-        </div>
-        <div class="input-group">
-          <input type="text" class="form-control text-center" aria-label="Search" placeholder="Cari Disini Ki ...!?">
-          <div class="input-group-btn">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-search" aria-hidden="true">&nbsp; </i>
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-right">
-              <li><a href="#">Tags</a></li>
-              <li><a href="#">Berita</a></li>
-              <li><a href="#">Data</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Go to Search Page</a></li>
-            </ul>
-          </div><!-- /btn-group -->
-        </div><!-- /input-group --> <!-- Search BOX -->
 
+        @component('_c.search')
+          @slot('hot')
+            <div class="text-center">
+              <b><small>Hot Search:</small></b>
+              <ul class="list-inline">
+                <li><span class="label label-primary"> APIP </span></li>
+                <li><span class="label label-primary"> SPIP </span></li>
+                <li><span class="label label-success"> Dana Desa </span></li>
+                <li><span class="label label-success"> Auditor </span></li>
+                <li><span class="label label-warning"> Pengadaan Barang Jasa </span></li>
+                <li><span class="label label-warning"> Penerimaan PNS </span></li>
+              </ul>
+            </div>
+          @endslot
+        @endcomponent
       </div>
-      <div class="col-md-4" class="well">
+      <div class="col-md-4">
 
         @if (Auth::guest())
           <div class="btn-group btn-group-justified hidden-xs">
-            <a href="/login" class="btn btn-default "><i class="fa fa-sign-in"></i>&nbsp; Login</a>
+            <a href="/#register" class="btn btn-default btn-sm">Daftar</a>
+            <a href="/login" class="btn btn-info btn-sm">Login</a>
           </div>
           <div class="btn-group btn-group-justified visible-xs">
+            <a href="/#register" class="btn btn-default btn-sm">Daftar</a>
+            <a href="/login" class="btn btn-info btn-sm">Login</a>
             <br>
-            <a href="/login" class="btn btn-default"><i class="fa fa-sign-in"></i>&nbsp; Login</a>
           </div>
         @else
           <div class="dropdown">
@@ -80,17 +71,8 @@
           </div>
           <br />
         @endif
-        <div style ="text-align:center">
-          <a href="#http://facebook.com/"><i class="fa sos fa-facebook" ></i></a>
-          <label class="label label-primary">12345</label>
-          <a href="#http://linkedin.com/"><i class="fa sos fa-linkedin"></i></a>
-          <label class="label label-primary">12345</label>
-          <a href="#http://twitter.com/"><i class="fa sos fa-twitter" ></i></a>
-          <label class="label label-info">12345</label>
-          <a href="#http://plus.google.com/"><i class="fa sos fa-google-plus" ></i> </a>
-          <label class="label label-danger">12345</label>
-
-        </div>
+        <br>
+        Social Button
       </div>
     </div>
     <div class="row">
@@ -172,17 +154,17 @@
           </div>
       </div>
       <div class="col-md-2 col-xs-12 center ">
-        <div class="panel panel-default">
-          <a href="/app/spip" class="btn btn-primary btn-xs btn-block" style="box-shadow: 1px 1px 1px 2px #000; background: purple" role="button">Data</a><br/>
-
-          <div class="panel-body">
-            <img class="img-rounded" src="/img/instansi/berani.png" alt="Generic placeholder image" width="125" height="150">
-            <img class="img-rounded" src="/img/instansi/kerjanyata.jpg" alt="Generic placeholder image" width="125" height="150">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <img class="img-rounded" src="/img/instansi/berani.png" alt="Generic placeholder image" width="125" height="150">
+              <img class="img-rounded" src="/img/instansi/kerjanyata.jpg" alt="Generic placeholder image" width="125" height="150">
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
 
+
+
+                </div>
+    </div>
 	</div>
   </div>
 @endsection

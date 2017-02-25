@@ -1,5 +1,4 @@
 
-
 @font-face {
   font-family: 'Lato';
   src: url(../fonts/Lato/Lato-Regular.ttf);
@@ -45,10 +44,17 @@
   font-size: 12px;
 }
 
-.navfont {
+.orbitron {
   font-family: 'Orbitron';
 }
 
+.lato {
+  font-family: 'Lato';
+}
+
+.oswald {
+  font-family: 'Oswald';
+}
 
 
 .bid {
@@ -86,4 +92,28 @@
     td{
       font-size: 12px;
     }
+}
+
+
+/* Social Button */
+.sos {
+  background: #205D7A;
+	color: #fff;
+	width:26px;
+	text-align: center;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.fa-facebook {
+  background:#3b5998
+}
+.fa-linkedin {
+  background:#007bb6
+}
+.fa-twitter {
+  background:#00aced
+}
+.fa-google-plus {
+  background:#dd4b39
 }

@@ -21,6 +21,18 @@ Route::get('cool', function () {return view('post.cool');});
 Route::get('dashboard', function () {return view('page.dashboard');});
 Route::get('/test', function () {return view('test');});
 
+// Pages
+Route::get('news','PageController@news');
+
+Route::get('app/spip','PageController@spip');
+Route::get('apip','PageController@apip');
+Route::get('simda','PageController@simda');
+Route::get('siskeudes','PageController@siskeudes');
+Route::get('sia','PageController@sia');
+Route::get('fcp','PageController@fcp');
+
+
+
 
 // Posts Resources
 Route::get('/api/posts', 'PostController@vueIndex');

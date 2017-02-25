@@ -2,22 +2,24 @@
 <html lang="en">
   <!-- The Head -->
   <head>
-    @include('layout._head')
+    @include('_l._head')
   </head>
 
-    @include('layout._nav') <!--  Navigation -->
+    @include('_l._navtop') <!--  Navigation -->
 
   <!-- The Body -->
   <body>
-    @include('layout._session')
-    @yield('contents')  <!--  Main Contents -->
+    @include('_l._session')
+    @yield('content')  <!--  Main Contents -->
 
   <!-- The Scripts -->
-    @include('layout._scripts')
+    @include('_l._scripts')
   </body>
 
+
+    @include('_l._navbot') <!--  Navigation -->
   <!-- The Foot -->
   <footer>
-    @include('layout._foot')
+    @include('_l._foot')
   </footer>
 </html>
