@@ -155,15 +155,14 @@
       </div>
       <div class="col-md-2 col-xs-12 center ">
           <div class="panel panel-default">
+            <a href="/app/spip" class="btn btn-primary btn-xs btn-block" style="box-shadow: 1px 1px 1px 2px #000; background: purple" role="button">Data</a><br/>
+
             <div class="panel-body">
               <img class="img-rounded" src="/img/instansi/berani.png" alt="Generic placeholder image" width="125" height="150">
               <img class="img-rounded" src="/img/instansi/kerjanyata.jpg" alt="Generic placeholder image" width="125" height="150">
             </div>
           </div>
-
-
-
-                </div>
+        </div>
     </div>
 	</div>
   </div>

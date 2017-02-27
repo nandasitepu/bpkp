@@ -24,7 +24,7 @@
             <div class="col-xs-12">
               <!-- Links -->
               <ul class="nav navbar-nav navbar-right hidden-xs">
-                <li><a href="#"><i class="fa fa-info" aria-hidden="true"><span class="lato">&nbsp; tentang kami</span></i></a></li>
+                <li><a href="#"><i class="fa fa-info" aria-hidden="true"><span class="lato">&nbsp; profil</span></i></a></li>
                 <li><a href="#"><i class="fa fa-list" aria-hidden="true">
                 <small class="lato">&nbsp; RKT</small>
                 </i></a></li>

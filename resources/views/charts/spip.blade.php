@@ -7,7 +7,7 @@
 <script>
         var ctx = document.getElementById("SPIP").getContext("2d");
         var myChart = new Chart(ctx, {
-            type: 'bar',
+            type: 'horizontalBar',
             data: {
                 labels:  ["Prov", "Polman", "Matra", "Mamasa", "Mamuju", "Mateng", "Majene"],
                 datasets: [
