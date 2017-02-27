@@ -8,34 +8,30 @@
     <div class="row">
       <!-- Search and Button -->
       <div class="col-md-8">
+        <div class="text-center">
+          <b><small>Hot Search:</small></b>
+          <ul class="list-inline">
+            <li><span class="label label-primary"> APIP </span></li>
+            <li><span class="label label-primary"> SPIP </span></li>
+            <li><span class="label label-success"> Dana Desa </span></li>
+            <li><span class="label label-success"> Auditor </span></li>
+            <li><span class="label label-warning"> Pengadaan Barang Jasa </span></li>
+            <li><span class="label label-warning"> Penerimaan PNS </span></li>
+          </ul>
+        </div>
+      @component('_c.search')
+      @endcomponent
 
-        @component('_c.search')
-          @slot('hot')
-            <div class="text-center">
-              <b><small>Hot Search:</small></b>
-              <ul class="list-inline">
-                <li><span class="label label-primary"> APIP </span></li>
-                <li><span class="label label-primary"> SPIP </span></li>
-                <li><span class="label label-success"> Dana Desa </span></li>
-                <li><span class="label label-success"> Auditor </span></li>
-                <li><span class="label label-warning"> Pengadaan Barang Jasa </span></li>
-                <li><span class="label label-warning"> Penerimaan PNS </span></li>
-              </ul>
-            </div>
-          @endslot
-        @endcomponent
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4" class="well">
 
         @if (Auth::guest())
           <div class="btn-group btn-group-justified hidden-xs">
-            <a href="/#register" class="btn btn-default btn-sm">Daftar</a>
-            <a href="/login" class="btn btn-info btn-sm">Login</a>
+            <a href="/login" class="btn btn-default "><i class="fa fa-sign-in"></i>&nbsp; Login</a>
           </div>
           <div class="btn-group btn-group-justified visible-xs">
-            <a href="/#register" class="btn btn-default btn-sm">Daftar</a>
-            <a href="/login" class="btn btn-info btn-sm">Login</a>
             <br>
+            <a href="/login" class="btn btn-default"><i class="fa fa-sign-in"></i>&nbsp; Login</a>
           </div>
         @else
           <div class="dropdown">
@@ -71,8 +67,17 @@
           </div>
           <br />
         @endif
-        <br>
-        Social Button
+        <div style ="text-align:center">
+          <a href="#http://facebook.com/"><i class="fa sos fa-facebook" ></i></a>
+          <label class="label label-primary">12345</label>
+          <a href="#http://linkedin.com/"><i class="fa sos fa-linkedin"></i></a>
+          <label class="label label-primary">12345</label>
+          <a href="#http://twitter.com/"><i class="fa sos fa-twitter" ></i></a>
+          <label class="label label-info">12345</label>
+          <a href="#http://plus.google.com/"><i class="fa sos fa-google-plus" ></i> </a>
+          <label class="label label-danger">12345</label>
+
+        </div>
       </div>
     </div>
     <div class="row">
@@ -139,31 +144,35 @@
           <div class="col-md-12 col-xs-6">
             <div class="btn-group-vertical" role="group" aria-label="...">
               <br>
-              <a href="/spip" class="btn btn-default" style="box-shadow: 1px 1px 1px 2px #000" role="button">SPIP</a><br />
-              <a href="#" class="btn btn-info" style="box-shadow: 1px 1px 1px 2px #000" role="button">APIP</a><br />
-              <a href="#" class="btn btn-warning" style="box-shadow: 1px 1px 1px 2px #000" role="button">SisKeuDes</a><br />
+              <a href="app/spip" class="btn btn-default btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SPIP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </a>
+              <br />
+              <a href="app/apip" class="btn btn-info btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">APIP</a><br />
+              <a href="app/fcp" class="btn btn-danger btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">FCP</a><br />
             </div>
           </div>
           <div class="col-md-12 col-xs-6">
             <div class="btn-group-vertical" role="group" aria-label="...">
               <br>
-              <a href="#" class="btn btn-success" style="box-shadow: 1px 1px 1px 2px #000" role="button">SIMDA</a><br />
-              <a href="#" class="btn btn-primary" style="box-shadow: 1px 1px 1px 2px #000" role="button">SIA BLUD</a><br />
-              <a href="#" class="btn btn-danger" style="box-shadow: 1px 1px 1px 2px #000" role="button">FCP</a><br />
+              <a href="app/simda" class="btn btn-success btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">SIMDA</a><br />
+              <a href="app/sia" class="btn btn-primary btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">SIA</a><br />
+              <a href="app/siskeudes" class="btn btn-warning btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">SISKEUDES</a><br />
             </div>
           </div>
       </div>
       <div class="col-md-2 col-xs-12 center ">
-          <div class="panel panel-default">
-            <a href="/app/spip" class="btn btn-primary btn-xs btn-block" style="box-shadow: 1px 1px 1px 2px #000; background: purple" role="button">Data</a><br/>
+        <div class="panel panel-default">
+          <a href="data" class="btn btn-default btn-xs btn-block" style="box-shadow: 1px 1px 1px 2px #000; background: #fff" role="button">Data</a><br/>
 
-            <div class="panel-body">
-              <img class="img-rounded" src="/img/instansi/berani.png" alt="Generic placeholder image" width="125" height="150">
-              <img class="img-rounded" src="/img/instansi/kerjanyata.jpg" alt="Generic placeholder image" width="125" height="150">
-            </div>
+          <div class="panel-body">
+            <img class="img-rounded" src="/img/instansi/berani.png" alt="Generic placeholder image" width="125" height="150">
+            <img class="img-rounded" src="/img/instansi/kerjanyata.jpg" alt="Generic placeholder image" width="125" height="150">
           </div>
         </div>
+      </div>
     </div>
+
 	</div>
   </div>
 @endsection

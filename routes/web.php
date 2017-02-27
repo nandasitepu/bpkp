@@ -14,7 +14,7 @@
 Auth::routes();
 
 // Main Menu
-Route::get('/', function () {return view('page.home');});
+Route::get('/', function () {return view('home');});
 Route::get('kontakkami', function () {return view('page.kontak');});
 Route::get('tugas/st', function () {return view('tugas.konsep');});
 Route::get('cool', function () {return view('post.cool');});
@@ -23,15 +23,16 @@ Route::get('/test', function () {return view('test');});
 
 // Pages
 Route::get('news','PageController@news');
-
+Route::get('data','PageController@data');
 Route::get('app/spip','PageController@spip');
-Route::get('apip','PageController@apip');
-Route::get('simda','PageController@simda');
-Route::get('siskeudes','PageController@siskeudes');
-Route::get('sia','PageController@sia');
-Route::get('fcp','PageController@fcp');
+Route::get('app/apip','PageController@apip');
+Route::get('app/simda','PageController@simda');
+Route::get('app/siskeudes','PageController@siskeudes');
+Route::get('app/sia','PageController@sia');
+Route::get('app/fcp','PageController@fcp');
 
-
+// Data
+Route::get('app/spip/data', 'SpipController@index');
 
 
 // Posts Resources

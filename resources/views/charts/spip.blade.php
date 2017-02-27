@@ -3,11 +3,12 @@
 
 <script type="text/javascript" src="../assets/chart.js/dist/Chart.bundle.min.js"></script>
 <canvas class ="panel cool" id="SPIP"></canvas>
+<span class="label label-default pull-right">Last Updated : 1 Februari 2017</span>
 <!-- Chart Script -->
 <script>
         var ctx = document.getElementById("SPIP").getContext("2d");
         var myChart = new Chart(ctx, {
-            type: 'horizontalBar',
+            type: 'bar',
             data: {
                 labels:  ["Prov", "Polman", "Matra", "Mamasa", "Mamuju", "Mateng", "Majene"],
                 datasets: [
@@ -34,10 +35,6 @@
                     ],
                     borderWidth: 1
                 },
-
-
-
-
               ]
             },
             options: {
@@ -52,6 +49,7 @@
                   display: true,
                   text: 'SPIP Sulawesi Barat',
                 }
+
             }
         });
       </script>

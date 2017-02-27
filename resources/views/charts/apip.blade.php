@@ -52,7 +52,8 @@
                 title: {
                   display: true,
                   text: 'APIP Sulawesi Barat',
-                }
+                },
+  
             }
         });
       </script>

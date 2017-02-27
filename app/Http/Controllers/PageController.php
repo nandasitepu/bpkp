@@ -10,13 +10,17 @@ class PageController extends Controller
 
 {
     /* All Apps*/
-    public function spip()      {return view('page.spip');}
-    public function apip()      {return view('page.apip');}
-    public function simda()     {return view('page.simda');}
-    public function siskeudes() {return view('page.siskeudes');}
-    public function sia()       {return view('page.sia');}
-    public function fcp()       {return view('page.fcp');}
+    public function data()      {return view('pages.data');}
+    public function spip()      {return view('pages.app.spip');}
+    public function apip()      {return view('pages.app.apip');}
+    public function simda()     {return view('pages.app.simda');}
+    public function siskeudes() {return view('pages.app.siskeudes');}
+    public function sia()       {return view('pages.app.sia');}
+    public function fcp()       {return view('pages.app.fcp');}
 
+
+    /* Data*/
+    public function dataspip () {return view('data.spip');}
 
     /**
      * Display a listing of the resource.

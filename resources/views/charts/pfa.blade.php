@@ -28,6 +28,7 @@
       display: true,
       text: 'PFA Sulawesi Barat'
     }
+
   }
   });
 </script>
