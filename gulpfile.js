@@ -13,25 +13,65 @@ require('laravel-elixir-vue-2');
  |
  */
 
-var directories = {
-  'node_modules/bootstrap'                    : 'public/assets/bootstrap',
-  'node_modules/font-awesome'                 : 'public/assets/font-awesome',
-  'node_modules/jquery'                       : 'public/assets/jquery',
-  'node_modules/vue'                          : 'public/assets/vue',
-  'node_modules/vue-resource'                 : 'public/assets/vue-resource',
-  'node_modules/toastr'                       : 'public/assets/toastr'
-}
+ var npmDir  = 'node_modules/',
+     jsDir   = 'resources/assets/js',
+     cssDir  = 'resources/assets/css';
+     assDir  = 'public/as/';
+
+ elixir((mix) => {
+   mix.copy(npmDir + 'jquery/dist/jquery.js', jsDir);
+
+   mix.copy(npmDir + 'vue/dist/vue.js', jsDir);
+   mix.copy(npmDir + 'axios/dist/axios.js', jsDir);
+
+   mix.copy(npmDir + 'tinymce/tinymce.js', jsDir);
+
+   mix.copy(npmDir + 'bootstrap/dist/css/bootstrap.css', cssDir);
+   mix.copy(npmDir + 'bootstrap/dist/js/bootstrap.js', jsDir);
+
+   mix.copy(npmDir + 'font-awesome/css/font-awesome.css', cssDir);
+
+   mix.copy(npmDir + 'select2/dist/js/select2.js', jsDir);
+   mix.copy(npmDir + 'select2/dist/css/select2.css', cssDir);
+
+   mix.copy(npmDir + 'parsleyjs/dist/parsley.js', jsDir);
+
+   mix.copy(npmDir + 'chart.js/dist/Chart.bundle.js', jsDir);
 
 
-elixir(function(mix) {
-   for (directory in directories){
-     mix.copy(directory, directories[directory]);
-   }
+
+// The Scripts
+   mix.scripts([
+     'vue.js',
+     'axios.js',
+   ],'public/js/my-vue.js' );
+
+   mix.scripts([
+     'tinymce.js',
+     'parsley.js',
+     'id.js',
+     'select2.js',
+   ],'public/js/form.js' );
+
+   mix.scripts([
+     'Chart.bundle.js'
+   ],'public/js/chart.js' );
 
 
-        mix.scripts([
-          'vue/dist/vue.js',
-          'vue-resource/dist/vue-resource.js',
-        ],'public/js/vendor.js' );
+ });
+
+ elixir(function(mix) {
+    mix.scripts([
+      'jquery.js',
+      'bootstrap.js'
+    ],'./public/js/app.js'
+    );
+
+    mix.styles([
+       'bootstrap.css',
+       'font-awesome.css'
+   ], './public/css/app.css'
+   );
+
 
 });
