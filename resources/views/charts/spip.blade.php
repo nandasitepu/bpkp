@@ -1,7 +1,7 @@
 
 
 
-<script type="text/javascript" src="../assets/chart.js/dist/Chart.bundle.min.js"></script>
+<script type="text/javascript" src="../js/chart.js"></script>
 <canvas class ="panel cool" id="SPIP"></canvas>
 <span class="label label-default pull-right">Last Updated : 1 Februari 2017</span>
 <!-- Chart Script -->

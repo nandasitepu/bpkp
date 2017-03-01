@@ -4,9 +4,8 @@
 <meta name="token" id="token" value="{{ csrf_token() }}">
 <title>BPKP - @yield('title')</title>
 
-<!-- Main CSS -->
-<link href="/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<!-- Main CSS Bootstrap & FontAwesome as app.css -->
+<link href="../css/app.css" rel="stylesheet">
 
 <link href="/css/nav.css" rel="stylesheet">
 

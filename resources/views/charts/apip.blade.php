@@ -1,7 +1,7 @@
 
 
 
-<script type="text/javascript" src="../assets/chart.js/dist/Chart.bundle.min.js"></script>
+<script type="text/javascript" src="../js/chart.js"></script>
 <canvas class ="panel cool" id="APIP"></canvas>
 <!-- Chart Script -->
 <script>
@@ -53,7 +53,7 @@
                   display: true,
                   text: 'APIP Sulawesi Barat',
                 },
-  
+
             }
         });
       </script>
