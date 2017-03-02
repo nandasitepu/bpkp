@@ -12,13 +12,14 @@
 */
 
 Auth::routes();
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 // Main Menu
 Route::get('/', function () {return view('home');});
 Route::get('kontakkami', function () {return view('page.kontak');});
 Route::get('tugas/st', function () {return view('tugas.konsep');});
 Route::get('cool', function () {return view('post.cool');});
-Route::get('dashboard', function () {return view('page.dashboard');});
+Route::get('dashboard', function () {return view('admin.dashboard');});
 Route::get('/test', function () {return view('test');});
 
 // Pages

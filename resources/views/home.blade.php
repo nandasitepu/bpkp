@@ -1,7 +1,7 @@
 @extends('main')
 @section('title', 'Perwakilan Provinsi Sulawesi Barat')
 @section('scripts')
-  <script src="/assets/wow/dist/wow.min.js"></script>
+  <script src="../js/style.js"></script>
 @endsection
 @section('content')
   <div class="container">
@@ -35,49 +35,24 @@
           </div>
         @else
           <div class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <a href="#" >
                 <button type="button" class="btn btn-primary btn-block btn-sm " name="button">
-                  Login @ | &nbsp; {{ Auth::user()->name }} &nbsp; <span class="caret"></span>
+                  Login as | &nbsp; {{ Auth::user()->name }} &nbsp;
                 </button>
               </a>
-
-              <ul class="dropdown-menu" role="menu">
-                <li>
-                  <a href="{{ url('/logout') }}"
-                      onclick="event.preventDefault();
-                               document.getElementById('logout-form').submit();">
-                      <button type="button" class="btn btn-default btn-block btn-sm " name="button">
-                      Logout
-                      </button>
-                  </a>
-                  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                      {{ csrf_field() }}
-                  </form>
-                </li>
-              </ul>
           </div>
 
           <div class="btn-group btn-group-justified hidden-xs">
             <a href="/dashboard" class="btn btn-default btn-sm">Dashboard</a>
-            <a href="/pages/create" class="btn btn-info btn-sm">Logout</a>
+            <a href="{{ url('/logout') }}" class="btn btn-info btn-sm">Logout</a>
           </div>
           <div class="btn-group btn-group-justified visible-xs">
-            <a href="/posts/create" class="btn btn-default btn-sm">Dashboard</a>
-            <a href="/pages/create" class="btn btn-info btn-sm">Logout</a>
+            <a href="/dashboard" class="btn btn-default btn-sm">Dashboard</a>
+            <a href="{{ url('/logout') }}" class="btn btn-info btn-sm">Logout</a>
           </div>
           <br />
         @endif
-        <div style ="text-align:center">
-          <a href="#http://facebook.com/"><i class="fa sos fa-facebook" ></i></a>
-          <label class="label label-primary">12345</label>
-          <a href="#http://linkedin.com/"><i class="fa sos fa-linkedin"></i></a>
-          <label class="label label-primary">12345</label>
-          <a href="#http://twitter.com/"><i class="fa sos fa-twitter" ></i></a>
-          <label class="label label-info">12345</label>
-          <a href="#http://plus.google.com/"><i class="fa sos fa-google-plus" ></i> </a>
-          <label class="label label-danger">12345</label>
 
-        </div>
       </div>
     </div>
     <div class="row">
@@ -140,37 +115,53 @@
           </a>
         </div><!-- /.carousel -->
       </div>
-      <div class="col-md-2 col-xs-12 center panel panel-default">
-          <div class="col-md-12 col-xs-6">
-            <div class="btn-group-vertical" role="group" aria-label="...">
-              <br>
-              <a href="app/spip" class="btn btn-default btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SPIP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </a>
-              <br />
-              <a href="app/apip" class="btn btn-info btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">APIP</a><br />
-              <a href="app/fcp" class="btn btn-danger btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">FCP</a><br />
-            </div>
-          </div>
-          <div class="col-md-12 col-xs-6">
-            <div class="btn-group-vertical" role="group" aria-label="...">
-              <br>
-              <a href="app/simda" class="btn btn-success btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">SIMDA</a><br />
-              <a href="app/sia" class="btn btn-primary btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">SIA</a><br />
-              <a href="app/siskeudes" class="btn btn-warning btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">SISKEUDES</a><br />
-            </div>
-          </div>
-      </div>
-      <div class="col-md-2 col-xs-12 center ">
-        <div class="panel panel-default">
-          <a href="data" class="btn btn-default btn-xs btn-block" style="box-shadow: 1px 1px 1px 2px #000; background: #fff" role="button">Data</a><br/>
+      <div class="col-md-4">
+        <div style ="text-align:center">
+          <a href="#http://facebook.com/"><i class="fa sos fa-facebook" ></i></a>
+          <label class="label label-primary">12345</label>
+          <a href="#http://linkedin.com/"><i class="fa sos fa-linkedin"></i></a>
+          <label class="label label-primary">12345</label>
+          <a href="#http://twitter.com/"><i class="fa sos fa-twitter" ></i></a>
+          <label class="label label-info">12345</label>
+          <a href="#http://plus.google.com/"><i class="fa sos fa-google-plus" ></i> </a>
+          <label class="label label-danger">12345</label>
 
-          <div class="panel-body">
-            <img class="img-rounded" src="/img/instansi/jujur.png" alt="Generic placeholder image" width="125" height="150">
-            <img class="img-rounded" src="/img/instansi/kerjanyata.jpg" alt="Generic placeholder image" width="125" height="150">
+        </div>
+        <br />
+        <div class="col-md-6 col-xs-12 center panel panel-default">
+            <div class="col-md-12 col-xs-6">
+              <div class="btn-group-vertical" role="group" aria-label="...">
+                <br>
+                <a href="app/spip" class="btn btn-default btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SPIP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </a>
+                <br />
+                <a href="app/apip" class="btn btn-info btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">APIP</a><br />
+                <a href="app/fcp" class="btn btn-danger btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">FCP</a><br />
+              </div>
+            </div>
+            <div class="col-md-12 col-xs-6">
+              <div class="btn-group-vertical" role="group" aria-label="...">
+                <br>
+                <a href="app/simda" class="btn btn-success btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">SIMDA</a><br />
+                <a href="app/sia" class="btn btn-primary btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">SIA</a><br />
+                <a href="app/siskeudes" class="btn btn-warning btn-block" style="box-shadow: 1px 1px 1px 2px #000" role="button">SISKEUDES</a><br />
+              </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12 center ">
+          <div class="panel panel-default">
+            <a href="data" class="btn btn-default btn-xs btn-block" style="box-shadow: 1px 1px 1px 2px #000; background: #fff" role="button">Data</a><br/>
+
+            <div class="panel-body">
+              <img class="img-rounded" src="/img/instansi/jujur.png" alt="Generic placeholder image" width="125" height="150">
+              <img class="img-rounded" src="/img/instansi/kerjanyata.jpg" alt="Generic placeholder image" width="125" height="150">
+            </div>
           </div>
         </div>
+
       </div>
+
     </div>
 
 	</div>

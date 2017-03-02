@@ -1,7 +1,7 @@
 @extends('main')
 
 @section('stylesheets')
-<meta id="_token" value="{{ csrf_token() }}"> 
+<meta id="_token" value="{{ csrf_token() }}">
 <link rel="stylesheet" href="/css/dashboard.css" media="screen" title="no title">
 @endsection
 
@@ -10,7 +10,7 @@
 <script type="text/javascript" src="js/dashboard.js"></script>
 @endsection
 
-@section('contents')
+@section('content')
   <div class="container">
     <div class="row">
         <div class="col-sm-3 col-md-3">

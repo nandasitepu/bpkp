@@ -4,13 +4,13 @@
   <link rel="stylesheet" href="/assets/toastr/toastr.min.css" media="screen" title="no title">
 @endsection
 
-@section('contents')
+@section('content')
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h3>Artikel Posts </h3>
-        @foreach (App\Post::Paginate(10) as $post)
-          <ul>
+        <h4>Artikel Posts </h4>
+        @foreach (App\Post::Paginate(5) as $post)
+          <ul class="style-none">
             <li>
               <h4>{{$post->title}}</h4>
             </li>
@@ -18,7 +18,7 @@
           </ul>
         @endforeach
       </div>
-      <div class="col-md-12">
+      <div class="col-md-12 text-center">
         {!! App\Post::paginate(10)->links() !!}
       </div>
     </div>
@@ -26,8 +26,6 @@
 @endsection
 
 @section('scripts')
-  <script type="text/javascript" src="/assets/toastr/toastr.min.js"></script>
-  <script type="text/javascript" src="/assets/vue/dist/vue.min.js"></script>
-  <script type="text/javascript" src="/assets/vue-resource/dist/vue-resource.min.js"></script>
+  <script type="text/javascript" src="../js/my-vue.js"></script>
   <script type="text/javascript" src="/js/post.js"></script>
 @endsection

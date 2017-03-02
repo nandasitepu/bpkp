@@ -15,7 +15,7 @@
 
 @stop
 
-@section('contents')
+@section('content')
 <div class="container">
   <div class="row">
     {!! Form::open(array('route' => 'posts.store', 'data-parsley-validate' => '', 'files' => true )) !!}

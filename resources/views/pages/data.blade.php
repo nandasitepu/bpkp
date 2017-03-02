@@ -20,5 +20,6 @@
         @include('charts.apip')
       </div>
     </div>
+    <br>
   </div>
 @endsection

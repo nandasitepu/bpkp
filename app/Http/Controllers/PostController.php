@@ -37,7 +37,7 @@ class PostController extends Controller
 
     public function Index()
      {
-        $posts  = Post::paginate(5);
+        $posts  = Post::all();
 
         return view('post.index')->withPosts($posts);
      }

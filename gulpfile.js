@@ -38,6 +38,8 @@ require('laravel-elixir-vue-2');
 
    mix.copy(npmDir + 'chart.js/dist/Chart.bundle.js', jsDir);
 
+   mix.copy(npmDir + 'wowjs/dist/wow.js', jsDir);
+
 
 
 // The Scripts
@@ -56,6 +58,10 @@ require('laravel-elixir-vue-2');
    mix.scripts([
      'Chart.bundle.js'
    ],'public/js/chart.js' );
+
+   mix.scripts([
+     'wow.js'
+   ],'public/js/style.js' );
 
 
  });

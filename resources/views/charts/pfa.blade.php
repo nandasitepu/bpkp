@@ -1,8 +1,9 @@
 
 
 
-<script type="text/javascript" src="../assets/chart.js/dist/Chart.bundle.min.js"></script>
-<canvas class ="panel cool" id="PFA"></canvas>
+<script type="text/javascript" src="../js/chart.js"></script>
+<canvas class ="panel cool" id="PFA" height="200%"></canvas>
+<span class="label label-default pull-right">Last Updated : 1 Februari 2017</span>
 <!-- Chart Script -->
 <script>
   var ctx = document.getElementById("PFA").getContext('2d');

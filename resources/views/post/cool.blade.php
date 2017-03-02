@@ -3,7 +3,7 @@
 @section('stylesheets')
   <link rel="stylesheet" href="/css/cool.css" media="screen" title="no title">
 @endsection
-@section('contents')
+@section('content')
   <div class="container">
     <div class="row">
         <div class="col-xs-8 col-xs-offset-2">

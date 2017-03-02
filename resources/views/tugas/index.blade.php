@@ -4,7 +4,7 @@
 @section('stylesheets')
   <link rel="stylesheet" href="/css/tugas.css" media="screen" title="no title">
 @endsection
-@section('contents')
+@section('content')
 <div class="container">
   <div class="row">
     <section class="panel">

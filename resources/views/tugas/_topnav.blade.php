@@ -4,9 +4,9 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="/">
         <span><img src="/img/web/logo-bpkp.jpg" height="30px" margin-top="7px" /></span>
-        <span>
-          <b><small>&nbsp; ~ Penugasan 2017 </small></b>
-        </span>
+        <span class="oswald" margin-top="5px">Prov. Sulawesi Barat</span> <br>
+
+
       </a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
@@ -14,6 +14,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-collapse-1">

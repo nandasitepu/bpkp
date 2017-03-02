@@ -15,7 +15,7 @@
 
 @stop
 
-@section('contents')
+@section('content')
 <div class="container">
   <div class="row">
     {!! Form::model($post, array('route' => ['posts.update', $post->id], 'data-parsley-validate' => '', 'files' => true )) !!}

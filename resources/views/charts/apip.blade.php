@@ -2,7 +2,8 @@
 
 
 <script type="text/javascript" src="../js/chart.js"></script>
-<canvas class ="panel cool" id="APIP"></canvas>
+<canvas class ="panel cool" id="APIP" height="100%"></canvas>
+<span class="label label-default pull-right">Last Updated : 1 Februari 2017</span>
 <!-- Chart Script -->
 <script>
         var ctx = document.getElementById("APIP").getContext("2d");
