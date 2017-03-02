@@ -166,7 +166,7 @@
           <a href="data" class="btn btn-default btn-xs btn-block" style="box-shadow: 1px 1px 1px 2px #000; background: #fff" role="button">Data</a><br/>
 
           <div class="panel-body">
-            <img class="img-rounded" src="/img/instansi/berani.png" alt="Generic placeholder image" width="125" height="150">
+            <img class="img-rounded" src="/img/instansi/jujur.png" alt="Generic placeholder image" width="125" height="150">
             <img class="img-rounded" src="/img/instansi/kerjanyata.jpg" alt="Generic placeholder image" width="125" height="150">
           </div>
         </div>
