@@ -94,7 +94,7 @@
               </div>
             </div>
             <div class="item">
-              <img class="third-slide" src="/img/web/idul-fitri.jpg" style="width: 100%;height:400px" alt="Third slide">
+              <img class="third-slide" src="/img/web/struktur.jpg" style="width: 100%;height:400px" alt="Third slide">
               <div class="container">
                 <div class="carousel-caption">
                   <h1></h1>

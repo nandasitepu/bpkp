@@ -4,7 +4,7 @@
 
 @endsection
 
-@section('contents')
+@section('content')
   <div class="jumbotron jumbotron-sm">
       <div class="container">
           <div class="row">
@@ -67,14 +67,21 @@
               <address>
                   <strong>Perwakilan BPKP Provinsi Sulawesi Barat</strong><br>
                   Jl. Abdul Malik Pattana Endeng, Mamuju<br>
-                  Sulawesi Barat 94107<br>
+                  Sulawesi Barat 91512<br>
                   <abbr title="Phone">
-                      P:</abbr>
-                  (123) 456-7890
+                    Phone:
+                  </abbr>
+                    (0426) 21088
+                    <br>
+                  <abbr title="Phone">
+                    Fax:
+                  </abbr>
+                    (0426) 21137
               </address>
               <address>
-                  <strong>Sulbar Belum Hebat !!</strong><br>
-                  <a href="mailto:#">sulbar@bpkp32.com</a>
+                  <strong>Sulbar Hebat </strong><br>
+                  Email :
+                  <a href="mailto:#"> sulawesi.barat@bpkp.go.id</a>
               </address>
               </form>
           </div>

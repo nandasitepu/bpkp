@@ -18,9 +18,18 @@ class PageController extends Controller
     public function sia()       {return view('pages.app.sia');}
     public function fcp()       {return view('pages.app.fcp');}
 
-
     /* Data*/
     public function dataspip () {return view('data.spip');}
+
+    /* Bidang */
+    public function tu()  {return view('bid.tu');}
+    public function ipp() {return view('bid.ipp');}
+    public function apd() {return view('bid.apd');}
+    public function an()  {return view('bid.an');}
+    public function inv() {return view('bid.inv');}
+    public function p3a() {return view('bid.p3a');}
+
+
 
     /**
      * Display a listing of the resource.

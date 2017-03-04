@@ -59,24 +59,24 @@
               <ul class="collapse nav navbar-nav nav-collapse hidden-xs" id="nav-collapse1">
 
                   <li>
-                    <a href="#"><i class="fa fa-money" aria-hidden="true"></i>  <span class="lato">&nbsp; APD</span></a>
+                    <a href={{route('bid.apd')}}><i class="fa fa-money" aria-hidden="true"></i>  <span class="lato">&nbsp; APD</span></a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-hotel" aria-hidden="true"></i>  <span class="lato">&nbsp; IPP</span></a>
+                    <a href={{route('bid.ipp')}}><i class="fa fa-hotel" aria-hidden="true"></i>  <span class="lato">&nbsp; IPP</span></a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-bath" aria-hidden="true"></i>  <span class="lato">&nbsp; AN</span></a>
+                    <a href={{route('bid.an')}}><i class="fa fa-bath" aria-hidden="true"></i>  <span class="lato">&nbsp; AN</span></a>
                   </li>
 
 
                   <li>
-                    <a href="#"><i class="fa fa-headphones" aria-hidden="true"></i>  <span class="lato">&nbsp; INV</span></a>
+                    <a href={{route('bid.inv')}}><i class="fa fa-headphones" aria-hidden="true"></i>  <span class="lato">&nbsp; INV</span></a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-wifi" aria-hidden="true">  <span class="lato"></i>&nbsp; P3A</span></a>
+                    <a href={{route('bid.p3a')}}><i class="fa fa-wifi" aria-hidden="true">  <span class="lato"></i>&nbsp; P3A</span></a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-clock-o" aria-hidden="true">  <span class="lato"></i>&nbsp; TU</span></a>
+                    <a href={{route('bid.tu')}}><i class="fa fa-clock-o" aria-hidden="true">  <span class="lato"></i>&nbsp; TU</span></a>
                   </li>
 
 
