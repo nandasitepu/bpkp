@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Post;
+use App\Models\Post;
 use Session;
 
 class PostController extends Controller
@@ -37,9 +37,9 @@ class PostController extends Controller
 
     public function Index()
      {
-        $posts  = Post::all();
+        $posts  = Post::orderBy('created_at', 'desc')->paginate(5);;
 
-        return view('post.index')->withPosts($posts);
+        return view('post.index')->with('posts',$posts);
      }
 
     /**

@@ -1,0 +1,36 @@
+//
+
+List of Models
+
+###############
+SPIP Models
+###############
+
+Unsur_SPIP
+Sub_Unsur_SPIP
+Level_SPIP
+SPIP
+
+###############
+APIP Models
+###############
+APIP
+Sub_Unsur_APIP
+Level_APIP
+APIP
+
+###############
+Office Models
+###############
+Obrik
+Pegawai
+Post
+Tag
+Tugas
+Page
+
+
+//  Milestone
+Multiple Role : Tamu // Pegawai // Admin
+Penugasan : CRUD // Monitoring // Vue
+Pegawai: CRUD // Vue // Search

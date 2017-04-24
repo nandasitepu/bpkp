@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Pegawai;
+use App\Models\Pegawai;
 
 class PegawaiTableSeeder extends Seeder
 {

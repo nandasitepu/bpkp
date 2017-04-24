@@ -3,9 +3,19 @@
 
 
 // Variables
-
+@import "variables";
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-@import "node_modules/font-awesome/css/font-awesome.min.css";
+// Font-Awesome
+@import "node_modules/font-awesome/scss/font-awesome";
+
+body {
+  background-color: #fff;
+  color: #000;
+}
+
+blockquote footer, blockquote small, blockquote .small {
+  color: #000;
+}

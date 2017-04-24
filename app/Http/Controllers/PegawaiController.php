@@ -10,9 +10,19 @@ use App\Models\Pegawai;
 class PegawaiController extends Controller
 {
 
-   public function index ()
+   public function getPegawai(Request $request)
     {
-      return view('pegawai.index');
+      $search = $request->search;
+
+      $pegawai = Pegawai::where('nama', 'LIKE', "%$search%")->orderBy('id', 'Asc')->paginate(20);
+
+      return response()->json([
+        'pegawai' => $pegawai
+      ]);
+    }
+
+    public function index() {
+      return view ('pegawai.index');
     }
 
 }

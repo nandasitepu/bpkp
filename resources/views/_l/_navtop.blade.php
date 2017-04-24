@@ -24,13 +24,13 @@
             <div class="col-xs-12">
               <!-- Links -->
               <ul class="nav navbar-nav navbar-right hidden-xs">
-                <li><a href="#"><i class="fa fa-info" aria-hidden="true"><span class="lato">&nbsp; profil</span></i></a></li>
+                <li><a href="{{route('profil')}}"><i class="fa fa-info" aria-hidden="true"><span class="lato">&nbsp; profil</span></i></a></li>
                 <li><a href="#"><i class="fa fa-list" aria-hidden="true">
                 <small class="lato">&nbsp; RKT</small>
                 </i></a></li>
-                <li><a href="/tugas"><i class="fa fa-cog fa-spin">
-                </i><span class="lato">&nbsp; tugas</span>
-                </a></li>
+                <li><a href="/tugas"><i class="fa fa-cog" aria-hidden="true">
+                <span class="lato">&nbsp; tugas</span>
+                </i></a></li>
                 <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true">
                 <span class="lato">&nbsp; forum</span></i></a></li>
                 <li><a href="/kontakkami"><i class="fa fa-envelope-o" aria-hidden="true">
@@ -44,8 +44,8 @@
                 <li><a href="#"><i class="fa fa-list" aria-hidden="true">
                 <span class="lato">&nbsp; RKT</span>
                 </i></a></li>
-                <li><a href="/tugas"><i class="fa fa-cog fa-spin">
-                </i><span class="lato">&nbsp; Tugas</span>
+                <li><a href="/tugas"><i class="fa fa-fw fa-cog fa-spin">
+                </i><span class="lato">&nbsp;  tugas</span>
                 </a></li>
                 <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true">
                 <span class="lato">&nbsp; Forum</span></i></a></li>
@@ -57,7 +57,6 @@
               </ul>
               <!-- Contents -->
               <ul class="collapse nav navbar-nav nav-collapse hidden-xs" id="nav-collapse1">
-
                   <li>
                     <a href={{route('bid.apd')}}><i class="fa fa-money" aria-hidden="true"></i>  <span class="lato">&nbsp; APD</span></a>
                   </li>
@@ -65,7 +64,7 @@
                     <a href={{route('bid.ipp')}}><i class="fa fa-hotel" aria-hidden="true"></i>  <span class="lato">&nbsp; IPP</span></a>
                   </li>
                   <li>
-                    <a href={{route('bid.an')}}><i class="fa fa-bath" aria-hidden="true"></i>  <span class="lato">&nbsp; AN</span></a>
+                    <a href={{route('bid.an')}}><i class="fa fa-wheelchair" aria-hidden="true"></i>  <span class="lato">&nbsp; AN</span></a>
                   </li>
 
 
@@ -78,8 +77,6 @@
                   <li>
                     <a href={{route('bid.tu')}}><i class="fa fa-clock-o" aria-hidden="true">  <span class="lato"></i>&nbsp; TU</span></a>
                   </li>
-
-
               </ul>
               <ul class="collapse nav navbar-nav nav-collapse visible-xs" id="nav-collapse-xs">
                 <div class="col-xs-6 nav navbar-nav bid">
@@ -118,12 +115,7 @@
                 </div>
               </ul>
             </div>
-
           </div>
-
-
-
-
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
 </nav><!-- /.navbar -->

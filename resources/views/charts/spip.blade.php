@@ -1,8 +1,4 @@
-
-
-
-<script type="text/javascript" src="../js/chart.js"></script>
-<canvas class ="panel cool" id="SPIP" height="100%"></canvas>
+<canvas class ="panel cool" id="SPIP" height="175%"></canvas>
 <span class="label label-default pull-right">Last Updated : 1 Februari 2017</span>
 <!-- Chart Script -->
 <script>

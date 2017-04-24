@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('contents')
+@section('content')
 
   <div class="container">
     <h3 class="center">Konsep Surat Tugas</h3>

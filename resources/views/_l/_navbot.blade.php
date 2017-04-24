@@ -11,16 +11,16 @@
 
 
             </div>
-            <!-- Collapsed Hamburger -->    
+            <!-- Collapsed Hamburger -->
         </div>
         <div class="collapse navbar-collapse navbar-right" id="app-navbar-bottom">
             <!-- Left Side Of Navbar -->
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right text-center">
                 <!-- Authentication Links -->
-                  <li><a href="{{url('disclaimer')}}">Disclaimer</a></li>
-                  <li><a href="{{url('sk')}}">Syarat & Ketentuan</a></li>
-                  <li><a href="{{url('faq')}}">FAQ</a></li>
+                  <li><a href="{{route('disclaimer')}}">Disclaimer</a></li>
+                  <li><a href="{{route('sdank')}}">Syarat & Ketentuan</a></li>
+                  <li><a href="{{route('faq')}}">FAQ</a></li>
             </ul>
         </div>
     </div>

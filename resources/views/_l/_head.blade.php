@@ -3,9 +3,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="token" id="token" value="{{ csrf_token() }}">
 <title>BPKP - @yield('title')</title>
-
 <!-- Main CSS Bootstrap & FontAwesome as app.css -->
-<link href="../css/app.css" rel="stylesheet">
+<link href="{{asset('css/app.css')}}" rel="stylesheet">
 
 <!-- Custom CSS -->
 <link href="/css/nav.css" rel="stylesheet">
@@ -13,3 +12,6 @@
 <link href="/css/timeline.css" rel="stylesheet">
 <link href="/css/bpkp.css" rel="stylesheet">
 @yield('stylesheets')
+<script src="{{asset('js/manifest.js')}}"></script>
+<script src="{{asset('js/chart.js')}}"></script>
+@yield('top_scripts')

@@ -3,22 +3,32 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Page;
 use View;
 use DB;
 
 class PageController extends Controller
 
 {
-    /* All Apps*/
+    /* All Apps */
     public function data()      {return view('pages.data');}
-    public function spip()      {return view('pages.app.spip');}
-    public function apip()      {return view('pages.app.apip');}
-    public function simda()     {return view('pages.app.simda');}
-    public function siskeudes() {return view('pages.app.siskeudes');}
-    public function sia()       {return view('pages.app.sia');}
-    public function fcp()       {return view('pages.app.fcp');}
 
-    /* Data*/
+    /* Pages */
+    public function profil () {return view('pages.profil');}
+    public function kontak () {return view('pages.kontak');}
+    public function disclaimer () {return view('pages.disclaimer');}
+    public function faq () {return view('pages.faq');}
+    public function sdank () {return view('pages.sdank');}
+
+    /* Kabupaten*/
+    public function mamuju() {return view('kab.mamuju');}
+
+    public function spipmamuju()
+    {
+
+    }
+
+    /* Data */
     public function dataspip () {return view('data.spip');}
 
     /* Bidang */
@@ -30,7 +40,6 @@ class PageController extends Controller
     public function p3a() {return view('bid.p3a');}
 
 
-
     /**
      * Display a listing of the resource.
      *
@@ -40,9 +49,9 @@ class PageController extends Controller
     {
         // List of All Pages
 
-        $pages = Page::all() ;
+        $pages = Page::orderBy('id', 'Asc')->paginate(10);;
 
-        return view ('page.index')->compact('pages');
+        return view ('pages.index')->with('pages', $pages);
     }
 
     /**

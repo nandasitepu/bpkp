@@ -1,5 +1,7 @@
 @extends('main')
-
+@section('title')
+  Kontak Kami
+@endsection
 @section('stylesheets')
 
 @endsection

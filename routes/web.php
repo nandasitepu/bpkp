@@ -11,52 +11,63 @@
 |
 */
 
+Route::any('/test{all}', function () {return view('test');})->where(['all' => '.*']);
+
 Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
-// Main Menu
-Route::get('/', function () {return view('home');});
-Route::get('kontakkami', function () {return view('pages.kontak');});
-Route::get('tugas/st', function () {return view('tugas.konsep');});
+// Testing
 Route::get('cool', function () {return view('post.cool');});
-Route::get('dashboard', function () {return view('admin.dashboard');});
-Route::get('/test', function () {return view('test');});
+Route::get('dashboard', 'AdminController@index')->name('dashboard')->middleware('auth');
+
+// Main Menu
+Route::get('/', 'HomeController@home')->name('home');
+Route::get('kontakkami','PageController@kontak')->name('kontak');
+Route::get('tugas/st', 'TugasController@tugas')->name('tugas');
 
 // Pages
+Route::resource('pages', 'PageController');
+// Custom Pages
 Route::get('news','PageController@news');
 Route::get('data','PageController@data');
-Route::get('app/spip','PageController@spip')->name('app.spip');
-Route::get('app/apip','PageController@apip');
-Route::get('app/simda','PageController@simda');
-Route::get('app/siskeudes','PageController@siskeudes');
-Route::get('app/sia','PageController@sia');
-Route::get('app/fcp','PageController@fcp');
+Route::get('profil','PageController@profil')->name('profil');
+Route::get('disclaimer','PageController@disclaimer')->name('disclaimer');
+Route::get('sdank','PageController@sdank')->name('sdank');
+Route::get('faq','PageController@faq')->name('faq');
 
-// Data
-Route::get('app/spip/data', 'SpipController@index');
+// App
+//SPIP
+Route::get('app/spip','AppController@spip')->name('app.spip');
+Route::get('app/spip/mamuju', 'AppController@spip_mamuju')->name('spip.mamuju');
+Route::get('app/spip/{obrik}', 'AppController@spip_show')->name('spip.show');
+
+
+//APIP
+Route::get('app/apip','AppController@apip')->name('app.apip');
+Route::get('app/simda','AppController@simda')->name('app.simda');
+Route::get('app/siskeudes','AppController@siskeudes')->name('app.siskeudes');
+Route::get('app/sia','AppController@sia')->name('app.sia');
+Route::get('app/fcp','AppController@fcp')->name('app.fcp');
+
+// Kabupaten
+Route::get('app/kab/mamuju', 'PageController@mamuju')->name('kab.mamuju');
 
 // Bidang
-Route::get('bid/tu', 'PageController@tu')->name('bid.tu');
+Route::get('bid/tu' , 'PageController@tu')->name('bid.tu');
 Route::get('bid/ipp', 'PageController@ipp')->name('bid.ipp');
 Route::get('bid/apd', 'PageController@apd')->name('bid.apd');
-Route::get('bid/an', 'PageController@an')->name('bid.an');
+Route::get('bid/an' , 'PageController@an')->name('bid.an');
 Route::get('bid/inv', 'PageController@inv')->name('bid.inv');
 Route::get('bid/p3a', 'PageController@p3a')->name('bid.p3a');
 
-
 // Posts Resources
 Route::get('/api/posts', 'PostController@vueIndex');
-Route::resource('posts', 'PostController');
+Route::get('posting', 'PostController@index')->name('posting.bpkp');
+Route::get('posting/create', 'PostController@create')->name('posting.new');
 
-// Pegawai Resource
-Route::resource('pegawai', 'PegawaiController');
-  // The Vue CRUD
-  Route::get('/api/pegawai', function(){
-    return App\Pegawai::all();
-  });
-  Route::post('/api/pegawai', function(){
-    return App\Pegawai::create(Request::all() );
-  });
+// API Pegawai
+Route::get('/api/pegawai', 'PegawaiController@getPegawai');
+Route::get('pegawai', 'PegawaiController@index');
 
 // Tugas Resource
 Route::resource('tugas', 'TugasController');

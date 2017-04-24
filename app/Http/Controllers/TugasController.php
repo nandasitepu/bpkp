@@ -8,6 +8,12 @@ use App\Http\Requests;
 
 class TugasController extends Controller
 {
+
+    public function tugas()
+    {
+        return view ('tugas.konsep');
+    }
+
     /**
      * Display a listing of the resource.
      *
