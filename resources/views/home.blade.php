@@ -37,7 +37,7 @@
         <div class="col-md-4">
             @component('_c.social')@endcomponent
           <div class="col-md-6 col-xs-12 center panel panel-default">
-            @component('_C.app')@endcomponent
+            @component('_c.app')@endcomponent
           </div>
           <div class="col-md-6 col-xs-12 center ">
             <div class="panel panel-default">
