@@ -66,16 +66,14 @@ Route::get('app/fcp','AppController@fcp')->name('app.fcp');
 // Kabupaten
 Route::get('app/kab/mamuju', 'PageController@mamuju')->name('kab.mamuju');
 
-
-
 // Posts Resources
-Route::get('/api/posts', 'PostController@vueIndex');
+Route::get('api/posts', 'PostController@vueIndex');
 Route::get('posting', 'PostController@index')->name('posting.bpkp');
 Route::get('posting/create', 'PostController@create')->name('posting.new');
 Route::get('posting/store', 'PostController@store')->name('posting.store');
 
 // API Pegawai
-Route::get('/api/pegawai', 'PegawaiController@getPegawai');
+Route::get('api/pegawai', 'PegawaiController@getPegawai');
 Route::get('pegawai', 'PegawaiController@index');
 
 // Tugas Resource

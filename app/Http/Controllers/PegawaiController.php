@@ -16,9 +16,7 @@ class PegawaiController extends Controller
 
       $pegawai = Pegawai::where('nama', 'LIKE', "%$search%")->orderBy('id', 'Asc')->paginate(20);
 
-      return response()->json([
-        'pegawai' => $pegawai
-      ]);
+      return response()->json(['pegawai' => $pegawai]);
     }
 
     public function index() {
