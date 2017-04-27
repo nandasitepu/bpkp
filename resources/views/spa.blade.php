@@ -4,9 +4,8 @@
   <head>
     @include('_l._head')
   </head>
-
-    @include('_l._navtop') <!--  Navigation -->
-
+  <!--  Navigation Top -->
+    @include('_l._navtop')
   <!-- The Body -->
   <body>
 

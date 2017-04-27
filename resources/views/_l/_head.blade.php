@@ -12,8 +12,8 @@
 <link href="/css/bpkp.css" rel="stylesheet">
 @yield('stylesheets')
 
-<script src="{{asset('js/manifest.js')}}"></script>
-<script src="{{asset('js/chart.js')}}"></script>
+
+<script src="{{asset('js/Chart.bundle.min.js')}}"></script>
 
 
 @yield('top-scripts')
