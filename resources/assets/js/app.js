@@ -14,10 +14,10 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('pegawai', require('./components/Pegawai.vue'));
+ Vue.component('spa', require('./components/SPA.vue'));
 
 
-  const app = new Vue({
-      el: '#app',
-      router
-  });
+ const app = new Vue({
+     el: '#app',
+     router
+ });

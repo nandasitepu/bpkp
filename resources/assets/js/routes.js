@@ -1,14 +1,29 @@
 import VueRouter from 'vue-router';
 
 let routes=[
+  // SPA
   {
-    path:'/pegawai',
+    path:'/spa/',
+    component:require('./components/SPA')
+  },
+  {
+    path:'/spa/pegawai',
     component:require('./components/Pegawai')
   },
   {
-    path:'/oke',
-    component:require('./components/Oke')
+    path:'/spa/berita',
+    component:require('./components/Berita')
   },
+  {
+    path:'/spa/penugasan',
+    component:require('./components/Penugasan')
+  },
+  {
+    path:'/spa/pengumuman',
+    component:require('./components/Pengumuman')
+  },
+
+  // SPIP
 ];
 
 export default new VueRouter({

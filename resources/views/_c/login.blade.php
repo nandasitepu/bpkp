@@ -20,10 +20,12 @@
       </div>
       <div class="btn-group btn-group-justified hidden-xs">
         <a href="/dashboard" class="btn btn-default btn-sm">Dashboard</a>
+        <a href="/spa" class="btn btn-success btn-sm">SPA</a>
         <a href="{{ url('/logout') }}" class="btn btn-info btn-sm">Logout</a>
       </div>
       <div class="btn-group btn-group-justified visible-xs">
-        <a href="/dashboard" class="btn btn-default btn-sm">Dashboard</a>
+        <a href="/dashboard" class="btn btn-success btn-sm">Dashboard</a>
+          <a href="/spa" class="btn btn-default btn-sm">SPA</a>
         <a href="{{ url('/logout') }}" class="btn btn-info btn-sm">Logout</a>
       </div>
     @endif

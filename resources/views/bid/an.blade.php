@@ -44,7 +44,7 @@
                 <hr>
               </div>
               <div class="col-md-4">
-                <img src="../img/instansi/kesehatan.png" alt="" class="img-thumbnail" height="150px">
+                <img src="../img/instansi/kesehatan.jpg" alt="" class="img-thumbnail" height="150px">
               </div>
 
               <div class="col-md-4">

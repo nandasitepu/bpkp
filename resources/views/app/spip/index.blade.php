@@ -49,7 +49,7 @@ canvas {
               <img src="../img/kab/majene.jpg" alt="" height="100px" >
             </div>
             <br>
-            <a href="#" class="btn btn-default btn-xs btn-block"> Detail</a>
+            <a href="{{route('spip.majene')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
             <br>
           </div>
           <div class="col-md-2">
@@ -58,7 +58,7 @@ canvas {
               <img src="../img/kab/polman.jpg" alt="" height="100px" >
             </div>
             <br>
-            <a href="#" class="btn btn-default btn-xs btn-block"> Detail</a>
+            <a href="{{route('spip.polman')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
             <br>
           </div>
           <div class="col-md-2">
@@ -67,7 +67,7 @@ canvas {
               <img src="../img/kab/mamasa.jpg" alt="" height="100px" >
             </div>
             <br>
-            <a href="#" class="btn btn-default btn-xs btn-block"> Detail</a>
+            <a href="{{route('spip.mamasa')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
             <br>
           </div>
           <div class="col-md-2">
@@ -76,7 +76,7 @@ canvas {
               <img src="../img/kab/matra.jpg" alt="" height="100px" >
             </div>
             <br>
-            <a href="#" class="btn btn-default btn-xs btn-block"> Detail</a>
+            <a href="{{route('spip.matra')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
             <br>
           </div>
           <div class="col-md-2">
@@ -85,7 +85,7 @@ canvas {
               <img src="../img/kab/mateng.jpg" alt="" height="100px" >
             </div>
             <br>
-            <a href="#" class="btn btn-default btn-xs btn-block"> Detail</a>
+            <a href="{{route('spip.mateng')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
             <br>
           </div>
       </div>

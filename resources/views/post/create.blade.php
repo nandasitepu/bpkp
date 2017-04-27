@@ -18,7 +18,7 @@
 @section('content')
 <div class="container">
   <div class="row">
-    {!! Form::open(array('route' => 'posts.store', 'data-parsley-validate' => '', 'files' => true )) !!}
+    {!! Form::open(array('route' => 'posting.store', 'data-parsley-validate' => '', 'files' => true )) !!}
       <div class="col-md-8">
         <h4> New Post: </h4>
       </div>

@@ -18,6 +18,11 @@ class AppController extends Controller
         return view('app.spip.index');
       }
 
+      public function spip_mamuju()
+      {
+        return view('app.spip.mamuju');
+      }
+
 
     // Show
       public function spip_show($id)

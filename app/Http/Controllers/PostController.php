@@ -9,32 +9,20 @@ use Session;
 class PostController extends Controller
 {
 
-    public function vueIndex(Request $request)
-    {
-        $posts = Post::latest()->paginate(5);
+  Public function getPosting(Request $request)
+   {
+     $search = $request->search;
 
-        $response = [
-            'pagination' => [
-                'total' => $posts->total(),
-                'per_page' => $posts->perPage(),
-                'current_page' => $posts->currentPage(),
-                'last_page' => $posts->lastPage(),
-                'from' => $posts->firstItem(),
-                'to' => $posts->lastItem()
-            ],
-            'data' => $posts
-        ];
+     $posting = Post::where('nama', 'LIKE', "%$search%")->orderBy('id', 'Asc')->paginate(20);
 
-        return response()->json($response);
-    }
+     return response()->json([
+       'posting' => $posting
+     ]);
+   }
 
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
 
+    // List of Posting
     public function Index()
      {
         $posts  = Post::orderBy('created_at', 'desc')->paginate(5);;

@@ -20,10 +20,10 @@
                 <img src="../img/instansi/kpk.jpg" alt="" width="100%">
               </div>
               <div class="col-md-4 ">
-                <img src="../img/instansi/polri.png" alt="" width="100%">
+                <img src="../img/instansi/polri.jpg" alt="" width="100%">
               </div>
               <div class="col-md-4 ">
-                <img src="../img/instansi/kejaksaan.png" alt="" width="100%">
+                <img src="../img/instansi/kejaksaan.jpg" alt="" width="100%">
               </div>
             </div>
           </div>

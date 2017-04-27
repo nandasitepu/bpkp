@@ -16,7 +16,6 @@
 @endsection
 <div id="app">
   @section('content')
-
     <div class="container">
       <div class="row">
         <!-- Search and Button -->
@@ -42,7 +41,7 @@
           <div class="col-md-6 col-xs-12 center ">
             <div class="panel panel-default">
               <div class="panel-body">
-                <img class="img-rounded" src="/img/instansi/jujur.png" alt="Generic placeholder image" width="125" height="150">
+                <img class="img-rounded" src="/img/instansi/jujur.jpg" alt="Generic placeholder image" width="125" height="150">
                 <img class="img-rounded" src="/img/instansi/kerjanyata.jpg" alt="Generic placeholder image" width="125" height="150">
               </div>
             </div>

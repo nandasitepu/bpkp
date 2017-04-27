@@ -22,23 +22,37 @@ Route::get('dashboard', 'AdminController@index')->name('dashboard')->middleware(
 
 // Main Menu
 Route::get('/', 'HomeController@home')->name('home');
-Route::get('kontakkami','PageController@kontak')->name('kontak');
+Route::get('kontakkami','Admin\PageController@kontak')->name('kontak');
 Route::get('tugas/st', 'TugasController@tugas')->name('tugas');
 
 // Pages
 Route::resource('pages', 'PageController');
 // Custom Pages
-Route::get('news','PageController@news');
-Route::get('data','PageController@data');
-Route::get('profil','PageController@profil')->name('profil');
-Route::get('disclaimer','PageController@disclaimer')->name('disclaimer');
-Route::get('sdank','PageController@sdank')->name('sdank');
-Route::get('faq','PageController@faq')->name('faq');
+Route::get('news','Admin\PageController@news');
+Route::get('data','Admin\PageController@data');
+Route::get('profil','Admin\PageController@profil')->name('profil');
+Route::get('disclaimer','Admin\PageController@disclaimer')->name('disclaimer');
+Route::get('sdank','Admin\PageController@sdank')->name('sdank');
+Route::get('faq','Admin\PageController@faq')->name('faq');
+
+// Bidang
+Route::get('bid/tu' , 'Admin\PageController@tu')->name('bid.tu');
+Route::get('bid/ipp', 'Admin\PageController@ipp')->name('bid.ipp');
+Route::get('bid/apd', 'Admin\PageController@apd')->name('bid.apd');
+Route::get('bid/an' , 'Admin\PageController@an')->name('bid.an');
+Route::get('bid/inv', 'Admin\PageController@inv')->name('bid.inv');
+Route::get('bid/p3a', 'Admin\PageController@p3a')->name('bid.p3a');
 
 // App
 //SPIP
 Route::get('app/spip','AppController@spip')->name('app.spip');
 Route::get('app/spip/mamuju', 'AppController@spip_mamuju')->name('spip.mamuju');
+Route::get('app/spip/majene', 'AppController@spip_mamuju')->name('spip.majene');
+Route::get('app/spip/polman', 'AppController@spip_mamuju')->name('spip.polman');
+Route::get('app/spip/mamasa', 'AppController@spip_mamuju')->name('spip.mamasa');
+Route::get('app/spip/matra' , 'AppController@spip_mamuju')->name('spip.matra');
+Route::get('app/spip/mateng', 'AppController@spip_mamuju')->name('spip.mateng');
+
 Route::get('app/spip/{obrik}', 'AppController@spip_show')->name('spip.show');
 
 
@@ -52,18 +66,13 @@ Route::get('app/fcp','AppController@fcp')->name('app.fcp');
 // Kabupaten
 Route::get('app/kab/mamuju', 'PageController@mamuju')->name('kab.mamuju');
 
-// Bidang
-Route::get('bid/tu' , 'PageController@tu')->name('bid.tu');
-Route::get('bid/ipp', 'PageController@ipp')->name('bid.ipp');
-Route::get('bid/apd', 'PageController@apd')->name('bid.apd');
-Route::get('bid/an' , 'PageController@an')->name('bid.an');
-Route::get('bid/inv', 'PageController@inv')->name('bid.inv');
-Route::get('bid/p3a', 'PageController@p3a')->name('bid.p3a');
+
 
 // Posts Resources
 Route::get('/api/posts', 'PostController@vueIndex');
 Route::get('posting', 'PostController@index')->name('posting.bpkp');
 Route::get('posting/create', 'PostController@create')->name('posting.new');
+Route::get('posting/store', 'PostController@store')->name('posting.store');
 
 // API Pegawai
 Route::get('/api/pegawai', 'PegawaiController@getPegawai');
@@ -71,3 +80,6 @@ Route::get('pegawai', 'PegawaiController@index');
 
 // Tugas Resource
 Route::resource('tugas', 'TugasController');
+
+// SPA resource
+Route::get('spa', 'spaController@index');

@@ -4,23 +4,23 @@
   <head>
     @include('_l._head')
   </head>
-
-    @include('_l._navtop') <!--  Navigation -->
+    <!--  Navigation Top -->
+    @include('_l._navtop')
 
   <!-- The Body -->
   <body>
+    <!-- The Session -->
     @include('_l._session')
-
-
-      @yield('content')  <!--  Main Contents -->
-    @include('_l._scripts')
-
+    <!--  Main Contents -->
+    @yield('content')
     <!-- The Scripts -->
-
+    @include('_l._scripts')
   </body>
-    @include('_l._navbot') <!--  Navigation -->
-  <!-- The Foot -->
+    <!--  Navigation Bottom-->
+    @include('_l._navbot')
+
   <footer>
+    <!-- The Foot -->
     @include('_l._foot')
   </footer>
 </html>
