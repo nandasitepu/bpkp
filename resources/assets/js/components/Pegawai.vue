@@ -31,7 +31,7 @@
               <td>{{p.jabatan}}</td>
               <td class="text-center">
                 <a class="btn btn-default btn-sm" href="#">
-                  <i class="fa fa-cog"></i> Settings
+                  <i class="fa fa-cog"></i> Details
                 </a>
               </td>
             </tr>

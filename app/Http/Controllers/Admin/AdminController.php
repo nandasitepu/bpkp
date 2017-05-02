@@ -1,45 +1,12 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use App\Models\Page;
-use View;
-use DB;
 
-class PageController extends Controller
-
+class AdminController extends Controller
 {
-    /* All Apps */
-    public function data()      {return view('pages.data');}
-
-    /* Pages */
-    public function profil () {return view('pages.profil');}
-    public function kontak () {return view('pages.kontak');}
-    public function disclaimer () {return view('pages.disclaimer');}
-    public function faq () {return view('pages.faq');}
-    public function sdank () {return view('pages.sdank');}
-
-    /* Kabupaten*/
-    public function mamuju() {return view('kab.mamuju');}
-
-    public function spipmamuju()
-    {
-
-    }
-
-    /* Data */
-    public function dataspip () {return view('data.spip');}
-
-    /* Bidang */
-    public function tu()  {return view('bid.tu');}
-    public function ipp() {return view('bid.ipp');}
-    public function apd() {return view('bid.apd');}
-    public function an()  {return view('bid.an');}
-    public function inv() {return view('bid.inv');}
-    public function p3a() {return view('bid.p3a');}
-
-
     /**
      * Display a listing of the resource.
      *
@@ -47,11 +14,7 @@ class PageController extends Controller
      */
     public function index()
     {
-        // List of All Pages
-
-        $pages = Page::orderBy('id', 'Asc')->paginate(10);;
-
-        return view ('pages.index')->with('pages', $pages);
+        return view ('admin.dashboard');
     }
 
     /**

@@ -1,5 +1,7 @@
 @extends('main')
-
+@section('title')
+  Fraud Control Plan (FCP)
+@endsection
 @section('stylesheets')
 <style media="screen">
 

@@ -245,3 +245,12 @@ a:hover,a:focus{
 .pad {
   padding:10px;
 }
+
+.table-responsive
+{
+  overflow-x: auto;
+}
+
+.white {
+  background-color: #fff;
+}

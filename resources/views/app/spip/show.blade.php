@@ -8,10 +8,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-10">
-        <h4>SPIP Kabupaten Mamuju</h4>
+        <h4>SPIP Kabupaten {{$obrik->nama}}</h4>
         <hr>
         <p>Level Maturitas Kabupaten {{$obrik->nama}} = 2.648</p>
-        <p>Berikut Pemetaan Dokumen SPIP Pada Pemerintah Kabupaten Mamuju</p>
+        <p>Berikut Pemetaan Dokumen SPIP Pada Pemerintah Kabupaten {{$obrik->nama}}</p>
         <div class="table-responsive">
           <table class="table table-condensed table-striped">
             <thead>

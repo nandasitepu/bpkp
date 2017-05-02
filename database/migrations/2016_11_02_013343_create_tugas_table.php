@@ -16,10 +16,10 @@ class CreateTugasTable extends Migration
       Schema::create('tugas', function (Blueprint $table) {
         $table->increments('id');
         $table->string('no_st');
-        $table->string('tanggal_tugas');
-        $table->string('nama_tugas');
-        $table->string('bidang_tugas');
-        $table->string('tim_tugas');
+        $table->string('tanggal');
+        $table->string('nama');
+        $table->string('bidang');
+        $table->string('tim');
         $table->string('no_laporan');
         $table->string('tanggal_laporan');
         $table->timestamps();

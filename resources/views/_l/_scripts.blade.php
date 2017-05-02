@@ -9,4 +9,4 @@
 
 <script src="{{asset('js/app.js')}}"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-@yield ('bottom-scripts')
+@yield ('bot-scripts')

@@ -13,15 +13,15 @@ class AppController extends Controller
 {
   // SPIP
     // The Index
-      public function spip()
-      {
-        return view('app.spip.index');
-      }
-
-      public function spip_mamuju()
-      {
-        return view('app.spip.mamuju');
-      }
+      public function spip() {return view('app.spip.index');}
+      public function spip_prov(){return view('app.spip.prov');}
+      // Kabupaten
+      public function spip_mamuju() {return view('app.spip.mamuju');}
+      public function spip_matra()  {return view('app.spip.matra');}
+      public function spip_majene() {return view('app.spip.majene');}
+      public function spip_mamasa() {return view('app.spip.mamasa');}
+      public function spip_mateng() {return view('app.spip.mateng');}
+      public function spip_polman() {return view('app.spip.polman');}
 
 
     // Show
@@ -41,6 +41,9 @@ class AppController extends Controller
         return view('app.spip.show')->with('obrik', $obrik)->with('spip', $spip);
       }
 
+
+
+      // OTHER APP
       public function apip()      {return view('app.apip.index');}
       public function simda()     {return view('app.simda.index');}
       public function siskeudes() {return view('app.siskeudes.index');}

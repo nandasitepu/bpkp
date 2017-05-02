@@ -8,8 +8,17 @@
 
 <div id="app" class="">
     <div class="container">
+
     <div class="col-md-10">
-      <div class="text-center">
+      <div class="text-center visible-xs">
+        <router-link class="btn btn-default btn-xs col-xs-12" to="/spa"><i class="fa fa-home" aria-hidden="true"></i></router-link>
+        <router-link class="btn btn-primary btn-xs col-xs-12" to="/spa/berita">Berita</router-link>
+        <router-link class="btn btn-success btn-xs col-xs-12" to="/spa/pengumuman">Pengumuman</router-link>
+        <router-link class="btn btn-warning btn-xs col-xs-12" to="/spa/pegawai">Pegawai</router-link>
+        <router-link class="btn btn-danger btn-xs col-xs-12" to="/spa/penugasan">Penugasan</router-link>
+        <br><br><br><br>
+      </div>
+      <div class="text-center well hidden-xs">
         <router-link class="btn btn-default btn-xs" to="/spa"><i class="fa fa-home" aria-hidden="true"></i></router-link>
         <router-link class="btn btn-primary btn-xs" to="/spa/berita">Berita</router-link>
         <router-link class="btn btn-success btn-xs" to="/spa/pengumuman">Pengumuman</router-link>

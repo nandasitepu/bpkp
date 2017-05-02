@@ -1,5 +1,7 @@
 @extends('main')
-
+@section('title')
+  Profil Kantor
+@endsection
 @section('stylesheets')
 
 @endsection

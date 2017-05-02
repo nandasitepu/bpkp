@@ -1,6 +1,6 @@
 @extends('main')
 @section('title', 'Perwakilan Provinsi Sulawesi Barat')
-@section('scripts')
+@section('bot-scripts')
   <script src="../js/style.js"></script>
   <script type="text/javascript">
       $(document).ready(function(e){

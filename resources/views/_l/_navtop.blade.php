@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default">
-      <div class="container">
+    <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <div>
@@ -24,33 +24,44 @@
             <div class="col-xs-12">
               <!-- Links -->
               <ul class="nav navbar-nav navbar-right hidden-xs">
-                <li><a href="{{route('profil')}}"><i class="fa fa-info" aria-hidden="true"><span class="lato">&nbsp; profil</span></i></a></li>
-                <li><a href="#"><i class="fa fa-list" aria-hidden="true">
-                <small class="lato">&nbsp; RKT</small>
-                </i></a></li>
+                <li>
+                  <a href="{{route('profil')}}">
+                    <i class="fa fa-info-circle" aria-hidden="true">
+                      <span class="lato">&nbsp;  profil</span>
+                    </i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-list" aria-hidden="true">
+                      <small class="lato">&nbsp;  RKT</small>
+                    </i>
+                  </a>
+                </li>
                 <li><a href="/tugas"><i class="fa fa-cog" aria-hidden="true">
-                <span class="lato">&nbsp; tugas</span>
+                <span class="lato">&nbsp;  tugas</span>
                 </i></a></li>
                 <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true">
-                <span class="lato">&nbsp; forum</span></i></a></li>
+                <span class="lato">&nbsp;  forum</span></i></a></li>
                 <li><a href="/kontakkami"><i class="fa fa-envelope-o" aria-hidden="true">
-                <span class="lato">&nbsp; kontak </span></i></a></li>
+                <span class="lato">&nbsp;  kontak </span></i></a></li>
                 <li>
                   <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse1" aria-expanded="false" aria-controls="nav-collapse1"><i class="fa fa-cubes" aria-hidden="true"></i>&nbsp; Bidang</a>
                 </li>
               </ul>
               <ul class="nav navbar-nav navbar-right visible-xs">
-                <li><a href="#"><i class="fa fa-info" aria-hidden="true"><span class="lato">&nbsp; Tentang Kami</span></i></a></li>
+                <li><a href="{{route('profil')}}"><i class="fa fa-info-circle" aria-hidden="true">
+                  <span class="lato">&nbsp;  profil</span></i></a></li>
                 <li><a href="#"><i class="fa fa-list" aria-hidden="true">
-                <span class="lato">&nbsp; RKT</span>
+                <span class="lato">&nbsp;  RKT</span>
                 </i></a></li>
                 <li><a href="/tugas"><i class="fa fa-fw fa-cog fa-spin">
                 </i><span class="lato">&nbsp;  tugas</span>
                 </a></li>
                 <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true">
-                <span class="lato">&nbsp; Forum</span></i></a></li>
+                <span class="lato">&nbsp;  forum</span></i></a></li>
                 <li><a href="/kontakkami"><i class="fa fa-envelope-o" aria-hidden="true">
-                <span class="lato">&nbsp; Kontak </span></i></a></li>
+                <span class="lato">&nbsp;  kontak </span></i></a></li>
                 <li>
                   <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse-xs" aria-expanded="false" aria-controls="nav-collapse1"><i class="fa fa-cubes" aria-hidden="true"></i>&nbsp; Bidang</a>
                 </li>
@@ -79,38 +90,50 @@
                   </li>
               </ul>
               <ul class="collapse nav navbar-nav nav-collapse visible-xs" id="nav-collapse-xs">
-                <div class="col-xs-6 nav navbar-nav bid">
+                <div class="col-xs-6  nav navbar-nav bid">
                   <li>
-                    <a href="#">
+                    <a href="{{route('bid.apd')}}">
                       <button class="btn btn-block btn-sm btn-default">
                         <i class="fa fa-money" aria-hidden="true"></i>&nbsp; APD
                       </button>
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="{{route('bid.ipp')}}">
                       <button class="btn btn-block btn-sm btn-default">
                         <i class="fa fa-hotel" aria-hidden="true"></i>&nbsp; IPP
                       </button>
                     </a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-bath" aria-hidden="true"></i>&nbsp; AN</a>
+                    <a href="{{route('bid.an')}}">
+                      <button class="btn btn-block btn-sm btn-default">
+                        <i class="fa fa-bath" aria-hidden="true"></i>&nbsp; AN
+                      </button>
+                    </a>
                   </li>
                 </div>
                 <div class="col-xs-6 nav navbar-nav bid">
                   <li>
-                    <a href="#">
+                    <a href="{{route('bid.inv')}}">
                       <button class="btn btn-block btn-sm btn-default">
                         <i class="fa fa-headphones" aria-hidden="true"></i>&nbsp; INV
                       </button>
                     </a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-wifi" aria-hidden="true"></i>&nbsp; P3A</a>
+                    <a href="{{route('bid.p3a')}}">
+                      <button class="btn btn-block btn-sm btn-default">
+                        <i class="fa fa-wifi" aria-hidden="true"></i>&nbsp; P3A
+                      </button>
+                    </a>
                   </li>
                   <li>
-                    <a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp; TU</a>
+                    <a href="{{route('bid.tu')}}">
+                      <button class="btn btn-block btn-sm btn-default">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp; TU
+                      </button>
+                    </a>
                   </li>
                 </div>
               </ul>

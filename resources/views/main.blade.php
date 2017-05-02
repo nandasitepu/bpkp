@@ -11,6 +11,7 @@
   <body>
     <!-- The Session -->
     @include('_l._session')
+    
     <!--  Main Contents -->
     @yield('content')
     <!-- The Scripts -->
