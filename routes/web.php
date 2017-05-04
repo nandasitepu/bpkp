@@ -11,6 +11,7 @@
 */
   Route::any('/spa{all}', function () {return view('spa.index');})->where(['all' => '.*']);
   Route::any('/dashboard{all}', function () {return view('admin.dashboard');})->where(['all' => '.*']);
+
   // Admin Pages
   Route::get('dashboard', 'Admin\AdminController@index')->name('dashboard')->middleware('auth');
 /*
@@ -31,21 +32,17 @@
 /*
   |--------------------------------------------------------------------------
   | // App \\
-  |--------------------------------------------------------------------------
+  |-------------------------------------------------------------------------
 */
   // SPIP
+  // No CREATE NO DELETE
   Route::get('app/spip','AppController@spip')->name('app.spip');
-  Route::get('app/spip/prov'  , 'AppController@spip_prov')  ->name('spip.prov');
-  Route::get('app/spip/mamuju', 'AppController@spip_mamuju')->name('spip.mamuju');
-  Route::get('app/spip/majene', 'AppController@spip_majene')->name('spip.majene');
-  Route::get('app/spip/polman', 'AppController@spip_polman')->name('spip.polman');
-  Route::get('app/spip/mamasa', 'AppController@spip_mamasa')->name('spip.mamasa');
-  Route::get('app/spip/matra' , 'AppController@spip_matra') ->name('spip.matra');
-  Route::get('app/spip/mateng', 'AppController@spip_mateng')->name('spip.mateng');
+  Route::get('app/spip/{obrik}/{short}', 'AppController@spip_show')->name('spip.show');
+  Route::get('app/spip/{obrik}/{short}/edit', 'AppController@spip_edit')->name('spip.edit');
+  Route::put('app/spip/{obrik}/{short}', 'AppController@spip_update')->name('spip.update');
 
-  Route::get('app/spip/{obrik}', 'AppController@spip_show')->name('spip.show');
 
-  //APP
+  //Other APPs
     Route::get('app/apip','AppController@apip')->name('app.apip');
     Route::get('app/simda','AppController@simda')->name('app.simda');
     Route::get('app/siskeudes','AppController@siskeudes')->name('app.siskeudes');

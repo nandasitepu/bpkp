@@ -1,5 +1,7 @@
 @extends('main')
-
+@section('title')
+  Bidang Instansi Pemerintah Pusat (IPP)
+@endsection
 @section('content')
   <div class="container">
     <div class="row">

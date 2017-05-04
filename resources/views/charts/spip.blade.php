@@ -10,7 +10,7 @@
                 datasets: [
                   {
                     label: 'Level SPIP',
-                    data: [3, 2, 1.5, 1.8, 2.2, 2.8,2.1],
+                    data: [2.5, 2, 1.5, 1.8, 2.2, 2.8,2.1],
                     backgroundColor: [
                       'rgba(255, 206, 86, 0.2)',
                       'rgba(255, 206, 86, 0.2)',

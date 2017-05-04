@@ -10,10 +10,9 @@
 <link href="/css/tab.css" rel="stylesheet">
 <link href="/css/timeline.css" rel="stylesheet">
 <link href="/css/bpkp.css" rel="stylesheet">
+<!-- Custom CSS -->
 @yield('stylesheets')
 
-
 <script src="{{asset('js/Chart.bundle.min.js')}}"></script>
-
 
 @yield('top-scripts')

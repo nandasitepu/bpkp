@@ -3,6 +3,7 @@
   <!-- The Head -->
   <head>
     @include('_l._head')
+
   </head>
     <!--  Navigation Top -->
     @include('_l._navtop')
@@ -11,7 +12,7 @@
   <body>
     <!-- The Session -->
     @include('_l._session')
-    
+
     <!--  Main Contents -->
     @yield('content')
     <!-- The Scripts -->

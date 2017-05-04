@@ -1,5 +1,7 @@
 @extends('main')
-
+@section('title')
+Bidang Akuntabilitas Pemerintah Daerah (APD)
+@endsection
 @section('content')
   <div class="container">
     <div class="row">

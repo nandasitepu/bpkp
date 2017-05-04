@@ -1,5 +1,7 @@
 @extends('main')
-
+@section('title')
+  Bidang Tata Usaha (TU)
+@endsection
 @section('content')
   <div class="container">
     <div class="row">

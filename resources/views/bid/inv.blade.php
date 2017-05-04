@@ -1,5 +1,7 @@
 @extends('main')
-
+@section('title')
+  Bidang Investigasi (INV)
+@endsection
 @section('stylesheets')
 
 @endsection

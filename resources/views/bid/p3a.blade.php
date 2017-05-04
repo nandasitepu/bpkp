@@ -1,5 +1,7 @@
 @extends('main')
-
+@section('title')
+  Bidang Program Pelaporan dan Pembinaan APIP (P3A)
+@endsection
 @section('content')
   <div class="container">
     <div class="row">

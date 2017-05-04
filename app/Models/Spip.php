@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Spip extends Model
 {
   protected $table = 'spip';
-  protected $fillable = [
-    'level_spip', 'dokumen', 'catatan'
+  public $fillable = [
+    'dokumen', 'catatan'
   ];
 
   public function obrik()
