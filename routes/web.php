@@ -36,14 +36,26 @@
 */
   // SPIP
   // No CREATE NO DELETE
+
   Route::get('app/spip','AppController@spip')->name('app.spip');
   Route::get('app/spip/{obrik}/{short}', 'AppController@spip_show')->name('spip.show');
   Route::get('app/spip/{obrik}/{short}/edit', 'AppController@spip_edit')->name('spip.edit');
   Route::put('app/spip/{obrik}/{short}', 'AppController@spip_update')->name('spip.update');
 
+  // Route::resource('app/spip', 'Apps\SPIPController');
+
+  // APIP
+  // No CREATE NO DELETE
+  Route::get('app/apip/lvup','Apps\APIPController@lvup')->name('apip.lvup');
+  Route::resource('app/apip', 'Apps\APIPController', [
+    'names' => [
+        'index' => 'app.apip',
+    ]
+  ]);
+
 
   //Other APPs
-    Route::get('app/apip','AppController@apip')->name('app.apip');
+  //  Route::get('app/apip','AppController@apip')->name('app.apip');
     Route::get('app/simda','AppController@simda')->name('app.simda');
     Route::get('app/siskeudes','AppController@siskeudes')->name('app.siskeudes');
     Route::get('app/sia','AppController@sia')->name('app.sia');

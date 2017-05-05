@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Apip extends Model
+class APIP extends Model
 {
     //
 }

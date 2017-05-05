@@ -13,6 +13,6 @@ class Sub_Unsur_SPIP extends Model
 
     public function spip()
     {
-      return $this->hasMany(Spip::class);
+      return $this->hasMany(SPIP::class);
     }
 }

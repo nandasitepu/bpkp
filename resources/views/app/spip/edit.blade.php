@@ -52,14 +52,14 @@
                     {{$s->level_spip_id}}
                    </td>
                   <td class="col-md-3">
-                      {{ Form::textarea($s->dokumen, $s->dokumen, [
+                      {{ Form::textarea( "dokumen", $s->dokumen, [
                         'class' => ' form-control',
                         'rows'=> '1',
                         'cols' => '40'
                       ])}}
                    </td>
                   <td class="col-md-3">
-                    {{ Form::textarea($s->catatan, $s->catatan, [
+                    {{ Form::textarea( "catatan", $s->catatan, [
                       'class' => ' form-control',
                       'rows'=> '1',
                       'cols' => '40'

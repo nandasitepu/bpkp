@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Spip;
+use App\Models\SPIP;
 use App\Models\Obrik;
 use App\Models\Unsur_Spip;
 use App\Models\Sub_Unsur_Spip;
@@ -62,9 +62,7 @@ class AppController extends Controller
           $s->save();
         }
 
-        return redirect()->route('spip.show', $obrik->id, $obrik->short);
-
-
+        return redirect()->route('app.spip');
       }
 
 

@@ -13,7 +13,7 @@ class Unsur_SPIP extends Model
 
   public function spip()
   {
-  return $this->belongsTo(Spip::class);  
+  return $this->belongsTo(SPIP::class);  
   }
 
 }

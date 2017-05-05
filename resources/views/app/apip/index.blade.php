@@ -17,7 +17,7 @@ canvas {
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <h3>Aparat Pengawasan Intern Pemerintah (APIP)</h3>
+        <h3>Aparat Pengawasan Intern Pemerintah (APIP) | &nbsp; <a href="{{route('apip.lvup')}}" class="label label-info">Peningkatan</a> <i class="fa fa-level-up"></i></span></h3>
         <hr>
         <span></span>
         <div class="main">
@@ -38,7 +38,7 @@ canvas {
                 <img src="../img/kab/mamuju.jpg" alt="" height="100px" >
               </div>
               <br>
-              <a href="{{route('spip.mamuju')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+              <a href="{{route('app.apip')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
               <br>
             </div>
             <div class="col-md-2">
@@ -97,10 +97,10 @@ canvas {
 
         </div>
         <div class="col-md-6 col-xs-6">
-          <img src="../img/instansi/aaipi.jpg" alt="" height="100px" >
+          <a href="#"><img src="../img/instansi/aaipi.jpg" alt="" height="100px" ></a>
         </div>
         <div class="col-md-6 col-xs-6">
-          <img src="../img/instansi/iia.jpg" alt="" height="100px" >
+          <a href="#"><img src="../img/instansi/iia.jpg" alt="" height="100px" ></a>
         </div>
       </div>
     </div>

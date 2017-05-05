@@ -14,8 +14,8 @@
           <div class="panel-body">
             <h4 class="text-center"><b>Profil Perwakilan BPKP Sulawesi Barat</b></h4>
             <hr>
-            <p>Mulai beroperasi sejak tahun 2012</p>
-            <p>Dengan Jumlah <b>Pejabat Fungsional Auditor (PFA) :</b></p>
+            <p>Mulai beroperasi sejak tahun 201X</p>
+            <p>Dengan Jumlah <b>Pegawai:</b></p>
             <div style="width:60%">
               @include('charts.pegawai')
             </div>

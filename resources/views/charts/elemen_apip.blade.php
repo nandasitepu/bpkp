@@ -2,17 +2,14 @@
 
 
 
-<div class="text-center">
-  <canvas class ="panel cool" id="PFA" height="200%" ></canvas>
-</div>
-<span class="label label-default pull-right">Last Updated : {{ date('d-M-Y ') }} </span>
+<canvas id="Elemen" class="panel cool" height="175%"></canvas>
 <!-- Chart Script -->
 <script>
-  var ctx = document.getElementById("PFA").getContext('2d');
+  var ctx = document.getElementById("Elemen").getContext('2d');
   var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-    labels: ["IPP", "APD", "AN", "INV", "P3A", "TU"],
+    labels: ["Peran dan Layanan | KPA", "Pengelolaan SDM | KPA", "Praktek Profesional | KPA", "Akuntabilitas dan Manajemen Kinerja | KPA", "Budaya dan Organisasi | KPA", "Struktur dan Tata Kelola | KPA"],
     datasets: [{
       backgroundColor: [
         "#2ecc71",
@@ -22,13 +19,14 @@
         "#f1c40f",
         "#e74c3c",
     ],
-    data: [14, 17, 10, 9, 9, 20]
-    }]
+    data: [5, 10, 7, 7, 5, 5]
+  },
+ ]
   },
   options: {
     title: {
       display: true,
-      text: 'PFA BPKP Prov Sulawesi Barat '
+      text: 'Elemen Kapabilitas APIP '
     },
     legend: {
       position: 'right',
@@ -37,10 +35,10 @@
     mode: 'value',
     arcText: false,
     format: function (value) {
-      return value + ' org';
+      return value;
     }
   }
 
   }
   });
-  </script>
+</script>

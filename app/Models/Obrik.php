@@ -13,6 +13,6 @@ class Obrik extends Model
 
   public function spip()
   {
-    return $this->hasMany(Spip::class);
+    return $this->hasMany(SPIP::class);
   }
 }

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Spip extends Model
+class SPIP extends Model
 {
   protected $table = 'spip';
   public $fillable = [

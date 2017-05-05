@@ -14,5 +14,5 @@
 @yield('stylesheets')
 
 <script src="{{asset('js/Chart.bundle.min.js')}}"></script>
-
+<script src="{{asset('js/Chart.pieceLabel.min.js')}}"></script>
 @yield('top-scripts')
