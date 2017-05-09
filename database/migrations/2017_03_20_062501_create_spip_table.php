@@ -15,13 +15,14 @@ class CreateSpipTable extends Migration
     {
         Schema::create('spip', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('level');
+
             $table->text('dokumen');
             $table->text('catatan');
             // Foreign Key
-            $table->integer('kab_id');
-            $table->integer('unsur_spip_id');
-            $table->integer('sub_unsur_spip_id');
+            $table->integer('obrik_id');
+            $table->integer('spip_level_id');
+            $table->integer('spip_unsur_id');
+            $table->integer('spip_sub_unsur_id');
             $table->timestamps();
         });
     }

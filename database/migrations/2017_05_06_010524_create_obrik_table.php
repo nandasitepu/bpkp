@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateKabupatenTable extends Migration
+class CreateObrikTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateKabupatenTable extends Migration
      */
     public function up()
     {
-        Schema::create('kabupaten', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+        Schema::create('obrik', function (Blueprint $table) {
+            //
         });
     }
 
@@ -26,6 +25,6 @@ class CreateKabupatenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kabupaten');
+      Schema::dropIfExists('obrik');
     }
 }

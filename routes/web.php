@@ -1,8 +1,9 @@
 <?php
 
 
-/******************************** Main Menu ********************************/
+/******************************** HOME ********************************/
   Route::get('/', 'HomeController@home')->name('home');
+  Route::get('search', 'HomeController@search')->name('search');
 
 /*
   |--------------------------------------------------------------------------
@@ -41,7 +42,7 @@
   Route::get('app/spip/{obrik}/{short}', 'AppController@spip_show')->name('spip.show');
   Route::get('app/spip/{obrik}/{short}/edit', 'AppController@spip_edit')->name('spip.edit');
   Route::put('app/spip/{obrik}/{short}', 'AppController@spip_update')->name('spip.update');
-
+  Route::get('app/spip/tentang', 'AppController@spip_about')->name('spip.tentang');
   // Route::resource('app/spip', 'Apps\SPIPController');
 
   // APIP
@@ -50,6 +51,7 @@
   Route::resource('app/apip', 'Apps\APIPController', [
     'names' => [
         'index' => 'app.apip',
+        'show' =>'apip.show'
     ]
   ]);
 
@@ -66,7 +68,7 @@
   | // Posts \\
   |--------------------------------------------------------------------------
 */
-  Route::get('api/posts', 'PostController@vueIndex');
+  Route::get('api/posts', 'PostController@getPosts');
   Route::get('posts', 'PostController@index')->name('posting.bpkp');
   Route::get('posts/create', 'PostController@create')->name('posting.new');
   Route::get('posts/store', 'PostController@store')->name('posting.store');

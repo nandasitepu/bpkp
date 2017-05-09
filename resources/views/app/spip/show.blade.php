@@ -24,20 +24,22 @@
         <!-- Test -->
         <div class="text-center cool">
           <div class="btn-group hidden-xs" style="box-shadow: 1px 1px 1px 2px #000" role="group" aria-label="...">
-            <a class="btn btn-primary" data-toggle="tab" href="#home">Lingkungan Pengendalian</a>
-            <a class="btn btn-success" data-toggle="tab" href="#menu1">Penilaian Risiko</a>
-            <a class="btn btn-info" data-toggle="tab" href="#menu2">Kegiatan Pengendalian</a>
-            <a class="btn btn-warning" data-toggle="tab" href="#menu3">Informasi dan Komunikasi</a>
-            <a class="btn btn-danger" data-toggle="tab" href="#menu4">Pemantauan Berkelanjutan</a>
+            <a class="btn btn-default" data-toggle="tab" href="#home"># SPIP</a>
+            <a class="btn btn-primary" data-toggle="tab" href="#1">Lingkungan Pengendalian</a>
+            <a class="btn btn-success" data-toggle="tab" href="#2">Penilaian Risiko</a>
+            <a class="btn btn-info" data-toggle="tab" href="#3">Kegiatan Pengendalian</a>
+            <a class="btn btn-warning" data-toggle="tab" href="#4">Informasi dan Komunikasi</a>
+            <a class="btn btn-danger" data-toggle="tab" href="#5">Pemantauan Berkelanjutan</a>
           </div>
         </div>
         <div class="text-center cool">
           <div class="btn-group-vertical visible-xs"  role="group" aria-label="...">
-            <a class="btn btn-primary" data-toggle="tab" href="#home">Lingkungan Pengendalian</a>
-            <a class="btn btn-success" data-toggle="tab" href="#menu1">Penilaian Risiko</a>
-            <a class="btn btn-info" data-toggle="tab" href="#menu2">Kegiatan Pengendalian</a>
-            <a class="btn btn-warning" data-toggle="tab" href="#menu3">Informasi dan Komunikasi</a>
-            <a class="btn btn-danger" data-toggle="tab" href="#menu4">Pemantauan Berkelanjutan</a>
+            <a class="btn btn-default" data-toggle="tab" href="#home"># SPIP</a>
+            <a class="btn btn-primary" data-toggle="tab" href="#1">Lingkungan Pengendalian</a>
+            <a class="btn btn-success" data-toggle="tab" href="#2">Penilaian Risiko</a>
+            <a class="btn btn-info" data-toggle="tab" href="#3">Kegiatan Pengendalian</a>
+            <a class="btn btn-warning" data-toggle="tab" href="#4">Informasi dan Komunikasi</a>
+            <a class="btn btn-danger" data-toggle="tab" href="#5">Pemantauan Berkelanjutan</a>
           </div>
         </div>
 
@@ -46,31 +48,38 @@
         <hr>
         <div class="tab-content">
           <div id="home" class="tab-pane fade in active">
+            <h4 class="text-center"><span class="label label-default">Kondisi SPIP</span></h4>
+            @component('_c.table_spip')
+              <!-- All -->
+              @include('_s.edit')
+            @endcomponent
+          </div>
+          <div id="1" class="tab-pane fade">
             <h4>Lingkungan Pengendalian</h4>
             @component('_c.table_spip')
               <!-- Lingkungan Pengendalian -->
               @include('_s.lipeng')
             @endcomponent
           </div>
-          <div id="menu1" class="tab-pane fade">
+          <div id="2" class="tab-pane fade">
             <h4>Penilaian Risiko</h4>
             @component('_c.table_spip')
               @include('_s.risk')
             @endcomponent
           </div>
-          <div id="menu2" class="tab-pane fade">
+          <div id="3" class="tab-pane fade">
             <h4>Kegiatan Pengendalian</h4>
             @component('_c.table_spip')
               @include('_s.kepeng')
             @endcomponent
           </div>
-          <div id="menu3" class="tab-pane fade">
+          <div id="4" class="tab-pane fade">
             <h4>Informasi dan Komunikasi</h4>
             @component('_c.table_spip')
               @include('_s.infokom')
             @endcomponent
           </div>
-          <div id="menu4" class="tab-pane fade">
+          <div id="5" class="tab-pane fade">
             <h4>Pemantauan Berkelanjutan</h4>
             @component('_c.table_spip')
               @include('_s.pemantauan')
@@ -82,9 +91,9 @@
         <img src="{{asset('img/kab/'. $obrik->short . '.jpg')}}" alt="" height="100px" >
         <h5 class="label label-primary">Pemerintah Kabupaten {{$obrik->short}}</h5>
         <div class="form-group">
-          <label for="sel1">Pilih Pemda:</label>
+          <label for="sel1">Pemda:</label>
           <select class="form-control" id="kabupaten" onchange="location=this.value">
-            <option></option>
+            <option># Pilih Dulu #</option>
             <option value="../1/provinsi">Provinsi</option>
             <option value="../2/mamuju">Mamuju</option>
             <option value="../3/majene">Majene</option>
@@ -94,6 +103,7 @@
             <option value="../7/matra">Matra</option>
           </select>
         </div>
+        @if (Auth::check())
         <span class="input-group-addon"><i class="fa fa-edit fa-2x"></i>
           <a href="{{url('app/spip/'. $obrik->id.'/'.$obrik->short.'/edit')}}">
             <button type="button" style="margin-top:20px" class="btn btn-sm btn-block btn-primary">
@@ -101,6 +111,7 @@
             </button>
           </a>
         </span>
+        @endif
       </div>
     </div>
   </div>

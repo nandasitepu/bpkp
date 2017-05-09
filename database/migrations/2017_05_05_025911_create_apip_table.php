@@ -14,7 +14,17 @@ class CreateApipTable extends Migration
     public function up()
     {
         Schema::create('apip', function (Blueprint $table) {
-            //
+          $table->increments('id');
+          $table->text('pernyataan')
+          $table->text('dokumen');
+          $table->text('catatan');
+          $table->string('status');
+
+          // Foreign Key
+          $table->integer('obrik_id');
+          $table->integer('apip_elemen_id');
+          $table->string('apip_level_id');
+          $table->timestamps();
         });
     }
 
@@ -25,8 +35,6 @@ class CreateApipTable extends Migration
      */
     public function down()
     {
-        Schema::table('apip', function (Blueprint $table) {
-            Schema::dropIfExists('apip');
-        });
+      Schema::dropIfExists('apip');
     }
 }

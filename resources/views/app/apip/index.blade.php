@@ -17,7 +17,9 @@ canvas {
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <h3>Aparat Pengawasan Intern Pemerintah (APIP) | &nbsp; <a href="{{route('apip.lvup')}}" class="label label-info">Peningkatan</a> <i class="fa fa-level-up"></i></span></h3>
+        <h4><span>Aparat Pengawasan Intern Pemerintah (APIP) |</span>
+        &nbsp; <a href="{{route('apip.lvup')}}" class="label label-info">Peningkatan Level</a> <i class="fa fa-level-up"></i></span>
+        </h4>
         <hr>
         <span></span>
         <div class="main">
@@ -33,54 +35,54 @@ canvas {
         </div>
         <div class="row text-center">
             <div class="col-md-2">
-            Inspektorat
+            APIP Mamuju
               <div class="">
-                <img src="../img/kab/mamuju.jpg" alt="" height="100px" >
+                <img class="img-thumbnail" src="../img/kab/mamuju.jpg" alt="" height="100px" >
               </div>
               <br>
               <a href="{{route('app.apip')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
               <br>
             </div>
             <div class="col-md-2">
-              Inspektorat
+            APIP Majene
               <div class="">
-                <img src="../img/kab/majene.jpg" alt="" height="100px" >
+                <img class="img-thumbnail" src="../img/kab/majene.jpg" alt="" height="100px" >
               </div>
               <br>
               <a href="#" class="btn btn-default btn-xs btn-block"> Detail</a>
               <br>
             </div>
             <div class="col-md-2">
-              Inspektorat
+            APIP Polman
               <div class="">
-                <img src="../img/kab/polman.jpg" alt="" height="100px" >
+                <img class="img-thumbnail" src="../img/kab/polman.jpg" alt="" height="100px" >
               </div>
               <br>
               <a href="#" class="btn btn-default btn-xs btn-block"> Detail</a>
               <br>
             </div>
             <div class="col-md-2">
-                Inspektorat
+            APIP Mamasa
               <div class="">
-                <img src="../img/kab/mamasa.jpg" alt="" height="100px" >
+                <img class="img-thumbnail" src="../img/kab/mamasa.jpg" alt="" height="100px" >
               </div>
               <br>
               <a href="#" class="btn btn-default btn-xs btn-block"> Detail</a>
               <br>
             </div>
             <div class="col-md-2">
-            Inspektorat
+            APIP Matra
               <div class="">
-                <img src="../img/kab/matra.jpg" alt="" height="100px" >
+                <img class="img-thumbnail" src="../img/kab/matra.jpg" alt="" height="100px" >
               </div>
               <br>
               <a href="#" class="btn btn-default btn-xs btn-block"> Detail</a>
               <br>
             </div>
             <div class="col-md-2">
-                Inspektorat
+                APIP Mateng
               <div class="">
-                <img src="../img/kab/mateng.jpg" alt="" height="100px" >
+                <img class="img-thumbnail" src="../img/kab/mateng.jpg" alt="" height="100px" >
               </div>
               <br>
               <a href="#" class="btn btn-default btn-xs btn-block"> Detail</a>

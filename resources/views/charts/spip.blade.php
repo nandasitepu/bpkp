@@ -1,16 +1,16 @@
 <canvas class ="panel cool" id="SPIP" height="175%"></canvas>
-<span class="label label-default pull-right">Last Updated : 1 Februari 2017</span>
+<span class="label label-default pull-right">Last Updated : {{ date('d-M-Y ') }} </span>
 <!-- Chart Script -->
 <script>
         var ctx = document.getElementById("SPIP").getContext("2d");
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels:  ["Prov", "Polman", "Matra", "Mamasa", "Mamuju", "Mateng", "Majene"],
+                labels:  ["Prov", "Mamuju", "Majene", "Mamasa", "Polman", "Mateng", "Matra"],
                 datasets: [
                   {
                     label: 'Level SPIP',
-                    data: [2.5, 2, 1.5, 1.8, 2.2, 2.8,2.1],
+                    data: [1.917, 2.548, 2.725, 1.340, 2.525, "belum ada" , 1.635],
                     backgroundColor: [
                         "#fff",
                         "#fff",
@@ -45,7 +45,7 @@
                   display: true,
                   text: 'SPIP Sulawesi Barat',
                 },
-                
+
 
             }
         });

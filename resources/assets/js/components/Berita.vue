@@ -1,5 +1,4 @@
 <template>
-
     <div class="panel panel-default">
       <div class="panel-body">
         <div class="row">
@@ -8,11 +7,16 @@
             <h6 class="text-center">Made with
                 <i class="fa fa-fw fa-heart text-danger"></i> by <a href="#" class="btn btn-primary btn-xs" target="_blank">Nanda Sitepu </a>
             </h6>
+            <div class="input-group-sm">
+              <span class="input-group-addon">Search by Name:</span>
+              <input @keyup="fetchDataPosts()" type="text" name="search" class="form-control" v-model="search">
+            </div>
           </div>
         </div>
         <hr>
 
         <div class="row">
+          <div id="berita" v-for="p in posts.data">
           <div class="col-md-4">
             <div class="berita-image">
               <img src="http://lorempixel.com/150/150?rand=1" class="img-thumbnail" alt="Image" width="100%">
@@ -20,29 +24,26 @@
           </div>
           <div class="col-md-8">
 
-              <div id="berita">
-                <div class="berita-title">
 
+                <div class="berita-title">
+                  {{p.title }}
                 </div>
                 <div class="berita-info">
-                  <span class="label label-default">Uploader: NS</span>
-                  <span class="label label-default"></span>
+                  <span class="label label-primary">Uploader: NS</span>
+                  <span class="label label-success">Date: {{p.created_at}}</span>
                   <span class="label label-default">Category: Berita</span>
                 </div>
                 <hr>
                 <div class="berita-body">
                   <p>
-
+                    {{p.body | Short}}
                   </p>
                 </div>
                 <hr>
                 <div class="berita-footer">
                   <div class="text-right">
                     <a href="#"><button class="btn btn-sm btn-default"><i class="fa fa-fw fa-eye"></i> Show</button></a>
-
                     <a href="#"><button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-edit"></i> Edit</button></a>
-
-
                   </div>
                 </div>
                 <hr>
@@ -64,21 +65,28 @@
   export default {
     data() {
       return {
-        pegawai:[],
+        posts:[],
         search:'',
-        url:'../api/pegawai'
+        url:'../api/posts'
       }
     },
     created:function(){
-      this.fetchDataPegawai()
+      this.fetchDataPosts()
     },
     methods:{
-      fetchDataPegawai() {
+      fetchDataPosts() {
         var vm = this
         axios.get(this.url + '?search=' + this.search)
           .then(function(response){
-             Vue.set(vm.$data, 'pegawai', response.data.pegawai)
+             Vue.set(vm.$data, 'posts', response.data.posts)
           })
+      }
+    },
+    filters: {
+      Short: function(value) {
+      return  value.length > length ?
+        value.substring(0, 300) + "..." :
+        value
       }
     }
   }

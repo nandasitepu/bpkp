@@ -13,9 +13,12 @@ class CreateSubUnsurSpipTable extends Migration
      */
     public function up()
     {
-        Schema::create('sub_unsur_spip', function (Blueprint $table) {
+        Schema::create('spip_sub_unsur', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->string('nama');
+
+            // Foreign Key
+            $table->integer('spip_unsur_id');
         });
     }
 
@@ -26,6 +29,6 @@ class CreateSubUnsurSpipTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sub_unsur_spip');
+        Schema::dropIfExists('spip_sub_unsur');
     }
 }

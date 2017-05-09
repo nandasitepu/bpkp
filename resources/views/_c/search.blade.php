@@ -10,7 +10,7 @@
   </ul>
 </div>
 <div class="input-group">
-  <div class="input-group-btn  search-panel">
+  <div class="input-group-btn search-panel">
       <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
         <span id="search_concept">Filter</span> <span class="caret"></span>
       </button>
@@ -25,6 +25,6 @@
   <input type="hidden" name="search_param" value="all" id="search_param">
   <input type="text" class="form-control input-sm text-center" name="x" placeholder="Cari...">
   <span class="input-group-btn">
-    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+    <a href="{{route('search')}}"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button></a>
   </span>
 </div>

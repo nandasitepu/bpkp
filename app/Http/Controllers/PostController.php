@@ -9,14 +9,14 @@ use Session;
 class PostController extends Controller
 {
 
-  Public function getPosting(Request $request)
+  Public function getPosts(Request $request)
    {
      $search = $request->search;
 
-     $posting = Post::where('nama', 'LIKE', "%$search%")->orderBy('id', 'Asc')->paginate(20);
+     $posts = Post::where('title', 'LIKE', "%$search%")->orderBy('id', 'Asc')->paginate(20);
 
      return response()->json([
-       'posting' => $posting
+       'posts' => $posts
      ]);
    }
 

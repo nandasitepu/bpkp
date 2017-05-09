@@ -1,5 +1,7 @@
 @extends('main')
-
+@section('title')
+  Sulawesi Barat | Berita
+@endsection
 @section('stylesheets')
 
 @endsection

@@ -8,12 +8,8 @@
     @include('_l._navtop')
   <!-- The Body -->
   <body>
-
-
-
       @include('_l._session')
       @yield('content')  <!--  Main Contents -->
-
     <!-- The Scripts -->
   @include('_l._scripts')
 

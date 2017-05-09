@@ -15,18 +15,20 @@ class AppController extends Controller
   // SPIP
     // The Index
       public function spip() {return view('app.spip.index');}
+      public function spip_about() {return view('app.spip.tentang');}
 
     // Show
       public function spip_show($id)
       {
         $obrik = Obrik::find($id);
-
+        $condition = ['obrik_id' => $id];
         $condition1 = ['obrik_id' => $id, 'unsur_spip_id' => '1'];
         $condition2 = ['obrik_id' => $id, 'unsur_spip_id' => '2'];
         $condition3 = ['obrik_id' => $id, 'unsur_spip_id' => '3'];
         $condition4 = ['obrik_id' => $id, 'unsur_spip_id' => '4'];
         $condition5 = ['obrik_id' => $id, 'unsur_spip_id' => '5'];
 
+        $spip  = SPIP::where($condition)->get();
         $spip1 = SPIP::where($condition1)->get();
         $spip2 = SPIP::where($condition2)->get();
         $spip3 = SPIP::where($condition3)->get();
@@ -34,6 +36,7 @@ class AppController extends Controller
         $spip5 = SPIP::where($condition5)->get();
 
         return view('app.spip.show')->with('obrik', $obrik)
+                                    ->with('spip' , $spip)
                                     ->with('spip1', $spip1)
                                     ->with('spip2', $spip2)
                                     ->with('spip3', $spip3)
