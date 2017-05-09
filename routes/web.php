@@ -37,13 +37,12 @@
 */
   // SPIP
   // No CREATE NO DELETE
-
+  Route::get('app/spip/tentang', 'AppController@spip_about')->name('spip.tentang');
   Route::get('app/spip','AppController@spip')->name('app.spip');
   Route::get('app/spip/{obrik}/{short}', 'AppController@spip_show')->name('spip.show');
   Route::get('app/spip/{obrik}/{short}/edit', 'AppController@spip_edit')->name('spip.edit');
   Route::put('app/spip/{obrik}/{short}', 'AppController@spip_update')->name('spip.update');
-  Route::get('app/spip/tentang', 'AppController@spip_about')->name('spip.tentang');
-  // Route::resource('app/spip', 'Apps\SPIPController');
+    // Route::resource('app/spip', 'Apps\SPIPController');
 
   // APIP
   // No CREATE NO DELETE
