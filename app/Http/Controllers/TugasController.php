@@ -9,7 +9,7 @@ use App\Http\Requests;
 class TugasController extends Controller
 {
 
-  
+
 
     public function tugas()
     {
