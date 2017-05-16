@@ -11,7 +11,6 @@ canvas {
 }
 </style>
 @endsection
-
 @section('content')
   <div class="container">
     <div class="row">
@@ -51,6 +50,7 @@ canvas {
                   </tr>
                 </thead>
                 <tbody>
+                  <!-- Gak KeBaca Di Server Prod -->
                   @foreach (App\Models\SPIP::where(['level_spip_id' => 1, 'obrik_id' => 1])->get() as $s)
                     <tr>
                       <td class="col-md-1 text-center">{{$loop->iteration}}</td>

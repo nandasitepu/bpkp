@@ -1,11 +1,11 @@
 <canvas class ="panel cool" id="APIP" height="200%"></canvas>
-<span class="label label-default pull-right">Last Updated : 1 Februari 2017</span>
+<span class="label label-default pull-right">Last Updated : Mei 2017</span>
 <!-- Chart Script -->
 <script>
 var ctx = document.getElementById("APIP").getContext("2d");
 var myChart = new Chart(ctx, {
     type: 'bar',
-    
+
     data: {
         labels:  ["Prov", "Polman", "Matra", "Mamasa", "Mamuju", "Mateng","Majene"],
         datasets: [
@@ -33,10 +33,6 @@ var myChart = new Chart(ctx, {
             ],
             borderWidth: 1
         },
-
-
-
-
       ]
     },
     options: {
@@ -51,6 +47,7 @@ var myChart = new Chart(ctx, {
           display: true,
           text: 'APIP Sulawesi Barat',
         },
+        tooltipTemplate: "<%if (label){%><%=label %>: <%}%><%= value + ' %' %>",
 
     },
 

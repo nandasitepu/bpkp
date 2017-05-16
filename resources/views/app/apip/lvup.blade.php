@@ -26,7 +26,12 @@ canvas {
         <div class="panel panel-default">
 
           <div class="panel-body">
-            <h4 ><span class="btn btn-default"><i class="fa fa-heart-o fa-fw"></i> <b>Pedoman Peningkatan Kapabilitas APIP</b></span></h4>
+            <h4 >
+              <span class="btn btn-default">
+                <b>Pedoman Peningkatan Kapabilitas APIP</b>
+                <i class="fa fa-hospital-o fa-2x fa-fw text-info"></i>
+              </span>
+            </h4>
             <hr>
             <h5>Ada 6 Elemen</h5>
             <ul class="fa-ul">

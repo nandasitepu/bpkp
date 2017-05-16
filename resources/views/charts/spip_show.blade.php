@@ -1,16 +1,22 @@
-<canvas class ="panel cool" id="SPIP" height="175%"></canvas>
-<span class="label label-default pull-right">Last Updated : {{ date('d-M-Y ') }} </span>
+<canvas class ="panel cool" id="SPIP" height="175%" ></canvas>
+
 <!-- Chart Script -->
 <script>
         var ctx = document.getElementById("SPIP").getContext("2d");
         var myChart = new Chart(ctx, {
-            type: 'bar',
+            type: 'horizontalBar',
             data: {
-                labels:  ["Prov", "Mamuju", "Majene", "Mamasa", "Polman", "Mateng", "Matra"],
+                labels:  [
+                  "Lingkungan Pengendalian ",
+                  "Penilaian Risiko ",
+                  "Kegiatan Pengendalian ",
+                  "Informasi dan Komunikasi ",
+                  "Pemantauan Berkelanjutan "
+                ],
                 datasets: [
                   {
-                    label: 'Level SPIP',
-                    data: [2.288, 2.548, 2.725, 1.340, 2.525, 0 , 1.635],
+                    label: 'Nilai Rata-Rata Unsur',
+                    data: [2, 1, 2, 1, 2],
                     backgroundColor: [
                         "#fff",
                         "#fff",
@@ -18,7 +24,7 @@
                         "#fff",
                         "#fff",
                         "#fff",
-                        "#fff",
+
                     ],
                     borderColor: [
                       "#2ecc71",
@@ -27,7 +33,7 @@
                       "#9b59b6",
                       "#f1c40f",
                       "#e74c3c",
-                      "#000"
+
                     ],
                     borderWidth: 2
                 },
@@ -35,7 +41,7 @@
             },
             options: {
                 scales: {
-                    yAxes: [{
+                    xAxes: [{
                         ticks: {
                             beginAtZero:true
                         }
@@ -43,7 +49,7 @@
                 },
                 title: {
                   display: true,
-                  text: 'SPIP Sulawesi Barat',
+                  text: 'Maturitas SPIP',
                 },
 
 

@@ -12,22 +12,20 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <h4>Sekilas <i>Fraud Control Plan </i> (FCP)  </h4>
-        <hr>
+        <div class="text-justify">
+          <h3><span class="label label-danger"><i>Fraud Control Plan </i> (FCP)  </span></h3>
+          <hr>
+          <p>Korupsi di Indonesia dilakukan secara sistemik sehingga perlu penanganan yang sistematis. Hal tersebut sejalan dengan UNCAC tahun 2003 yang telah diratifikasi dengan Undang-undang No. 7 tahun 2006. Dalam article 5 UNCAC tahun 2003 disebutkan bahwa pencegahan korupsi juga harus dilakukan seiring dengan upaya represif dalam pemberantasan korupsi. Untuk pencegahan korupsi memerlukan instrumen yang dapat memperkuat pengendalian intern instansi pemerintah.</p>
 
-        <p>Korupsi di Indonesia dilakukan secara sistemik sehingga perlu penanganan yang sistematis. Hal tersebut sejalan dengan UNCAC tahun 2003 yang telah diratifikasi dengan Undang-undang No. 7 tahun 2006. Dalam article 5 UNCAC tahun 2003 disebutkan bahwa pencegahan korupsi juga harus dilakukan seiring dengan upaya represif dalam pemberantasan korupsi. Untuk pencegahan korupsi memerlukan instrumen yang dapat memperkuat pengendalian intern instansi pemerintah.</p>
+          <p>BPKP sedang dan terus mengembangkan pengendalian yang dirancang secara spesifik untuk mencegah, menangkal dan memudahkan pengungkapan kejadian yang berindikasi korupsi.
+          </p>
+          <p>Sistem tersebut ditandai dengan adanya atribut-atribut yang spesifik yang merupakan pendalaman atau penguatan dari sistem tata kelola setiap organisasi yang telah ada yang dipengaruhi oleh situasi dan kondisi masing-masing organisasi pemerintah.</p>
 
-        <p>BPKP sedang dan terus mengembangkan pengendalian yang dirancang secara spesifik untuk mencegah, menangkal dan memudahkan pengungkapan kejadian yang berindikasi korupsi.
-        </p>
-        <p>Sistem tersebut ditandai dengan adanya atribut-atribut yang spesifik yang merupakan pendalaman atau penguatan dari sistem tata kelola setiap organisasi yang telah ada yang dipengaruhi oleh situasi dan kondisi masing-masing organisasi pemerintah.</p>
-
-        ALUR FRAUD CONTROL PLAN
-
-        FRAMEWORK FRAUD CONTROL PLAN
-
-        SIKLUS FRAUD CONTROL PLAN
-
-        PENDEKATAN EVALUASI
+          <h5><u>Alur FCP</u></h5>
+          <h5>Framework FCP</h5>
+          <h5>Siklus FCP</h5>
+          <h5>Pendekatan Evaluasi</h5>
+        </div>
       </div>
       <div class="col-md-4 well">
         <h4 class="pull-right">// 10 Atribut | FCP</h4>

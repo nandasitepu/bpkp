@@ -14,18 +14,18 @@
       <div class="dropdown">
           <a href="#" >
             <button type="button" class="btn btn-primary btn-block btn-sm " name="button">
-              Login as | &nbsp; {{ Auth::user()->name }} &nbsp;
+              Login as | &nbsp; {{ Auth::user()->name }} &nbsp; <i class="fa fa-fw fa-google-plus-square"></i>
             </button>
           </a>
       </div>
       <div class="btn-group btn-group-justified hidden-xs">
-        <a href="/dashboard" class="btn btn-default btn-sm">Dashboard</a>
-        <a href="/spa" class="btn btn-info btn-sm">SPA</a>
-        <a href="{{ url('/logout') }}" class="btn btn-success btn-sm">Logout</a>
+        <a href="/dashboard" class="btn btn-default btn-sm"><i class="fa fa-fw fa-dashboard"></i>Dashboard</a>
+        <a href="/spa" class="btn btn-info btn-sm"><i class="fa fa-fw fa-pagelines"></i>SPA</a>
+        <a href="{{ url('/logout') }}" class="btn btn-success btn-sm"><i class="fa fa-fw fa-sign-out"></i>Logout</a>
       </div>
       <div class="btn-group btn-group-justified visible-xs">
         <a href="/dashboard" class="btn btn-success btn-sm">Dashboard</a>
-          <a href="/spa" class="btn btn-default btn-sm">SPA</a>
+        <a href="/spa" class="btn btn-default btn-sm">SPA</a>
         <a href="{{ url('/logout') }}" class="btn btn-info btn-sm">Logout</a>
       </div>
     @endif
