@@ -16,6 +16,7 @@ class PageController extends Controller
 
     /* Pages */
     public function profil () {return view('pages.profil');}
+    public function rkt () {return view('pages.rkt');}
     public function kontak () {return view('pages.kontak');}
     public function disclaimer () {return view('pages.disclaimer');}
     public function faq () {return view('pages.faq');}

@@ -28,7 +28,7 @@
   options: {
     title: {
       display: true,
-      text: 'PFA BPKP Prov Sulawesi Barat '
+      text: 'Pegawai BPKP Prov Sulawesi Barat '
     },
     legend: {
       position: 'right',

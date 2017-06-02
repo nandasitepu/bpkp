@@ -24,7 +24,11 @@
   </div>
   <input type="hidden" name="search_param" value="all" id="search_param">
   <input type="text" class="form-control input-sm text-center" name="x" placeholder="Cari...">
-  <span class="input-group-btn">
-    <a href="{{route('search')}}"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button></a>
-  </span>
+  <div class="input-group-btn search-panel">
+      <a href="{{route('search')}}">
+        <button type="button" class="btn btn-default btn-sm " >
+          <i class="fa fa-fw fa-search-minus"></i>
+        </button>
+      </a>
+  </div>
 </div>

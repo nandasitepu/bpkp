@@ -22,6 +22,8 @@ let routes=[
     path:'/spa/pengumuman',
     component:require('./components/Pengumuman')
   },
+
+
   // Dashboard
   {
     path:'/dashboard',
@@ -40,6 +42,8 @@ let routes=[
 
 export default new VueRouter({
   mode: 'history',
-  routes,
-  linkActiveClass: 'active'
+  hashbang: false,
+  linkActiveClass: 'active',
+  saveScrollPosition: true,
+  routes
 });

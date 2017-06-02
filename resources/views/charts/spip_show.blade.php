@@ -43,7 +43,8 @@
                 scales: {
                     xAxes: [{
                         ticks: {
-                            beginAtZero:true
+                            beginAtZero:true,
+                            max: 5
                         }
                     }]
                 },

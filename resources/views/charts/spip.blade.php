@@ -1,5 +1,5 @@
 <canvas class ="panel cool" id="SPIP" height="175%"></canvas>
-<span class="label label-default pull-right">Last Updated : {{ date('d-M-Y ') }} </span>
+<span class="label label-default pull-right">Last Updated : {{ date('M-Y ') }} </span>
 <!-- Chart Script -->
 <script>
         var ctx = document.getElementById("SPIP").getContext("2d");

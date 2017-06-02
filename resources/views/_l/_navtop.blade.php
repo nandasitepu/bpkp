@@ -32,7 +32,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="{{route('rkt')}}">
                     <i class="fa fa-list" aria-hidden="true">
                       <small class="lato">&nbsp;  RKT</small>
                     </i>
@@ -43,7 +43,7 @@
                 </i></a></li>
                 <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true">
                 <span class="lato">&nbsp;  forum</span></i></a></li>
-                <li><a href="/kontakkami"><i class="fa fa-envelope-o" aria-hidden="true">
+                <li><a href="/kontak"><i class="fa fa-envelope-o" aria-hidden="true">
                 <span class="lato">&nbsp;  kontak </span></i></a></li>
                 <li>
                   <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse1" aria-expanded="false" aria-controls="nav-collapse1"><i class="fa fa-cubes" aria-hidden="true"></i>&nbsp; Bidang</a>
@@ -52,7 +52,7 @@
               <ul class="nav navbar-nav navbar-right visible-xs">
                 <li><a href="{{route('profil')}}"><i class="fa fa-info-circle" aria-hidden="true">
                   <span class="lato">&nbsp;  profil</span></i></a></li>
-                <li><a href="#"><i class="fa fa-list" aria-hidden="true">
+                <li><a href="{{route('rkt')}}"><i class="fa fa-list" aria-hidden="true">
                 <span class="lato">&nbsp;  RKT</span>
                 </i></a></li>
                 <li><a href="/tugas"><i class="fa fa-fw fa-cog fa-spin">
@@ -60,7 +60,7 @@
                 </a></li>
                 <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true">
                 <span class="lato">&nbsp;  forum</span></i></a></li>
-                <li><a href="/kontakkami"><i class="fa fa-envelope-o" aria-hidden="true">
+                <li><a href="/kontak"><i class="fa fa-envelope-o" aria-hidden="true">
                 <span class="lato">&nbsp;  kontak </span></i></a></li>
                 <li>
                   <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse-xs" aria-expanded="false" aria-controls="nav-collapse1"><i class="fa fa-cubes" aria-hidden="true"></i>&nbsp; Bidang</a>

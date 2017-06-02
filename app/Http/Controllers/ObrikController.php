@@ -14,7 +14,9 @@ class ObrikController extends Controller
      */
     public function index()
     {
-        return view('obrik.index');
+        $obrik = Obrik::all();
+
+        return view('obrik.index')->with('obrik', $obrik);
     }
 
     /**

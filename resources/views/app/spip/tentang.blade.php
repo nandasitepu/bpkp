@@ -15,9 +15,9 @@ canvas {
   <div class="container">
     <div class="row">
       <div class="col-md-5">
-          <div class="panel panel-default">
-
-            <div class="panel-body">
+        <div class="panel panel-default">
+          <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t31.0-8/18558727_10155283256127641_6548132552798663464_o.jpg?oh=480caf33df5e631e1d2514ea81cc56d1&oe=59BF48A8" alt="BPKP Konsisten Mengawal Keuangan Desa" width="100%">
+          <div class="panel-body">
               <h4 ><span class="btn btn-warning btn-block"><i class="fa fa-heart-o fa-fw"></i> <b>Tentang SPIP </b></span></h4>
               <br>
               <h5><b>Ada 5 Unsur :</b></h5>
@@ -32,16 +32,15 @@ canvas {
 
               </ul>
             </div>
-
-          </div>
         </div>
+      </div>
       <div class="col-md-7">
         <div class="panel panel-default">
           <div class="panel-body">
             @include('charts.spip_unsur')
             <!-- Table Penilaian SPIP -->
             <div class="table table-responsive">
-              <table class="table-condensed">
+              <table class="table-condensed table-bordered table-striped table-hover">
                 <thead>
                   <tr class="text-center">
                     <td>No</td>
@@ -51,11 +50,11 @@ canvas {
                 </thead>
                 <tbody>
                   <!-- Gak KeBaca Di Server Prod -->
-                  @foreach (App\Models\SPIP::where(['level_spip_id' => 1, 'obrik_id' => 1])->get() as $s)
+                  @foreach ($spip_unsur as $s)
                     <tr>
                       <td class="col-md-1 text-center">{{$loop->iteration}}</td>
-                      <td class="col-md-5">{{$s->unsur_spip->nama}}</td>
-                      <td class="col-md-6">{{$s->sub_unsur_spip->nama}}</td>
+                      <td class="col-md-5">{{ucwords($s->spip_unsur->nama)}}</td>
+                      <td class="col-md-6">{{$s->spip_sub_unsur->nama}}</td>
                     </tr>
                   @endforeach
                 </tbody>

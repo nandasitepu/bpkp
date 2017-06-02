@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- The Head -->
+
   <head>
     @include('_l._head')
-
+    @yield('more-css')
   </head>
+  <nav>
     <!--  Navigation Top -->
     @include('_l._navtop')
+  </nav>
 
-  <!-- The Body -->
+
   <body>
-    <!-- The Session -->
-    @include('_l._session')
 
     <!--  Main Contents -->
     @yield('content')
     <!-- The Scripts -->
     @include('_l._scripts')
+    @yield('bot_scripts')
+
   </body>
+
+  <nav>
     <!--  Navigation Bottom-->
     @include('_l._navbot')
+  </nav>
 
   <footer>
     <!-- The Foot -->
     @include('_l._foot')
   </footer>
+
 </html>

@@ -15,38 +15,40 @@
   });
 </script>
 @endsection
-
+<div id="app">
 @section('content')
-<div class="container">
-  <div class="row">
-    <!-- Search and Button -->
-    <div class="col-md-8">
-      <div class="col-md-12">
-        @component('_c.search')@endcomponent
+
+    <div class="container">
+      <div class="row">
+        <!-- Search and Button -->
+        <div class="col-md-8">
+          <div class="col-md-12">
+            @component('_c.search')@endcomponent
+          </div>
+        </div>
+        <div class="col-md-4" class="well">
+          @component('_c.login')@endcomponent
+        </div>
       </div>
-    </div>
-    <div class="col-md-4" class="well">
-      @component('_c.login')@endcomponent
-    </div>
-  </div>
-  <div class="row">
-    <!-- Jumbotron and Tabs -->
-    <div class="col-md-8">
-      @component('_c.slider')@endcomponent
-    </div>
-    <div class="col-md-4">
-        @component('_c.social')@endcomponent
-      <div class="col-md-6 col-xs-12 center panel panel-default">
-        @component('_c.app')@endcomponent
-      </div>
-      <div class="col-md-6 col-xs-12 center ">
-        @component('_c.slogan')@endcomponent
+      <div class="row">
+        <!-- Jumbotron and Tabs -->
+        <div class="col-md-8">
+          @component('_c.slider')@endcomponent
+        </div>
+        <div class="col-md-4">
+            @component('_c.social')@endcomponent
+          <div class="col-md-6 col-xs-12 center panel panel-default">
+            @component('_c.app')@endcomponent
+          </div>
+          <div class="col-md-6 col-xs-12 center ">
+            @component('_c.slogan')@endcomponent
+          </div>
+
+        </div>
+
       </div>
 
     </div>
-
-  </div>
-
-</div>
-</div>
+    </div>
 @endsection
+</div>

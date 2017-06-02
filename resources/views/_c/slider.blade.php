@@ -4,6 +4,7 @@
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
@@ -46,6 +47,23 @@
           <p><a class="btn btn-success btn-sm" href="#" role="button">Lihat Galeri &raquo;</a></p>
         </div>
       </div>
+    </div>
+    <div class="item">
+      <img class="fourth-slide" src="/img/web/all.jpg" style="width: 100%;height:400px" alt="Fourth slide">
+      <div class="container">
+        <div class="carousel-caption">
+          <div style="background-color:none; padding: 5px">
+            <h4>Siap Melayani </h4>
+            <p>\\ SulBar Hebat //</p>
+          </div>
+          <br>
+          <p>
+            <a class="btn btn-warning btn-sm " href="#" role="button">BPKP Provinsi Sulawesi Barat &raquo;</a>
+          </p>
+        </div>
+  
+      </div>
+
     </div>
   </div>
   <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">

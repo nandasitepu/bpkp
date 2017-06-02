@@ -353,5 +353,23 @@
       </div>
     </section>
   </div>
+  <div class="container">
+   <h3>Total Follower : <strong></strong></h3>
+ </div>
+
+ <script type="text/javascript">
+
+  var twitter_username = 'BPKPgoid';
+
+  $.ajax({
+    url: "https://cdn.syndication.twimg.com/widgets/followbutton/info.json?screen_names=+BPKPgoid",
+    dataType : 'jsonp',
+    crossDomain : true
+  }).done(function(data) {
+    $("h3 strong").text(data[0]['followers_count']);
+  });
+
+ </script>
+
 </div>
 @endsection

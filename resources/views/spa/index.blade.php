@@ -4,9 +4,10 @@
 @section('stylesheets')
   <link rel="stylesheet" href="/css/tugas.css" media="screen" title="no title">
 @endsection
+
 @section('content')
 
-<div id="app" class="">
+  <div id="app" class="">
     <div class="container">
 
     <div class="col-md-10">
@@ -51,4 +52,9 @@
     </div>
   </div>
 </div>
+@endsection
+
+
+@section('bot_scripts')
+ <script src="{{asset('js/myvue.js')}}"></script>
 @endsection

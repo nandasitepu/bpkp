@@ -6,11 +6,11 @@
     type: 'doughnut',
     data: {
     labels: [
-      "Lingkungan Pengendalian | Sub:",
-      "Penilaian Risiko | Sub:",
-      "Kegiatan Pengendalian | Sub:",
-      "Informasi dan Komunikasi | Sub:",
-      "Pemantauan Berkelanjutan | Sub:"
+      "Lingkungan Pengendalian | Sub: 8",
+      "Penilaian Risiko | Sub: 2",
+      "Kegiatan Pengendalian | Sub: 11",
+      "Informasi dan Komunikasi | Sub: 2",
+      "Pemantauan Berkelanjutan | Sub: 2"
     ],
     datasets: [{
       backgroundColor: [

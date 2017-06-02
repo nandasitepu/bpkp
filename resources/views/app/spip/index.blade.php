@@ -17,7 +17,8 @@ canvas {
     <div class="container">
       <div class="row">
         <div class="col-md-7">
-          <h3><span class="label label-default">Sistem Pengendalian Intern Pemerintah (SPIP) </span></h3>
+          <h3>Sistem Pengendalian Intern Pemerintah    <span class="label label-warning" >(SPIP)</span></h3>
+
           <hr>
 
           <div class="main">
@@ -43,7 +44,7 @@ canvas {
             <img src="../img/kab/sulbar.jpg" alt="" height="100px"  >
           </div>
           <br>
-          <a href="{{url('app/spip/1/sulbar')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+          <a href="{{url('app/spip/kab/1')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
           <br>
         </div>
           <div class="col-md-1">
@@ -52,7 +53,7 @@ canvas {
               <img class="img-thumbnail" src="../img/kab/mamuju.jpg" alt="" height="100px" >
             </div>
             <br>
-            <a href="{{url('app/spip/2/mamuju')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+            <a href="{{url('app/spip/kab/2')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
             <br>
           </div>
           <div class="col-md-1">
@@ -61,7 +62,7 @@ canvas {
               <img class="img-thumbnail" src="../img/kab/majene.jpg" alt="" height="100px" >
             </div>
             <br>
-            <a href="{{url('app/spip/3/majene')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+            <a href="{{url('app/spip/kab/3')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
             <br>
           </div>
           <div class="col-md-1">
@@ -70,7 +71,7 @@ canvas {
               <img class="img-thumbnail" src="../img/kab/mamasa.jpg" alt="" height="100px" >
             </div>
             <br>
-            <a href="{{url('app/spip/4/mamasa')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+            <a href="{{url('app/spip/kab/4')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
             <br>
           </div>
           <div class="col-md-1">
@@ -79,7 +80,7 @@ canvas {
               <img class="img-thumbnail" src="../img/kab/polman.jpg" alt="" height="100px" >
             </div>
             <br>
-            <a href="{{url('app/spip/5/polman')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+            <a href="{{url('app/spip/kab/5')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
             <br>
           </div>
           <div class="col-md-1">
@@ -88,7 +89,7 @@ canvas {
               <img class="img-thumbnail" src="../img/kab/mateng.jpg" alt="" height="100px" >
             </div>
             <br>
-            <a href="{{url('app/spip/6/mateng')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+            <a href="{{url('app/spip/kab/6')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
             <br>
           </div>
           <div class="col-md-1">
@@ -97,7 +98,7 @@ canvas {
               <img class="img-thumbnail" src="../img/kab/matra.jpg" alt="" height="100px" >
             </div>
             <br>
-            <a href="{{url('app/spip/7/matra')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+            <a href="{{url('app/spip/kab/7')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
             <br>
           </div>
 
@@ -106,7 +107,7 @@ canvas {
           </div>
         </div>
 
-        <div class="col-md-3 well pull-left">
+        <div class="col-md-3 well ">
             <h4 class=""><span class="label label-primary">Pedoman Penilaian</span>
               &nbsp;
               <a href="https://www.dropbox.com/s/f27kflivusacppv/Pedoman%20Penilaian%20Maturitas%20SPIP.pdf?dl=0">

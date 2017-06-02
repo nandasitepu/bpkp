@@ -1,10 +1,4 @@
 <?php
-
-
-/******************************** HOME ********************************/
-  Route::get('/', 'HomeController@home')->name('home');
-  Route::get('search', 'HomeController@search')->name('search');
-
 /*
   |--------------------------------------------------------------------------
   | // Catch All The Wild Vue (For Vue Router Refresh Not 404) \\
@@ -12,7 +6,14 @@
 */
   Route::any('/spa{all}', function () {return view('spa.index');})->where(['all' => '.*']);
   Route::any('/dashboard{all}', function () {return view('admin.dashboard');})->where(['all' => '.*']);
-
+/*
+  |--------------------------------------------------------------------------
+  | // Main \\
+  |--------------------------------------------------------------------------
+*/
+/******************************** HOME ********************************/
+  Route::get('/', 'HomeController@home')->name('home');
+  Route::get('search', 'HomeController@search')->name('search');
   // Admin Pages
   Route::get('dashboard', 'Admin\AdminController@index')->name('dashboard')->middleware('auth');
 /*
@@ -25,68 +26,62 @@
 
 /*
   |--------------------------------------------------------------------------
-  | // Obrik \\
-  |--------------------------------------------------------------------------
-*/
-
-
-/*
-  |--------------------------------------------------------------------------
   | // App \\
   |-------------------------------------------------------------------------
 */
   // SPIP
-  // No CREATE NO DELETE
-  Route::get('app/spip/tentang', 'AppController@spip_about')->name('spip.tentang');
-  Route::get('app/spip','AppController@spip')->name('app.spip');
-  Route::get('app/spip/{obrik}/{short}', 'AppController@spip_show')->name('spip.show');
-  Route::get('app/spip/{obrik}/{short}/edit', 'AppController@spip_edit')->name('spip.edit');
-  Route::put('app/spip/{obrik}/{short}', 'AppController@spip_update')->name('spip.update');
-    // Route::resource('app/spip', 'Apps\SPIPController');
+  Route::group(['prefix' => 'app/spip'], function () {
+    Route::get('kab/{id}', 'Apps\SPIPController@spip_pemda')->name('spip.pemda');
+    Route::get('tentang', 'Apps\SPIPController@spip_about')->name('spip.tentang');
+
+  });
+  Route::resource('app/spip','Apps\SPIPController');
 
   // APIP
-  // No CREATE NO DELETE
-  Route::get('app/apip/lvup','Apps\APIPController@lvup')->name('apip.lvup');
-  Route::resource('app/apip', 'Apps\APIPController', [
-    'names' => [
-        'index' => 'app.apip',
-        'show' =>'apip.show'
-    ]
-  ]);
+  Route::group(['prefix' => 'app/apip'], function () {
+    Route::get('lvup','Apps\APIPController@lvup')->name('apip.lvup');
+    Route::get('data/{id}','Apps\APIPController@show_data')->name('apip.data');
+  });
 
+  Route::resource('app/apip', 'Apps\APIPController');
 
-  //Other APPs
-  //  Route::get('app/apip','AppController@apip')->name('app.apip');
-    Route::get('app/simda','AppController@simda')->name('app.simda');
-    Route::get('app/siskeudes','AppController@siskeudes')->name('app.siskeudes');
-    Route::get('app/sia','AppController@sia')->name('app.sia');
-    Route::get('app/fcp','AppController@fcp')->name('app.fcp');
+  // SIMDA
+  Route::get('app/simda','Apps\SIMDAController@index')->name('app.simda');
+  // SISKEUDES
+  Route::get('app/siskeudes','Apps\SISKEUDESController@index')->name('app.siskeudes');
+  // SIA
+  Route::get('app/sia','Apps\SIAController@index')->name('app.sia');
+  //FCP
+  Route::get('app/fcp','Apps\FCPController@index')->name('app.fcp');
+
 
 /*
   |--------------------------------------------------------------------------
-  | // Posts \\
+  | // Data \\
   |--------------------------------------------------------------------------
 */
+// Obrik
+  Route::resource('obrik', 'ObrikController');
+
+// Posts
   Route::get('api/posts', 'PostController@getPosts');
   Route::get('posts', 'PostController@index')->name('posting.bpkp');
   Route::get('posts/create', 'PostController@create')->name('posting.new');
-  Route::get('posts/store', 'PostController@store')->name('posting.store');
+  Route::post('posts/store', 'PostController@store')->name('posting.store');
 
-/*
-  |--------------------------------------------------------------------------
-  | // Pages \\
-  |--------------------------------------------------------------------------
-*/
-  Route::resource('pages', 'Admin\PageController');
-  // Custom Pages
+// Pages
   Route::get('news','Admin\PageController@news');
   Route::get('data','Admin\PageController@data');
-  Route::get('kontakkami','Admin\PageController@kontak')->name('kontak');
+  Route::get('kontak','Admin\PageController@kontak')->name('kontak');
   Route::get('profil','Admin\PageController@profil')->name('profil');
+  Route::get('rkt','Admin\PageController@rkt')->name('rkt');
   Route::get('disclaimer','Admin\PageController@disclaimer')->name('disclaimer');
   Route::get('sdank','Admin\PageController@sdank')->name('sdank');
   Route::get('faq','Admin\PageController@faq')->name('faq');
-  // Bidang
+  //
+  Route::resource('pages', 'Admin\PageController');
+
+// Bidang
   Route::group(['prefix' => 'bid'], function () {
     Route::get('tu' , 'Admin\PageController@tu')->name('bid.tu');
     Route::get('ipp', 'Admin\PageController@ipp')->name('bid.ipp');
@@ -112,7 +107,7 @@
 // Tugas Resource
 Route::resource('tugas', 'TugasController');
 
-// SPA resource
+// SPA
 Route::get('spa', 'spaController@index');
 
 // Testing
