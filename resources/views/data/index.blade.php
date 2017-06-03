@@ -19,7 +19,7 @@
               <li>
                 <a href="#data" data-toggle="tab">
                   <button type="button" class="btn btn-default btn-xs btn-block" >
-                    <i class="fa fa-home fa-fw"></i> &nbsp; Data
+                    <i class="fa fa-database fa-fw"></i> &nbsp; Data
                   </button>
                 </a>
               </li>

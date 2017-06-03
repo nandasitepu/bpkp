@@ -11,6 +11,11 @@
   }
 </style>
 @endsection
+@section('bot_scripts')
+  <script src="{{asset("swal/dist/sweetalert.min.js")}}"></script>
+  <link rel="stylesheet" type="text/css" href="{{asset("swal/dist/sweetalert.css")}}">
+  @include('sweet::alert')
+@endsection
 @section('content')
   <div class="container">
     <div class="row">

@@ -4,9 +4,11 @@
  * code may be modified to fit the specific needs of your application.
  */
 
-window.$ = window.jQuery = require('jquery');
+ try {
+     window.$ = window.jQuery = require('jquery');
 
-require('bootstrap-sass');
+     require('bootstrap-sass');
+ } catch (e) {}
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces

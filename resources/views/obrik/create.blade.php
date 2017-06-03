@@ -16,17 +16,17 @@
 
 <!-- Initialize Quill editor -->
 <script>
-var quill = new Quill('#editor', {
-  modules: {
-    toolbar: [
-      [{ header: [1, 2, false] }],
-      ['bold', 'italic', 'underline'],
-      ['image', 'code-block']
-    ]
-  },
-  placeholder: 'Silahkan Ditambahkan...',
-  theme: 'snow'  // or 'bubble'
-});
+  var quill = new Quill('#editor', {
+    modules: {
+      toolbar: [
+        [{ header: [1, 2, false] }],
+        ['bold', 'italic', 'underline'],
+        ['image', 'code-block']
+      ]
+    },
+    placeholder: 'Silahkan Ditambahkan...',
+    theme: 'snow'  // or 'bubble'
+  });
 </script>
 @endsection
 @section('content')
@@ -58,7 +58,7 @@ var quill = new Quill('#editor', {
               </div>
             </div>
             {{ Form::label('keterangan','Keterangan:') }}
-            
+
               {{ Form::textarea('keterangan', null, array('class' => 'form-control input-sm', 'required' => '', 'rows'=> '10',
               'cols' => '40', 'id' =>"editor")) }}
 

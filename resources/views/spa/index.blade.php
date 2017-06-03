@@ -6,9 +6,8 @@
 @endsection
 
 @section('content')
-
-  <div id="app" class="">
-    <div class="container">
+<div id="app" class="">
+  <div class="container">
 
     <div class="col-md-10">
       <div class="text-center visible-xs">
