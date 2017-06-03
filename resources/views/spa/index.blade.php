@@ -20,11 +20,11 @@
         <br><br><br><br>
       </div>
       <div class="text-center well hidden-xs">
-        <router-link class="btn btn-default btn-xs" to="/spa"><i class="fa fa-home" aria-hidden="true"></i></router-link>
-        <router-link class="btn btn-primary btn-xs" to="/spa/berita">Berita</router-link>
-        <router-link class="btn btn-success btn-xs" to="/spa/pengumuman">Pengumuman</router-link>
-        <router-link class="btn btn-warning btn-xs" to="/spa/pegawai">Pegawai</router-link>
-        <router-link class="btn btn-danger btn-xs" to="/spa/penugasan">Penugasan</router-link>
+        <router-link class="btn btn-default btn-xs" to="/data"><i class="fa fa-home" aria-hidden="true"></i></router-link>
+        <router-link class="btn btn-primary btn-xs" to="/data/berita">Berita</router-link>
+        <router-link class="btn btn-success btn-xs" to="/data/pengumuman">Pengumuman</router-link>
+        <router-link class="btn btn-warning btn-xs" to="/data/pegawai">Pegawai</router-link>
+        <router-link class="btn btn-danger btn-xs" to="/data/penugasan">Penugasan</router-link>
       </div>
       <hr>
       <router-view></router-view>

@@ -12,7 +12,7 @@
 
 
   <body>
-
+    @yield('top_scripts')
     <!--  Main Contents -->
     @yield('content')
     <!-- The Scripts -->

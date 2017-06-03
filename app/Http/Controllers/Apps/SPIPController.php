@@ -10,6 +10,7 @@ use App\Models\SPIP\SPIP_Unsur;
 use App\Models\SPIP\SPIP_Sub_Unsur;
 use App\Models\SPIP\SPIP_Level;
 use App\Models\SPIP\SPIP_Dokumen;
+use Excel;
 use Session;
 use Alert;
 
@@ -37,21 +38,20 @@ class SPIPController extends Controller
     /* SPIP -  Show - Obrik */
     public function spip_pemda($id)
     {
-      $pemda = SPIP_Data::find($id);
-      $condition  = ['spip_data_id' => $id];
-      $condition1 = ['spip_data_id' => $id, 'spip_unsur_id' => '1'];
-      $condition2 = ['spip_data_id' => $id, 'spip_unsur_id' => '2'];
-      $condition3 = ['spip_data_id' => $id, 'spip_unsur_id' => '3'];
-      $condition4 = ['spip_data_id' => $id, 'spip_unsur_id' => '4'];
-      $condition5 = ['spip_data_id' => $id, 'spip_unsur_id' => '5'];
+      $pemda        = SPIP_Data::find($id);
+      $condition    = ['spip_data_id' => $id];
+      $condition1   = ['spip_data_id' => $id, 'spip_unsur_id' => '1'];
+      $condition2   = ['spip_data_id' => $id, 'spip_unsur_id' => '2'];
+      $condition3   = ['spip_data_id' => $id, 'spip_unsur_id' => '3'];
+      $condition4   = ['spip_data_id' => $id, 'spip_unsur_id' => '4'];
+      $condition5   = ['spip_data_id' => $id, 'spip_unsur_id' => '5'];
 
-      $spip  = SPIP::where($condition)->get();
-      $spip1 = SPIP::where($condition1)->get();
-      $spip2 = SPIP::where($condition2)->get();
-      $spip3 = SPIP::where($condition3)->get();
-      $spip4 = SPIP::where($condition4)->get();
-      $spip5 = SPIP::where($condition5)->get();
-
+      $spip         = SPIP::where($condition)->get();
+      $spip1        = SPIP::where($condition1)->get();
+      $spip2        = SPIP::where($condition2)->get();
+      $spip3        = SPIP::where($condition3)->get();
+      $spip4        = SPIP::where($condition4)->get();
+      $spip5        = SPIP::where($condition5)->get();
       return view('app.spip.kab')->with('pemda', $pemda)
                                   ->with('spip' , $spip)
                                   ->with('spip1', $spip1)
@@ -60,6 +60,13 @@ class SPIPController extends Controller
                                   ->with('spip4', $spip4)
                                   ->with('spip5', $spip5);
     }
+
+    /* Download Excel */
+
+
+
+
+
     /* SPIP -  Show */
     public function show($id)
     {

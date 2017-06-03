@@ -1,4 +1,30 @@
-<div id="myCarousel" class="carousel carousel-fade" data-ride="carousel" style="border: 1px solid #000; box-shadow: 1px 1px 1px 2px #eee">
+<style media="screen">
+/* fade on slider */
+  .carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  }
+  .carousel-fade .carousel-inner .active {
+  opacity: 1 !important;
+  }
+  .carousel-fade .carousel-inner .active.left,
+  .carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  }
+  .carousel-fade .carousel-inner .next.left,
+  .carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+  }
+  .carousel-fade .carousel-control {
+  z-index: 2;
+  }
+</style>
+<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" style="border: 1px solid #000; box-shadow: 1px 1px 1px 2px #eee">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -61,7 +87,7 @@
             <a class="btn btn-warning btn-sm " href="#" role="button">BPKP Provinsi Sulawesi Barat &raquo;</a>
           </p>
         </div>
-  
+
       </div>
 
     </div>

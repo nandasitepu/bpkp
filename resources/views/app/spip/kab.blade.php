@@ -26,9 +26,29 @@
             <div class="col-md-12">
               <p>Berikut Nilai Maturitas & Pemetaan Dokumen SPIP Pada Pemerintah {{ucwords($pemda->nama)}}</p>
             </div>
-            <div class="col-md-8 col-md-offset-2" style="border:1px solid #ccc">
+            <div class="col-md-7" style="border:1px solid #ccc">
               @include('charts.spip_show')
               <div class="label label-default pull-right">Last Updated : {{ date('M-Y ') }} </div>
+            </div>
+            <div class="col-md-5">
+              <div class="panel panel-default">
+
+                <div class="panel-body">
+                  <h4><span class="label label-success">Catatan | SPIP {{ucwords($pemda->nama)}} </span></h4>
+                  <hr>
+                  <ul class="fa-ul">
+                    @foreach ($spip as $r)
+                      @if (!empty($r->catatan))
+                        <li><i class="fa fa-li fa-times-circle-o"></i>{{$r->catatan}}</li>
+                      @else
+                        <span></span>
+                      @endif
+                    @endforeach
+                  </ul>
+                </div>
+
+              </div>
+
             </div>
           </div>
           <div class="row">
@@ -106,15 +126,15 @@
           </h3>
           <hr>
           <div class="form-group text-center">
-            <select class="form-control" id="kabupaten" onchange="location=this.value">
+            <select class="form-control input-sm" id="kabupaten" onchange="location=this.value">
               <option># Pemda #</option>
-              <option value="../1/provinsi">Provinsi</option>
-              <option value="../2/mamuju">Mamuju</option>
-              <option value="../3/majene">Majene</option>
-              <option value="../4/mamasa">Mamasa</option>
-              <option value="../5/polman">Polman</option>
-              <option value="../6/mateng">Mateng</option>
-              <option value="../7/matra">Matra</option>
+              <option value="../kab/1">Provinsi</option>
+              <option value="../kab/2">Mamuju</option>
+              <option value="../kab/3">Majene</option>
+              <option value="../kab/4">Mamasa</option>
+              <option value="../kab/5">Polman</option>
+              <option value="../kab/6">Mateng</option>
+              <option value="../kab/7">Matra</option>
             </select>
           </div>
 
@@ -129,13 +149,13 @@
           <div class="form-group text-center">
             <select class="form-control" id="kabupaten" onchange="location=this.value">
               <option># Pemda #</option>
-              <option value="../1/provinsi">Provinsi</option>
-              <option value="../2/mamuju">Mamuju</option>
-              <option value="../3/majene">Majene</option>
-              <option value="../4/mamasa">Mamasa</option>
-              <option value="../5/polman">Polman</option>
-              <option value="../6/mateng">Mateng</option>
-              <option value="../7/matra">Matra</option>
+              <option value="../kab/1">Provinsi</option>
+              <option value="../kab/2">Mamuju</option>
+              <option value="../kab/3">Majene</option>
+              <option value="../kab/4">Mamasa</option>
+              <option value="../kab/5">Polman</option>
+              <option value="../kab/6">Mateng</option>
+              <option value="../kab/7">Matra</option>
             </select>
           </div>
 

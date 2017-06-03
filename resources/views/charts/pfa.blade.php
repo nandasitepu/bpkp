@@ -1,9 +1,5 @@
-
-
-
-<script type="text/javascript" src="../js/chart.js"></script>
 <canvas class ="panel cool" id="PFA" height="200%"></canvas>
-<span class="label label-default pull-right">Last Updated : 1 Februari 2017</span>
+<span class="label label-default pull-right">Last Updated : {{ date('M-Y ') }}</span>
 <!-- Chart Script -->
 <script>
   var ctx = document.getElementById("PFA").getContext('2d');
@@ -27,8 +23,20 @@
   options: {
     title: {
       display: true,
-      text: 'PFA Sulawesi Barat'
+      text: 'PFA APIP Se-Sulawesi Barat'
+    },
+    legend: {
+      position: 'right',
+    },
+    pieceLabel: {
+    mode: 'value',
+    arcText: false,
+    format: function (value) {
+      return value + ' org';
     }
+    }
+
+
 
   }
   });

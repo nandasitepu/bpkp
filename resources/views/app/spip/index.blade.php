@@ -38,7 +38,7 @@ canvas {
       <hr>
       <div class="row">
         <div class="text-center">
-          <div class="col-md-2">
+          <div class="col-md-2 col-xs-12">
           Sulawesi Barat
           <div class="text-center">
             <img src="../img/kab/sulbar.jpg" alt="" height="100px"  >

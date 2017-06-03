@@ -6,6 +6,7 @@
 */
   Route::any('/spa{all}', function () {return view('spa.index');})->where(['all' => '.*']);
   Route::any('/dashboard{all}', function () {return view('admin.dashboard');})->where(['all' => '.*']);
+
 /*
   |--------------------------------------------------------------------------
   | // Main \\
@@ -60,8 +61,11 @@
   | // Data \\
   |--------------------------------------------------------------------------
 */
+
+  Route::get('data',function () {return view('data.index');})->name('data');
 // Obrik
-  Route::resource('obrik', 'ObrikController');
+  Route::get('data/obrik/{id}', 'Data\ObrikController@show_data')->name('obrik.data');
+  Route::resource('obrik', 'Data\ObrikController');
 
 // Posts
   Route::get('api/posts', 'PostController@getPosts');
@@ -71,7 +75,7 @@
 
 // Pages
   Route::get('news','Admin\PageController@news');
-  Route::get('data','Admin\PageController@data');
+  //Route::get('data','Admin\PageController@data');
   Route::get('kontak','Admin\PageController@kontak')->name('kontak');
   Route::get('profil','Admin\PageController@profil')->name('profil');
   Route::get('rkt','Admin\PageController@rkt')->name('rkt');

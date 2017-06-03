@@ -1,5 +1,5 @@
 <div class="table table-responsive">
-  <table class="table-condensed table-bordered table-striped table-hover" style="border-collapse:collapse;">
+  <table class="table-condensed table-bordered" >
     <thead>
       <tr class="text-center">
         <td>No</td>

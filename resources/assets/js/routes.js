@@ -4,15 +4,15 @@ let routes=[
   // SPA
   {
     path:'/spa',
-    component:require('./components/SPA')
+    components:require('./components/SPA')
   },
   {
     path:'/spa/pegawai',
-    component:require('./components/Pegawai')
+    components:require('./components/Pegawai')
   },
   {
     path:'/spa/berita',
-    component:require('./components/Berita')
+    components:require('./components/Berita')
   },
   {
     path:'/spa/penugasan',
@@ -38,6 +38,16 @@ let routes=[
     component:require('./components/Pengumuman')
   },
 
+  // Data
+
+  {
+    path:'/data/pegawai',
+    component:require('./components/Pegawai')
+  },
+  {
+    path:'/data/pengumuman',
+    component:require('./components/Pengumuman')
+  },
 ];
 
 export default new VueRouter({

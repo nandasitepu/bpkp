@@ -42,7 +42,7 @@ canvas {
                   <img class="img-thumbnail" src="../img/kab/mamuju.jpg" alt="" height="100px" >
                 </div>
                 <br>
-                <a href="{{route('apip.show', 2)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+                <a href="{{route('apip.data', 2)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
                 <br>
               </div>
               <div class="col-md-2">
@@ -51,7 +51,7 @@ canvas {
                   <img class="img-thumbnail" src="../img/kab/majene.jpg" alt="" height="100px" >
                 </div>
                 <br>
-                <a href="{{route('apip.show', 3)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+                <a href="{{route('apip.data', 3)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
                 <br>
               </div>
               <div class="col-md-2">
@@ -60,7 +60,7 @@ canvas {
                   <img class="img-thumbnail" src="../img/kab/polman.jpg" alt="" height="100px" >
                 </div>
                 <br>
-                <a href="{{route('apip.show', 4)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+                <a href="{{route('apip.data', 4)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
                 <br>
               </div>
               <div class="col-md-2">
@@ -69,7 +69,7 @@ canvas {
                   <img class="img-thumbnail" src="../img/kab/mamasa.jpg" alt="" height="100px" >
                 </div>
                 <br>
-                <a href="{{route('apip.show', 5)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+                <a href="{{route('apip.data', 5)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
                 <br>
               </div>
               <div class="col-md-2">
@@ -78,7 +78,7 @@ canvas {
                   <img class="img-thumbnail" src="../img/kab/matra.jpg" alt="" height="100px" >
                 </div>
                 <br>
-                <a href="{{route('apip.show', 6)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+                <a href="{{route('apip.data', 6)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
                 <br>
               </div>
               <div class="col-md-2">
@@ -87,7 +87,7 @@ canvas {
                   <img class="img-thumbnail" src="../img/kab/mateng.jpg" alt="" height="100px" >
                 </div>
                 <br>
-                <a href="{{route('apip.show', 7)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+                <a href="{{route('apip.data', 7)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
                 <br>
               </div>
           </div>

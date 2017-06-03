@@ -38,9 +38,13 @@
                     </i>
                   </a>
                 </li>
-                <li><a href="/tugas"><i class="fa fa-cog" aria-hidden="true">
-                <span class="lato">&nbsp;  tugas</span>
-                </i></a></li>
+                <li>
+                  <a href="/data">
+                    <i class="fa fa-briefcase" aria-hidden="true">
+                      <span class="lato">&nbsp;  data</span>
+                    </i>
+                  </a>
+                </li>
                 <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true">
                 <span class="lato">&nbsp;  forum</span></i></a></li>
                 <li><a href="/kontak"><i class="fa fa-envelope-o" aria-hidden="true">
@@ -55,8 +59,8 @@
                 <li><a href="{{route('rkt')}}"><i class="fa fa-list" aria-hidden="true">
                 <span class="lato">&nbsp;  RKT</span>
                 </i></a></li>
-                <li><a href="/tugas"><i class="fa fa-fw fa-cog fa-spin">
-                </i><span class="lato">&nbsp;  tugas</span>
+                <li><a href="/data"><i class="fa fa-fw fa-cog fa-spin">
+                </i><span class="lato">&nbsp;  data</span>
                 </a></li>
                 <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true">
                 <span class="lato">&nbsp;  forum</span></i></a></li>

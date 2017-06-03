@@ -1,7 +1,3 @@
-
-
-
-
 <div class="text-center">
   <canvas class ="panel cool" id="PFA" height="200%" ></canvas>
 </div>
@@ -39,7 +35,7 @@
     format: function (value) {
       return value + ' org';
     }
-  }
+    }
 
   }
   });

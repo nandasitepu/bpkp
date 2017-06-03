@@ -1,36 +1,12 @@
-//
+// Milestone
 
-List of Models
+// Data
+CRUD Pegawai - On Progress
+CRUD Obrik - On Progress
+CRUD Posts - On Progress
+CRUD Pages - On Progress
+CRUD Tugas - On Progress
 
-###############
-SPIP Models
-###############
-
-Unsur_SPIP
-Sub_Unsur_SPIP
-Level_SPIP
-SPIP
-
-###############
-APIP Models
-###############
-APIP
-Sub_Unsur_APIP
-Level_APIP
-APIP
-
-###############
-Office Models
-###############
-Obrik
-Pegawai
-Post
-Tag
-Tugas
-Page
-
-
-//  Milestone
-Multiple Role : Tamu // Pegawai // Admin
-Penugasan : CRUD // Monitoring // Vue
-Pegawai: CRUD // Vue // Search
+// APP
+CRUD SPIP - Done
+CRUD APIP - On Progress

@@ -95,3 +95,6 @@
     </div>
     </div>
   @endsection
+  @section('bot_scripts')
+   <script src="{{asset('js/myvue.js')}}"></script>
+  @endsection

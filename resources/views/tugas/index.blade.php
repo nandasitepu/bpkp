@@ -1,5 +1,7 @@
 @extends('tugas.main')
-@section('Tugas', 'Perwakilan Provinsi Sulawesi Barat')
+@section('title')
+  Daftar Tugas 2017
+@endsection
 @include('tugas._topnav')
 @section('stylesheets')
   <link rel="stylesheet" href="/css/tugas.css" media="screen" title="no title">

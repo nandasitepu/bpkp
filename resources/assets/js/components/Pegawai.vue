@@ -19,7 +19,7 @@
               <td>NIP</td>
               <td>Pangkat</td>
               <td>Jabatan</td>
-              <td>Action</td>
+              <td>Foto</td>
             </tr>
           </thead>
           <tbody>
@@ -30,9 +30,7 @@
               <td>{{p.pangkat}}</td>
               <td>{{p.jabatan}}</td>
               <td class="text-center">
-                <a class="btn btn-default btn-sm" href="#">
-                  <i class="fa fa-cog"></i> Details
-                </a>
+                <img v-bind:src="'/img/pegawai/' + p.foto" alt="">
               </td>
             </tr>
           </tbody>
