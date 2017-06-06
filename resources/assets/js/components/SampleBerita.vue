@@ -1,7 +1,19 @@
 <template>
   <div class="panel panel-default">
       <div class="panel-body">
-
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="text-center">Berita // Perwakilan BPKP Provinsi Sulawesi Barat</h4>
+            <h6 class="text-center">Made with
+                <i class="fa fa-fw fa-heart text-danger"></i> by <a href="#" class="btn btn-primary btn-xs" target="_blank">Nanda Sitepu </a>
+            </h6>
+            <div class="input-group-sm">
+              <span class="input-group-addon">Search by Name:</span>
+              <input @keyup="fetchDataPosts()" type="text" name="search" class="form-control" v-model="search">
+            </div>
+          </div>
+        </div>
+        <hr>
 
         <div class="row">
           <div v-if="loading" class="text-center"><span><i class="fa fa-refresh fa-3x fa-spin"></i></span></div>
@@ -31,8 +43,8 @@
                 <hr>
                 <div class="berita-footer">
                   <div class="text-right">
-                    <a href="#"><button class="btn btn-sm btn-default btn-sm"><i class="fa fa-fw fa-eye"></i> Show</button></a>
-                    <a href="#"><button class="btn btn-sm btn-primary btn-sm"><i class="fa fa-fw fa-edit"></i> Edit</button></a>
+                    <a href="#"><button class="btn btn-sm btn-default"><i class="fa fa-fw fa-eye"></i> Show</button></a>
+                    <a href="#"><button class="btn btn-sm btn-primary"><i class="fa fa-fw fa-edit"></i> Edit</button></a>
                   </div>
                 </div>
                 <hr>

@@ -7,18 +7,17 @@
 @endsection
 
 @section('content')
-
   <div class="container">
-    <div class="jumbotron jumbotron-sm">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-lg-12">
-                    <h3 style="text-align:center"> \\ Silahkan Hubungi Kami // </h3>
-                </div>
+    <div class="row">
+      <div class="col-md-12">
+          <div class="carousel text-center" role="listbox">
+            <div class="item active">
+              <img class="img-thumbnail img-responsive" src="{{asset('img/web/kontak.jpg')}}" alt="kontak">
             </div>
+          </div>
         </div>
     </div>
-      <div class="row">
+    <div class="row">
           <div class="col-md-8">
               <div class="well well-sm">
                   <form>

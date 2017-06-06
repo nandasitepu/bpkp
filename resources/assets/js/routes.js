@@ -3,16 +3,16 @@ import VueRouter from 'vue-router';
 let routes=[
   // SPA
   {
-    path:'/spa',
-    components:require('./components/SPA')
+    path:'/spa/home',
+    components:require('./components/BPKP')
   },
   {
     path:'/spa/pegawai',
-    components:require('./components/Pegawai')
+    component:require('./components/Pegawai')
   },
   {
     path:'/spa/berita',
-    components:require('./components/Berita')
+    component:require('./components/Berita')
   },
   {
     path:'/spa/penugasan',
@@ -48,6 +48,21 @@ let routes=[
     path:'/data/pengumuman',
     component:require('./components/Pengumuman')
   },
+  {
+    path:'/data/berita',
+    component:require('./components/Berita')
+  },
+
+  // obrik
+  {
+    path:'/obrik',
+    component:require('./components/Obrik')
+  },
+  {
+    path:'/obrik/create',
+    component:require('./components/Form')
+  },
+
 ];
 
 export default new VueRouter({

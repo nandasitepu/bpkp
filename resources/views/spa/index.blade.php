@@ -11,19 +11,35 @@
 
     <div class="col-md-10">
       <div class="text-center visible-xs">
-        <router-link class="btn btn-default btn-xs col-xs-12" to="/spa"><i class="fa fa-home" aria-hidden="true"></i></router-link>
-        <router-link class="btn btn-primary btn-xs col-xs-12" to="/spa/berita">Berita</router-link>
-        <router-link class="btn btn-success btn-xs col-xs-12" to="/spa/pengumuman">Pengumuman</router-link>
-        <router-link class="btn btn-warning btn-xs col-xs-12" to="/spa/pegawai">Pegawai</router-link>
-        <router-link class="btn btn-danger btn-xs col-xs-12" to="/spa/penugasan">Penugasan</router-link>
+        <router-link class="btn btn-default btn-sm btn-block" to="/spa/berita" exact>
+          Berita &nbsp;<i class="fa fa-newspaper-o fa-fw"></i>
+        </router-link>
+        <router-link class="btn btn-default btn-sm btn-block" to="/spa/pengumuman">
+          Pengumuman &nbsp;<i class="fa fa-comment-o -o fa-fw"></i>
+        </router-link>
+        <router-link class="btn btn-default btn-sm btn-block" to="/spa/pegawai">
+          Pegawai &nbsp;<i class="fa fa-vcard-o fa-fw"></i>
+        </router-link>
+        <router-link class="btn btn-default btn-sm btn-block" to="/spa/penugasan">
+          Penugasan &nbsp;<i class="fa fa-briefcase fa-fw"></i>
+        </router-link>
+      </menu>
         <br><br><br><br>
       </div>
       <div class="text-center well hidden-xs">
-        <router-link class="btn btn-default btn-xs" to="/data"><i class="fa fa-home" aria-hidden="true"></i></router-link>
-        <router-link class="btn btn-primary btn-xs" to="/data/berita">Berita</router-link>
-        <router-link class="btn btn-success btn-xs" to="/data/pengumuman">Pengumuman</router-link>
-        <router-link class="btn btn-warning btn-xs" to="/data/pegawai">Pegawai</router-link>
-        <router-link class="btn btn-danger btn-xs" to="/data/penugasan">Penugasan</router-link>
+        <router-link class="btn btn-default btn-sm" to="/spa/berita" exact>
+          Berita &nbsp;<i class="fa fa-newspaper-o fa-fw"></i>
+        </router-link>
+        <router-link class="btn btn-default btn-sm" to="/spa/pengumuman">
+          Pengumuman &nbsp;<i class="fa fa-comment-o -o fa-fw"></i>
+        </router-link>
+        <router-link class="btn btn-default btn-sm" to="/spa/pegawai">
+          Pegawai &nbsp;<i class="fa fa-vcard-o fa-fw"></i>
+        </router-link>
+        <router-link class="btn btn-default btn-sm" to="/spa/penugasan">
+          Penugasan &nbsp;<i class="fa fa-briefcase fa-fw"></i>
+        </router-link>
+      </menu>
       </div>
       <hr>
       <router-view></router-view>

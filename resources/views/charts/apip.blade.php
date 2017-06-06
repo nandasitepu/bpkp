@@ -3,7 +3,7 @@
 <!-- Chart Script -->
 <script>
   var ctx = document.getElementById("APIP").getContext("2d");
-  var myChart = new Chart(ctx, {
+  var APIPChart = new Chart(ctx, {
       type: 'bar',
 
       data: {

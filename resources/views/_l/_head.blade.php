@@ -6,6 +6,8 @@
     <title>BPKP - @yield('title')</title>
     <!-- Main CSS Bootstrap & FontAwesome as app.css -->
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-material-design.css">
+    <link rel="stylesheet" type="text/css" href="dist/css/ripples.min.css">
     <!-- Custom CSS -->
     <link href="/css/nav.css" rel="stylesheet">
     <link href="/css/tab.css" rel="stylesheet">

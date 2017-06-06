@@ -1,16 +1,15 @@
+
 <div class="panel-body">
-  <h4>Audit Universe | BPKP Perwakilan Sulawesi Barat</h4>
-  <hr>
   <div class="row">
     <div class="col-md-8">
-
+      <h4 class="text-center"><span class="label label-info">Audit Universe | BPKP Perwakilan Sulawesi Barat</span></h4>
       <hr>
       <div class="table-responsive">
         <table class="table table-bordered">
           <thead>
-            <tr class="text-center">
+            <tr class="text-center bold">
               <td>No</td>
-              <td>Nama</td>
+              <td>Nama Obrik</td>
               <td>Pimpinan</td>
               <td>Detail</td>
             </tr>
@@ -24,13 +23,13 @@
                 <td class="text-center">
                   <div class="btn-group-xs cool">
                     <a href="{{route("obrik.show", $ob->id)}}" class="btn btn-default">
-                      <i class="fa fa-fw fa-eye"></i>View
+                      <i class="fa fa-fw fa-eye"></i>
                     </a>
                     <a href="{{route("obrik.edit", $ob->id)}}" class="btn btn-info">
-                      <i class="fa fa-fw fa-edit"></i>Edit
+                      <i class="fa fa-fw fa-edit"></i>
                     </a>
                     <a href="{{route("obrik.edit", $ob->id)}}" class="btn btn-danger">
-                      <i class="fa fa-fw fa-trash-o"></i>  Delete
+                      <i class="fa fa-fw fa-trash-o"></i>
                     </a>
                   </div>
                 </td>
@@ -42,8 +41,6 @@
       </div>
     </div>
     <div class="col-md-4">
-      <hr>
-
       <div class="">
         <div class="panel panel-default">
           <div class="panel-body">

@@ -16,8 +16,6 @@ window.axios.defaults.headers.common = {
 };
 
 // Vue Instance
-
-
 const app = new Vue({
     el: '#app',
     router

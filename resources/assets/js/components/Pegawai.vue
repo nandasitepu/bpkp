@@ -1,17 +1,8 @@
 <template>
-  <div class="panel panel-default">
-    <div class="panel-heading text-center">
-      <h4>Daftar Pegawai BPKP</h4>
-      <div class="input-group-sm">
-        <span class="input-group-addon">Search by Name:</span>
-        <input @keyup="fetchDataPegawai()" type="text" name="search" class="form-control" v-model="search">
-      </div>
-
-    </div>
-    <div class="panel-body">
-
-      <div class="table-responsive">
-        <table class="table table-condensed">
+  <div class="">
+    <div class="">
+      <div class="table table-responsive">
+        <table class="table table-condensed table-striped table-bordered" style="background-color:#fff">
           <thead class="text-center bold">
             <tr>
               <td>No</td>
@@ -36,7 +27,6 @@
           </tbody>
         </table>
       </div>
-
     </div>
   </div>
 </template>

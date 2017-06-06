@@ -55,7 +55,6 @@
   //FCP
   Route::get('app/fcp','Apps\FCPController@index')->name('app.fcp');
 
-
 /*
   |--------------------------------------------------------------------------
   | // Data \\
@@ -84,6 +83,10 @@
   Route::get('faq','Admin\PageController@faq')->name('faq');
   //
   Route::resource('pages', 'Admin\PageController');
+
+// Pengumuman
+  Route::get('api/pengumuman', 'Admin\PengumumanController@getPengumuman');
+  Route::resource('spa/pengumuman', 'Admin\PengumumanController');
 
 // Bidang
   Route::group(['prefix' => 'bid'], function () {

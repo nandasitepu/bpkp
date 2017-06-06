@@ -9,6 +9,18 @@ use Alert;
 
 class ObrikController extends Controller
 {
+    // JSON Data Obrik
+    Public function getObrik(Request $request)
+     {
+       $search = $request->search;
+
+       $obrik = Obrik::where('nama', 'LIKE', "%$search%")->orderBy('id', 'Asc')->paginate(10);
+
+       return response()->json([
+         'obrik' => $obrik
+       ]);
+     }
+
     // Index List Obrik
     public function index()
     {

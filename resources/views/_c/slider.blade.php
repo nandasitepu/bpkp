@@ -1,29 +1,3 @@
-<style media="screen">
-/* fade on slider */
-  .carousel-fade .carousel-inner .item {
-  opacity: 0;
-  -webkit-transition-property: opacity;
-  -moz-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-  }
-  .carousel-fade .carousel-inner .active {
-  opacity: 1 !important;
-  }
-  .carousel-fade .carousel-inner .active.left,
-  .carousel-fade .carousel-inner .active.right {
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-  }
-  .carousel-fade .carousel-inner .next.left,
-  .carousel-fade .carousel-inner .prev.right {
-  opacity: 1;
-  }
-  .carousel-fade .carousel-control {
-  z-index: 2;
-  }
-</style>
 <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel" style="border: 1px solid #000; box-shadow: 1px 1px 1px 2px #eee">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -37,27 +11,27 @@
       <img class="first-slide" src="/img/web/gedung-bpkp.jpg" style="width: 100%;height:400px" alt="First slide">
       <div class="container">
         <div class="carousel-caption">
-          <div style="background-color:#aaa; padding: 5px">
-            <h4>Perwakilan BPKP Sulawesi Barat</h4>
-            <p>\\ Selamat Datang//</p>
+          <h3 class="bold" >\\Selamat Datang//</h3>
+          <hr>
+          <h5 class="bold">Perwakilan BPKP Sulawesi Barat</h5>
 
-          </div>
+          <a class="btn btn-xs btn-primary btn-block" href="{{route('profil')}}">
+            Masuk &nbsp; <i class="fa fa-sign-in"></i>
+          </a>
           <br>
-          <p><a class="btn btn-sm btn-primary" href="{{route('posting.bpkp')}}" role="button">Masuk &raquo;</a></p>
         </div>
+
       </div>
     </div>
     <div class="item">
       <img class="second-slide" src="/img/web/gedung-prov-sulbar.jpg" style="width: 100%;height:400px" alt="Second slide">
       <div class="container">
         <div class="carousel-caption" >
-
-          <div style="background-color:#aaa; padding: 5px">
-            <h4>Bersama Pemerintah Daerah Sulawesi Barat</h4>
-            <p>\\ Mewujudkan Masyarakat Yang Malaqbi //</p>
-          </div>
+            <h4 class="bold"><span class="label label-default">Bersama Pemerintah Daerah</span></h4>
+            <hr>
+            <h4><span class="label label-primary">\\ Mewujudkan Masyarakat Yang Malaqbi //</span></h4>
           <br>
-          <p><a class="btn btn-info btn-sm" href="#" role="button">Selengkapnya &raquo;</a></p>
+          <p><a class="btn btn-info btn-xs btn-block" href="#" role="button">Selengkapnya &raquo;</a></p>
         </div>
       </div>
     </div>
@@ -79,12 +53,12 @@
       <div class="container">
         <div class="carousel-caption">
           <div style="background-color:none; padding: 5px">
-            <h4>Siap Melayani </h4>
-            <p>\\ SulBar Hebat //</p>
+            <h4><span class="label label-default">BPKP Provinsi Sulawesi Barat</span> </h4>
+            <p class="bold" style="background-color:#eee; color:#000">\\ Siap Melayani //</p>
           </div>
           <br>
           <p>
-            <a class="btn btn-warning btn-sm " href="#" role="button">BPKP Provinsi Sulawesi Barat &raquo;</a>
+
           </p>
         </div>
 

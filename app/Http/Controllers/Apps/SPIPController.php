@@ -52,7 +52,7 @@ class SPIPController extends Controller
       $spip3        = SPIP::where($condition3)->get();
       $spip4        = SPIP::where($condition4)->get();
       $spip5        = SPIP::where($condition5)->get();
-      return view('app.spip.kab')->with('pemda', $pemda)
+      return view('app.spip.kab') ->with('pemda', $pemda)
                                   ->with('spip' , $spip)
                                   ->with('spip1', $spip1)
                                   ->with('spip2', $spip2)
@@ -60,12 +60,6 @@ class SPIPController extends Controller
                                   ->with('spip4', $spip4)
                                   ->with('spip5', $spip5);
     }
-
-    /* Download Excel */
-
-
-
-
 
     /* SPIP -  Show */
     public function show($id)

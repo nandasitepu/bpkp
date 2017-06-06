@@ -3,33 +3,57 @@
   Obrik | Audit Universe
 @endsection
 @section('stylesheets')
-<style media="screen">
-  .cool
-  {
-    box-shadow: 1px 1px 1px 1px #ffc;
-    background-color: #fff;
+  <link href="{{asset('quill/quill.snow.css')}}" rel="stylesheet">
+  <style media="screen">
+  #editor {
+    height: 200px;
   }
-</style>
+  </style>
+  <style media="screen">
+    .cool
+    {
+      box-shadow: 1px 1px 1px 1px #ffc;
+      background-color: #fff;
+    }
+  </style>
 @endsection
 @section('bot_scripts')
+  <script src="{{asset('quill/quill.js')}}"></script>
+
+  <!-- Initialize Quill editor -->
+  <script type="text/javascript">
+  var quill = new Quill("#editor" , {
+    modules: {
+      toolbar: [
+        [{ header: [1, 2, false] }],
+        ['bold', 'italic', 'underline'],
+        ['image', 'code-block']
+      ]
+    },
+    placeholder: 'Silahkan Ditambahkan...',
+    theme: 'snow'  // or 'bubble'
+  });
+  </script>
+  <script src="{{asset('js/myvue.js')}}"></script>
   <script src="{{asset("swal/dist/sweetalert.min.js")}}"></script>
   <link rel="stylesheet" type="text/css" href="{{asset("swal/dist/sweetalert.css")}}">
   @include('sweet::alert')
+
+
+
 @endsection
 @section('content')
-  <div class="container">
+  <div class="container" id="app">
     <div class="row">
       <div class="col-md-12">
-        <div class="panel panel-default">
-
+        <div class="panel panel-default" >
           <div class="panel-body">
             <h4>Audit Universe | BPKP Perwakilan Sulawesi Barat</h4>
             <hr>
-            <div class="row">
-              <div class="col-md-8">
 
-                <hr>
-                <div class="table-responsive">
+            <div class="row">
+              <div class="col-md-8" >
+                <!-- <div class="table-responsive collapse" id="obrik">
                   <table class="table table-bordered">
                     <thead>
                       <tr class="text-center">
@@ -63,11 +87,11 @@
                     </tbody>
                   </table>
                 </div>
+                -->
+                <router-view></router-view>
               </div>
               <div class="col-md-4">
-                <hr>
-
-                <div class="">
+                <div>
                   <div class="panel panel-default">
                     <div class="panel-body">
                       @component('_c.search_xs')@endcomponent
@@ -79,12 +103,28 @@
                       Tambah Obrik <i class="fa fa-fw fa-plus-circle"></i>
                     </button>
                   </a>
+                  <hr>
+                  <div class="btn-group btn-group-sm">
+                    <router-link class="btn btn-default btn-sm" data-target="#vue" data-toggle="collapse" to="/obrik">
+                      List Obrik &nbsp;<i class="fa fa-list-ol fa-fw"></i>
+                    </router-link>
+                    <router-link class="btn btn-default btn-sm" data-target="#vue" data-toggle="collapse" to="/obrik/create">
+                      Tambah Obrik &nbsp;<i class="fa fa-plus-circle fa-fw"></i>
+                    </router-link>
+                  </div>
+
                 </div>
               </div>
             </div>
           </div>
 
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+
+
       </div>
     </div>
   </div>

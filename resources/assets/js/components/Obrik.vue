@@ -1,29 +1,23 @@
 <template>
   <div class="">
     <div class="">
-      <div class="table table-responsive">
-        <table class="table table-condensed table-striped table-bordered" style="background-color:#fff">
-          <thead class="text-center bold">
-            <tr>
+      <div class="table table-responsive" >
+        <table class="table table-bordered table-condensed table-striped" style="background-color:#fff">
+          <thead>
+            <tr class="text-center">
               <td>No</td>
-
-              <td>Pengumuman</td>
-              <td>Tanggal</td>
-              <td>Foto</td>
-              <td>Action</td>
+              <td>Nama</td>
+              <td>Pimpinan</td>
+              <td>Detail</td>
             </tr>
           </thead>
-          <tbody class="text-center">
-            <tr v-for="p in pengumuman.data">
-              <td>{{p.id}}</td>
-              <td>{{p.judul}}</td>
-            
-              <td>{{p.tanggal}}</td>
+          <tbody>
+            <tr v-for="p in obrik.data">
+              <td class="text-center">{{p.id}}</td>
+              <td>{{p.nama | capitalize}}</td>
+              <td>{{p.pimpinan}}</td>
               <td class="text-center">
-                <img v-bind:src="'/img/pegawai/' + p.foto" alt="">
-              </td>
-              <td>
-                <div class="btn-group btn-group-sm">
+                <div class="btn-group btn-group-xs">
                   <button type="button" class="btn btn-default">
                     <i class="fa fa-eye"></i>
                   </button>
@@ -42,38 +36,39 @@
     </div>
   </div>
 </template>
-
 <script>
   import axios from 'axios'
 
   export default {
     data() {
       return {
-        pengumuman:[],
-        loading:false,
+        obrik:[],
         search:'',
-        url:'../api/pengumuman'
+        url:'../api/obrik'
       }
     },
     created:function(){
-      this.fetchDataPengumuman()
+      this.fetchDataObrik()
     },
     methods:{
-      fetchDataPengumuman() {
+      fetchDataObrik() {
         var vm = this
-        this.loading=true;
         axios.get(this.url + '?search=' + this.search)
           .then(function(response){
-             Vue.set(vm.$data, 'pengumuman', response.data.pengumuman)
+             Vue.set(vm.$data, 'obrik', response.data.obrik )
           })
-        this.loading=false;
       }
     },
     filters: {
-      Short: function(value) {
+      short: function(value) {
       return  value.length > length ?
         value.substring(0, 300) + "..." :
         value
+      },
+      capitalize: function (value){
+        if (!value) return ''
+         value = value.toString()
+         return value.charAt(0).toUpperCase() + value.slice(1)
       }
     }
   }

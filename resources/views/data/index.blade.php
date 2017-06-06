@@ -7,6 +7,17 @@
   <link rel="stylesheet" href="/css/tugas.css" media="screen" title="no title">
 @endsection
 
+  <script type="text/javascript">
+      $('.search-panel .dropdown-menu').find('a').click(function(e) {
+      e.preventDefault();
+      var param = $(this).attr("href").replace("#","");
+      var concept = $(this).text();
+      $('.search-panel span#search_concept').text(concept);
+      $('.input-group #search_param').val(param);
+    });
+  </script>
+
+
 @section('content')
   <div class="container">
       <div class="row">
@@ -15,10 +26,10 @@
             <i class="fa fa-2x fa-cubes fa-fw" aria-hidden="true"></i>
           </button>
           <div class="panel panel-default collapse in" id="sidemenu">
-            <ul class="nav " >
+            <ul class="nav">
               <li>
                 <a href="#data" data-toggle="tab">
-                  <button type="button" class="btn btn-default btn-xs btn-block" >
+                    <button type="button" class="btn btn-default btn-xs btn-block" >
                     <i class="fa fa-database fa-fw"></i> &nbsp; Data
                   </button>
                 </a>
@@ -54,7 +65,6 @@
               </li>
             </ul>
           </div>
-
         </div>
         <div class="col-md-10">
           <div class="panel panel-default">
