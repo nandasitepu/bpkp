@@ -5,26 +5,28 @@
     @include('_l._head')
     @yield('more-css')
   </head>
-  <nav>
-    <!--  Navigation Top -->
-    @include('_l._navtop')
-  </nav>
+
 
 
   <body>
+    <div class="se-pre-con" id="loader"></div>
+    <nav>
+      <!--  Navigation Top -->
+      @include('_l._navtop')
+    </nav>
     @yield('top_scripts')
     <!--  Main Contents -->
-    @yield('content')
+      @yield('content')
     <!-- The Scripts -->
     @include('_l._scripts')
     @yield('bot_scripts')
-
+    <nav>
+      <!--  Navigation Bottom-->
+      @include('_l._navbot')
+    </nav>
   </body>
 
-  <nav>
-    <!--  Navigation Bottom-->
-    @include('_l._navbot')
-  </nav>
+
 
   <footer>
     <!-- The Foot -->

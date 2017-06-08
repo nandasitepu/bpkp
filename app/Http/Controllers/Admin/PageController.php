@@ -18,6 +18,30 @@ class PageController extends Controller
     public function profil () {return view('pages.profil');}
     public function rkt () {return view('pages.rkt');}
     public function kontak () {return view('pages.kontak');}
+
+    public function getKontak (Request $request)
+    {
+
+        $data = [
+          'nama'    => $request->nama;
+          'email'   => $request->email;
+          'tentang' => $request->tentang;
+          'pesan'   => $request->pesan
+        ];
+
+        Mail::send('post.kontak', $data, function($message) use ($data) {
+          $message->($data['nama']);
+          $message->from($data['email']);
+          $message->to('bpkp@mydata.id'); // email tujuan
+          $tentang->tentang($data['tentang']);
+          $tentang->subject($data['pesan']);
+        });
+
+        // Alert Success Message
+        Alert::success('Pesan Terkirim !')->persistent("Tutup");
+    }
+
+
     public function disclaimer () {return view('pages.disclaimer');}
     public function faq () {return view('pages.faq');}
     public function sdank () {return view('pages.sdank');}

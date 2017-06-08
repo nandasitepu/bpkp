@@ -20,13 +20,13 @@
     <div class="row">
           <div class="col-md-8">
               <div class="well well-sm">
-                  <form>
+                  <form action="{{url('kontak')}}" method="POST">
                   <div class="row">
                       <div class="col-md-6">
                           <div class="form-group">
                               <label for="name">
                                   Nama</label>
-                              <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                              <input type="text" name="nama" class="form-control" id="name" placeholder="Enter name" required="required" />
                           </div>
                           <div class="form-group">
                               <label for="email">
@@ -34,16 +34,16 @@
                               <div class="input-group">
                                   <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                   </span>
-                                  <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                                  <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
                           </div>
                           <div class="form-group">
                               <label for="subject">
                                   Tentang</label>
-                              <select id="subject" name="subject" class="form-control" required="required">
-                                  <option value="na" selected="">Choose One:</option>
-                                  <option value="service">General Customer Service</option>
-                                  <option value="suggestions">Suggestions</option>
-                                  <option value="product">Product Support</option>
+                              <select id="subject" name="tentang" class="form-control" required="required">
+                                  <option value="na" selected="">Pilih Satu:</option>
+                                  <option value="Tanya">Pertanyaan</option>
+                                  <option value="Saran">Saran</option>
+                                  <option value="Pengaduan">Pengaduan</option>
                               </select>
                           </div>
                       </div>
@@ -51,8 +51,8 @@
                           <div class="form-group">
                               <label for="name">
                                   Pesan</label>
-                              <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-                                  placeholder="Message"></textarea>
+                              <textarea name="pesan" id="message" class="form-control" rows="9" cols="25" required="required"
+                                  placeholder="Pesan ..."></textarea>
                           </div>
                       </div>
                       <div class="col-md-12">

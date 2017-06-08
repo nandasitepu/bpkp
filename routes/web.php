@@ -76,6 +76,7 @@
   Route::get('news','Admin\PageController@news');
   //Route::get('data','Admin\PageController@data');
   Route::get('kontak','Admin\PageController@kontak')->name('kontak');
+  Route::post('kontak','Admin\PageController@kontak')->name('post.kontak');
   Route::get('profil','Admin\PageController@profil')->name('profil');
   Route::get('rkt','Admin\PageController@rkt')->name('rkt');
   Route::get('disclaimer','Admin\PageController@disclaimer')->name('disclaimer');
