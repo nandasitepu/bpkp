@@ -45,14 +45,22 @@
               </a>
               <a href="#spa" data-toggle="tab" style="">
                   <button type="button" class="btn btn-default btn-xs " >
-                  <i class="fa fa-database fa-fw"></i>
+                  <i class="fa fa-bookmark-o fa-fw"></i>
                 </button>
               </a>
-              <a href="/#tugas" data-toggle="tab" style="">
+              <a href="/#slider" data-toggle="tab" style="">
                 <button type="button" class="btn btn-default btn-xs " >
-                  <i class="fa fa-briefcase fa-fw"></i>
+                  <i class="fa fa-bar-chart-o fa-fw"></i>
                 </button>
               </a>
+              <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" >
+                <i class="fa fa-angle-down fa-fw"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="/">Pedoman</a></li>
+                <li><a href="/obrik">Obrik</a></li>
+                <li><a href="/">Penugasan</a></li>
+              </ul>
             </div>
           </div>
           <div class="col-md-12 ">

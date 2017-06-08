@@ -21,12 +21,12 @@
     <td class="col-md-4">{!! $s->spip_dokumen->nama !!}</td>
     <td>
       <!-- Trigger the modal with a button -->
-      <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#mdl{{$s->spip_level_id}}">
+      <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#mdl{{$s->id}}">
         <i class="fa fa-edit"></i>
       </button>
 
       <!-- Modal -->
-      <div class="modal fade" id="mdl{{$s->spip_level_id}}" role="dialog">
+      <div class="modal fade" id="mdl{{$s->id}}" role="dialog">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -34,7 +34,7 @@
               <h4 class="modal-title">{{$s->spip_sub_unsur->nama}} - Level {{$s->spip_level_id}} </h4>
             </div>
             <div class="modal-body">
-              {!! Form::model($spip,['route'=>['spip.update', $s->id], 'files' => true, 'class' => 'form-group', 'method' => 'PUT']) !!}
+              {!! Form::model($s,['route'=>['spip.update', $s->id], 'files' => true, 'class' => 'form-group', 'method' => 'PUT']) !!}
               <label for="title">Status: 1= "Ya"; 2 = "Tidak"</label>
               {{ Form::textarea( "status", $s->status, [
                 'class' => ' form-control',

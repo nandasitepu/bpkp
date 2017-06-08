@@ -9,12 +9,12 @@
     <!-- jQuery & Bootstrap as app.js (necessary for Bootstrap's JavaScript plugins) -->
     <script src="{{asset('js/app.js')}}"></script>
     <script type="text/javascript">
-      $(document).ready(function () {
-         var $loader = $("#loader").addClass("se-pre-con");
 
+      $(document).ready(function () {
+        var $loader = $("#loader").addClass("se-pre-con");
          setTimeout(function() {
              $loader.fadeOut("se-pre-con");
-         }, 100);
+         }, 1000);
       });
     </script>
     <link href="/css/loader.css" rel="stylesheet">

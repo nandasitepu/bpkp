@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default">
-    <div class="container">
+  <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <div>
@@ -39,14 +39,15 @@
                   </a>
                 </li>
                 <li>
-                  <a href="/data">
-                    <i class="fa fa-briefcase" aria-hidden="true">
+                  <a href="{{route('data')}}">
+                    <i class="fa fa-bar-chart-o" aria-hidden="true">
                       <span class="lato">&nbsp;  data</span>
                     </i>
                   </a>
                 </li>
                 <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true">
-                <span class="lato">&nbsp;  forum</span></i></a></li>
+                <span class="lato">&nbsp;  forum</span></i></a>
+                </li>
                 <li><a href="/kontak"><i class="fa fa-envelope-o" aria-hidden="true">
                 <span class="lato">&nbsp;  kontak </span></i></a></li>
                 <li>

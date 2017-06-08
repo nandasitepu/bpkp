@@ -21,24 +21,25 @@ class PageController extends Controller
 
     public function getKontak (Request $request)
     {
-
         $data = [
-          'nama'    => $request->nama;
-          'email'   => $request->email;
-          'tentang' => $request->tentang;
+          'nama'    => $request->nama,
+          'email'   => $request->email,
+          'tentang' => $request->tentang,
           'pesan'   => $request->pesan
         ];
 
         Mail::send('post.kontak', $data, function($message) use ($data) {
-          $message->($data['nama']);
+          $message->nama($data['nama']);
           $message->from($data['email']);
-          $message->to('bpkp@mydata.id'); // email tujuan
+          $message->to('bpkp@mydata.id');
           $tentang->tentang($data['tentang']);
           $tentang->subject($data['pesan']);
         });
 
         // Alert Success Message
         Alert::success('Pesan Terkirim !')->persistent("Tutup");
+
+        return redirect()->route('kontak');
     }
 
 
