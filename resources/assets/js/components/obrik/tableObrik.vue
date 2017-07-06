@@ -6,7 +6,7 @@
           <thead>
             <tr class="text-center">
               <td>No</td>
-              <td>Nama</td>
+              <td>Obrik</td>
               <td>Pimpinan</td>
               <td>Detail</td>
             </tr>
@@ -57,6 +57,15 @@
           .then(function(response){
              Vue.set(vm.$data, 'obrik', response.data.obrik )
           })
+      },
+      editIt(pId) {
+        return this.editForm=pId;
+      },
+      showIt(pId) {
+        if (this.editForm==pId) {
+          return true;
+        }
+        return false;
       }
     },
     filters: {

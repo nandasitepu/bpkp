@@ -60,24 +60,62 @@
             </button>
             <div class="panel panel-default collapse in" id="sidemenu">
               <ul class="nav" >
-                <li><a href="/" data-target-id="home"><i class="fa fa-home fa-fw"></i> &nbsp; Home</a></li>
-                <li><a href="{{route('dashboard')}}" data-target-id="applications"><i class="fa fa-barcode fa-fw"></i> &nbsp; App</a></li>
-                <li><a href="/obrik" data-target-id="widgets"><i class="fa fa-list fa-fw"></i> &nbsp; Obrik</a></li>
-                <li><a href="/posts" data-target-id="pages"><i class="fa fa-file-o fa-fw"></i> &nbsp; Posts</a></li>
-                <li><a href="/pages" data-target-id="calender"><i class="fa fa-calendar fa-fw"></i> &nbsp; Pages</a></li>
+                <li>
+                  <router-link to="/dashboard">
+                    <i class="fa fa-home fa-fw"></i> &nbsp; Home
+                  </router-link>
+                </li>
+                <li>
+                  <router-link to="/dashboard/app">
+                    <i class="fa fa-barcode fa-fw"></i> &nbsp; App
+                  </router-link>
+                </li>
+                <li>
+                  <router-link to="/dashboard/obrik">
+                    <i class="fa fa-list fa-fw"></i> &nbsp; Obrik
+                  </router-link>
+                </li>
+                <li>
+                  <router-link to="/dashboard/posts">
+                    <i class="fa fa-file-o fa-fw"></i> &nbsp; Posts
+                  </router-link>
+                </li>
+                <li>
+                  <router-link to="/dashboard/pages">
+                    <i class="fa fa-calendar fa-fw"></i> &nbsp; Pages
+                  </router-link>
+                </li>
                 <li>
                   <router-link  to="/dashboard/pegawai">
                     <i class="fa fa-users fa-fw"></i> &nbsp; Pegawai
                   </router-link>
                 </li>
-                <li><a href="#" data-target-id="table"><i class="fa fa-table fa-fw"></i> &nbsp; Tables</a></li>
-                <li><a href="#" data-target-id="forms"><i class="fa fa-tasks fa-fw"></i> &nbsp; Forms</a></li>
                 <li>
-                  <router-link to="/dashboard/pengumuman"><i class="fa fa-check-square-o fa-fw"></i> &nbsp; Pengumuman</router-link>
+                  <router-link to="/dashboard/tables">
+                    <i class="fa fa-table fa-fw"></i> &nbsp; Tables
+                  </router-link>
                 </li>
-                <li><a href="#" data-target-id="library"><i class="fa fa-book fa-fw"></i> &nbsp; Perpustakaan</a></li>
+                <li>
+                  <router-link to="/dashboard/forms">
+                    <i class="fa fa-tasks fa-fw"></i> &nbsp; Forms
+                  </router-link>
+                </li>
+                <li>
+                  <router-link to="/dashboard/pengumuman">
+                    <i class="fa fa-check-square-o fa-fw"></i> &nbsp; Pengumuman
+                  </router-link>
+                </li>
+                <li>
+                  <router-link to="/dashboard/perpustakaan">
+                    <i class="fa fa-book fa-fw"></i> &nbsp; Perpustakaan
+                  </router-link>
+                </li>
 
-                <li><a href="#" data-target-id="settings"><i class="fa fa-cogs fa-fw"></i> &nbsp; Settings</a></li>
+                <li>
+                  <router-link to="/dashboard/pengaturan">
+                    <i class="fa fa-cogs fa-fw"></i> &nbsp; Pengaturan
+                  </router-link>
+                </li>
               </ul>
             </div>
         </div>

@@ -12,6 +12,13 @@ use App\Models\APIP\APIP_Level;
 class APIPController extends Controller
 {
 
+    public function getAPIP ()
+    {
+      $apip = APIP_Data::all();
+
+      return response()->json($apip);
+    }
+
     public function lvup(){return view('app.apip.lvup');}
     public function index() {return view('app.apip.index');}
 

@@ -3,9 +3,6 @@
     <div class="panel-body">
       <form class="" action="index.html" method="post" >
         <div class="row">
-          <div class="col-md-12">
-            <h4 class="text-right"><span class="label label-primary">Tambah Obrik&nbsp; <i class="fa fa-plus-circle fa-fw"></i></span></h4>
-          </div>
           <div class="col-md-8" >
             <div class="col-md-9">
               <div class="form-group">
@@ -53,6 +50,9 @@
               <label for="kontak">Kontak:</label>
               <textarea class="form-control" rows="1" id="kontak"></textarea>
             </div>
+            <h4 class="text-right">
+              <span class="label label-primary">Tambah Obrik&nbsp; <i class="fa fa-plus-circle fa-fw"></i></span>
+            </h4>
           </div>
         </div>
       </form>
@@ -61,6 +61,7 @@
 </template>
 
 <script>
+  
   export default {
       data() {
           return {

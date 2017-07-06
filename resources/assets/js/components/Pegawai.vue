@@ -21,7 +21,12 @@
               <td>{{p.pangkat}}</td>
               <td>{{p.jabatan}}</td>
               <td class="text-center">
-                <img v-bind:src="'/img/pegawai/' + p.foto" alt="">
+                <div v-if="p.foto === null ">
+                  <img class="img-circle" v-bind:src="'/img/web/profil_img.png'" alt="" style="max-width:24px">
+                </div>
+                <div v-else>
+                  <img v-bind:src="'/img/pegawai/' + p.foto" alt="" style="max-width:24px">
+                </div>
               </td>
             </tr>
           </tbody>

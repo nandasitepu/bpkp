@@ -13,12 +13,11 @@ canvas {
 @endsection
 <div id="app">
   @section('content')
-
     <div class="container">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-7">
           <h4><span>Aparat Pengawasan Intern Pemerintah (APIP) |</span>
-          &nbsp; <a href="{{route('apip.lvup')}}" class="label label-info">Peningkatan Level <i class="fa fa-fw fa-arrow-up "></i></a> </span>
+          &nbsp; <a href="{{route('apip.lvup')}}" class="label label-info">Peningkatan Kapabilitas <i class="fa fa-fw fa-arrow-up "></i></a> </span>
           </h4>
           <hr>
           <span></span>
@@ -35,92 +34,95 @@ canvas {
           </div>
           <div class="row text-center">
 
-              <div class="col-md-2">
-
-              APIP Mamuju
-                <div class="">
-                  <img class="img-thumbnail" src="../img/kab/mamuju.jpg" alt="" height="100px" >
-                </div>
-                <br>
-                <a href="{{route('apip.data', 2)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
-                <br>
-              </div>
-              <div class="col-md-2">
-              APIP Majene
-                <div class="">
-                  <img class="img-thumbnail" src="../img/kab/majene.jpg" alt="" height="100px" >
-                </div>
-                <br>
-                <a href="{{route('apip.data', 3)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
-                <br>
-              </div>
-              <div class="col-md-2">
-              APIP Polman
-                <div class="">
-                  <img class="img-thumbnail" src="../img/kab/polman.jpg" alt="" height="100px" >
-                </div>
-                <br>
-                <a href="{{route('apip.data', 4)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
-                <br>
-              </div>
-              <div class="col-md-2">
-              APIP Mamasa
-                <div class="">
-                  <img class="img-thumbnail" src="../img/kab/mamasa.jpg" alt="" height="100px" >
-                </div>
-                <br>
-                <a href="{{route('apip.data', 5)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
-                <br>
-              </div>
-              <div class="col-md-2">
-              APIP Matra
-                <div class="">
-                  <img class="img-thumbnail" src="../img/kab/matra.jpg" alt="" height="100px" >
-                </div>
-                <br>
-                <a href="{{route('apip.data', 6)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
-                <br>
-              </div>
-              <div class="col-md-2">
-                  APIP Mateng
-                <div class="">
-                  <img class="img-thumbnail" src="../img/kab/mateng.jpg" alt="" height="100px" >
-                </div>
-                <br>
-                <a href="{{route('apip.data', 7)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
-                <br>
-              </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
           <div class="panel panel-default">
-
             <div class="panel-body">
                 @include('charts.apip')
             </div>
-
           </div>
-          <div class="col-md-6 col-xs-6">
-
+        </div>
+        <div class="text-center">
+          <div class="col-md-1">
             <div class="text-center">
-              APIP Prov Sulbar
+              APIP Sulbar
               <img class="img-thumbnail" src="../img/kab/sulbar.jpg" alt=""   >
             </div>
+            <br>
+            <a href="{{route('apip.data', 1)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+          </div>
+          <div class="col-md-1">
 
-            <a href="{{route('apip.show', 1)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+            APIP Mamuju
+            <div class="">
+              <img class="img-thumbnail" src="../img/kab/mamuju.jpg" alt="" height="100px" >
+            </div>
+            <br>
+            <a href="{{route('apip.data', 2)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
             <br>
           </div>
-          <div class="col-md-6 col-xs-6">
-            <a href="#"><img src="../img/instansi/aaipi.jpg" alt="" height="100px" ></a>
+          <div class="col-md-1">
+            APIP Majene
+            <div class="">
+              <img class="img-thumbnail" src="../img/kab/majene.jpg" alt="" height="100px" >
+            </div>
+            <br>
+            <a href="{{route('apip.data', 3)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+            <br>
           </div>
-          <div class="col-md-6 col-xs-6">
-            <a href="#"><img src="../img/instansi/iia.jpg" alt="" height="100px" ></a>
+          <div class="col-md-1">
+            APIP Polman
+            <div class="">
+              <img class="img-thumbnail" src="../img/kab/polman.jpg" alt="" height="100px" >
+            </div>
+            <br>
+            <a href="{{route('apip.data', 4)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+            <br>
+          </div>
+          <div class="col-md-1">
+            APIP Mamasa
+            <div class="">
+              <img class="img-thumbnail" src="../img/kab/mamasa.jpg" alt="" height="100px" >
+            </div>
+            <br>
+            <a href="{{route('apip.data', 5)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+            <br>
+          </div>
+          <div class="col-md-1">
+            APIP Matra
+            <div class="">
+              <img class="img-thumbnail" src="../img/kab/matra.jpg" alt="" height="100px" >
+            </div>
+            <br>
+            <a href="{{route('apip.data', 6)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+            <br>
+          </div>
+          <div class="col-md-1">
+            APIP Mateng
+            <div class="">
+              <img class="img-thumbnail" src="../img/kab/mateng.jpg" alt="" height="100px" >
+            </div>
+            <br>
+            <a href="{{route('apip.data', 7)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
+            <br>
+          </div>
+        </div>
+
+        <div class="col-md-5 text-center">
+              <hr>
+          <div class="col-md-5 col-xs-12">
+            <a href="http://118.97.51.140:1001/"><img class="img-thumbnail"src="../img/web/penilaian_apip.png" alt="" height="100px" ></a>
+          </div>
+          <div class="col-md-4 col-xs-12">
+            <a href="#"><img class="img-thumbnail"src="../img/instansi/aaipi.jpg" alt="" height="100px" ></a>
+          </div>
+          <div class="col-md-3 col-xs-12">
+            <a href="#"><img class="img-thumbnail"src="../img/instansi/iia.jpg" alt="" height="100px" ></a>
           </div>
 
         </div>
       </div>
-      <hr>
-
     </div>
   @endsection
 </div>

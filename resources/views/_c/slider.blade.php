@@ -55,6 +55,9 @@
           <div style="background-color:none; padding: 5px">
             <h4><span class="label label-default">BPKP Provinsi Sulawesi Barat</span> </h4>
             <p class="bold" style="background-color:#eee; color:#000">\\ Siap Melayani //</p>
+            <br>
+            <br>
+            <br>
           </div>
           <br>
           <p>

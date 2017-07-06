@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="" style="margin-bottom:5px">
+  <div>
     <ul class="list-inline hidden-xs">
       <li><span style="font-family:Lato"><small><b>Pencarian:&nbsp;</b></small> </span></li>
       <li><span class="label label-default"> APIP </span></li>
@@ -34,6 +34,4 @@
        </div>
     </div>
   </div>
-
-
 </div>

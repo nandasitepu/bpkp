@@ -6,7 +6,9 @@
             <a class="navbar-brand" href="/">
               <span><img src="/img/web/logo-bpkp.jpg" height="24px" margin-top="1px" /></span>
               <span>
-                <span class="oswald" margin-top="5px">&nbsp;Prov. Sulawesi Barat</span>
+                <span class="Lato bold" margin-top="5px">
+                  &nbsp;  Sulawesi Barat &nbsp; <i class="fa fa-star-o fa-fw"></i>
+                </span>
               </span>
             </a>
           </div>

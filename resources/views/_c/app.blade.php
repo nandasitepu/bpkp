@@ -1,4 +1,4 @@
-<div >
+<div>
   <div class="col-md-12 col-xs-6">
     <div class="btn-group-vertical" role="group" aria-label="...">
       <br>
@@ -30,5 +30,4 @@
       </a><br />
     </div>
   </div>
-  <label class="label label-default text-center">Services</label>
 </div>

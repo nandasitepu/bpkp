@@ -1,5 +1,9 @@
 import router from './routes.js';
 
+// Moment JS
+var moment = require('moment');
+moment().format();
+
 
 // Vue Router
 window.Vue = require('vue');

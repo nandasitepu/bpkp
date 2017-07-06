@@ -1,19 +1,19 @@
 @extends('main')
-@section('title')
-  Sistem Pengawasan Internal Pemerintah
-@endsection
-@section('stylesheets')
-<style media="screen">
-canvas {
-    padding: 0;
-    margin: auto;
-    display: block;
-}
-</style>
-@endsection
+  @section('title')
+    Sistem Pengawasan Internal Pemerintah
+  @endsection
+  @section('stylesheets')
+  <style media="screen">
+  canvas {
+      padding: 0;
+      margin: auto;
+      display: block;
+  }
+  </style>
+  @endsection
+  
 <div id="app">
   @section('content')
-
     <div class="container">
       <div class="row">
         <div class="col-md-7">
@@ -38,10 +38,10 @@ canvas {
       <hr>
       <div class="row">
         <div class="text-center">
-          <div class="col-md-2 col-xs-12">
-          Sulawesi Barat
+          <div class="col-md-1 col-xs-12">
+          Sulbar
           <div class="text-center">
-            <img src="../img/kab/sulbar.jpg" alt="" height="100px"  >
+            <img class="img-thumbnail" src="../img/kab/sulbar.jpg" alt="" height="50px ! important"  >
           </div>
           <br>
           <a href="{{url('app/spip/kab/1')}}" class="btn btn-default btn-xs btn-block"> Detail</a>
@@ -108,21 +108,22 @@ canvas {
         </div>
 
         <div class="col-md-3 well ">
+          <h4 class=""><span class="label label-danger">Tentang SPIP</span>
+            &nbsp;
+            <a href="{{route('spip.tentang')}}"><i class="fa fa-fw fa-file-o text-primary pull-right"></i></a>
+
+          </h4>
             <h4 class=""><span class="label label-primary">Pedoman Penilaian</span>
               &nbsp;
               <a href="https://www.dropbox.com/s/f27kflivusacppv/Pedoman%20Penilaian%20Maturitas%20SPIP.pdf?dl=0">
                 <i class="fa fa-fw fa-file-o text-primary pull-right"></i>
               </a>
             </h4>
-            <h4 class=""><span class="label label-success">Penilaian Maturitas SPIP</span>
+            <h4 class=""><span class="label label-success">Nilai Maturitas SPIP</span>
 
               &nbsp;<i class="fa fa-fw fa-file-o text-primary pull-right"></i>
             </h4>
-            <h4 class=""><span class="label label-danger">Tentang SPIP</span>
-              &nbsp;
-              <a href="{{route('spip.tentang')}}"><i class="fa fa-fw fa-file-o text-primary pull-right"></i></a>
 
-            </h4>
           </div>
       </div>
     </div>

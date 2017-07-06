@@ -20,7 +20,28 @@ class ObrikController extends Controller
          'obrik' => $obrik
        ]);
      }
+    /*
+    *
+    *
+         VUE SECTION
+    *
+    */
 
+    public function vObrikUpdate(Request $request, Obrik $obrik)
+    {
+
+      $obrik->update( $request->all() );
+
+      return "success";
+    }
+
+
+    /*
+    *
+    *
+        LARAVEL SECTION
+    *
+    */
     // Index List Obrik
     public function index()
     {
@@ -75,12 +96,7 @@ class ObrikController extends Controller
       return redirect()->route('obrik.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    // Tampilkan Obrik Single Page
     public function show($id)
     {
       $obrik = Obrik::find($id);
@@ -88,35 +104,19 @@ class ObrikController extends Controller
       return view ('obrik.show')->with('obrik', $obrik);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    // Edit Obrik Page
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    // Update Data Obrik
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    // Hapus Obrik
     public function destroy($id)
     {
         //

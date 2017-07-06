@@ -1,8 +1,5 @@
-<div class="row">
-  <div class="col-md-12">
-    <div class=" text-center">
 
-      <div class="panel panel-default">
+    <div class=" text-center" style="border: 1px solid #ccc">
       @if (Auth::guest())
         <div class="panel-body">
           <div class="btn-group btn-group-xs btn-group-justified">
@@ -30,9 +27,4 @@
           <a href="{{ url('/logout') }}" class="btn btn-info btn-sm">Logout</a>
         </div>
       @endif
-
-      </div>
     </div>
-  </div>
-
-</div>

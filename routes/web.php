@@ -1,12 +1,33 @@
 <?php
+
+/*
+  |--------------------------------------------------------------------------
+  | //TESTING \\
+  |--------------------------------------------------------------------------
+*/
+  Route::get('/scrape', function() {
+    $crawler = Goutte::request('GET', 'http://duckduckgo.com/html/?q=Laravel');
+    $crawler->filter('.result__title .result__a')->each(function ($node) {
+      dump($node->text());
+    });
+    return view('webScrap');
+  });
+  /* Social Counter */
+  Route::get('counter', function() {
+    return view('_c.social2');
+  });
 /*
   |--------------------------------------------------------------------------
   | // Catch All The Wild Vue (For Vue Router Refresh Not 404) \\
   |--------------------------------------------------------------------------
 */
-  Route::any('/spa{all}', function () {return view('spa.index');})->where(['all' => '.*']);
+  Route::any('/spa/{all}', function () {return view('spa.index');})->where(['all' => '.*']);
   Route::any('/dashboard{all}', function () {return view('admin.dashboard');})->where(['all' => '.*']);
-
+  Route::any('/pengumuman{all}', function () {return view('home');})->where(['all' => '.*']);
+  Route::any('/pegawai{all}', function () {return view('home');})->where(['all' => '.*']);
+  Route::any('/penugasan{all}', function () {return view('home');})->where(['all' => '.*']);
+  Route::any('/perpustakaan{all}', function () {return view('home');})->where(['all' => '.*']);
+  Route::any('/obrik/grid{all}', function () {return view('obrik.index');})->where(['all' => '.*']);
 /*
   |--------------------------------------------------------------------------
   | // Main \\
@@ -24,7 +45,6 @@
 */
   Auth::routes();
   Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
-
 /*
   |--------------------------------------------------------------------------
   | // App \\
@@ -37,15 +57,13 @@
 
   });
   Route::resource('app/spip','Apps\SPIPController');
-
   // APIP
+  Route::get('api/apip', 'Apps\APIPController@getAPIP');
   Route::group(['prefix' => 'app/apip'], function () {
     Route::get('lvup','Apps\APIPController@lvup')->name('apip.lvup');
     Route::get('data/{id}','Apps\APIPController@show_data')->name('apip.data');
   });
-
   Route::resource('app/apip', 'Apps\APIPController');
-
   // SIMDA
   Route::get('app/simda','Apps\SIMDAController@index')->name('app.simda');
   // SISKEUDES
@@ -60,17 +78,18 @@
   | // Data \\
   |--------------------------------------------------------------------------
 */
-
   Route::get('data',function () {return view('data.index');})->name('data');
 // Obrik
   Route::get('data/obrik/{id}', 'Data\ObrikController@show_data')->name('obrik.data');
   Route::resource('obrik', 'Data\ObrikController');
 
+
+
 // Posts
-  Route::get('api/posts', 'PostController@getPosts');
-  Route::get('posts', 'PostController@index')->name('posting.bpkp');
-  Route::get('posts/create', 'PostController@create')->name('posting.new');
-  Route::post('posts/store', 'PostController@store')->name('posting.store');
+  Route::get('api/posts', 'Admin\PostController@getPosts');
+  Route::get('posts', 'Admin\PostController@index')->name('posting.bpkp');
+  Route::get('posts/create', 'Admin\PostController@create')->name('posting.new');
+  Route::post('posts/store', 'Admin\PostController@store')->name('posting.store');
 
 // Pages
   Route::get('news','Admin\PageController@news');
@@ -107,18 +126,16 @@
 |--------------------------------------------------------------------------
 */
   // API Pegawai
-  Route::get('api/pegawai', 'PegawaiController@getPegawai');
+  Route::get('api/pegawai', 'Data\PegawaiController@getPegawai');
   // CRUD
-  Route::get('pegawai', 'PegawaiController@index');
+  Route::get('pegawai', 'Data\PegawaiController@index');
 
 /****************************************************************************** ETC */
 // Tugas Resource
-Route::resource('tugas', 'TugasController');
+Route::get('tugas/st', 'Data\TugasController@tugas')->name('tugas');
+Route::resource('tugas', 'Data\TugasController');
 
-// SPA
-Route::get('spa', 'spaController@index');
+
 
 // Testing
 Route::get('cool', function () {return view('post.cool');});
-
-Route::get('tugas/st', 'TugasController@tugas')->name('tugas');

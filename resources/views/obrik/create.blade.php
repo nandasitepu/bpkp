@@ -33,6 +33,9 @@
   <div class="container">
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-12">
+          <h4><span class="label label-info">Tambah Obrik</span></h4>
+        </div>
         <div class="">
           {!! Form::open(array('route' => 'obrik.store', 'data-parsley-validate' => '', 'files' => true )) !!}
             <div class="col-md-8 ">
@@ -90,7 +93,6 @@
               </div>
 
             </div>
-
           {!! Form::close() !!}
         </div>
 

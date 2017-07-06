@@ -14,7 +14,7 @@
         var $loader = $("#loader").addClass("se-pre-con");
          setTimeout(function() {
              $loader.fadeOut("se-pre-con");
-         }, 1000);
+         }, 1);
       });
     </script>
     <link href="/css/loader.css" rel="stylesheet">
