@@ -136,7 +136,7 @@
         </div>
         <div class="col-md-4 hidden-xs" data-spy="affix" data-offset-top="150">
             <div class="cool">
-             {{-- @component('_c.social')@endcomponent --}}
+             @component('_c.social')@endcomponent
             </div>
 
           <div class="col-md-6 col-xs-12 center panel panel-default">
