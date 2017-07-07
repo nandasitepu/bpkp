@@ -1,7 +1,8 @@
 <div class="row">
   <div>
-    <ul class="list-inline hidden-xs">
-      <li><span style="font-family:Lato"><small><b>Pencarian:&nbsp;</b></small> </span></li>
+
+    <ul class="list-inline hidden-xs text-center">
+      <span class="pull-left" style="font-family:Lato"><small><b>Pencarian:&nbsp;</b></small> </span> 
       <li><span class="label label-default"> APIP </span></li>
       <li><span class="label label-default"> SPIP </span></li>
       <li><span class="label label-default"> Dana Desa </span></li>

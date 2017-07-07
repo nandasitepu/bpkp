@@ -43,8 +43,6 @@ let routes=[
     component:require('./components/Penugasan')
   },
 
-
-
   // Dashboard
   {
     path:'/dashboard',
@@ -52,7 +50,7 @@ let routes=[
   },
   {
     path:'/dashboard/obrik',
-    component:require('./components/obrik/tableObrik')
+    component:require('./components/obrik/index')
   },
   {
     path:'/dashboard/pegawai',
@@ -78,18 +76,29 @@ let routes=[
     component:require('./components/Berita')
   },
 
-  // obrik
+  // Obrik
   {
     path:'/obrik',
-    component:require('./components/obrik/tableObrik')
+    component:require('./components/obrik/index')
   },
   {
     path:'/obrik/grid',
-    component:require('./components/obrik/gridObrik')
+    component:require('./components/obrik/indexGrid')
   },
   {
     path:'/obrik/create',
-    component:require('./components/obrik/Form')
+    component:require('./components/obrik/addForm')
+  },
+
+
+  // Tugas
+  {
+    path:'/tugas',
+    component:require('./components/tugas/index')
+  },
+  {
+    path:'/tugas/create',
+    component:require('./components/tugas/addForm')
   },
 
 ];

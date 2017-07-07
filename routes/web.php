@@ -28,6 +28,7 @@
   Route::any('/penugasan{all}', function () {return view('home');})->where(['all' => '.*']);
   Route::any('/perpustakaan{all}', function () {return view('home');})->where(['all' => '.*']);
   Route::any('/obrik/grid{all}', function () {return view('obrik.index');})->where(['all' => '.*']);
+  Route::any('/tugas{all}', function () {return view('tugas.index');})->where(['all' => '.*']);
 /*
   |--------------------------------------------------------------------------
   | // Main \\
@@ -133,6 +134,7 @@
 /****************************************************************************** ETC */
 // Tugas Resource
 Route::get('tugas/st', 'Data\TugasController@tugas')->name('tugas');
+Route::get('api/tugas', 'Data\TugasController@getTugas');
 Route::resource('tugas', 'Data\TugasController');
 
 

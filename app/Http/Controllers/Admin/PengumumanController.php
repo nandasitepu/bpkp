@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+
 use App\Models\Pengumuman;
 
 class PengumumanController extends Controller

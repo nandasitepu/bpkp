@@ -1,15 +1,25 @@
 <?php
 
 namespace App\Http\Controllers\Data;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use App\Models\Tugas;
 
 class TugasController extends Controller
 {
 
+    public function getTugas(Request $request)
+    {
+       $search = $request->search;
 
+       $tugas = Tugas::where('uraian', 'LIKE', "%$search%")->orderBy('id', 'Asc')->paginate(20);
+
+       return response()->json([
+         'tugas' => $tugas
+       ]);
+    }
 
     public function tugas()
     {

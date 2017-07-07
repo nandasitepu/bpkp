@@ -1,377 +1,76 @@
-@extends('tugas.main')
+@extends('main')
 @section('title')
   Daftar Tugas 2017
 @endsection
-@include('tugas._topnav')
+
 @section('stylesheets')
-  <link rel="stylesheet" href="/css/tugas.css" media="screen" title="no title">
+
 @endsection
+
 @section('content')
-<div class="container">
-  <div class="row">
-    <section class="panel">
-      <div class="panel-heading">
-          All projects List
-          <span class="pull-right">
-              <button type="button" id="loading-btn" class="btn btn-warning btn-xs"><i class="fa fa-refresh"></i> Refresh</button>
-              <a href="#" class=" btn btn-success btn-xs"> Create New Project</a>
-          </span>
+  <div class="container" id="app">
+    <div class="row">
+      <div class="col-md-3">
+        <button class="btn btn-default btn-block btn-xs" data-toggle="collapse" data-target="#sidemenu">
+          <i class="fa fa-th" aria-hidden="true"></i>
+        </button>
+        <div class="well collapse in" id="sidemenu">
+          <ul class="nav">
+            <li>
+              <router-link to="/dashboard">
+                  <i class="fa fa-home fa-fw"></i> &nbsp; Home
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/dashboard/app">
+                <i class="fa fa-barcode fa-fw"></i> &nbsp; App
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/dashboard/obrik">
+                <i class="fa fa-list fa-fw"></i> &nbsp; Obrik
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/dashboard/posts">
+                <i class="fa fa-file-o fa-fw"></i> &nbsp; Posts
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/dashboard/pages">
+                <i class="fa fa-calendar fa-fw"></i> &nbsp; Pages
+              </router-link>
+            </li>
+            <li>
+              <router-link  to="/dashboard/pegawai">
+                <i class="fa fa-users fa-fw"></i> &nbsp; Pegawai
+              </router-link>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="panel-body">
-          <div class="row">
-
-              <div class="col-md-12">
-                  <div class="input-group"><input type="text" placeholder="Search Here" class="input-sm form-control"> <span class="input-group-btn">
-                  <button type="button" class="btn btn-sm btn-success"> Go!</button> </span></div>
-              </div>
+      <div class="col-md-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            @component('_c.search_xs')@endcomponent
           </div>
+          <div class="panel-body">
+            <!-- Menu Tugas -->
+            <div class="pull-right">
+              <router-link class="btn btn-primary btn-sm btn-outline" to="/tugas">Tugas</router-link>
+              <router-link class="btn btn-primary btn-sm" to="/tugas/create">
+                <i class="fa fa-plus-circle"></i>
+              </router-link>
+            </div>
+            <hr>
+            <!--  Dynamic Data -->
+            <router-view></router-view>
+          </div>
+        </div>
       </div>
-      <div class="col-md-12 table-responsive">
-        <table class="table table-hover p-table">
-            <thead>
-            <tr>
-                <th>Project Name</th>
-                <th>Team Member</th>
-                <th>Project Progress</th>
-                <th>Project Status</th>
-                <th>Custom</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td class="p-name">
-                    <a href="project_details.html">New Dashboard BS3</a>
-                    <br>
-                    <small>Created 27.11.2014</small>
-                </td>
-                <td class="p-team">
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar1.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar2.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar3.png"></a>
-                </td>
-                <td class="p-progress">
-                    <div class="progress progress-xs">
-                        <div style="width: 87%;" class="progress-bar progress-bar-success"></div>
-                    </div>
-                    <small>87% Complete </small>
-                </td>
-                <td>
-                    <span class="label label-primary">Active</span>
-                </td>
-                <td>
-                    <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="p-name">
-                    <a href="project_details.html">Creative Portfolio</a>
-                    <br>
-                    <small>Created 21.10.2014</small>
-                </td>
-                <td class="p-team">
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar1.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar2.png"></a>
-                </td>
-                <td class="p-progress">
-                    <div class="progress progress-xs">
-                        <div style="width: 65%;" class="progress-bar progress-bar-success"></div>
-                    </div>
-                    <small>65% Complete </small>
-                </td>
-                <td>
-                    <span class="label label-primary">Active</span>
-                </td>
-                <td>
-                    <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="p-name">
-                    <a href="project_details.html">Directory &amp; listing</a>
-                    <br>
-                    <small>Created 2.09.2014</small>
-                </td>
-                <td class="p-team">
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar1.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar2.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar3.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar3.png"></a>
-                </td>
-                <td class="p-progress">
-                    <div class="progress progress-xs">
-                        <div style="width: 55%;" class="progress-bar progress-bar-success"></div>
-                    </div>
-                    <small>55% Complete </small>
-                </td>
-                <td>
-                    <span class="label label-primary">Active</span>
-                </td>
-                <td>
-                    <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="p-name">
-                    <a href="project_details.html">New Dashboard BS3</a>
-                    <br>
-                    <small>Created 27.11.2014</small>
-                </td>
-                <td class="p-team">
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar1.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar2.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar3.png"></a>
-                </td>
-                <td class="p-progress">
-                    <div class="progress progress-xs">
-                        <div style="width: 87%;" class="progress-bar progress-bar-success"></div>
-                    </div>
-                    <small>87% Complete </small>
-                </td>
-                <td>
-                    <span class="label label-primary">Active</span>
-                </td>
-                <td>
-                    <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="p-name">
-                    <a href="project_details.html">Creative Portfolio</a>
-                    <br>
-                    <small>Created 21.10.2014</small>
-                </td>
-                <td class="p-team">
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar1.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar2.png"></a>
-                </td>
-                <td class="p-progress">
-                    <div class="progress progress-xs">
-                        <div style="width: 65%;" class="progress-bar progress-bar-success"></div>
-                    </div>
-                    <small>65% Complete </small>
-                </td>
-                <td>
-                    <span class="label label-primary">Active</span>
-                </td>
-                <td>
-                    <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="p-name">
-                    <a href="project_details.html">Directory &amp; listing</a>
-                    <br>
-                    <small>Created 2.09.2014</small>
-                </td>
-                <td class="p-team">
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar1.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar2.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar3.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar4.png"></a>
-                </td>
-                <td class="p-progress">
-                    <div class="progress progress-xs">
-                        <div style="width: 55%;" class="progress-bar progress-bar-success"></div>
-                    </div>
-                    <small>55% Complete </small>
-                </td>
-                <td>
-                    <span class="label label-default">Inactive</span>
-                </td>
-                <td>
-                    <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="p-name">
-                    <a href="project_details.html">New Dashboard BS3</a>
-                    <br>
-                    <small>Created 27.11.2014</small>
-                </td>
-                <td class="p-team">
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar1.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar2.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar3.png"></a>
-                </td>
-                <td class="p-progress">
-                    <div class="progress progress-xs">
-                        <div style="width: 87%;" class="progress-bar progress-bar-success"></div>
-                    </div>
-                    <small>87% Complete </small>
-                </td>
-                <td>
-                    <span class="label label-primary">Active</span>
-                </td>
-                <td>
-                    <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="p-name">
-                    <a href="project_details.html">Creative Portfolio</a>
-                    <br>
-                    <small>Created 21.10.2014</small>
-                </td>
-                <td class="p-team">
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar1.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar2.png"></a>
-                </td>
-                <td class="p-progress">
-                    <div class="progress progress-xs">
-                        <div style="width: 65%;" class="progress-bar progress-bar-success"></div>
-                    </div>
-                    <small>65% Complete </small>
-                </td>
-                <td>
-                    <span class="label label-default">Inactive</span>
-                </td>
-                <td>
-                    <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="p-name">
-                    <a href="project_details.html">Directory &amp; listing</a>
-                    <br>
-                    <small>Created 2.09.2014</small>
-                </td>
-                <td class="p-team">
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar1.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar2.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar3.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar4.png"></a>
-                </td>
-                <td class="p-progress">
-                    <div class="progress progress-xs">
-                        <div style="width: 55%;" class="progress-bar progress-bar-success"></div>
-                    </div>
-                    <small>55% Complete </small>
-                </td>
-                <td>
-                    <span class="label label-primary">Active</span>
-                </td>
-                <td>
-                    <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="p-name">
-                    <a href="project_details.html">New Dashboard BS3</a>
-                    <br>
-                    <small>Created 27.11.2014</small>
-                </td>
-                <td class="p-team">
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar1.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar2.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar3.png"></a>
-                </td>
-                <td class="p-progress">
-                    <div class="progress progress-xs">
-                        <div style="width: 87%;" class="progress-bar progress-bar-success"></div>
-                    </div>
-                    <small>87% Complete </small>
-                </td>
-                <td>
-                    <span class="label label-primary">Active</span>
-                </td>
-                <td>
-                    <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="p-name">
-                    <a href="project_details.html">Creative Portfolio</a>
-                    <br>
-                    <small>Created 21.10.2014</small>
-                </td>
-                <td class="p-team">
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar1.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar2.png"></a>
-                </td>
-                <td class="p-progress">
-                    <div class="progress progress-xs">
-                        <div style="width: 65%;" class="progress-bar progress-bar-success"></div>
-                    </div>
-                    <small>65% Complete </small>
-                </td>
-                <td>
-                    <span class="label label-primary">Active</span>
-                </td>
-                <td>
-                    <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="p-name">
-                    <a href="project_details.html">Directory &amp; listing</a>
-                    <br>
-                    <small>Created 2.09.2014</small>
-                </td>
-                <td class="p-team">
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar1.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar2.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar3.png"></a>
-                    <a href="#"><img alt="image" class="" src="http://bootdey.com/img/Content/avatar/avatar4.png"></a>
-                </td>
-                <td class="p-progress">
-                    <div class="progress progress-xs">
-                        <div style="width: 55%;" class="progress-bar progress-bar-success"></div>
-                    </div>
-                    <small>55% Complete </small>
-                </td>
-                <td>
-                    <span class="label label-primary">Active</span>
-                </td>
-                <td>
-                    <a href="project_details.html" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
-                    <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                    <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-      </div>
-    </section>
+    </div>
   </div>
-  <div class="container">
-   <h3>Total Follower : <strong></strong></h3>
- </div>
-
- <script type="text/javascript">
-
-  var twitter_username = 'BPKPgoid';
-
-  $.ajax({
-    url: "https://cdn.syndication.twimg.com/widgets/followbutton/info.json?screen_names=+BPKPgoid",
-    dataType : 'jsonp',
-    crossDomain : true
-  }).done(function(data) {
-    $("h3 strong").text(data[0]['followers_count']);
-  });
-
- </script>
-
-</div>
+@endsection
+@section('bot_scripts')
+ <script src="{{asset('js/myvue.js')}}"></script>
 @endsection
