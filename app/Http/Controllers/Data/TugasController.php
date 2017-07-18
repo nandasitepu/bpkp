@@ -10,11 +10,11 @@ use App\Models\Tugas;
 class TugasController extends Controller
 {
 
-    public function getTugas(Request $request)
+    public function indexTugas(Request $request)
     {
        $search = $request->search;
 
-       $tugas = Tugas::where('uraian', 'LIKE', "%$search%")->orderBy('id', 'Asc')->paginate(20);
+       $tugas = Tugas::where('uraian', 'LIKE', "%$search%")->orderBy('id', 'Asc')->paginate();
 
        return response()->json([
          'tugas' => $tugas
@@ -63,9 +63,10 @@ class TugasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+
+
     }
 
     /**

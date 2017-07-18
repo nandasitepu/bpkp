@@ -44,15 +44,15 @@ canvas {
           </div>
         </div>
         <div class="text-center">
-          <div class="col-md-1">
-            <div class="text-center">
-              APIP Sulbar
+          <div class="col-md-1 col-xs-10">
+            APIP Sulbar
+            <div class="">
               <img class="img-thumbnail" src="../img/kab/sulbar.jpg" alt=""   >
             </div>
             <br>
             <a href="{{route('apip.data', 1)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
           </div>
-          <div class="col-md-1">
+          <div class="col-md-1 col-xs-6 ">
 
             APIP Mamuju
             <div class="">
@@ -62,7 +62,7 @@ canvas {
             <a href="{{route('apip.data', 2)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
             <br>
           </div>
-          <div class="col-md-1">
+          <div class="col-md-1 col-xs-6 ">
             APIP Majene
             <div class="">
               <img class="img-thumbnail" src="../img/kab/majene.jpg" alt="" height="100px" >
@@ -71,7 +71,7 @@ canvas {
             <a href="{{route('apip.data', 3)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
             <br>
           </div>
-          <div class="col-md-1">
+          <div class="col-md-1 col-xs-6 ">
             APIP Polman
             <div class="">
               <img class="img-thumbnail" src="../img/kab/polman.jpg" alt="" height="100px" >
@@ -80,7 +80,7 @@ canvas {
             <a href="{{route('apip.data', 4)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
             <br>
           </div>
-          <div class="col-md-1">
+          <div class="col-md-1 col-xs-6 ">
             APIP Mamasa
             <div class="">
               <img class="img-thumbnail" src="../img/kab/mamasa.jpg" alt="" height="100px" >
@@ -89,7 +89,7 @@ canvas {
             <a href="{{route('apip.data', 5)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
             <br>
           </div>
-          <div class="col-md-1">
+          <div class="col-md-1 col-xs-6 ">
             APIP Matra
             <div class="">
               <img class="img-thumbnail" src="../img/kab/matra.jpg" alt="" height="100px" >
@@ -98,7 +98,7 @@ canvas {
             <a href="{{route('apip.data', 6)}}" class="btn btn-default btn-xs btn-block"> Detail</a>
             <br>
           </div>
-          <div class="col-md-1">
+          <div class="col-md-1 col-xs-6 ">
             APIP Mateng
             <div class="">
               <img class="img-thumbnail" src="../img/kab/mateng.jpg" alt="" height="100px" >

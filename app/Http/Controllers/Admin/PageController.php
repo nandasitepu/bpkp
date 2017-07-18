@@ -59,6 +59,7 @@ class PageController extends Controller
     public function dataspip () {return view('data.spip');}
 
     /* Bidang */
+    public function bid()  {return view('bid.index');}
     public function tu()  {return view('bid.tu');}
     public function ipp() {return view('bid.ipp');}
     public function apd() {return view('bid.apd');}

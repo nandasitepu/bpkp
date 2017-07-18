@@ -76,6 +76,37 @@ let routes=[
     component:require('./components/Berita')
   },
 
+  // Bidang
+  {
+    path:'/bid',
+    component:require('./components/bidang/index')
+  },
+  {
+    path:'/bid/tu',
+    component:require('./components/bidang/TU')
+  },
+  {
+    path:'/bid/ipp',
+    component:require('./components/bidang/IPP')
+  },
+  {
+    path:'/bid/apd',
+    component:require('./components/bidang/APD')
+  },
+  {
+    path:'/bid/an',
+    component:require('./components/bidang/AN')
+  },
+  {
+    path:'/bid/inv',
+    component:require('./components/bidang/INV')
+  },
+  {
+    path:'/bid/p3a',
+    component:require('./components/bidang/P3A')
+  },
+
+
   // Obrik
   {
     path:'/obrik',
@@ -97,9 +128,14 @@ let routes=[
     component:require('./components/tugas/index')
   },
   {
-    path:'/tugas/create',
-    component:require('./components/tugas/addForm')
+    path:'/tugas/show',
+    component:require('./components/tugas/show')
   },
+  {
+    path:'/tugas/tambah',
+    component:require('./components/tugas/addTugas')
+  },
+
 
 ];
 

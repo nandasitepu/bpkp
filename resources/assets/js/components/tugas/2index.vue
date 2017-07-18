@@ -1,21 +1,47 @@
 <template>
 
-  <div>
-    <div class="text-center">
-      <!-- Menu Tugas -->
-      <router-link class="btn btn-primary btn-sm btn-outline" to="/tugas">
-      &nbsp; Daftar Tugas &nbsp;<i class="fa fa-th-list"></i>
-      </router-link>
+</template>
 
-      <router-link class="btn btn-primary btn-sm btn-outline" to="/tugas/show">
-      &nbsp; Detail &nbsp; <i class="fa fa-star-o"></i>
-      </router-link>
+<template>
+  <div >
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <strong>Penugasan:   <span class="label label-primary">{{showData.no_st_nd }}</span> </strong>
+        <hr>
+        <p> Tanggal ST/ND : &nbsp;  <span class="label label-success">{{showData.tanggal_st_nd | date }}</span></p>
+        <p> Uraian Tugas  : &nbsp;  {{showData.uraian}} </p>
+      </div>
+      <div class="panel-body">
+          <strong>Data Pelaksanaan:</strong>
+          <hr>
+        <div class="row">
 
-      <router-link class="btn btn-primary btn-sm btn-outline" to="/tugas/tambah">
-      &nbsp; Tambah &nbsp;  <i class="fa fa-plus-circle"></i>
-      </router-link>
+          <div class="col-md-4">
+            <p>Pengendali Mutu:</p>
+            <p>Pengendali Teknis : </p>
+            <p>Ketua Tim:</p>
+          </div>
+          <div class="col-md-4">
+            <p>Anggota Tim:</p>
+
+            <p>Hari Penugasan:</p>
+          </div>
+          <div class="col-md-4">
+            <p>Anggaran : </p>
+            <p>Mulai : </p>
+            <p>Selesai: </p>
+          </div>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <strong>Pelaporan:</strong>
+        <hr>
+        <p> Tanggal Laporan: &nbsp; {{showData.tanggal_laporan | date}}</p>
+        <p> Nomor Laporan: &nbsp; {{showData.no_laporan }}</p>
+        <p> Rekomendasi/Temuan:  </p>
+      </div>
     </div>
-    <hr>
+
     <form class="" action="#" method="post">
       <div class="table table-responsive" >
         <table class="table table-condensed table-hover" style="background-color:#fff">
@@ -72,10 +98,12 @@
                </td>
 
             </tr>
+
           </tbody>
         </table>
       </div>
     </form>
+
   </div>
 </template>
 

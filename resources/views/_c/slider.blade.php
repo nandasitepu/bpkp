@@ -28,6 +28,8 @@
       <div class="container">
         <div class="carousel-caption" >
             <h4 class="bold"><span class="label label-default">Bersama Pemerintah Daerah</span></h4>
+            <br>
+            <br>
             <hr>
             <h4><span class="label label-primary">\\ Mewujudkan Masyarakat Yang Malaqbi //</span></h4>
           <br>
@@ -39,9 +41,19 @@
       <img class="third-slide" src="/img/web/struktur.jpg" style="width: 100%;height:400px" alt="Third slide">
       <div class="container">
         <div class="carousel-caption">
-          <div style="background-color:#aaa; padding: 5px">
-            <h4>Tim BPKP</h4>
-            <p>\\ Mengawal Pembangunan Nasional//</p>
+          <div style="padding: 5px">
+            <h4><span class="label label-default">Tim BPKP</span> </h4>
+            <p class="bold" style="background-color:#none; color:#000">Mengawal</p>
+            <p class="bold" style="background-color:#none; color:#000">\\ Pembangunan Nasional //</p>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
           </div>
           <br>
           <p><a class="btn btn-success btn-sm" href="#" role="button">Lihat Galeri &raquo;</a></p>
@@ -61,7 +73,6 @@
           </div>
           <br>
           <p>
-
           </p>
         </div>
 

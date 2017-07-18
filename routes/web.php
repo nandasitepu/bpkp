@@ -89,7 +89,7 @@
 // Posts
   Route::get('api/posts', 'Admin\PostController@getPosts');
   Route::get('posts', 'Admin\PostController@index')->name('posting.bpkp');
-  Route::get('posts/create', 'Admin\PostController@create')->name('posting.new');
+  Route::get('posts/{id}', 'Admin\PostController@create')->name('posting.new');
   Route::post('posts/store', 'Admin\PostController@store')->name('posting.store');
 
 // Pages
@@ -111,6 +111,7 @@
 
 // Bidang
   Route::group(['prefix' => 'bid'], function () {
+    Route::get('/' , 'Admin\PageController@bid')->name('bid.index');
     Route::get('tu' , 'Admin\PageController@tu')->name('bid.tu');
     Route::get('ipp', 'Admin\PageController@ipp')->name('bid.ipp');
     Route::get('apd', 'Admin\PageController@apd')->name('bid.apd');
@@ -134,7 +135,7 @@
 /****************************************************************************** ETC */
 // Tugas Resource
 Route::get('tugas/st', 'Data\TugasController@tugas')->name('tugas');
-Route::get('api/tugas', 'Data\TugasController@getTugas');
+Route::get('api/tugas', 'Data\TugasController@indexTugas');
 Route::resource('tugas', 'Data\TugasController');
 
 

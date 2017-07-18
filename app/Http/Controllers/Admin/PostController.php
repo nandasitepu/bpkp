@@ -14,11 +14,20 @@ class PostController extends Controller
    {
      $search = $request->search;
 
-     $posts = Post::where('name', 'LIKE', "%$search%")->orderBy('id', 'Asc')->paginate(10);
+     $posts = Post::where('name', 'LIKE', "%$search%")->orderBy('id', 'Asc')->paginate();
+     $response = [
+             'pagination' => [
+                 'total' => $posts->total(),
+                 'per_page' => $posts->perPage(),
+                 'current_page' => $posts->currentPage(),
+                 'last_page' => $posts->lastPage(),
+                 'from' => $posts->firstItem(),
+                 'to' => $posts->lastItem()
+             ],
+             'posts' => $posts
+         ];
 
-     return response()->json([
-       'posts' => $posts
-     ]);
+     return response()->json($response);
    }
 
 

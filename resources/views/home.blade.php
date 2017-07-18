@@ -14,7 +14,9 @@
 @endsection
 
 @section('content')
-  <div class="container">
+  
+  <div class="container" >
+
     <div class="row">
       <!-- Search and Button -->
       <div class="col-md-8">
@@ -68,7 +70,7 @@
 
     <div class="row">
     <!-- Jumbotron and Tabs -->
-      <div id="app" class="col-md-8">
+      <div class="col-md-8" id="app">
           <div class="tab-content">
             <div id="slider" class="tab-pane fade in active">
               @component('_c.slider')@endcomponent
@@ -77,9 +79,9 @@
               @component('_c.posting')@endcomponent
             </div>
           </div>
-        </div>
+      </div>
       <div class="col-md-4 visible-xs">
-        <div class="col-md-6 col-xs-12 center panel panel-default">
+        <div class="col-md-6 col-xs-12 center">
           @component('_c.app')@endcomponent
         </div>
         <div class="col-md-6 col-xs-12 center ">
@@ -87,17 +89,17 @@
         </div>
       </div>
       <div class="col-md-4 hidden-xs" data-spy="affix" data-offset-top="150">
-          <div class="cool">
-           @component('_c.social')@endcomponent
-          </div>
+
+        @component('_c.social')@endcomponent
 
         <div class="col-md-6 col-xs-12 center panel panel-default">
-
           @component('_c.app')@endcomponent
         </div>
         <div class="col-md-6 col-xs-12 center ">
           @component('_c.slogan')@endcomponent
         </div>
+
+
       </div>
     </div>
 

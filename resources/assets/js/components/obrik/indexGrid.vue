@@ -81,7 +81,6 @@
         obrik.forEach( (obr,i) => {
           if(obr.id==obrId) {
             this.editObrik = obr
-
           }
         });
 
