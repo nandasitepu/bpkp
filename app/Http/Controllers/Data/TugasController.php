@@ -16,9 +16,20 @@ class TugasController extends Controller
 
        $tugas = Tugas::where('uraian', 'LIKE', "%$search%")->orderBy('id', 'Asc')->paginate();
 
-       return response()->json([
-         'tugas' => $tugas
-       ]);
+       $response = [
+               'pagination' => [
+                   'total' => $tugas->total(),
+                   'per_page' => $tugas->perPage(),
+                   'current_page' => $tugas->currentPage(),
+                   'last_page' => $tugas->lastPage(),
+                   'from' => $tugas->firstItem(),
+                   'to' => $tugas->lastItem()
+               ],
+               'tugas' => $tugas,
+
+           ];
+
+       return response()->json($response);
     }
 
     public function tugas()
@@ -63,11 +74,27 @@ class TugasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
-    {
+     public function showTugas(Request $request)
+     {
+        $search = $request->search;
 
+        $tugas = Tugas::where('uraian', 'LIKE', "%$search%")->orderBy('id', 'Asc')->paginate(1);
 
-    }
+        $response = [
+                'pagination' => [
+                    'total' => $tugas->total(),
+                    'per_page' => $tugas->perPage(),
+                    'current_page' => $tugas->currentPage(),
+                    'last_page' => $tugas->lastPage(),
+                    'from' => $tugas->firstItem(),
+                    'to' => $tugas->lastItem()
+                ],
+                'tugas' => $tugas,
+
+            ];
+
+        return response()->json($response);
+     }
 
     /**
      * Show the form for editing the specified resource.

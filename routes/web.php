@@ -23,12 +23,14 @@
 */
   Route::any('/spa/{all}', function () {return view('spa.index');})->where(['all' => '.*']);
   Route::any('/dashboard{all}', function () {return view('admin.dashboard');})->where(['all' => '.*']);
+  //Home
   Route::any('/pengumuman{all}', function () {return view('home');})->where(['all' => '.*']);
   Route::any('/pegawai{all}', function () {return view('home');})->where(['all' => '.*']);
   Route::any('/penugasan{all}', function () {return view('home');})->where(['all' => '.*']);
   Route::any('/perpustakaan{all}', function () {return view('home');})->where(['all' => '.*']);
   Route::any('/obrik/grid{all}', function () {return view('obrik.index');})->where(['all' => '.*']);
   Route::any('/tugas{all}', function () {return view('tugas.index');})->where(['all' => '.*']);
+  Route::any('/data/{all}', function () {return view('data.index');})->where(['all' => '.*']);
 /*
   |--------------------------------------------------------------------------
   | // Main \\
@@ -52,6 +54,7 @@
   |-------------------------------------------------------------------------
 */
   // SPIP
+  Route::get('api/spip', 'Apps\SPIPController@getSPIP');
   Route::group(['prefix' => 'app/spip'], function () {
     Route::get('kab/{id}', 'Apps\SPIPController@spip_pemda')->name('spip.pemda');
     Route::get('tentang', 'Apps\SPIPController@spip_about')->name('spip.tentang');
@@ -80,6 +83,8 @@
   |--------------------------------------------------------------------------
 */
   Route::get('data',function () {return view('data.index');})->name('data');
+
+
 // Obrik
   Route::get('data/obrik/{id}', 'Data\ObrikController@show_data')->name('obrik.data');
   Route::resource('obrik', 'Data\ObrikController');
@@ -88,9 +93,13 @@
 
 // Posts
   Route::get('api/posts', 'Admin\PostController@getPosts');
-  Route::get('posts', 'Admin\PostController@index')->name('posting.bpkp');
-  Route::get('posts/{id}', 'Admin\PostController@create')->name('posting.new');
-  Route::post('posts/store', 'Admin\PostController@store')->name('posting.store');
+  Route::get('berita', 'Admin\PostController@index')->name('posting.bpkp');
+  Route::get('berita/new', 'Admin\PostController@create')->name('posting.new');
+  Route::get('berita/{id}', 'Admin\PostController@show')->name('posting.show');
+  Route::get('berita/{id}/edit', 'Admin\PostController@edit')->name('posting.edit');
+  Route::post('posts', 'Admin\PostController@store')->name('posting.store');
+  Route::post('posts', 'Admin\PostController@update')->name('posting.update');
+
 
 // Pages
   Route::get('news','Admin\PageController@news');
@@ -136,6 +145,7 @@
 // Tugas Resource
 Route::get('tugas/st', 'Data\TugasController@tugas')->name('tugas');
 Route::get('api/tugas', 'Data\TugasController@indexTugas');
+Route::get('api/tugas/show', 'Data\TugasController@showTugas');
 Route::resource('tugas', 'Data\TugasController');
 
 

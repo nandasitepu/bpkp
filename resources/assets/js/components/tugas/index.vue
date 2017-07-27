@@ -1,36 +1,37 @@
 <template>
-
   <div>
     <div class="text-center">
       <!-- Menu Tugas -->
       <router-link class="btn btn-primary btn-sm btn-outline" to="/tugas">
-      &nbsp; Daftar Tugas &nbsp;<i class="fa fa-th-list"></i>
+      &nbsp; List &nbsp;<i class="fa fa-th-list"></i>
       </router-link>
 
-      <router-link class="btn btn-primary btn-sm btn-outline" to="/tugas/show">
+      <router-link class="btn btn-primary btn-sm btn-outline" to="tugas/show">
       &nbsp; Detail &nbsp; <i class="fa fa-star-o"></i>
       </router-link>
 
-      <router-link class="btn btn-primary btn-sm btn-outline" to="/tugas/tambah">
+      <router-link class="btn btn-primary btn-sm btn-outline" to="tugas/tambah">
       &nbsp; Tambah &nbsp;  <i class="fa fa-plus-circle"></i>
       </router-link>
     </div>
     <hr>
     <form class="" action="#" method="post">
       <div class="table table-responsive" >
-        <table class="table table-condensed table-hover" style="background-color:#fff">
+        <table class="table table-condensed table-hover table-striped table-bordered" style="background-color:#fff">
           <thead>
           <tr class="text-primary bold text-center">
             <td class="col-xs-">No</td>
-            <td class="col-xs-3">ST/ND</td>
-            <td class="col-xs-1">Tanggal</td>
-            <td class="col-xs-3">Uraian</td>
-            <td class="col-xs-3">Laporan</td>
+            <td class="col-xs-2">ST/ND</td>
+            <td class="col-xs-2">Tanggal</td>
+            <td class="col-xs-4">Uraian</td>
+            <td class="col-xs-2">Laporan</td>
             <td class="col-xs-2">Action</td>
           </tr>
         </thead>
           <tbody>
+
             <tr v-for="t in tugas.data">
+              <i v-show="loading" class="fa fa-spinner fa-spin"></i>
               <td>{{t.id}}</td>
 
               <td v-show="!formTugas(t.id)">{{t.no_st_nd }}</td>
@@ -172,7 +173,7 @@
       // Format Date
       date (date){
         moment.locale("id");
-        return moment(date).format('DD MMMM YY');
+        return moment(date).format('LL');
       }
     }
   }

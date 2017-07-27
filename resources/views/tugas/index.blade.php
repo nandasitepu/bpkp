@@ -17,61 +17,71 @@
         <div class="collapse in" id="sidemenu">
           <ul class="nav text-center">
             <li>
-              <router-link to="/tugas">
-                <div class="btn btn-success">
+              <router-link to="tugas">
+                <div class="btn btn-default btn-xs">
                   <i class="fa fa-briefcase fa-fw"></i>
                 </div>
               </router-link>
 
             </li>
             <li>
-              <router-link to="/posts">
-                <div class="btn btn-primary">
+              <router-link to="pengumuman">
+                <div class="btn btn-default btn-xs">
                   <i class="fa fa-barcode fa-fw"></i>
                 </div>
               </router-link>
             </li>
             <li>
-              <router-link to="/obrik">
-                <div class="btn btn-info">
+              <router-link to="obrik">
+                <div class="btn btn-default btn-xs">
                   <i class="fa fa-building-o fa-fw"></i>
                 </div>
               </router-link>
             </li>
             <li>
-              <router-link to="/posts">
-                <i class="fa fa- fa-fw"></i>
+              <router-link to="berita">
+                <div class="btn btn-default btn-xs">
+                  <i class="fa fa-newspaper-o fa-fw"></i>
+                </div>
               </router-link>
             </li>
             <li>
-              <router-link to="/pengumuman">
-                <i class="fa fa-calendar fa-fw"></i>
+              <router-link to="pengumuman">
+                <div class="btn btn-default btn-xs">
+                  <i class="fa fa-calendar fa-fw"></i>
+                </div>
               </router-link>
             </li>
             <li>
-              <router-link  to="/pegawai">
-                <i class="fa fa-users fa-fw"></i>
+              <router-link  to="pegawai">
+                <div class="btn btn-default btn-xs">
+                  <i class="fa fa-users fa-fw"></i>
+                </div>
               </router-link>
             </li>
           </ul>
         </div>
       </div>
-      <div class="col-md-11">
+      <div class="col-md-9">
         <div class="panel panel-default">
-          <div class="panel-heading">
-            @component('_c.search_xs')@endcomponent
-          </div>
-          <div class="panel-body">
+              <div class="panel-heading">
+                <!--  @component('_c.search_xs')@endcomponent -->
+              </div>
+              <div class="panel-body">
+                <!--  Dynamic Data -->
+                <router-view></router-view>
+              </div>
+            </div>
+      </div>
+      <div class="col-md-2">
 
-
-            <!--  Dynamic Data -->
-            <router-view></router-view>
-          </div>
-        </div>
+        <div id="gpr-kominfo-widget-container"></div>
       </div>
     </div>
+    <br>
   </div>
 @endsection
 @section('bot_scripts')
+ <script type="text/javascript" src="https://widget.kominfo.go.id/gpr-widget-kominfo.min.js"></script>
  <script src="{{asset('js/myvue.js')}}"></script>
 @endsection

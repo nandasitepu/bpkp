@@ -14,8 +14,9 @@
       &nbsp; Tambah &nbsp;  <i class="fa fa-plus-circle"></i>
       </router-link>
     </div>
-    <br>
+    <hr>
     <!--  Pagination -->
+    <h5>Pagination</h5>
     <ul class="pagination pagination-sm pull-right">
       <li v-if="pagination.current_page > 1">
           <a href="#" aria-label="Previous"
@@ -44,8 +45,10 @@
         <p> Uraian Tugas  : &nbsp;  {{t.uraian}} </p>
       </div>
       <div class="panel-body">
-        <strong>Data Pelaksanaan:</strong>
+          <strong>Data Pelaksanaan:</strong>
+          <hr>
         <div class="row">
+
           <div class="col-md-4">
             <p>Pengendali Mutu:</p>
             <p>Pengendali Teknis : </p>
@@ -65,6 +68,7 @@
       </div>
       <div class="panel-footer">
         <strong>Pelaporan:</strong>
+        <hr>
         <p> Tanggal Laporan: &nbsp; {{t.tanggal_laporan | date}}</p>
         <p> Nomor Laporan: &nbsp; {{t.no_laporan }}</p>
         <p> Rekomendasi/Temuan:  </p>
@@ -82,23 +86,21 @@
       return {
         tugas:[],
         loading:false,
+        url:'../api/tugas',
         pagination: {
           total: '',
-          per_page: '',
+          per_page: 5,
           from: '',
           to: '',
           current_page: 1
         },
         offset: 1,
         loading:false,
-        resource_url: 'api/tugas/show',
+        resource_url: '/api/tugas',
       }
     },
-    props: {
-      per_page: 1,
-    },
     created:function(){
-      this.fetchDataTugas()
+      this.indexTugas()
     },
 
     computed: {
@@ -127,21 +129,15 @@
     },
 
     methods:{
-      fetchDataTugas(page) {
+      indexTugas() {
         var vm = this
         this.loading=true;
-        axios.get('/api/tugas/show?page=' + page)
+        axios.get(this.url)
           .then(function(response){
-             Vue.set(vm.$data, 'tugas', response.data.tugas)
-             Vue.set(vm.$data, 'pagination', response.data.pagination)
+             Vue.set(vm.$data, "tugas" , response.data.tugas)
           })
         this.loading=false;
       },
-
-      changePage: function (page) {
-          this.pagination.current_page = page;
-          this.fetchDataTugas(page);
-      }
     },
 
     filters: {

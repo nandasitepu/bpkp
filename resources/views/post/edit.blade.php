@@ -18,13 +18,13 @@
 @section('content')
 <div class="container">
   <div class="row">
-    {!! Form::model($post, array('route' => ['posts.update', $post->id], 'data-parsley-validate' => '', 'files' => true )) !!}
+    {!! Form::model($post, array('route' => ['posting.update', $post->id], 'data-parsley-validate' => '', 'files' => true )) !!}
 
       <div class="col-md-8">
         <h4> New Post: </h4>
       </div>
       <div class="col-md-4 well ">
-        {{ Form::submit('Edit Post', array('class' => 'btn btn-sm btn-success btn-block' ))}}
+        {{ Form::submit('Update Data', array('class' => 'btn btn-sm btn-success btn-block' ))}}
       </div>
       <div class="col-md-8 panel panel-default pad">
 

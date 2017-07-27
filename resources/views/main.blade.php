@@ -6,15 +6,14 @@
     @yield('more-css')
   </head>
   <body>
-    <div class="se-pre-con" id="loader"></div>
     <nav>
       <!--  Navigation Top -->
       @include('_l._navtop')
     </nav>
 
     @yield('top_scripts')
-    <!--  Main Contents -->
 
+    <!--  Main Contents -->
       @yield('content')
     <!-- The Scripts -->
     @include('_l._scripts')

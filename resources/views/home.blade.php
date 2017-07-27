@@ -14,10 +14,11 @@
 @endsection
 
 @section('content')
-  
+
   <div class="container" >
 
     <div class="row">
+      <div class="se-pre-con" id="loader"></div>
       <!-- Search and Button -->
       <div class="col-md-8">
         <div class="col-md-12">
@@ -41,7 +42,7 @@
                 <i class="fa fa-th-list fa-fw"></i>
               </button>
              </a>
-            <a href="/data" data-content="Data" data-toggle="popover" data-trigger="hover" data-placement="bottom" >
+            <a href="/data" data-content="Stats" data-toggle="popover" data-trigger="hover" data-placement="bottom" >
               <button type="button" class="btn btn-default btn-xs " >
                 <i class="fa fa-bar-chart-o fa-fw"></i>
               </button>
@@ -51,9 +52,9 @@
                 <i class="fa fa-book fa-fw"></i>
               </button>
             </a>
-            <a href="#" data-content="Aplikasi" data-toggle="popover" data-trigger="hover" data-placement="bottom" >
+            <a href="{{route('tugas.index')}}" data-content="Tugas" data-toggle="popover" data-trigger="hover" data-placement="bottom" >
               <button type="button" class="btn btn-default btn-xs " >
-                <i class="fa fa-building-o fa-fw"></i>
+                <i class="fa fa-briefcase fa-fw"></i>
               </button>
             </a>
              &nbsp; || &nbsp;

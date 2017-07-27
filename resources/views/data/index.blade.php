@@ -20,77 +20,57 @@
 
 @section('content')
   <div class="container">
-      <div class="row">
-        <div class="col-md-2 well-sm">
-          <button class="btn btn-default btn-block btn-xs" data-toggle="collapse" data-target="#sidemenu">
-            <i class="fa fa-2x fa-cubes fa-fw" aria-hidden="true"></i>
-          </button>
-          <div class="panel panel-default collapse in" id="sidemenu">
-            <ul class="nav">
-              <li>
-                <a href="#data" data-toggle="tab">
-                    <button type="button" class="btn btn-default btn-xs btn-block" >
-                    <i class="fa fa-database fa-fw"></i> &nbsp; Data
-                  </button>
-                </a>
-              </li>
-              <li>
-                <a href="#pegawai" data-toggle="tab">
-                  <button type="button" class="btn btn-primary btn-xs btn-block">
-                    <i class="fa fa-users fa-fw"></i> &nbsp; Pegawai
-                  </button>
-                </a>
-              </li>
-              <li>
-                  <a href="#tugas" data-toggle="tab">
-                  <button type="button" name="button" class="btn btn-warning btn-xs btn-block">
-                    <i class="fa fa-briefcase fa-fw"></i>
-                    &nbsp; Tugas
-                  </button>
-                </a>
-              </li>
-              <li>
-                <a href="#obrik" data-toggle="tab">
-                  <button type="button" name="button" class="btn btn-info btn-xs btn-block">
-                    <i class="fa fa-building-o fa-fw"></i> &nbsp; Obrik
-                  </button>
-                </a>
-              </li>
-              <li>
-                <a href="#temuan" data-toggle="tab">
-                  <button type="button" name="button" class="btn btn-success btn-xs btn-block">
-                  <i class="fa fa-money fa-fw"></i> &nbsp; Temuan
-                  </button>
-                </a>
-              </li>
-            </ul>
-          </div>
+      <div class="row" id="app">
+        <div class="col-md-2">
+            <a href="/#stats" title="Stats" data-toggle="tab">
+              <button type="button" class="btn btn-default btn-sm btn-block">
+                Stats &nbsp; <i class="fa fa-bar-chart-o fa-fw"></i>
+              </button>
+             </a>
+
+            <a href="/#data" data-content="Data" data-toggle="tab">
+              <button type="button" class="btn btn-default btn-sm btn-block" >
+                 Database &nbsp; <i class="fa fa-table fa-fw"></i>
+              </button>
+            </a>
+
         </div>
-        <div class="col-md-10">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <div class="tab-content">
-                <div id="data" class="tab-pane fade in active">
-                  @component('_c.data')@endcomponent
-                </div>
-                <div id="pegawai" class="tab-pane fade">
-                  @component('_c.pegawai')@endcomponent
-                </div>
-                <div id="tugas" class="tab-pane fade">
-                  @component('_c.tugas')@endcomponent
-                </div>
-                <div id="obrik" class="tab-pane fade">
-                  @component('_c.obrik')@endcomponent
-                </div>
-                <div id="temuan" class="tab-pane fade">
-                  Temuan
-                </div>
+        <div class="col-md-9" >
+            <div class="tab-content">
+              <div id="stats" class="tab-pane fade in active">
+                @component('_c.stats')@endcomponent
+              </div>
+              <div id="data" class="tab-pane fade">
+                @component('_c.data')@endcomponent
               </div>
             </div>
-
-          </div>
+        </div>
+        <div class="col-md-1">
+          <a href="/#stats" title="Stats" data-toggle="tab">
+            <button type="button" class="btn btn-default btn-sm btn-block">
+              <i class="fa fa-bar-chart-o fa-fw"></i>
+            </button>
+           </a>
+          <a href="/#data" data-content="Data" data-toggle="tab">
+            <button type="button" class="btn btn-default btn-sm btn-block" >
+              <i class="fa fa-table fa-fw"></i>
+            </button>
+           </a>
+           <a href="/#stats" title="Stats" data-toggle="tab">
+             <button type="button" class="btn btn-default btn-sm btn-block">
+               <i class="fa fa-bar-chart-o fa-fw"></i>
+             </button>
+            </a>
+           <a href="/#data" data-content="Data" data-toggle="tab">
+             <button type="button" class="btn btn-default btn-sm btn-block" >
+               <i class="fa fa-table fa-fw"></i>
+             </button>
+            </a>
 
         </div>
       </div>
+      <br>
+      <br>
+      <br>
     </div>
 @endsection

@@ -16,6 +16,14 @@ use Alert;
 
 class SPIPController extends Controller
 {
+
+  public function getSPIP()
+    {
+      $spip = SPIP_Data::all();
+
+      return response()->json($spip);
+    }
+
     /* SPIP - Peningkatan Maturitas  */
     public function lvup()
     {

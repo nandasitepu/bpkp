@@ -1,38 +1,36 @@
 <template>
-  <div class="">
-    <div class="">
-      <div class="table table-responsive" >
-        <table class="table table-bordered table-condensed table-striped" style="background-color:#fff">
-          <thead>
-            <tr class="text-center">
-              <td>No</td>
-              <td>Obrik</td>
-              <td>Pimpinan</td>
-              <td>Detail</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="p in obrik.data">
-              <td class="text-center">{{p.id}}</td>
-              <td>{{p.nama | capitalize}}</td>
-              <td>{{p.pimpinan}}</td>
-              <td class="text-center">
-                <div class="btn-group btn-group-xs">
-                  <button type="button" class="btn btn-default">
-                    <i class="fa fa-eye"></i>
-                  </button>
-                  <button type="button" class="btn btn-default">
-                    <i class="fa fa-edit"></i>
-                  </button>
-                  <button type="button" class="btn btn-default">
-                    <i class="fa fa-trash-o"></i>
-                  </button>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+  <div>
+    <div class="table table-responsive" >
+      <table class="table table-bordered table-condensed table-striped" style="background-color:#fff">
+        <thead>
+          <tr class="text-center">
+            <td>No</td>
+            <td>Obrik</td>
+            <td>Pimpinan</td>
+            <td>Detail</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="p in obrik.data">
+            <td class="text-center">{{p.id}}</td>
+            <td>{{p.nama | capitalize}}</td>
+            <td>{{p.pimpinan}}</td>
+            <td class="text-center">
+              <div class="btn-group btn-group-xs">
+                <button type="button" class="btn btn-default">
+                  <i class="fa fa-eye"></i>
+                </button>
+                <button type="button" class="btn btn-default">
+                  <i class="fa fa-edit"></i>
+                </button>
+                <button type="button" class="btn btn-default">
+                  <i class="fa fa-trash-o"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </template>
