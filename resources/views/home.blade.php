@@ -18,7 +18,7 @@
   <div class="container" >
 
     <div class="row">
-      <div class="se-pre-con" id="loader"></div>
+        <div class="se-pre-con" id="loader"></div>
       <!-- Search and Button -->
       <div class="col-md-8">
         <div class="col-md-12">
