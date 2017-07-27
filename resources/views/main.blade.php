@@ -12,7 +12,7 @@
     </nav>
 
     @yield('top_scripts')
-
+    <div class="se-pre-con" id="loader"></div>
     <!--  Main Contents -->
       @yield('content')
     <!-- The Scripts -->
