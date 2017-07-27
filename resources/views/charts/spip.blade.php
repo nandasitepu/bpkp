@@ -4,7 +4,7 @@
 <script>
   $(document).ready(function(){
   $.ajax({
-    url: "http://bpkp.dev/api/spip",
+    url: "/api/spip",
     method: "GET",
     success: function(data) {
       console.log(data);
