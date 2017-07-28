@@ -3,22 +3,22 @@
 @section('stylesheets')
   <link rel="stylesheet" href="/css/tugas.css">
   <style>
-  body {
-      position: relative;
-  }
-  .affix {
-      top: 20px;
-      right: 30px;
-  }
-  </style>
+    body {
+        position: relative;
+    }
+    .affix {
+        top: 20px;
+        right: 30px;
+    }
+   </style>
 @endsection
 
 @section('content')
-
-  <div class="container" >
-
+  <div class="animate-bottom" id="app" style="display:none">
     <div class="row">
-        <div class="se-pre-con" id="loader"></div>
+      <div id="the-load">
+        <div id="loader"></div>
+      </div>
       <!-- Search and Button -->
       <div class="col-md-8">
         <div class="col-md-12">
@@ -68,9 +68,8 @@
         </div>
       </div>
     </div>
-
     <div class="row">
-    <!-- Jumbotron and Tabs -->
+     <!-- Jumbotron and Tabs -->
       <div class="col-md-8" id="app">
           <div class="tab-content">
             <div id="slider" class="tab-pane fade in active">
@@ -103,15 +102,13 @@
 
       </div>
     </div>
-
   </div>
 @endsection
 
 @section('bot-scripts')
   <!-- Bottom Script -->
-  <script src="../js/style.js"></script>
+  <script src="/js/style.js"></script>
   <script type="text/javascript">
-
     $(document).ready(function(e){
       // Search Vue
         $('.search-panel .dropdown-menu').find('a').click(function(e) {

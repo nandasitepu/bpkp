@@ -5,7 +5,7 @@
     @include('_l._head')
     @yield('more-css')
   </head>
-  <body onload="myFunction()">
+  <body>
     <nav>
       <!--  Navigation Top -->
       @include('_l._navtop')
@@ -14,12 +14,7 @@
     @yield('top_scripts')
 
     <!--  Main Contents -->
-
-    <div class="container">
-      <div id="loader"></div>
       @yield('content')
-    </div>
-
     <!-- The Scripts -->
     @include('_l._scripts')
     @yield('bot_scripts')
