@@ -1,4 +1,5 @@
-<div>
+
+<div>  
   <div class="col-md-12 col-xs-6">
     <div class="btn-group-vertical" role="group" aria-label="...">
       <br>
@@ -31,3 +32,4 @@
     </div>
   </div>
 </div>
+<a href="/app"><span class="label label-default">More</span></a>

@@ -17,7 +17,7 @@
     <hr>
     <form class="" action="#" method="post">
       <div class="table table-responsive" >
-        <table class="table table-condensed table-hover table-striped table-bordered" style="background-color:#fff">
+        <table class="table table-condensed table-hover table-bordered" style="background-color:#fff">
           <thead>
           <tr class="text-primary bold text-center">
             <td class="col-xs-">No</td>
@@ -29,17 +29,16 @@
           </tr>
         </thead>
           <tbody>
-
             <tr v-for="t in tugas.data">
               <i v-show="loading" class="fa fa-spinner fa-spin"></i>
-              <td>{{t.id}}</td>
+              <td class="text-center">{{t.id}}</td>
 
-              <td v-show="!formTugas(t.id)">{{t.no_st_nd }}</td>
+              <td v-show="!formTugas(t.id)" class="text-center"><small>{{t.no_st_nd }}</small></td>
               <td v-show="formTugas(t.id)">
                 <input type="text" name="" value="" class="form-control input-sm" v-model="editData.no_st_nd">
                </td>
 
-              <td v-show="!formTugas(t.id)">{{t.tanggal_st_nd | date}}</td>
+              <td v-show="!formTugas(t.id)" class="text-center">{{t.tanggal_st_nd | date}}</td>
               <td v-show="formTugas(t.id)">
                 <input type="text" name="" value="" class="form-control input-sm" v-model="editData.tanggal_st_nd">
               </td>
@@ -49,7 +48,7 @@
                 <input type="text" name="" value="" class="form-control input-sm" v-model="editData.uraian">
               </td>
 
-              <td v-show="!formTugas(t.id)">{{t.no_laporan}}</td>
+              <td v-show="!formTugas(t.id)" class="text-center"><small>{{t.no_laporan}}</small></td>
               <td v-show="formTugas(t.id)">
                <input type="text" name="" value="" class="form-control input-sm" v-model="editData.no_laporan">
               </td>
@@ -90,7 +89,7 @@
         tugas:[],
         loading:false,
         search:'',
-        url:'api/tugas',
+        url:'/api/tugas',
 
         editForm: "",
         editData: {

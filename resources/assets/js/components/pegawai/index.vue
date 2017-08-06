@@ -43,7 +43,7 @@
       return {
         pegawai:[],
         search:'',
-        url:'../api/pegawai'
+        url:'/api/pegawai'
       }
     },
     created:function(){

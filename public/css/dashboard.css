@@ -254,3 +254,8 @@ a:hover,a:focus{
 .white {
   background-color: #fff;
 }
+
+.cool {
+  box-shadow: 1px 1px 1px 2px #000;
+  border-radius: 0px;
+}

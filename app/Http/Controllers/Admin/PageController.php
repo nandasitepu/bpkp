@@ -13,7 +13,6 @@ class PageController extends Controller
 {
     /* All Apps */
     public function data()      {return view('pages.data');}
-
     /* Pages */
     public function profil () {return view('pages.profil');}
     public function rkt () {return view('pages.rkt');}
@@ -42,18 +41,11 @@ class PageController extends Controller
         return redirect()->route('kontak');
     }
 
-
     public function disclaimer () {return view('pages.disclaimer');}
     public function faq () {return view('pages.faq');}
     public function sdank () {return view('pages.sdank');}
 
-    /* Kabupaten*/
-    public function mamuju() {return view('kab.mamuju');}
 
-    public function spipmamuju()
-    {
-
-    }
 
     /* Data */
     public function dataspip () {return view('data.spip');}
@@ -82,69 +74,4 @@ class PageController extends Controller
         return view ('pages.index')->with('pages', $pages);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

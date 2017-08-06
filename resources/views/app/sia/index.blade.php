@@ -9,8 +9,7 @@
 @endsection
 
 @section('content')
-  <div class="container">
-    <div class="row">
+  <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <div class="well text-center">
           <h3>
@@ -28,7 +27,7 @@
           </div>
           <div class="panel-body">
 
-            <p>SIA digunakan oleh BLUD di Provinsi Sulawesi Barat, antara lain:</p>
+            <p>SIA telah digunakan oleh BLUD di Provinsi Sulawesi Barat, antara lain:</p>
             <ol>
               <li>Rumah Sakit Umum Daerah (RSUD)</li>
               <li>Puskesmas Mamuju</li>
@@ -60,6 +59,4 @@
 
       </div>
     </div>
-  </div>
-
 @endsection

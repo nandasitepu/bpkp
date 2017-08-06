@@ -3,7 +3,7 @@
       @if (Auth::guest())
         <div class="panel-body">
           <div class="btn-group btn-group-xs btn-group-justified">
-            <a href="{{route('login')}}" class="btn btn-xs btn-success"><i class="fa fa-users"></i>&nbsp; Tamu</a>
+            <a href="{{route('spa')}}" class="btn btn-xs btn-success"><i class="fa fa-users"></i>&nbsp; Tamu</a>
             <a href="{{route('login')}}" class="btn btn-xs btn-primary"><i class="fa fa-user"></i>&nbsp; Pegawai</a>
             <a href="{{route('login')}}" class="btn btn-xs btn-default"><i class="fa fa-android"></i>&nbsp; Admin</a>
           </div>

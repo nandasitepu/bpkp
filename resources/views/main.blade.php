@@ -6,8 +6,10 @@
     @yield('more-css')
   </head>
   <body onload="myFunction()">
+
     <nav>
       <!--  Navigation Top -->
+
       @include('_l._navtop')
     </nav>
 
@@ -16,8 +18,14 @@
     <!--  Main Contents -->
 
     <div class="container">
-      <div id="loader"></div>
-      @yield('content')
+      <div id="loader">
+        <p class="text-center" style="margin-top: 120px">
+          <span class="label label-primary">Loading ..</span>
+        </p>
+      </div>
+      <div id="app" class="animate-bottom" style="display:none">
+        @yield('content')
+      </div>
     </div>
 
     <!-- The Scripts -->

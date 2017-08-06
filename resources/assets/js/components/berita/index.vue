@@ -33,7 +33,7 @@
             <div id="berita" v-for="p in posts.data">
               <div class="col-md-4">
                 <div class="berita-image">
-                  <img src="https://lorempixel.com/150/150?rand=1" class="img-thumbnail" alt="Image" width="100%">
+                  <img v-bind:src="'/img/lorem/150x150.jpg'" class="img-thumbnail" alt="Image" width="100%">
                 </div>
               </div>
               <div class="col-md-8">
@@ -67,7 +67,6 @@
         </div>
     </div>
   </div>
-
 </template>
 <script>
   import axios from 'axios'

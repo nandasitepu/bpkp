@@ -5,7 +5,7 @@
 <script>
   $(document).ready(function(){
     $.ajax({
-      url: "http://bpkp.dev/api/apip",
+      url: "/api/apip",
       method: "GET",
       success: function(data) {
         console.log(data);

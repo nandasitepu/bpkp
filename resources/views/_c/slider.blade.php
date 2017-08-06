@@ -33,7 +33,7 @@
             <hr>
             <h4><span class="label label-primary">\\ Mewujudkan Masyarakat Yang Malaqbi //</span></h4>
           <br>
-          <p><a class="btn btn-info btn-xs btn-block" href="#" role="button">Selengkapnya &raquo;</a></p>
+          <p><a class="btn btn-info btn-xs btn-block" href="{{route('spa')}}" role="button">Selengkapnya &raquo;</a></p>
         </div>
       </div>
     </div>
@@ -56,7 +56,7 @@
             <br>
           </div>
           <br>
-          <p><a class="btn btn-success btn-sm" href="#" role="button">Lihat Galeri &raquo;</a></p>
+          <p><a class="btn btn-success btn-sm" href="Galeri#" role="button">Lihat Galeri &raquo;</a></p>
         </div>
       </div>
     </div>

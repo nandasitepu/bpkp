@@ -56,7 +56,7 @@
         pengumuman:[],
         loading:false,
         search:'',
-        url:'../api/pengumuman'
+        url:'/api/pengumuman'
       }
     },
     created:function(){

@@ -21,15 +21,31 @@
   | // Catch All The Wild Vue (For Vue Router Refresh Not 404) \\
   |--------------------------------------------------------------------------
 */
-  Route::any('/spa/{all}', function () {return view('spa.index');})->where(['all' => '.*']);
-  Route::any('/dashboard{all}', function () {return view('admin.dashboard');})->where(['all' => '.*']);
+Route::prefix('dashboard')->group(function () {
+  Route::any('tugas', function () {return view('users.dashboard');}); // Matches The "/spa/*" URL
+  Route::any('pengumuman', function () {return view('users.dashboard');});
+  Route::any('obrik', function () {return view('users.dashboard');});
+  Route::any('berita', function () {return view('users.dashboard');});
+  Route::any('pegawai', function () {return view('users.dashboard');});
+});
+
+Route::prefix('spa')->group(function () {
+  Route::any('spip', function () {return view('dashboard');}); // Matches The "/spa/*" URL
+  Route::any('apip', function () {return view('dashboard');});
+  Route::any('fcp', function () {return view('dashboard');});
+  Route::any('simda', function () {return view('dashboard');});
+  Route::any('sia', function () {return view('dashboard');});
+  Route::any('siskeudes', function () {return view('dashboard');});
+});
+  //Route::any('/app/spip/{all}', function () {return view('dashboard');})->where(['all' => '.*']);
+  Route::any('admin/dashboard/{all}', function () {return view('admin.dashboard');})->where(['all' => '.*']);
   //Home
-  Route::any('/pengumuman{all}', function () {return view('home');})->where(['all' => '.*']);
-  Route::any('/pegawai{all}', function () {return view('home');})->where(['all' => '.*']);
-  Route::any('/penugasan{all}', function () {return view('home');})->where(['all' => '.*']);
-  Route::any('/perpustakaan{all}', function () {return view('home');})->where(['all' => '.*']);
-  Route::any('/obrik/grid{all}', function () {return view('obrik.index');})->where(['all' => '.*']);
-  Route::any('/tugas{all}', function () {return view('tugas.index');})->where(['all' => '.*']);
+  Route::any('/pengumuman/{all}', function () {return view('home');})->where(['all' => '.*']);
+  Route::any('/pegawai/{all}', function () {return view('home');})->where(['all' => '.*']);
+  Route::any('/penugasan/{all}', function () {return view('home');})->where(['all' => '.*']);
+  Route::any('/perpustakaan/{all}', function () {return view('home');})->where(['all' => '.*']);
+  Route::any('/obrik/grid/{all}', function () {return view('obrik.index');})->where(['all' => '.*']);
+  Route::any('/tugas/{all}', function () {return view('tugas.index');})->where(['all' => '.*']);
   Route::any('/data/{all}', function () {return view('data.index');})->where(['all' => '.*']);
 /*
   |--------------------------------------------------------------------------
@@ -40,7 +56,11 @@
   Route::get('/', 'HomeController@home')->name('home');
   Route::get('search', 'HomeController@search')->name('search');
   // Admin Pages
-  Route::get('dashboard', 'Admin\AdminController@index')->name('dashboard')->middleware('auth');
+  Route::get('admin/dashboard', 'Admin\AdminController@index')->name('admin.dashboard')->middleware('auth');
+  // User/Pegawai Pages
+  Route::get('dashboard', 'UserController@index')->name('user.dashboard')->middleware('auth');
+  // Guest Pages
+  Route::get('spa', 'HomeController@index')->name('spa');
 /*
   |--------------------------------------------------------------------------
   | // Authentication \\
@@ -54,7 +74,7 @@
   |-------------------------------------------------------------------------
 */
   // SPIP
-  Route::get('api/spip', 'Apps\SPIPController@getSPIP');
+
   Route::group(['prefix' => 'app/spip'], function () {
     Route::get('kab/{id}', 'Apps\SPIPController@spip_pemda')->name('spip.pemda');
     Route::get('tentang', 'Apps\SPIPController@spip_about')->name('spip.tentang');
@@ -62,7 +82,7 @@
   });
   Route::resource('app/spip','Apps\SPIPController');
   // APIP
-  Route::get('api/apip', 'Apps\APIPController@getAPIP');
+
   Route::group(['prefix' => 'app/apip'], function () {
     Route::get('lvup','Apps\APIPController@lvup')->name('apip.lvup');
     Route::get('data/{id}','Apps\APIPController@show_data')->name('apip.data');
@@ -76,6 +96,11 @@
   Route::get('app/sia','Apps\SIAController@index')->name('app.sia');
   //FCP
   Route::get('app/fcp','Apps\FCPController@index')->name('app.fcp');
+
+   // Apps Index
+  Route::get('app', function() {
+    return view('app.index');
+  });
 
 /*
   |--------------------------------------------------------------------------
@@ -92,7 +117,7 @@
 
 
 // Posts
-  Route::get('api/posts', 'Admin\PostController@getPosts');
+
   Route::get('berita', 'Admin\PostController@index')->name('posting.bpkp');
   Route::get('berita/new', 'Admin\PostController@create')->name('posting.new');
   Route::get('berita/{id}', 'Admin\PostController@show')->name('posting.show');
@@ -115,7 +140,7 @@
   Route::resource('pages', 'Admin\PageController');
 
 // Pengumuman
-  Route::get('api/pengumuman', 'Admin\PengumumanController@getPengumuman');
+
   Route::resource('spa/pengumuman', 'Admin\PengumumanController');
 
 // Bidang
@@ -128,27 +153,26 @@
     Route::get('inv', 'Admin\PageController@inv')->name('bid.inv');
     Route::get('p3a', 'Admin\PageController@p3a')->name('bid.p3a');
   });
-  // Kabupaten
-  Route::get('app/kab/mamuju', 'Admin\PageController@mamuju')->name('kab.mamuju');
 
 /*
 |--------------------------------------------------------------------------
 | Pegawai
 |--------------------------------------------------------------------------
 */
-  // API Pegawai
-  Route::get('api/pegawai', 'Data\PegawaiController@getPegawai');
+
   // CRUD
   Route::get('pegawai', 'Data\PegawaiController@index');
 
 /****************************************************************************** ETC */
 // Tugas Resource
 Route::get('tugas/st', 'Data\TugasController@tugas')->name('tugas');
-Route::get('api/tugas', 'Data\TugasController@indexTugas');
-Route::get('api/tugas/show', 'Data\TugasController@showTugas');
+
 Route::resource('tugas', 'Data\TugasController');
 
 
 
 // Testing
 Route::get('cool', function () {return view('post.cool');});
+
+// PKPD - Pengawasan Keuangan dan Pembangunan Desa
+Route::resource('pkpd', 'Apps\PKPDController');

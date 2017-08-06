@@ -8,8 +8,19 @@ class HomeController extends Controller
 {
 
 
-    public function home(){return view('home');}
-    
-    public function search(){return view('search');}
+    public function home()
+    {
+      return view('home');
+    }
+
+    public function search()
+    {
+      return view('search');
+    }
+
+    public function index()
+    {
+      return view('dashboard');
+    }
 
 }

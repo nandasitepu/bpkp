@@ -20,9 +20,6 @@
           Sesuai dengan visi BPKP sebagai Auditor Presiden yang responsif, interaktif dan terpercaya untuk mewujudkan akuntabilitas keuangan negara yang berkualitas dalam mentransformasikan manajemen pemerintahan menuju pemerintahan yang baik dan bersih serta sesuai amanat PP 60 tahun 2008 pasal 59 ayat (2) dan Inpres Nomor 4 Tahun 2011, BPKP, dalam hal ini Deputi Pengawasan Bidang Penyelenggaraan Keuangan Daerah, memandang perlu untuk memfasilitasi Pemerintah Daerah dalam mempersiapkan aparatnya menghadapi perubahan, mendorong pelaksanaan tata kelola keuangan daerah sesuai dengan peraturan yang berlaku, efisien, efektif, transparan, akuntabel, dan auditabel. Hal ini penting guna  meningkatkan kualitas Laporan Keuangan pemerintah daerah menuju terwujudnya good governance.
         </p>
         <p>
-          Sejalan dengan RPJM Tahun 2010-2014, dalam Renstra Tahun 2010-2014,Deputi Pengawasan Bidang Penyelenggaraan Keuangan Daerah telah menetapkan Pengembangan Sistem Informasi Manajemen Daerah sebagai kegiatan untuk mendukung capaian indikator kinerja” Meningkatnya Tingkat Opini BPK terhadap LKPD”.
-        </p>
-        <p>
           Untuk mendukung tujuan tersebut, sejak tahun 2003, Deputi Pengawasan Bidang Penyelenggaraan Keuangan Daerah membentuk Satuan Tugas Pengembangan Sistem Informasi Manajemen Daerah  (SIMDA), dengan tugas:
         </p>
         <ul>

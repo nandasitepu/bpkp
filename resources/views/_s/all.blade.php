@@ -21,10 +21,15 @@
     <td class="col-md-4">{!! $s->spip_dokumen->nama !!}</td>
     <td>
       <!-- Trigger the modal with a button -->
+    @if(Auth::check())
       <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#mdl{{$s->id}}">
         <i class="fa fa-edit"></i>
       </button>
-
+    @else
+      <button type="button" class="btn btn-default btn-sm disabled">
+        <i class="fa fa-edit"></i>
+      </button>
+    @endif
       <!-- Modal -->
       <div class="modal fade" id="mdl{{$s->id}}" role="dialog">
         <div class="modal-dialog">

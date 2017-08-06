@@ -4,9 +4,9 @@
         <div class="navbar-header">
           <!-- Branding Image -->
             <div class="">
-              <a class="navbar-brand text-center" href="{{ url('/') }}">
+              <span class="navbar-brand text-center">
                 <h6>© Copyright 2017</h6>
-              </a>
+              </span>
 
 
             </div>

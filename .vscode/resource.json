@@ -1,0 +1,8 @@
+{
+  "css": {
+    "style": [
+
+      "node_modules/bootstrap/dist/css/bootstrap.css" //i.e bower_components/bootstrap/dist/bootstrap.css
+    ]
+  }
+}

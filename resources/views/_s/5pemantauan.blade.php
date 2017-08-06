@@ -14,9 +14,15 @@
     <td class="col-md-1 text-center">{{$s5->spip_level_id}}</td>
     <td class="col-md-4">{!! $s5->spip_dokumen->nama !!}</td>
     <td>
+    @if(Auth::check())
       <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#mdl{{$s5->spip_level_id}}">
         <i class="fa fa-edit"></i>
       </button>
+    @else
+      <button type="button" class="btn btn-default btn-sm disabled">
+        <i class="fa fa-edit"></i>
+      </button>
+    @endif
     </td>
 
     <td class="col-md-2 text-center">@if ($s5->status == 1)

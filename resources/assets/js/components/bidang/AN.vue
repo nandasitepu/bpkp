@@ -1,6 +1,6 @@
 <template lang="html">
 
-    <div class="row">
+  <div class="row">
       <div class="col-md-12">
       <h4>Bidang Pengawasan <span class="label label-info">Akuntan Negara (AN)</span> </h4>
       </div>
@@ -10,7 +10,7 @@
 
           <div class="panel-body">
             <b>Tim Akuntan Negara</b>
-            <img v-bind:src="'/img/bid/bid_an.jpg'" class="img-thumbnail" alt="" width="100%">
+                        <img v-bind:src="'../img/bid/bid_an.jpg'" class="img-thumbnail" alt="" width="100%">
             <p>Dalam rangka Mewujudkan Good Coorporate Gevernance(GCG) pada BUMN/D Bidang Akuntan Negara Perwakilan BPKP Provinsi Sulawesi Barat Memberikan Pelayanan/Jasa berupa:</p>
 
           <ol>
@@ -54,15 +54,12 @@
               <div class="col-md-4">
                 <img v-bind:src="'../img/instansi/pdam.png'" alt="" class="img-thumbnail" width="100%" height="150px">
               </div>
-
-
             </div>
           </div>
 
         </div>
       </div>
     </div>
-
 </template>
 
 <script>

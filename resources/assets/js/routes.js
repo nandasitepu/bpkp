@@ -20,41 +20,67 @@ let routes=[
       component:require('./components/tugas/index')
     },
 
+    // APP // SPA // TAMU
+    {
+      path:'/spa',
+      component:require('./components/app/-index')
+    },
+    {
+      path:'/spa/spip',
+      component:require('./components/app/spip')
+    },
+    {
+      path:'/spa/apip',
+      component:require('./components/app/apip')
+    },
+    {
+      path:'/spa/fcp',
+      component:require('./components/app/fcp')
+    },
+    {
+      path:'/spa/simda',
+      component:require('./components/app/simda')
+    },
+    {
+      path:'/spa/sia',
+      component:require('./components/app/sia')
+    },
+    {
+      path:'/spa/siskeudes',
+      component:require('./components/app/siskeudes')
+    },
 
-  // SPA
+  // DASHBOARD // PEGAWAI
     {
-      path:'/spa/home',
-      components:require('./components/BPKP')
+      path:'/dashboard',
+      component:require('./components/dashboard')
     },
     {
-      path:'/spa/berita',
-      component:require('./components/berita/index')
+      path:'/dashboard/tugas',
+      component:require('./components/tugas/index.vue')
     },
-    {
-      path:'/spa/pengumuman',
-      component:require('./components/pengumuman/index')
-    },
-    {
-      path:'/spa/pegawai',
-      component:require('./components/pegawai/index')
-    },
-    {
-      path:'/spa/tugas',
-      component:require('./components/tugas/index')
-    },
-
-  // Dashboard
     {
       path:'/dashboard/obrik',
       component:require('./components/obrik/index')
     },
+
     {
       path:'/dashboard/pegawai',
-      component:require('./components/Pegawai')
+      component:require('./components/pegawai/index')
     },
+
     {
       path:'/dashboard/pengumuman',
-      component:require('./components/Pengumuman')
+      component:require('./components/pengumuman/index')
+    },
+
+    {
+      path:'/dashboard/berita',
+      component:require('./components/berita/index')
+    },
+    {
+      path:'/dashboard/pengumuman', // Ganti Jadi Knowledge Center
+      component:require('./components/pengumuman/index')
     },
 
   // Data

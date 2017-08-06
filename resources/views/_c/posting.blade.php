@@ -6,17 +6,17 @@
       </router-link>
     </li>
     <li>
-      <router-link class="btn btn-default btn-sm" to="/pengumuman">
+      <router-link class="btn btn-default btn-sm" to="/data/pengumuman">
         Pengumuman &nbsp;<i class="fa fa-comment-o -o fa-fw"></i>
       </router-link>
     </li>
     <li>
-      <router-link class="btn btn-default btn-sm" to="/pegawai">
+      <router-link class="btn btn-default btn-sm" to="/data/pegawai">
         Pegawai &nbsp;<i class="fa fa-vcard-o fa-fw"></i>
       </router-link>
     </li>
     <li>
-      <router-link class="btn btn-default btn-sm" to="/tugas">
+      <router-link class="btn btn-default btn-sm" to="/data/tugas">
         Tugas &nbsp;<i class="fa fa-briefcase fa-fw"></i>
       </router-link>
     </li>

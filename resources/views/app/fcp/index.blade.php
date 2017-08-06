@@ -9,8 +9,7 @@
 @endsection
 
 @section('content')
-  <div class="container">
-    <div class="row">
+  <div class="row">
       <div class="col-md-8">
         <div class="text-justify">
           <h3><span class="label label-danger"><i>Fraud Control Plan </i> (FCP)  </span></h3>
@@ -45,6 +44,4 @@
         </ol>
       </div>
     </div>
-  </div>
-
 @endsection
