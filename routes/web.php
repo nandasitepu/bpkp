@@ -175,4 +175,5 @@ Route::resource('tugas', 'Data\TugasController');
 Route::get('cool', function () {return view('post.cool');});
 
 // PKPD - Pengawasan Keuangan dan Pembangunan Desa
-Route::resource('pkpd', 'Apps\PKPDController');
+Route::resource('app/pkpd', 'Apps\PKPDController');
+Route::resource('app/sidupak', 'Apps\PAKController');

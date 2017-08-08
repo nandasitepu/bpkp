@@ -19,10 +19,12 @@
   },
   "dependencies": {
     "bootstrap-material-design": "^0.5.10",
+    "chart.js": "^2.6.0",
     "font-awesome": "^4.7.0",
     "moment": "^2.18.1",
     "quill": "^1.2.6",
     "select2": "^4.0.3",
+    "vue-chartjs": "^2.8.1",
     "vuejs-paginator": "^2.0.1",
     "webpack": "^2.6.1"
   }

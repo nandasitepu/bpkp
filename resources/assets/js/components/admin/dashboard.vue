@@ -1,7 +1,6 @@
 <template>
-  <div class="">
     <div class="row">
-      <div class="col-md-10 col-md-offset-1">
+      <div class="col-md-12">
           <h4 class="text-right"><span class="label label-success">Aplikasi </span>&nbsp; // &nbsp;<i class="fa fa-fw fa-desktop"></i> </h4>
           <hr>
           <div class="panel panel-default text-center">
@@ -30,10 +29,10 @@
                       </div>
                       
                   </div>
-               
+                  
               </div>
           </div>
-          <hr>
+          <hr>:
           <div class="panel panel-default text-center">
               <div class="panel-body">
                   <div class="row text-center">
@@ -65,14 +64,15 @@
           </div>
       </div>
     </div>
-  </div>  
-
+  
 </template>
+
+<style>
+
+</style>
+
 <script>
-  import axios from 'axios'
-    
-  export default {
-
-  }
-
+export default {
+  
+}
 </script>

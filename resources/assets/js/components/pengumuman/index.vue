@@ -8,7 +8,7 @@
 
               <td>Pengumuman</td>
               <td>Tanggal</td>
-              <td>Foto</td>
+              <td>Media</td>
               <td>Action</td>
             </tr>
           </thead>

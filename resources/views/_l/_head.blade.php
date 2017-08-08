@@ -89,6 +89,6 @@
     <link href="/css/bpkp.css" rel="stylesheet">
     <!-- Custom CSS -->
     @yield('stylesheets')
-      <script src="{{asset('js/Chart.bundle.min.js')}}"></script>
-      <script src="{{asset('js/Chart.PieceLabel.min.js')}}"></script>
+    
+    
     @yield('top-scripts')

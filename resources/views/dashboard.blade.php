@@ -21,9 +21,9 @@
         <div class="panel-body">
           <div class="hidden-xs">
             <div class="pull-right">
-              <i class="fa fa-bell-o fa-fw"></i>&nbsp; Pengumuman &nbsp;<span class="label label-primary"> 12</span> &nbsp;
-              <i class="fa fa-comment-o fa-fw"></i>&nbsp; Komentar &nbsp;<span class="label label-success">22</span> &nbsp;
-              <i class="fa fa-envelope-o fa-fw"></i>&nbsp; Kontak &nbsp;<span class="label label-info">32</span> &nbsp;
+              <i class="fa fa-bell-o fa-fw"></i>&nbsp; Pengumuman &nbsp;<span class="label label-primary">Go</span> &nbsp;
+              <i class="fa fa-comment-o fa-fw"></i>&nbsp; Komentar &nbsp;<span class="label label-success">Go</span> &nbsp;
+              <i class="fa fa-envelope-o fa-fw"></i>&nbsp; Kontak &nbsp;<span class="label label-info">Go</span> &nbsp;
             </div>
             <i><span class="label label-info">Selamat Datang</span></i>
 
@@ -34,13 +34,13 @@
               <br>
             </div>
             <div class="col-xs-12">
-              <i class="fa fa-bell-o fa-fw"></i>Message &nbsp;<span class="label label-primary"> 12</span>
+              <i class="fa fa-bell-o fa-fw"></i>Message &nbsp;<span class="label label-primary">Go</span>
             </div>
             <div class="col-xs-12">
-              <i class="fa fa-comment-o fa-fw"></i>Comments &nbsp;<span class="label label-success">22</span>
+              <i class="fa fa-comment-o fa-fw"></i>Comments &nbsp;<span class="label label-success">Go</span>
             </div>
             <div class="col-xs-12">
-              <i class="fa fa-envelope-o fa-fw"></i>Email &nbsp;<span class="label label-info">32</span>
+              <i class="fa fa-envelope-o fa-fw"></i>Email &nbsp;<span class="label label-info">Go</span>
             </div>
           </div>
         </div>
@@ -56,9 +56,9 @@
         <div class="btn-group-vertical" role="group">
           <br>
           <router-link to="/spa"      class="btn btn-default btn-xs btn-block cool" role="button" exact>
-            B e R i T a &nbsp;<i class="fa fa-fw fa-newspaper-o"></i>
+            A p p S &nbsp;<i class="fa fa-fw fa-newspaper-o"></i>
           </router-link>
-          <br>
+          <hr>
           <div class="col-md-12 col-xs-6">
             <router-link to="/spa/spip"      class="btn btn-default btn-xs btn-block cool" role="button" exact>
               SPIP <i class="fa fa-fw fa-building-o"></i>

@@ -9,8 +9,8 @@
 
 @section('content')
   <div class="row">
-    <div class="col-md-1 hidden-xs">
-     <div class="panel panel-default">
+    <div class="col-md-1 hidden-xs" >
+     <div class="panel panel-default" data-spy="affix" data-offset-top="50px">
       <button class="btn btn-default btn-block btn-xs" data-toggle="collapse" data-target="#sidemenu">
         <i class="fa fa-th" aria-hidden="true"></i>
       </button>
@@ -86,7 +86,7 @@
     
     </div>
 
-    <div class="col-md-10">
+    <div class="col-md-9">
       <div class="row">
         <div class="col-md-12">
           <div class="panel panel-default">
@@ -129,14 +129,18 @@
         </div>
       </div>
     </div>
-    <div class="col-md-1">
-      <div id="gpr-kominfo-widget-container"></div>
+    <div class="col-md-2">
+      <div class="service-wrapper">
+        <a class="twitter-timeline"  href="https://twitter.com/BPKPgoid/lists/sinopsis-informasi" data-widget-id="579844155678937090">
+          Tweet Dari BPKPgoid
+        </a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
     </div>
   </div>
   <br>
 @endsection
 
 @section('bot_scripts')
- <script type="text/javascript" src="https://widget.kominfo.go.id/gpr-widget-kominfo.min.js"></script>
  <script src="{{asset('js/myvue.js')}}"></script>
 @endsection

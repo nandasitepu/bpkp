@@ -24,7 +24,7 @@
          </div>
          <div class="panel panel-default">
            <div class="panel-body">
-              <h4>// 10 Atribut | FCP</h4>
+              <h4><strong>FCP | 10 Atribut</strong></h4>
         <hr>
         <ul class="medium">
           <li>Kebijakan Terintegrasi</li>
