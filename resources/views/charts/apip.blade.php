@@ -16,7 +16,7 @@
 			  }
 
         var apipData = {
-            labels:  ["Prov", "Polman", "Matra*", "Mamasa*", "Mamuju", "Mateng","Majene"],
+            labels:  ["Prov", "Mamuju", "Majene*", "Polman*", "Mamasa", "Matra","Mateng"],
             datasets: [
               {
                 label: 'Level APIP',

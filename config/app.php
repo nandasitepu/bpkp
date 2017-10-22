@@ -180,7 +180,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
-
+        Yajra\DataTables\DataTablesServiceProvider::class,
 
 
     ],
@@ -237,6 +237,7 @@ return [
 
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
     ],
 
 ];

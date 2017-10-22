@@ -2,5 +2,6 @@
   "/js/app.js": "/js/app.js",
   "/css/app.css": "/css/app.css",
   "/js/myvue.js": "/js/myvue.js",
-  "/js/mychart.js": "/js/mychart.js"
+  "/js/mychart.js": "/js/mychart.js",
+  "/js/other.js": "/js/other.js"
 }

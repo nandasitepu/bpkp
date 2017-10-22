@@ -1,16 +1,16 @@
 <template>
   <div>
-    <div class="text-center">
+   <div class="text-center">
       <!-- Menu Tugas -->
-      <router-link class="btn btn-primary btn-sm btn-outline" to="/tugas">
-      &nbsp; Daftar Tugas &nbsp;<i class="fa fa-th-list"></i>
+      <router-link class="btn btn-primary btn-sm btn-outline" :to="{ path: '/admin/dashboard/tugas' }" replace>
+      &nbsp; List &nbsp;<i class="fa fa-th-list"></i>
       </router-link>
 
-      <router-link class="btn btn-primary btn-sm btn-outline" to="/tugas/show">
+      <router-link class="btn btn-primary btn-sm btn-outline" :to="{ path: '/admin/dashboard/tugas/show' }" replace>
       &nbsp; Detail &nbsp; <i class="fa fa-star-o"></i>
       </router-link>
 
-      <router-link class="btn btn-primary btn-sm btn-outline" to="/tugas/tambah">
+      <router-link class="btn btn-primary btn-sm btn-outline" :to="{ path: '/admin/dashboard/tugas/tambah'  }" replace>
       &nbsp; Tambah &nbsp;  <i class="fa fa-plus-circle"></i>
       </router-link>
     </div>

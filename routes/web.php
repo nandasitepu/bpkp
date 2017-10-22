@@ -38,14 +38,16 @@ Route::prefix('spa')->group(function () {
   Route::any('siskeudes', function () {return view('dashboard');});
 });
   //Route::any('/app/spip/{all}', function () {return view('dashboard');})->where(['all' => '.*']);
-  Route::any('admin/dashboard/{all}', function () {return view('admin.dashboard');})->where(['all' => '.*']);
+  Route::any('/admin/dashboard/tugas', function () {return view('admin.dashboard');})->where(['all' => '.*']);
+  Route::any('/admin/dashboard/tugas/{all}', function () {return view('admin.dashboard');})->where(['all' => '.*']);
+  
   //Home
   Route::any('/pengumuman/{all}', function () {return view('home');})->where(['all' => '.*']);
   Route::any('/pegawai/{all}', function () {return view('home');})->where(['all' => '.*']);
   Route::any('/penugasan/{all}', function () {return view('home');})->where(['all' => '.*']);
   Route::any('/perpustakaan/{all}', function () {return view('home');})->where(['all' => '.*']);
   Route::any('/obrik/grid/{all}', function () {return view('obrik.index');})->where(['all' => '.*']);
-  Route::any('/tugas/{all}', function () {return view('tugas.index');})->where(['all' => '.*']);
+  // Route::any('/tugas/{all}', function () {return view('tugas.index');})->where(['all' => '.*']);
   Route::any('/data/{all}', function () {return view('data.index');})->where(['all' => '.*']);
 /*
   |--------------------------------------------------------------------------
@@ -55,8 +57,6 @@ Route::prefix('spa')->group(function () {
 /******************************** HOME ********************************/
   Route::get('/', 'HomeController@home')->name('home');
   Route::get('search', 'HomeController@search')->name('search');
-  // Admin Pages
-  Route::get('admin/dashboard', 'Admin\AdminController@index')->name('admin.dashboard')->middleware('auth');
   // User/Pegawai Pages
   Route::get('dashboard', 'UserController@index')->name('user.dashboard')->middleware('auth');
   // Guest Pages
@@ -66,8 +66,19 @@ Route::prefix('spa')->group(function () {
   | // Authentication \\
   |--------------------------------------------------------------------------
 */
+  // Users
   Auth::routes();
-  Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+  Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('all.logout');
+  Route::get('/user/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('user.logout');
+  // Admins
+  Route::prefix('admin')->group(function() {
+    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+    Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+    Route::get('/dashboard', 'Admin\AdminController@index')->name('admin.dashboard');
+    Route::get('/logout','Auth\AdminLoginController@logout')->name('admin.logout');  
+  });
+
+  
 /*
   |--------------------------------------------------------------------------
   | // App \\
@@ -114,8 +125,7 @@ Route::prefix('spa')->group(function () {
   Route::get('data/obrik/{id}', 'Data\ObrikController@show_data')->name('obrik.data');
   Route::resource('obrik', 'Data\ObrikController');
 
-
-
+  
 // Posts
 
   Route::get('berita', 'Admin\PostController@index')->name('posting.bpkp');
@@ -160,20 +170,42 @@ Route::prefix('spa')->group(function () {
 |--------------------------------------------------------------------------
 */
 
-  // CRUD
+// CRUD
   Route::get('pegawai', 'Data\PegawaiController@index');
+  
 
 /****************************************************************************** ETC */
 // Tugas Resource
-Route::get('tugas/st', 'Data\TugasController@tugas')->name('tugas');
-
+Route::get('tugas/f', 'Data\TugasController@filter')->name('tugas.filter');
+Route::get('tugas/{id}/cetak', 'Data\TugasController@cetak')->name('cetak.tugas');
 Route::resource('tugas', 'Data\TugasController');
 
 
 
 // Testing
 Route::get('cool', function () {return view('post.cool');});
-
+Route::get('test','Data\PegawaiController@daltu');
 // PKPD - Pengawasan Keuangan dan Pembangunan Desa
 Route::resource('app/pkpd', 'Apps\PKPDController');
 Route::resource('app/sidupak', 'Apps\PAKController');
+
+/*
+|--------------------------------------------------------------------------
+| Perpustakaan
+|--------------------------------------------------------------------------
+*/
+
+Route::get('perpustakaan', function() {return view('perpustakaan.index');});
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Export Import
+|--------------------------------------------------------------------------
+*/
+
+Route::get('export/pegawai', 'Data\PegawaiController@exportExcel')->name('pegawai.excel');
+Route::post('import/pegawai', 'Data\PegawaiController@importExcel')->name('pegawai.import');
+Route::get('export/tugas', 'Data\TugasController@exportExcel')->name('tugas.excel');
+Route::post('import/tugas', 'Data\TugasController@importExcel')->name('tugas.import');

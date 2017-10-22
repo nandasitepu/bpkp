@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     @include('_l._head')
     @yield('more-css')
@@ -9,7 +8,6 @@
 
     <nav>
       <!--  Navigation Top -->
-
       @include('_l._navtop')
     </nav>
 
@@ -25,14 +23,17 @@
       </div>
       <div id="app" class="animate-bottom" style="display:none">
         @yield('content')
+        
       </div>
+      <br>
+        <br>
     </div>
 
     <!-- The Scripts -->
     @include('_l._scripts')
     @yield('bot_scripts')
     <nav>
-      <br>
+     
       <!--  Navigation Bottom-->
       @include('_l._navbot')
     </nav>

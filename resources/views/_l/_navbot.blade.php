@@ -5,10 +5,8 @@
           <!-- Branding Image -->
             <div class="">
               <span class="navbar-brand text-center">
-                <h6>© Copyright 2017</h6>
+                <h5><b>© Copyright 2017</b></h5>
               </span>
-
-
             </div>
             <!-- Collapsed Hamburger -->
         </div>
@@ -17,9 +15,9 @@
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right text-center">
                 <!-- Authentication Links -->
-                  <li><a href="{{route('disclaimer')}}">Disclaimer</a></li>
-                  <li><a href="{{route('sdank')}}">Syarat & Ketentuan</a></li>
-                  <li><a href="{{route('faq')}}">FAQ</a></li>
+                  <li><a href="{{route('disclaimer')}}"><b>Disclaimer</b></a></li>
+                  <li><a href="{{route('sdank')}}"><b>Syarat & Ketentuan</b></a></li>
+                  <li><a href="{{route('faq')}}"><b>FAQ</b></a></li>
             </ul>
         </div>
     </div>

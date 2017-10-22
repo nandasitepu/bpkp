@@ -27,28 +27,32 @@
         </div>
       </div>
       <div class="col-md-4 well">
-        <b>Terdiri dari 6 Bidang:</b>
-        <ol>
-          <li>Instansi Pemerintah Pusat (IPP)</li>
-          <li>Akuntabilitas Pemerintah Daerah (APD)</li>
-          <li>Akuntan Negara (AN)</li>
-          <li>Investigasi (INV)</li>
-          <li>Program Pelaporan dan Pembinaan APIP (P3A)</li>
-          <li>Tata Usaha (TU)</li>
-        </ol>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <b>Terdiri dari 6 Bidang:</b>
+            <ol>
+              <li>Tata Usaha (TU)</li>
+              <li>Instansi Pemerintah Pusat (IPP)</li>
+              <li>Akuntabilitas Pemerintah Daerah (APD)</li>
+              <li>Akuntan Negara (AN)</li>
+              <li>Investigasi (INV)</li>
+              <li>Program Pelaporan dan Pembinaan APIP (P3A)</li>
+            </ol>
+          </div>
+        </div>
       </div>
       <div class="col-md-4 well">
-        <h5><b>// Link</b></h5>
-        <ul style="none">
-          <li><a href="#">Struktur Organisasi</a></li>
-          <li><a href="#">LAKIP</a></li>
-          <li><a href="#">Perjanjian Kinerja</a></li>
-          <li><a href="/pegawai">Daftar Pegawai</a></li>
-
-        </ul>
-
-
-
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h5><b>// Peta Situs</b></h5>
+            <ul style="none">
+              <li><a href="#">Struktur Organisasi</a></li>
+              <li><a href="#">LAKIP</a></li>
+              <li><a href="#">Perjanjian Kinerja</a></li>
+              <li><a href="/pegawai">Daftar Pegawai</a></li>
+            </ul>
+          </div>
+         </div>
       </div>
     </div>
 @endsection

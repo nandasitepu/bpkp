@@ -7,7 +7,15 @@
 
     <!-- Main Scripts -->
     <!-- jQuery & Bootstrap as app.js (necessary for Bootstrap's JavaScript plugins) -->
+
     <script src="{{asset('js/app.js')}}"></script>
+    {{-- dataTables --}}
+ 
+    <link href="{{ asset('assets/datatables/css/dataTables.bootstrap.min.css') }}" rel="stylesheet">
+    <script src="{{ asset('assets/dataTables/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('assets/dataTables/js/dataTables.bootstrap.min.js') }}"></script>
+    
+  
     <!-- Loader -->
     <script>
       var myVar;
@@ -83,12 +91,20 @@
     <!-- Main CSS Bootstrap & FontAwesome as app.css -->
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="/css/nav.css" rel="stylesheet">
-    <link href="/css/tab.css" rel="stylesheet">
-    <link href="/css/timeline.css" rel="stylesheet">
-    <link href="/css/bpkp.css" rel="stylesheet">
+    
+    <link href="{{asset('css/nav.css')}}" rel="stylesheet">
+    <link href="{{asset('css/tab.css')}}" rel="stylesheet">
+    <link href="{{asset('css/timeline.css')}}" rel="stylesheet">
+    <link href="{{asset('css/bpkp.css')}}" rel="stylesheet">
+
     <!-- Custom CSS -->
-    @yield('stylesheets')
+     @yield('stylesheets')
     <script src="{{asset('js/Chart.bundle.min.js')}}"></script>
     <script src="{{asset('js/Chart.PieceLabel.min.js')}}"></script>
+    
     @yield('top-scripts')
+<script>
+  window.Laravel =  <?php echo json_encode([
+      'csrfToken' => csrf_token(),
+  ]); ?>
+</script>

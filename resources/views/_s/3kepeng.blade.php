@@ -33,7 +33,7 @@
       <i class="fa fa-question-circle fa-2x text-warning"></i>
     @endif</td>
     <td class="col-md-2 text-center" data-toggle="collapse" data-target="#all{{$s3->id}}">
-      @if ($s3->catatan == null)
+      @if ($s3->catatan == null or $s3->catatan == 0)
         <i class="fa fa-2x fa-minus-square-o text-info"></i>
       @else
         <i class="fa fa-2x fa-plus-square-o text-danger"></i>
@@ -44,7 +44,7 @@
   <tr>
     <td colspan="6" class="hiddenRow">
         <div id="all{{ $s3->id }}" class="collapse">
-          @if ($s3->catatan == null)
+          @if ($s3->catatan == null )
             <h5 style="padding-left:40px">Belum ada Catatan</h5>
           @else
             <h5 style="padding-left:40px">{{$s3->catatan}}</h5>

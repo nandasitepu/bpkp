@@ -54,20 +54,17 @@
               </td>
               <td class="col-md-2 col-xs-4">
                 <div class="btn-group btn-group-xs">
-                  <button type="button" class="btn btn-default" @click.prevent="showTugas(t.id)">
+                  <button type="button" class="btn btn-default" @click.prevent="showTugas(t.id)" data-toggle="modal" data-target="#myModal">
                     <i class="fa fa-eye fa-fw"></i>
                   </button>
 
-                  <button type="button" class="btn btn-default" @click.prevent="editTugas(t.id)">
+                  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
                     <i class="fa fa-edit fa-fw"></i>
                    </button>
-
+                   
                   <button type="button" class="btn btn-default">
                     <i class="fa fa-trash-o fa-fw"></i>
                    </button>
-                   <button type="button" class="btn btn-default" @click.prevent="editForm=false" >
-                     <i class="fa fa-times fa-fw"></i>
-                    </button>
                 </div>
                </td>
 
@@ -76,6 +73,27 @@
         </table>
       </div>
     </form>
+    <!-- -->
+
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
   </div>
 </template>
 

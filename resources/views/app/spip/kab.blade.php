@@ -27,14 +27,21 @@
           <div class="col-md-7" style="border:1px solid #ccc">
             @include('charts.spip_show')
             <div class="label label-default pull-right">Last Updated : {{ date('M-Y ') }} </div>
+            <br>
+        
+
           </div>
           <div class="col-md-5">
             <div class="panel panel-default">
-
               <div class="panel-body">
                 <h4><span class="label label-success">Catatan | SPIP {{ucwords($pemda->nama)}} </span></h4>
                 <hr>
-                <ul class="fa-ul">
+                @if (Auth::guest())
+                <ul class="fa-ul text-center">
+                 <a href="{{ route('login') }}"> <li class="btn btn-default btn-sm btn-block">Harus Login</li></a>
+                </ul>
+                @else
+                  <ul class="fa-ul">
                   @foreach ($spip as $r)
                     @if (!empty($r->catatan))
                       <li><i class="fa fa-li fa-times-circle-o"></i>{{$r->catatan}}</li>
@@ -42,7 +49,8 @@
                       <span></span>
                     @endif
                   @endforeach
-                </ul>
+                  </ul>
+                @endif
               </div>
 
             </div>
@@ -115,8 +123,9 @@
             @endcomponent
           </div>
         </div>
-      </div>
+      </div>    
       <div class="col-md-2 well text-center hidden-xs absolute">
+    
         <img src="{{asset('img/kab/'. $pemda->short . '.jpg')}}" alt="" height="100px" >
         <h5 class="label label-primary">Pemerintah {{ucwords($pemda->nama)}}</h5>
         <h3>
@@ -138,6 +147,7 @@
 
       </div>
       <div class="col-md-2 text-center visible-xs">
+     
         <img src="{{asset('img/kab/'. $pemda->short . '.jpg')}}" alt="" height="100px" >
         <h5 class="label label-primary">Pemerintah {{ucwords($pemda->nama)}}</h5>
         <h3>

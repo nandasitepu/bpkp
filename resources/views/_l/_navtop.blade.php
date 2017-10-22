@@ -29,46 +29,49 @@
                 <li>
                   <a href="{{route('profil')}}">
                     <i class="fa fa-info-circle" aria-hidden="true">
-                      <span class="lato">&nbsp;  profil</span>
+                      <span class="lato">&nbsp;  <b>profil</b></span>
                     </i>
                   </a>
                 </li>
                 <li>
                   <a href="{{route('rkt')}}">
                     <i class="fa fa-list" aria-hidden="true">
-                      <small class="lato">&nbsp;  RKT</small>
+                      <small class="lato">&nbsp;  <b>RKT</b></small>
                     </i>
                   </a>
                 </li>
                 <li>
                   <a href="{{route('data')}}">
                     <i class="fa fa-bar-chart-o" aria-hidden="true">
-                      <span class="lato">&nbsp;  data</span>
+                      <span class="lato">&nbsp;  <b>data</b></span>
                     </i>
                   </a>
                 </li>
                 <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true">
-                <span class="lato">&nbsp;  forum</span></i></a>
+                <span class="lato">&nbsp;  <b>forum</b></span></i></a>
                 </li>
                 <li><a href="/kontak"><i class="fa fa-envelope-o" aria-hidden="true">
-                <span class="lato">&nbsp;  kontak </span></i></a></li>
+                <span class="lato">&nbsp;  <b>kontak</b> </span></i></a></li>
                 <li>
                   <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse1" aria-expanded="false" aria-controls="nav-collapse1"><i class="fa fa-cubes" aria-hidden="true"></i>&nbsp; Bidang</a>
                 </li>
               </ul>
-              <ul class="nav navbar-nav navbar-right visible-xs">
-                <li><a href="{{route('profil')}}"><i class="fa fa-info-circle" aria-hidden="true">
-                  <span class="lato">&nbsp;  profil</span></i></a></li>
+              <ul class="nav navbar-nav navbar-right visible-xs text-center">
+                <li>
+                  <a href="{{route('profil')}}"><i class="fa fa-info-circle" aria-hidden="true">
+                   <span class="lato">&nbsp;  <b>profil</b></span></i>
+                  </a>
+                </li>
                 <li><a href="{{route('rkt')}}"><i class="fa fa-list" aria-hidden="true">
-                <span class="lato">&nbsp;  RKT</span>
+                <span class="lato">&nbsp;  <b>RKT</b></span>
                 </i></a></li>
-                <li><a href="/data"><i class="fa fa-fw fa-cog fa-spin">
-                </i><span class="lato">&nbsp;  data</span>
+                <li><a href="/data"><i class="fa fa-bar-chart-o">
+                </i><span class="lato">&nbsp;  <b>data</b></span>
                 </a></li>
                 <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true">
-                <span class="lato">&nbsp;  forum</span></i></a></li>
+                <span class="lato">&nbsp;  <b>forum</b></span></i></a></li>
                 <li><a href="/kontak"><i class="fa fa-envelope-o" aria-hidden="true">
-                <span class="lato">&nbsp;  kontak </span></i></a></li>
+                <span class="lato">&nbsp;  <b>kontak</b> </span></i></a></li>
                 <li>
                   <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse-xs" aria-expanded="false" aria-controls="nav-collapse1"><i class="fa fa-cubes" aria-hidden="true"></i>&nbsp; Bidang</a>
                 </li>
@@ -97,7 +100,7 @@
 
               </ul>
               <ul class="collapse nav navbar-nav nav-collapse visible-xs" id="nav-collapse-xs">
-                <div class="col-xs-6  nav navbar-nav bid">
+                <div class="col-xs-6 nav navbar-nav bid">
                   <li>
                     <a href="{{route('bid.apd')}}">
                       <button class="btn btn-block btn-sm btn-default">

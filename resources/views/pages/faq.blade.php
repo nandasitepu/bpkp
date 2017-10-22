@@ -26,7 +26,7 @@ FAQ
             </button>
             <div class="collapse" id="1">
               <div class="well">
-                Situs BPKP Perwakilan Sulawesi Pengunaan merupakan sarana penyediaan informasi bagi para pegawai dan <i>stakeholders</i> BPKP, khususnya di Wilayah Provinsi Sulawesi Barat.
+                Situs BPKP Perwakilan Sulawesi Barat merupakan sarana penyediaan informasi bagi para pegawai dan <i>stakeholders</i> BPKP, khususnya di Wilayah Provinsi Sulawesi Barat.
               </div>
             </div>
             <div class="collapse" id="2">

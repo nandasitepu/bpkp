@@ -14,7 +14,10 @@
         "maatwebsite/excel": "~2.1.0",
         "uxweb/sweet-alert": "^1.4",
         "fabpot/goutte": "^3.2",
-        "weidner/goutte": "^1.0"
+        "weidner/goutte": "^1.0",
+        "yajra/laravel-datatables-oracle": "~8.0",
+        "yajra/laravel-datatables": "1.0",
+        "nicolaslopezj/searchable": "^1.9"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

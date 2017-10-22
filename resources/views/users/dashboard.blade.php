@@ -9,83 +9,81 @@
 
 @section('content')
   <div class="row">
-    <div class="col-md-1 hidden-xs" >
-     <div class="panel panel-default" data-spy="affix" data-offset-top="50px">
-      <button class="btn btn-default btn-block btn-xs" data-toggle="collapse" data-target="#sidemenu">
-        <i class="fa fa-th" aria-hidden="true"></i>
-      </button>
-      <div class="panel-body">
-        <div class="collapse in" id="sidemenu">
-          <div>
+    <div class="col-md-1 hidden-xs">
+      <div class="panel panel-default" data-spy="affix" data-offset-top="50px">
+        <button class="btn btn-default btn-block btn-xs" data-toggle="collapse" data-target="#sidemenu">
+          <i class="fa fa-th" aria-hidden="true"></i>
+        </button>
+        <div class="panel-body">
+          <div class="collapse in" id="sidemenu">
             <div>
-              <router-link to="/dashboard">
-                <div class="btn btn-default btn-sm" >
-                  <i class="fa fa-dashboard fa-fw"></i>
-                </div>
-                <span></span>
-              </router-link>
-            </div>
-            <br>
-            <div>
-              <router-link to="/dashboard/tugas">
-                <div class="btn btn-default btn-sm">
-                  <i class="fa fa-briefcase fa-fw"></i>
-                </div>
-                <span></span>
-              </router-link>
-            </div>
-            <br>
-            <div>
-              <router-link to="/dashboard/pengumuman">
-                <div class="btn btn-default btn-sm">
-                  <i class="fa fa-calendar fa-fw"></i>
-                </div>
-                <span></span>
-              </router-link>
-            </div>
-            <br>
-            <div>
-              <router-link to="/dashboard/obrik">
-                <div class="btn btn-default btn-sm">
-                  <i class="fa fa-building-o fa-fw"></i>
-                </div>
-                <span></span>
-              </router-link>
-            </div>
-            <br>
-            <div>
-              <router-link to="/dashboard/berita">
-                <div class="btn btn-default btn-sm">
-                  <i class="fa fa-newspaper-o fa-fw"></i>
-                </div>
-                <span></span>
-              </router-link>
-            </div>
-            <br>
-            <div>
-              <router-link to="/dashboard/pengumuman">
-                <div class="btn btn-default btn-sm">
-                  <i class="fa fa-calendar fa-fw"></i>
-                </div>
-                <span></span>
-              </router-link>
-            </div>
-            <br>
-            <div>
-              <router-link  to="/dashboard/pegawai">
-                <div class="btn btn-default btn-sm">
-                  <i class="fa fa-users fa-fw"></i>
-                </div>
-                <span></span>
-              </router-link>
+              <div>
+                <router-link to="/dashboard">
+                  <div class="btn btn-default btn-sm" >
+                    <i class="fa fa-dashboard fa-fw"></i>
+                  </div>
+                  <span></span>
+                </router-link>
+              </div>
+              <br>
+              <div>
+                <router-link to="/dashboard/tugas">
+                  <div class="btn btn-default btn-sm">
+                    <i class="fa fa-briefcase fa-fw"></i>
+                  </div>
+                  <span></span>
+                </router-link>
+              </div>
+              <br>
+              <div>
+                <router-link to="/dashboard/pengumuman">
+                  <div class="btn btn-default btn-sm">
+                    <i class="fa fa-calendar fa-fw"></i>
+                  </div>
+                  <span></span>
+                </router-link>
+              </div>
+              <br>
+              <div>
+                <router-link to="/dashboard/obrik">
+                  <div class="btn btn-default btn-sm">
+                    <i class="fa fa-building-o fa-fw"></i>
+                  </div>
+                  <span></span>
+                </router-link>
+              </div>
+              <br>
+              <div>
+                <router-link to="/dashboard/berita">
+                  <div class="btn btn-default btn-sm">
+                    <i class="fa fa-newspaper-o fa-fw"></i>
+                  </div>
+                  <span></span>
+                </router-link>
+              </div>
+              <br>
+              <div>
+                <router-link to="/dashboard/pengumuman">
+                  <div class="btn btn-default btn-sm">
+                    <i class="fa fa-calendar fa-fw"></i>
+                  </div>
+                  <span></span>
+                </router-link>
+              </div>
+              <br>
+              <div>
+                <router-link  to="/dashboard/pegawai">
+                  <div class="btn btn-default btn-sm">
+                    <i class="fa fa-users fa-fw"></i>
+                  </div>
+                  <span></span>
+                </router-link>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
-    </div>
-
     <div class="col-md-9">
       <div class="row">
         <div class="col-md-12">
@@ -133,14 +131,14 @@
       <div class="service-wrapper">
         <a class="twitter-timeline"  href="https://twitter.com/BPKPgoid/lists/sinopsis-informasi" data-widget-id="579844155678937090">
           Tweet Dari BPKPgoid
-        </a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </a>     
         </div>
     </div>
   </div>
-  <br>
+ 
 @endsection
 
 @section('bot_scripts')
  <script src="{{asset('js/myvue.js')}}"></script>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 @endsection

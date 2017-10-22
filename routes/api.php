@@ -26,3 +26,7 @@ Route::get('tugas', 'Data\TugasController@indexTugas');
 Route::get('tugas/show', 'Data\TugasController@showTugas');
 Route::get('spip', 'Apps\SPIPController@getSPIP');
 Route::get('apip', 'Apps\APIPController@getAPIP');
+
+// Data Table
+Route::get('pegawai/table', 'Data\PegawaiController@dataTablePegawai')->name('table.pegawai');
+Route::get('tugas/table', 'Data\TugasController@dataTableTugas')->name('table.tugas');

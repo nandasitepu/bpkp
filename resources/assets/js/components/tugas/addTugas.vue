@@ -1,16 +1,16 @@
 <template>
   <div>
-    <div class="text-center">
+  <div class="text-center">
       <!-- Menu Tugas -->
-      <router-link class="btn btn-primary btn-sm btn-outline" to="/tugas">
-      &nbsp; Daftar Tugas &nbsp;<i class="fa fa-th-list"></i>
+      <router-link class="btn btn-primary btn-sm btn-outline" :to="{ path: '/admin/dashboard/tugas' }" replace>
+      &nbsp; List &nbsp;<i class="fa fa-th-list"></i>
       </router-link>
 
-      <router-link class="btn btn-primary btn-sm btn-outline" to="/tugas/show">
+      <router-link class="btn btn-primary btn-sm btn-outline" :to="{ path: '/admin/dashboard/tugas/show' }" replace>
       &nbsp; Detail &nbsp; <i class="fa fa-star-o"></i>
       </router-link>
 
-      <router-link class="btn btn-primary btn-sm btn-outline" to="/tugas/tambah">
+      <router-link class="btn btn-primary btn-sm btn-outline" :to="{ path: '/admin/dashboard/tugas/tambah'  }" replace>
       &nbsp; Tambah &nbsp;  <i class="fa fa-plus-circle"></i>
       </router-link>
     </div>
@@ -20,7 +20,7 @@
       <div class="panel-body">
         <form class="" action="index.html" method="post" >
           <div class="row">
-            <div class="col-md-8" >
+            <div class="col-md-12" >
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="nama">No ST/ ND:</label>
@@ -77,14 +77,22 @@
 
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-8">
               <div class="form-group">
                 <label for="">Jenis Penugasan:</label><br>
                 <label class="radio-inline"><input type="radio" name="optradio">Assurance</label>
                 <label class="radio-inline"><input type="radio" name="optradio">Consulting</label>
                 <label class="radio-inline"><input type="radio" name="optradio">Lainnya</label>
               </div>
+              
               <div class="form-group">
+                <label for="anggaran">Catatan:</label>
+                <textarea type="text" class="form-control input-sm" id="" placeholder=""></textarea>
+              </div>
+             
+            </div>
+            <div class="col-md-4">
+               <div class="form-group">
                 <label for="lokasi">Lokasi:</label>
                  <select class="form-control" id="lokasi">
                    <option>Lokasi Penugasan</option>
@@ -101,16 +109,17 @@
                 <label for="kontak">Hari Penugasan:</label>
                 <input class="form-control">
               </div>
-              <div class="form-group">
-                <label for="anggaran">Catatan:</label>
-                <textarea type="text" class="form-control input-sm" id="" placeholder=""></textarea>
-              </div>
+             
               <h4 class="text-right">
                 <span class="label label-primary">Tambah Tugas&nbsp; <i class="fa fa-plus-circle fa-fw"></i></span>
               </h4>
             </div>
+
           </div>
-        </form>
+              
+          </form>
+        </div>
+      
       </div>
     </div>
   </div>

@@ -33,7 +33,7 @@
       <i class="fa fa-question-circle fa-2x text-warning"></i>
     @endif</td>
     <td class="col-md-2 text-center" data-toggle="collapse" data-target="#all{{$s4->id}}">
-      @if ($s4->catatan == null)
+      @if ($s4->catatan == null or $s4->catatan == 0)
         <i class="fa fa-2x fa-minus-square-o text-info"></i>
       @else
         <i class="fa fa-2x fa-plus-square-o text-danger"></i>

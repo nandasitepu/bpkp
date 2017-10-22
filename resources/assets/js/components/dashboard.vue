@@ -1,5 +1,4 @@
 <template>
-  <div class="">
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
           <h4 class="text-right"><span class="label label-success">Aplikasi </span>&nbsp; // &nbsp;<i class="fa fa-fw fa-desktop"></i> </h4>
@@ -65,8 +64,6 @@
           </div>
       </div>
     </div>
-  </div>  
-
 </template>
 <script>
   import axios from 'axios'

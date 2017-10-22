@@ -8,7 +8,7 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img class="first-slide" src="/img/web/gedung-bpkp.jpg" style="width: 100%;height:400px" alt="First slide">
+      <img class="first-slide" src="/img/web/gedung-bpkp.jpg" style="width: 100%;height:380px" alt="First slide">
       <div class="container">
         <div class="carousel-caption">
           <h3 class="bold" >\\Selamat Datang//</h3>
@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="item">
-      <img class="second-slide" src="/img/web/gedung-prov-sulbar.jpg" style="width: 100%;height:400px" alt="Second slide">
+      <img class="second-slide" src="/img/web/gedung-prov-sulbar.jpg" style="width: 100%;height:380px" alt="Second slide">
       <div class="container">
         <div class="carousel-caption" >
             <h4 class="bold"><span class="label label-default">Bersama Pemerintah Daerah</span></h4>
@@ -33,35 +33,36 @@
             <hr>
             <h4><span class="label label-primary">\\ Mewujudkan Masyarakat Yang Malaqbi //</span></h4>
           <br>
-          <p><a class="btn btn-info btn-xs btn-block" href="{{route('spa')}}" role="button">Selengkapnya &raquo;</a></p>
+          <p>
+            <a class="btn btn-info btn-xs btn-block" href="{{route('spa')}}" role="button">
+                Selengkapnya &raquo; <i class="fa fa-fw fa-plus-circle"></i>
+            </a>
+          </p>
         </div>
       </div>
     </div>
     <div class="item">
-      <img class="third-slide" src="/img/web/struktur.jpg" style="width: 100%;height:400px" alt="Third slide">
+      <img class="third-slide" src="/img/web/struktur2017.jpg" style="width: 100%;height:380px" alt="Third slide">
       <div class="container">
         <div class="carousel-caption">
-          <div style="padding: 5px">
-            <h4><span class="label label-default">Tim BPKP</span> </h4>
-            <p class="bold" style="background-color:#none; color:#000">Mengawal</p>
-            <p class="bold" style="background-color:#none; color:#000">\\ Pembangunan Nasional //</p>
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+         
+           
+          <div style="background-color:#fff; padding:0xp; margin:0px 200px 300px 0px">
+              <h4><span class="label label-default">Tim BPKP</span> </h4>
+              <p class="bold" style="color:#000">Mengawal</p>
+              <p class="bold" style="color:#000">\\ Pembangunan Nasional //</p>
           </div>
           <br>
-          <p><a class="btn btn-success btn-sm" href="Galeri#" role="button">Lihat Galeri &raquo;</a></p>
+          <p>
+            <a class="btn btn-success btn-sm" href="Galeri#" role="button">
+             <i class="fa fa-fw fa-user-circle-o"></i>&nbsp;Lihat Profil &raquo;
+            </a>
+          </p>
         </div>
       </div>
     </div>
     <div class="item">
-      <img class="fourth-slide" src="/img/web/all.jpg" style="width: 100%;height:400px" alt="Fourth slide">
+      <img class="fourth-slide" src="/img/web/all.jpg" style="width: 100%;height:380px" alt="Fourth slide">
       <div class="container">
         <div class="carousel-caption">
           <div style="background-color:none; padding: 5px">
@@ -73,6 +74,9 @@
           </div>
           <br>
           <p>
+            <a class="btn btn-default btn-xs btn-block" href="#" role="button">
+              <b>Lihat Kinerja &raquo; <i class="fa fa-fw fa-briefcase"></i>&nbsp; </b>
+            </a>
           </p>
         </div>
 

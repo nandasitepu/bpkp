@@ -12,6 +12,11 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
-    .sass('resources/assets/sass/app.scss', 'public/css');
+       
+                .sass('resources/assets/sass/app.scss', 'public/css');
+                mix.js('resources/assets/js/myvue.js', 'public/js/myvue.js');
+                mix.js('resources/assets/js/other.js', 'public/js/other.js');
 
-mix.js('resources/assets/js/myvue.js', 'public/js/myvue.js');
+                mix.copy('node_modules/select2/dist/js/select2.min.js', 'public/assets/select2/js');
+                mix.copy('node_modules/select2/dist/css/select2.min.css', 'public/assets/select2/css');
+                

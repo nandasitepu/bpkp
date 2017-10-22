@@ -76,7 +76,7 @@
       @endif
     </td>
     <td class="col-md-2 text-center" data-toggle="collapse" data-target="#all{{$s->id}}">
-      @if ($s->catatan == null)
+      @if ($s->catatan == null or $s->catatan == 0)
         <i class="fa fa-2x fa-minus-square-o text-info"></i>
       @else
         <i class="fa fa-2x fa-plus-square-o text-danger"></i>
