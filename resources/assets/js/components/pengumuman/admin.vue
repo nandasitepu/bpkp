@@ -8,7 +8,6 @@
               <td>No</td>
               <td>Pengumuman</td>
               <td>Tanggal</td>
-              <td>Media</td>
               <td>Action</td>
             </tr>
           </thead>

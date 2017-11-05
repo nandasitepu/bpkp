@@ -24,7 +24,7 @@ class PengumumanController extends Controller
 
     public function index()
     {
-
+        return view('pengumuman.index');
     }
 
     /**

@@ -30,3 +30,4 @@ Route::get('apip', 'Apps\APIPController@getAPIP');
 // Data Table
 Route::get('pegawai/table', 'Data\PegawaiController@dataTablePegawai')->name('table.pegawai');
 Route::get('tugas/table', 'Data\TugasController@dataTableTugas')->name('table.tugas');
+Route::get('tugas/st/table', 'Data\Penugasan\STController@DataTable_ST')->name('datatable.st');

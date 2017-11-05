@@ -50,20 +50,24 @@
                             </div>
                           <div class="col-md-8">
                               <label for="uraian" class="col-form-label">Nama/Uraian Penugasan</label>
-                              <textarea name="uraian" class="form-control" type="text"  rows="2" id="uraian">{{$tugas->uraian}}</textarea>
+                              <textarea name="uraian" class="form-control" type="text"  rows="3" id="uraian">{{$tugas->uraian}}</textarea>
                               <br>
-                                <div class="col-md-4">
-                                    <label for="tanggal_st_nd" class="col-form-label">Tanggal ST/ND</label>
+                                <div class="col-md-3">
+                                    <label for="tanggal_st_nd" class="col-form-label">Tanggal ST</label>
                                     <input name="tanggal_st_nd" class="form-control" type="date" value="{{$tugas->tanggal_st_nd}}" id="tanggal_st_nd">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <label for="tanggal_mulai" class="col-form-label">Tanggal Mulai</label>
                                     <input name="tanggal_mulai" class="form-control" type="date" value="{{$tugas->tanggal_mulai}}" id="tanggal_mulai">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <label for="tanggal_selesai" class="col-form-label">Tanggal Selesai</label>
                                     <input name="tanggal_selesai" class="form-control" type="date" value="{{$tugas->tanggal_selesai}}" id="tanggal_selesai"> 
-                                </div>    
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="total_hp" class="col-form-label">Hari Penugasan</label>
+                                    <input name="total_hp" class="form-control" type="text" value="{{$tugas->total_hp}}" id="total_hp"> 
+                                </div>      
                              </div>
                         
                       </div>
@@ -83,7 +87,7 @@
                               <div>
                                   <select class="form-control select2-daltu" name="pengendali_mutu_id" style="width:100%">
                                       @foreach ($daltu as $dtu )
-                                          <option value="{{ $dtu->id }}">{{ $dtu->nama }}</option>
+                                          <option value="{{ $dtu->id === NULL ? 1 : $dtu->id }}">{{ $dtu->nama }}</option>
                                       @endforeach
                                   </select>
                               </div>
@@ -162,4 +166,8 @@
         
         </div>
     </div>
+@endsection
+@section('bot_scripts')
+    <link   href="{{  asset('assets/parsley/parsley.min.css') }}" rel="stylesheet">
+    <script src="{{ asset('assets/parsley/parsley.min.js') }}"></script>
 @endsection

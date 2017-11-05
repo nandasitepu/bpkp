@@ -25,7 +25,6 @@
           <li><a href="#all">Semua</a></li>
         </ul>
       </div>
-  <form method="GET" action="{{ route('search') }}">
       <input type="text" name="search" class="form-control input-sm text-center" placeholder="Cari ..." value="{{ old('search') }}">
      
         <div class="input-group-btn search-panel">

@@ -1,6 +1,28 @@
 <template>
   <div>
-    <div class="text-center">
+    <div>
+        <span class="label label-info" style="font-size:14px"><b>Daftar ST</b></span>
+        <ul class="pagination pagination-sm pull-right">
+              <li v-if="pagination.current_page > 1">
+                  <a href="#" aria-label="Previous"
+                      @click.prevent="changePage(pagination.current_page - 1)">
+                      <span aria-hidden="true">«</span>
+                  </a>
+              </li>
+              <li v-for="page in pagesNumber"
+                  v-bind:class="[ page == isActived ? 'active' : '']">
+                  <a href="#"
+                      @click.prevent="changePage(page)">{{ page }}</a>
+              </li>
+              <li v-if="pagination.current_page < pagination.last_page">
+                  <a href="#" aria-label="Next"
+                      @click.prevent="changePage(pagination.current_page + 1)">
+                      <span aria-hidden="true">»</span>
+                  </a>
+              </li>
+          </ul>
+    </div>
+    <div class="text-center" style="margin:10px">
       <!-- Menu Tugas -->
       <router-link class="btn btn-primary btn-sm btn-outline" to="/tugas">
       &nbsp; List &nbsp;<i class="fa fa-th-list"></i>
@@ -8,10 +30,6 @@
 
       <router-link class="btn btn-primary btn-sm btn-outline" to="tugas/show">
       &nbsp; Detail &nbsp; <i class="fa fa-star-o"></i>
-      </router-link>
-
-      <router-link class="btn btn-primary btn-sm btn-outline" to="tugas/tambah">
-      &nbsp; Tambah &nbsp;  <i class="fa fa-plus-circle"></i>
       </router-link>
     </div>
     <hr>
@@ -21,7 +39,7 @@
           <thead>
           <tr class="text-primary bold text-center">
             <td class="col-xs-">No</td>
-            <td class="col-xs-2">ST/ND</td>
+            <td class="col-xs-2">ST</td>
             <td class="col-xs-2">Tanggal</td>
             <td class="col-xs-4">Uraian</td>
             <td class="col-xs-2">Laporan</td>
@@ -33,14 +51,14 @@
               <i v-show="loading" class="fa fa-spinner fa-spin"></i>
               <td class="text-center">{{t.id}}</td>
 
-              <td v-show="!formTugas(t.id)" class="text-center"><small>{{t.no_st_nd }}</small></td>
+              <td v-show="!formTugas(t.id)" class="text-center"><small>{{t.no_st }}</small></td>
               <td v-show="formTugas(t.id)">
-                <input type="text" name="" value="" class="form-control input-sm" v-model="editData.no_st_nd">
+                <input type="text" name="" value="" class="form-control input-sm" v-model="editData.no_st">
                </td>
 
-              <td v-show="!formTugas(t.id)" class="text-center">{{t.tanggal_st_nd | date}}</td>
+              <td v-show="!formTugas(t.id)" class="text-center">{{t.tanggal_st | date}}</td>
               <td v-show="formTugas(t.id)">
-                <input type="text" name="" value="" class="form-control input-sm" v-model="editData.tanggal_st_nd">
+                <input type="text" name="" value="" class="form-control input-sm" v-model="editData.tanggal_st">
               </td>
 
               <td v-show="!formTugas(t.id)">{{t.uraian}}</td>
@@ -53,7 +71,7 @@
                <input type="text" name="" value="" class="form-control input-sm" v-model="editData.no_laporan">
               </td>
               <td class="col-md-2 col-xs-4">
-                <div class="btn-group btn-group-xs">
+                <div class="btn-group btn-group-xs text-center">
                   <button type="button" class="btn btn-default" @click.prevent="showTugas(t.id)" data-toggle="modal" data-target="#myModal">
                     <i class="fa fa-eye fa-fw"></i>
                   </button>
@@ -107,6 +125,15 @@
         tugas:[],
         loading:false,
         search:'',
+        pagination: {
+          total: '',
+          per_page: 5,
+          from: '',
+          to: '',
+          current_page: 1
+        },
+        offset: 1,
+        loading:false,
         url:'/api/tugas',
 
         editForm: "",
@@ -126,7 +153,30 @@
     created:function(){
       this.indexTugas()
     },
-
+    computed: {
+        isActived: function () {
+            return this.pagination.current_page;
+        },
+        pagesNumber: function () {
+            if (!this.pagination.to) {
+                return [];
+            }
+            var from = this.pagination.current_page - this.offset;
+            if (from < 1) {
+                from = 1;
+            }
+            var to = from + (this.offset * 2);
+            if (to >= this.pagination.last_page) {
+                to = this.pagination.last_page;
+            }
+            var pagesArray = [];
+            while (from <= to) {
+                pagesArray.push(from);
+                from++;
+            }
+            return pagesArray;
+        }
+    },
     methods:{
       indexTugas() {
         var vm = this

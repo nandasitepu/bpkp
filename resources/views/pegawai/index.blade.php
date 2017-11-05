@@ -37,7 +37,7 @@
             
             <div class="col-md-3">
               <div class="btn-group-sm text-center" style="margin:10px">
-                <button onclick="" class="btn btn-default btn-sm ">Tambah Data</button> 
+                <a href ="{{route('pegawai.create')}}"> <button class="btn btn-default btn-sm ">Tambah Data</button> </a>
                 <button onclick="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myExport">Export</button> 
                 <button onclick="" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myImport">Import</button>
               </div>
@@ -47,13 +47,14 @@
         </div>
         <div class="panel-body">
              <div class="panel-body table-responsive">
-                <table id="pegawai" class="table table-striped" style="width:100%">
+                <table id="pegawai" class="table compact cell-border" style="width:100%">
                     <thead>
                       <tr>
                         <th width="30">No</th>
                         <th>Nama</th>
                         <th>NIP</th>
                         <th>Jabatan</th>
+                        <th>Detail</th>
                       </tr>
                     </thead>
                     <tbody >
@@ -143,8 +144,8 @@
           {data: 'id', name: 'id'},
           {data: 'nama', name: 'nama'},
           {data: 'nip', name: 'nip'},
-         
           {data: 'jabatan', name: 'jabatan'},
+          {data: 'action', name: 'action'},
         ],
 
         "language": {

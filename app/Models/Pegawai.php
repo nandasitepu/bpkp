@@ -64,4 +64,42 @@ class Pegawai extends Model
       return $this->hasMany(Tugas::class, 'tugas_id');    
     }
 
+    // Relationship with ST
+     public function st_anggotaTim()
+     {
+       return $this->belongsToMany(ST::class, 'st_x_at', 'pegawai_id', 'st_id');
+     }
+ 
+     public function st_narasumber()
+     {
+       return $this->belongsToMany(ST::class, 'st_x_ns', 'pegawai_id', 'tugas_id');
+     }
+ 
+     public function st_fasilitator()
+     {
+       return $this->belongsToMany(ST::class, 'st_x_ft', 'pegawai_id', 'tugas_id');
+     }
+ 
+     //
+     public function st_pj() 
+     {
+       return $this->hasMany(ST::class, 'st_id');    
+     }
+ 
+     public function st_daltu() 
+     {
+       return $this->hasMany(ST::class, 'st_id');    
+     }
+ 
+     public function st_dalnis() 
+     {
+       return $this->hasMany(ST::class, 'st_id');    
+     }
+ 
+     public function st_kt() 
+     {
+       return $this->hasMany(ST::class, 'st_id');    
+     }
+
+
 }

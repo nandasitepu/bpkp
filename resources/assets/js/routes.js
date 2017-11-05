@@ -93,6 +93,10 @@ let routes = [
             component: require('./components/tugas/index.vue')
         },
         {
+            path: '/dashboard/tugas/show',
+            component: require('./components/tugas/show.vue')
+        },
+        {
             path: '/dashboard/obrik',
             component: require('./components/obrik/index')
         },

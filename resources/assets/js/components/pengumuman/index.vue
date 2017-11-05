@@ -8,7 +8,7 @@
 
               <td>Pengumuman</td>
               <td>Tanggal</td>
-              <td>Media</td>
+    
               <td>Action</td>
             </tr>
           </thead>
@@ -18,16 +18,9 @@
               <td>{{p.judul}}</td>
 
               <td>{{p.tanggal | date}}</td>
-              <td class="text-center">
-                <div v-if="p.gambar === null">
-                  <i class="fa fa-file-text-o"></i>
-                </div>
-                <div v-else>
-                  <img v-bind:src="'/img/pegawai/' + p.foto" alt="" style="max-width:24px">
-                </div>
-              </td>
+         
               <td class="col-md-2 col-xs-4">
-                <div class="btn-group btn-group-sm">
+                <div class="btn-group btn-group-xs">
                   <button type="button" class="btn btn-default">
                     <i class="fa fa-eye fa-fw"></i>
                   </button>

@@ -23,5 +23,7 @@
     </style>
  @endsection
 
-<div class="text-center bold" style="border: 1px solid #ccc; margin:none; padding:3px; background:#fff;"><span id="typed" ></span></div>
+<div class="row text-center bold" style="border: 1px solid #ccc; margin:none; padding:3px; background:#fff;">
+    <span id="typed" ></span>
+</div>
  

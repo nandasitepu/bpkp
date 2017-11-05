@@ -6,16 +6,26 @@
   <div class="row">
     <div class="col-md-12">
       <div class="panel panel-default">
+        
         <div class="panel-heading">
-          <h4><b>{{$tugas->uraian}}</b></h4> <h3><span class="label label-default pull-right">{{$tugas->bidang}}</span></h3>
+            <div class="col-md-2">
+              <b>URAIAN PENUGASAN:</b>
+              <hr>
+            </div>
+            <div class="col-md-7">
+              <b>{{$tugas->uraian}}</b><br>
+            </div>
+   
+            <h3 class="text-right"><span class="label label-default text-right">{{$tugas->bidang}}</span></h3>
         </div>
+      
         <br>
         <div class="panel-body">
           <div class="row">
             <div class="col-md-12 hidden-xs" id="data-penugasan">
               <span class="col-md-5">
                 <div class="col-md-6 btn btn-primary btn-sm active">{{$tugas->no_st_nd}}</div> 
-                <div class="col-md-6 btn btn-primary btn-sm active">{{$tugas->tanggal_st_nd}}</div>   
+                <div class="col-md-6 btn btn-primary btn-sm active">{{$tugas->tanggal_st_nd  === NULL ? "Belum ada tanggal" : $tugas->tanggal_st_nd }}</div>   
                </span>
               <span class="col-md-5 " >
                 <div class="col-md-6 btn btn-success btn-sm active">
@@ -75,9 +85,9 @@
                 <div class="col-md-5">
                   <h4><b>Data Tim</b></h4>
                   <hr>
-                    <p> Pengendali Mutu : <br>{{$tugas->pengendaliMutu->nama}}</p>
-                    <p> Pengendali Teknis : <br>{{$tugas->pengendaliTeknis->nama}}</p>
-                    <p> Ketua Tim : <br>{{$tugas->ketuaTim->nama}}</p>
+                    <p> Pengendali Mutu : <br>{{ $tugas->pengendali_mutu_id === null ? "Tidak Ada" : $tugas->pengendaliMutu->nama }}</p>
+                    <p> Pengendali Teknis : <br>{{ $tugas->pengendali_teknis_id === null ? "Tidak Ada" : $tugas->pengendaliTeknis->nama }}</p>
+                    <p> Ketua Tim : <br>{{ $tugas->ketua_tim_id === null ? "Tidak Ada" : $tugas->ketuaTim->nama }}</p>
                     <p> Anggota Tim : 
                         @foreach($tugas->anggotaTim as $at)
                           <li>{{$at->nama}}</li>
@@ -122,9 +132,9 @@
               </div>
         
               <div id="file-tugas" style="padding:20px">
-                 <b> <b>Catatan:</b> </p>
+                 <b> <b>Catatan:</b> </div>
                 <div class="col-md-7" style="border: 1px solid #000; padding:50px">
-                    
+                      
                 </div>
               </div>
           </div>

@@ -23,6 +23,7 @@
     "chart.js": "^2.6.0",
     "font-awesome": "^4.7.0",
     "moment": "^2.18.1",
+    "parsleyjs": "^2.8.0",
     "quill": "^1.2.6",
     "typed.js": "^2.0.6",
     "vue-chartjs": "^2.8.1",

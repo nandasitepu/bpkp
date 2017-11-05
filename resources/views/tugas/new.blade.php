@@ -1,7 +1,19 @@
 @extends('main')
+@section('stylesheets')
+    <style>
+        /*
+        * Row with equal height columns
+        * --------------------------------------------------
+        */
+        .row-eq-height 
+            {
+            display: -webkit-box;
+            }
+    </style>
+@endsection
 @section('title')
     Pembuatan ST
-@endsection
+ @endsection
 @section('top_scripts')
     <link href="{{ asset('assets/select2/css/select2.min.css') }}" rel="stylesheet">
     <script src="{{ asset('assets/select2/js/select2.min.js') }}"></script>
@@ -13,89 +25,79 @@
             
         });
      </script>
-@endsection
+ @endsection
 @section('content')
+    <div class="row" class="alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+             <li>{!! $error !!}</li>
+            @endforeach
+        </ul>
+    </div>
     <div class="row"> 
         <div class="col-md-12">
          
             <div class="panel panel-default">
                
-                <div class="panel-heading" style="background:blue;color:#fff">
+                <div class="panel-heading" style="background:#328cc1;color:#fff">
                     <h4 class="text-center"><b> Buat Surat Tugas </b></h4>
                      
                 </div>
                
                 <div class="panel-body">
-                    <form method="POST" action="{{route('tugas.store')}}" class="form-horizontal" >
+                    <form method="POST" action="{{route('tugas.store')}}" class="form-horizontal" id="form">
                      {!! csrf_field() !!}
-                       
-                   
                         <div class="row">
-                            <div class="col-md-4 well">
-                                <label for="no_st_nd" class="col-form-label">Nomor ST/ND :</label>
-                                <input name="no_st_nd" class="form-control" type="text" value="ST-XXX/PW32/X/2017" placeholder="ST-XXX/PW32/X/2017" id="no_st_nd">
-                                <br>
-                                <label for="tanggal_st_nd" class="col-form-label">Tanggal ST/ND</label>
-                                <input name="tanggal_st_nd" class="form-control" type="date" placeholder="01/01/2017" id="tanggal_st_nd">
-                                <br>
-                                <label for="tipe" class="col-form-label">Tipe Penugasan :</label>
-                                <input name="tipe" class="form-control" type="text" placeholder="Assurance:.../Consulting:... " id="tipe">
-                                <br>
+                            <div class="col-md-4" style="  padding:15px">
+                                <label for="no_st" class="col-form-label">Nomor ST :</label>
+                                <input name="no_st" class="form-control" type="text" value="{!! old('no_st') !!}" placeholder="ST-XXX/PW32/X/2017" id="no_st">
+                       
+                                <label for="tujuan_st" class="col-form-label">Tujuan ST</label>
+                                <input name="tujuan_st" class="form-control" type="text" value="{!! old('tujuan_st') !!}" placeholder="Bupati/Kepala Dinas XYZ" id="tujuan_st">
+                      
+                                <label for="tipe" class="col-form-label">Tipe :</label>
+                                <input name="tipe" class="form-control" type="text" value="{!! old('tipe') !!}" placeholder="Assurance:.../Consulting:... " id="tipe">
+                        
                                 <label for="bidang" class="col-form-label">Bidang :</label>
-                                <input name="bidang" class="form-control" type="text"  placeholder="IPP/APD/dll" id="bidang">
+                                <input name="bidang" class="form-control" type="text"  value="{!! old('bidang') !!}" placeholder="IPP/APD/dll" id="bidang">
                             </div>
     
-                            <div class="col-md-8">
-                                <div class="well">
+                          <div class="col-md-8" style="background:#77c9d4; color:white; padding:15px">
+                              
+                                  
+                            
                                   <label for="uraian" class="col-form-label">Nama/Uraian Penugasan</label>
-                                  <textarea name="uraian" class="form-control" rows="5" type="text-area" placeholder="Audit/Evaluasi/Bimtek bla bla bla..." id="uraian"></textarea>
-                                 </div>
-                              <br>
+                                  <textarea name="uraian" class="form-control" rows="4" type="text-area" value="{!! old('uraian') !!}" placeholder="Audit/Evaluasi/Bimtek bla bla bla..." id="uraian"></textarea>
+                                 
+                                <br>
                                 <div class="row">
                                     <div class="col-md-3">
+                                        <label for="tanggal_st" class="col-form-label">Tanggal ST</label>
+                                        <input name="tanggal_st" class="form-control" type="date" value="{!! old('tanggal_st') !!}" placeholder="01/01/2017" id="tanggal_st">
+                                    </div>
+                                    <div class="col-md-3">
                                         <label for="tanggal-mulai" class="col-form-label">Tanggal Mulai</label>
-                                        <input name="tanggal_mulai" class="form-control" type="date" placeholder="01/01/2017" id="tanggal_mulai">
+                                        <input name="tanggal_mulai" class="form-control" type="date" value="{!! old('tanggal_mulai') !!}" placeholder="01/01/2017" id="tanggal_mulai">
                                     </div>
                                     <div class="col-md-3">
                                         <label for="tanggal_selesai" class="col-form-label">Tanggal Selesai</label>
-                                        <input name="tanggal_selesai" class="form-control" type="date" placeholder="01/01/2017" id="tanggal_selesai"> 
+                                        <input name="tanggal_selesai" class="form-control" type="date" value="{!! old('tanggal_selesai') !!}" placeholder="01/01/2017" id="tanggal_selesai"> 
                                     </div>
                                     <div class="col-md-3">
-                                        <label for="HP" class="col-form-label">Total HP</label>
-                                        <input name="HP" class="form-control" type="text" placeholder="Hari Penugasan" id="tanggal_mulai">
+                                        <label for="hp" class="col-form-label">Total HP</label>
+                                        <input name="hp" class="form-control" type="text" value="{!! old('hp') !!}" placeholder="Hari Penugasan" id="hp">
                                     </div>
-                                    <div class="col-md-3">
-                                        <label for="dl_pj" class="col-form-label">DL/Translok PJ</label>
-                                         <input name="dl_pj" class="form-control" type="text" placeholder="Jumlah Hari" id="dl_pj">
-                                    </div>
+                                
                                 </div>
                                 <br>
-                               
-                                <div class="row">
-                                        <div class="col-md-3">
-                                            <label for="dl_daltu" class="col-form-label">DL/Translok DALTU</label>
-                                            <input name="dl_daltu" class="form-control" type="text" placeholder="Jumlah Hari" id="dl_daltu">
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label for="dl_dalnis" class="col-form-label">DL/Translok DALNIS</label>
-                                            <input name="dl_dalnis" class="form-control" type="text" placeholder="Jumlah Hari" id="dl_dalnis"> 
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label for="dl_kt" class="col-form-label">DL/Translok KT</label>
-                                            <input name="dl_kt" class="form-control" type="text" placeholder="Jumlah Hari" id="dl_kt"> 
-                                        </div>   
-                                        <div class="col-md-3">
-                                            <label for="dl_at_ft_ns" class="col-form-label">DL/Translok AT/FT/NS</label>
-                                            <input name="dl_at_ft_ns" class="form-control" type="text" placeholder="Jumlah Hari" id="dl_at_ft_ns"> 
-                                        </div> 
-                                </div>     
+                            
                             </div>
                         
                             
                         </div>
                         <hr>
                         <div class="row" id="data-tim">
-                            <div class="col-md-4 well">
+                            <div class="col-md-4" style="background:#8eaebd; color:white; padding:15px">
                                 <label for="penanggung_jawab_id" class="col-form-label">Kepala Perwakilan/Plh</label>
                                 <div>
                                     <select class="form-control select2" name="penanggung_jawab_id" style="width:100%">
@@ -133,7 +135,7 @@
                                  </div>
                             </div>
                             
-                           <div class="col-md-4">
+                         <div class="col-md-4" style="background:#ec576b; color:white; padding:15px">
                                 <label for="anggota_tim" class="col-form-label">Anggota Tim</label>
                                 <div>
                                     <select class="form-control select2" name="anggotaTim[]" multiple="multiple" style="width:100%">
@@ -160,18 +162,29 @@
                                         @endforeach
                                     </select>
                                 </div>
+                                <br>
+                                <div class="input-group">
+                                  <span class="input-group-addon"><i class="fa fa-fw fa-money"></i></span>
+                                    <a href="km"><div class="btn btn-md btn-default btn-block"><b>Tambah KM</b></div></a>
+                                    <input id="km" type="text" class="form-control" name="km_id" placeholder="No KM" disabled>
+                                </div>
                                
                          
                            </div>
-                           <div class="col-md-4 well">
+                           <div class="col-md-4" style="background:#4ABDAC; color:white; padding:15px">
                                 <label for="lokasi" class="col-form-label">Lokasi</label>
-                                <input name="lokasi" class="form-control" type="text" placeholder="Mamuju/Majene/dll" id="lokasi">
+                                <input name="lokasi" class="form-control" type="text" value="{!! old('lokasi') !!}" placeholder="Mamuju/Majene/..." id="lokasi">
                                 <br>
-                                <label for="beban" class="col-form-label">Beban</label>
-                                <input name="beban" class="form-control" type="text" placeholder="BPKP/Pemda Mamuju/dll" id="beban">
+                                <b>Biaya:  &nbsp; &nbsp;</b>
+                                <input name="biaya" class="form-control" type="text" value="{!! old('biaya') !!}" placeholder="Tidak Ada/BPKP/Pemda ABC/..." id="biaya">
                                 <br>
                                 <label for="rencana_biaya" class="col-form-label">Total Rencana Biaya</label>
-                                <input name="rencana_biaya" class="form-control" type="text" placeholder="10000000" id="rencana_biaya">
+                               
+                                 <div class="input-group">
+                                  <span class="input-group-addon"><i class="fa fa-fw fa-money"></i></span>
+                                    <a href="costsheet"><div class="btn btn-md btn-default btn-block"><b>Tambah CostSheet</b></div></a>
+                                    <input id="costsheet" type="text" class="form-control" name="costsheet_id" placeholder="No CostSheet" disabled>
+                                </div>
                            </div>
                            
                         </div>
@@ -188,4 +201,13 @@
         
         </div>
     </div>
+
+  
+ @endsection
+@section('bot_scripts')
+    <link   href="{{  asset('assets/parsley/parsley.min.css') }}" rel="stylesheet">
+    <script src="{{ asset('assets/parsley/parsley.min.js') }}"></script>
+    <script>
+        $('#form').parsley();
+    </script>
 @endsection

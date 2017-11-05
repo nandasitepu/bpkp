@@ -38,17 +38,17 @@ Route::prefix('spa')->group(function () {
   Route::any('siskeudes', function () {return view('dashboard');});
 });
   //Route::any('/app/spip/{all}', function () {return view('dashboard');})->where(['all' => '.*']);
-  Route::any('/admin/dashboard/tugas', function () {return view('admin.dashboard');})->where(['all' => '.*']);
-  Route::any('/admin/dashboard/tugas/{all}', function () {return view('admin.dashboard');})->where(['all' => '.*']);
+  Route::any('admin/dashboard/tugas', function () {return view('admin.dashboard');})->where(['all' => '.*']);
+  Route::any('admin/dashboard/tugas/{all}', function () {return view('admin.dashboard');})->where(['all' => '.*']);
   
   //Home
-  Route::any('/pengumuman/{all}', function () {return view('home');})->where(['all' => '.*']);
-  Route::any('/pegawai/{all}', function () {return view('home');})->where(['all' => '.*']);
-  Route::any('/penugasan/{all}', function () {return view('home');})->where(['all' => '.*']);
-  Route::any('/perpustakaan/{all}', function () {return view('home');})->where(['all' => '.*']);
-  Route::any('/obrik/grid/{all}', function () {return view('obrik.index');})->where(['all' => '.*']);
+  Route::any('pengumuman/{all}', function () {return view('home');})->where(['all' => '.*']);
+  //Route::any('/pegawai/{all}', function () {return view('home');})->where(['all' => '.*']);
+  Route::any('penugasan/{all}', function () {return view('home');})->where(['all' => '.*']);
+  Route::any('perpustakaan/{all}', function () {return view('home');})->where(['all' => '.*']);
+  Route::any('obrik/grid/{all}', function () {return view('obrik.index');})->where(['all' => '.*']);
   // Route::any('/tugas/{all}', function () {return view('tugas.index');})->where(['all' => '.*']);
-  Route::any('/data/{all}', function () {return view('data.index');})->where(['all' => '.*']);
+  Route::any('data/{all}', function () {return view('data.index');})->where(['all' => '.*']);
 /*
   |--------------------------------------------------------------------------
   | // Main \\
@@ -57,8 +57,14 @@ Route::prefix('spa')->group(function () {
 /******************************** HOME ********************************/
   Route::get('/', 'HomeController@home')->name('home');
   Route::get('search', 'HomeController@search')->name('search');
-  // User/Pegawai Pages
-  Route::get('dashboard', 'UserController@index')->name('user.dashboard')->middleware('auth');
+  // Users Controller
+  Route::get('dashboard', 'UserController@dashboard')->name('user.dashboard')->middleware('auth');
+  Route::get('users/{nama}', 'UserController@profil')->name('user.profil');
+  
+  Route::get('users/new', 'UserController@create')->name('user.new')->middleware('auth:admin');
+  Route::get('users', 'UserController@index')->name('user.create')->middleware('auth:admin');
+  
+  
   // Guest Pages
   Route::get('spa', 'HomeController@index')->name('spa');
 /*
@@ -171,14 +177,56 @@ Route::prefix('spa')->group(function () {
 */
 
 // CRUD
-  Route::get('pegawai', 'Data\PegawaiController@index');
+Route::resource('pegawai', 'Data\PegawaiController');
   
 
 /****************************************************************************** ETC */
+// Surat Tugas Resource
+Route::get('tugas/st', 'Data\Penugasan\STController@index')->name('st.index')->middleware(['auth']);
+Route::get('tugas/st/new', 'Data\Penugasan\STController@create')->name('st.new');
+Route::post('tugas/st', 'Data\Penugasan\STController@store')->name('st.store');
+Route::put('tugas/st', 'Data\Penugasan\STController@update')->name('st.update');
+// Export Import
+Route::get('tugas/st/export',  'Data\Penugasan\STController@exportExcel')->name('st.export.excel');
+Route::post('tugas/st/import', 'Data\Penugasan\STController@importExcel')->name('st.import.excel');
+
+Route::get('tugas/st/{id}', 'Data\Penugasan\STController@show')->name('st.show')->middleware('auth');
+
+Route::get('tugas/st/{id}/ubah', 'Data\Penugasan\STController@edit')->name('st.edit')->middleware('auth');
+//Delete
+// Cetak
+Route::get('tugas/st/{id}/cetak', 'Data\Penugasan\STController@cetak')->name('st.cetak');
+// Filter
+Route::get('tugas/st/f','Data\Penugasan\STController@filter')->name('st.filter');
+
+
+
+
+
 // Tugas Resource
-Route::get('tugas/f', 'Data\TugasController@filter')->name('tugas.filter');
-Route::get('tugas/{id}/cetak', 'Data\TugasController@cetak')->name('cetak.tugas');
+// Route::get('tugas/f', 'Data\TugasController@filter')->name('tugas.filter');
+// Route::get('tugas/{id}/cetak', 'Data\TugasController@cetak')->name('cetak.tugas');
 Route::resource('tugas', 'Data\TugasController');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

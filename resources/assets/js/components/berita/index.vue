@@ -54,8 +54,8 @@
                 <hr>
                 <div class="berita-footer">
                   <div class="text-right">
-                    <a :href="posts +'/'+p.id"><button class="btn btn-sm btn-default btn-sm"><i class="fa fa-fw fa-eye"></i> Show</button></a>
-                    <a href="#"><button class="btn btn-sm btn-primary btn-sm"><i class="fa fa-fw fa-edit"></i> Edit</button></a>
+                    <a :href="'berita/' + p.id"><button class="btn btn-sm btn-default btn-sm"><i class="fa fa-fw fa-eye"></i> Show</button></a>
+                    <a :href="'berita/' + p.id + '/edit'  "><button class="btn btn-sm btn-primary btn-sm"><i class="fa fa-fw fa-edit"></i> Edit</button></a>
                   </div>
                 </div>
                 <hr>

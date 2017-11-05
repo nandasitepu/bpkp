@@ -1,31 +1,25 @@
 
-<div class="hidden-xs text-center" >
-  <div class="panel panel-default">
-    <div class="panel-heading" style="box-shadow: 1px 1px 1px 1px #000; padding-bottom: 0px">
-      <ul class="list-inline">
-        <li>
-          <router-link class="btn btn-default btn-sm" to="/" exact>
-            Berita &nbsp;<i class="fa fa-newspaper-o fa-fw"></i>
-          </router-link>
-        </li>
-        <li>
-          <router-link class="btn btn-default btn-sm" to="/data/pengumuman">
-            Pengumuman &nbsp;<i class="fa fa-comment-o -o fa-fw"></i>
-          </router-link>
-        </li>
-        <li>
-          <router-link class="btn btn-default btn-sm" to="/data/pegawai">
-            Pegawai &nbsp;<i class="fa fa-vcard-o fa-fw"></i>
-          </router-link>
-        </li>
-        <li>
-          <router-link class="btn btn-default btn-sm" to="/data/tugas">
-            Tugas &nbsp;<i class="fa fa-briefcase fa-fw"></i>
-          </router-link>
-        </li>
-      </ul>
+<div class="text-center hidden-xs">
+    <br>
+    <div class="btn-group">
+
+            <router-link class="btn btn-default btn-sm" to="/" exact>
+              Berita &nbsp;<i class="fa fa-newspaper-o fa-fw"></i>
+            </router-link>
+      
+            <router-link class="btn btn-default btn-sm" to="/data/pengumuman">
+              Pengumuman &nbsp;<i class="fa fa-comment-o -o fa-fw"></i>
+            </router-link>
+       
+            <router-link class="btn btn-default btn-sm" to="/data/pegawai">
+              Pegawai &nbsp;<i class="fa fa-vcard-o fa-fw"></i>
+            </router-link>
+     
+            <router-link class="btn btn-default btn-sm" to="/data/tugas">
+              Tugas &nbsp;<i class="fa fa-briefcase fa-fw"></i>
+            </router-link>
     </div>
-  </div>
+    <br>
 </div>
 
 <div class="visible-xs text-center">

@@ -24,12 +24,18 @@ class Tugas extends Model
       'total_biaya'
     ];
 
-    // Tugas Dilaksanakan Oleh Banyak Pegawai
-   
+    // Tugas Punya Satu Cost Sheet
+    public function costsheet() 
+      {
+        return $this->belongsTo(CostSheet::class, 'costsheet_id');
+      }
 
+    public function kendaliMutu() 
+      {
+        return $this->belongsTo(KendaliMutu::class, 'kendali_mutu_id');
+      }  
 
-
-    // BELUM FIX
+    // Tugas Punya Penanggung Jawab, Pengendali Mutu, Pengendali Teknis, Ketua Tim, Anggota Tim
 
       public function penanggungJawab() 
         {
@@ -50,11 +56,7 @@ class Tugas extends Model
         {
           return $this->belongsTo(Pegawai::class, 'ketua_tim_id');   
         }
-    
-
-
-
-          
+              
       public function anggotaTim()
         {
           return $this->belongsToMany('App\Models\Pegawai', 'it_tugas_anggota_tim', 'tugas_id', 'pegawai_id');

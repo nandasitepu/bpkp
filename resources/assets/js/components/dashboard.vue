@@ -3,6 +3,44 @@
       <div class="col-md-10 col-md-offset-1">
           <h4 class="text-right"><span class="label label-success">Aplikasi </span>&nbsp; // &nbsp;<i class="fa fa-fw fa-desktop"></i> </h4>
           <hr>
+          <div class="text-center">
+              <div class="panel-body" style="margin:5px">
+
+                <div class="col-md-2">
+                    <small><b><u> Surat:</u></b></small>
+                    <a href="#"> 
+                        <button class="btn btn-default fa fa-envelope-o fa-2x"></button>
+                    </a>
+
+                </div>
+
+                <div class="col-md-2">
+                    <small><b><u> ST:</u></b></small>
+                    <a :href="'/tugas/st'">
+                        <button class="btn btn-default fa fa-archive fa-2x"></button>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <small><b><u> ND:</u></b></small>
+                    <button class="btn btn-default fa fa-file-archive-o fa-2x"></button>
+                </div>
+                <div class="col-md-2">
+                    <small><b><u>Post:</u></b></small>
+                    <button class="btn btn-default fa fa-newspaper-o fa-2x"></button>
+                </div>
+                <div class="col-md-2">
+                    <small><b><u>Pustaka:</u></b></small>
+                    <button class="btn btn-default fa fa-book fa-2x"></button>
+                </div>
+
+                <div class="col-md-2">
+                    <small><b><u>Data:</u></b></small>
+                    <button class="btn btn-default fa fa-bar-chart fa-2x"></button>
+                </div>
+              </div>
+          </div>
+
+          <hr>
           <div class="panel panel-default text-center">
               <div class="panel-body">
                   <div class="row text-center">

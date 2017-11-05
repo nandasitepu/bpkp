@@ -27,10 +27,11 @@
     </div>
 
     <div class="col-md-4">
-      <!-- Login Component -->
-      @component('_c.login')@endcomponent
-
-      <div class="col-md-12 text-center" style="padding:10px">
+        <!-- Login Component -->
+       
+      <div style="padding:10px; border:1px solid #ccc">@component('_c.login')@endcomponent</div>
+  
+      <div class="col-md-12 text-center well" style="padding:10px">
         <div id="menu-icon">
           <a href="/#slider" title="Slider" data-toggle="tab" style="">
             <button type="button" class="btn btn-default btn-sm " >
@@ -69,6 +70,7 @@
           </ul>
         </div>
       </div>
+    
     </div>
   </div>
   <div class="row">

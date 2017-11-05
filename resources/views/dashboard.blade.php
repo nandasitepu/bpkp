@@ -55,17 +55,17 @@
       <div id="sidemenu" class="text-center">
         <div class="btn-group-vertical" role="group">
           <br>
-          <router-link to="/spa"      class="btn btn-default btn-xs btn-block cool" role="button" exact>
-            A p p S &nbsp;<i class="fa fa-fw fa-newspaper-o"></i>
+          <router-link to="/spa"      class="btn btn-default btn-md btn-block cool" style="background:black; color:white" role="button" exact>
+            Konsultansi &nbsp;<i class="fa fa-fw fa-cubes"></i>
           </router-link>
-          <hr>
+          <br>
           <div class="col-md-12 col-xs-6">
             <router-link to="/spa/spip"      class="btn btn-default btn-xs btn-block cool" role="button" exact>
-              SPIP <i class="fa fa-fw fa-building-o"></i>
+              S P I P <i class="fa fa-fw fa-building-o"></i>
             </router-link>
             <br>
             <router-link to="/spa/apip"      class="btn btn-info btn-xs btn-block cool" role="button">
-              APIP <i class="fa fa-fw fa-users "></i>
+              A P I P <i class="fa fa-fw fa-users "></i>
             </router-link>
             <br>
             <router-link to="/spa/fcp"       class="btn btn-danger btn-xs btn-block cool" role="button">
@@ -75,15 +75,15 @@
           </div>
           <div class="col-md-12 col-xs-6">
             <router-link to="/spa/simda"class="btn btn-success btn-xs btn-block cool" role="button">
-              SIMDA <i class="fa fa-fw fa-money"></i>
+              S I M D A <i class="fa fa-fw fa-money"></i>
             </router-link>
             <br>
             <router-link to="/spa/sia"       class="btn btn-primary btn-xs btn-block cool" role="button">
-              SIA <i class="fa fa-fw fa-database"></i>
+              S I A  <i class="fa fa-fw fa-database"></i>
             </router-link>
             <br>
             <router-link to="/spa/siskeudes"  class="btn btn-warning btn-xs btn-block cool" role="button">
-              SISKEUDES <i class="fa fa-fw fa-home"></i>
+              SIS KEU DES <i class="fa fa-fw fa-home"></i>
             </router-link>
             <br>
           </div>
@@ -101,7 +101,7 @@
     <br>
   </div>
   <br>
-
+  
 @endsection
 @section('bot_scripts')
  <script src="{{asset('js/myvue.js')}}"></script>
