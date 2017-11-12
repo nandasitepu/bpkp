@@ -36,13 +36,17 @@ Route::prefix('spa')->group(function () {
   Route::any('simda', function () {return view('dashboard');});
   Route::any('sia', function () {return view('dashboard');});
   Route::any('siskeudes', function () {return view('dashboard');});
+  //
+  Route::any('tugas', function () {return view('tugas.index');});
+  Route::any('pengumuman', function () {return view('home');});
+  Route::any('pegawai', function () {return view('pegawai.index');});
 });
   //Route::any('/app/spip/{all}', function () {return view('dashboard');})->where(['all' => '.*']);
   Route::any('admin/dashboard/tugas', function () {return view('admin.dashboard');})->where(['all' => '.*']);
   Route::any('admin/dashboard/tugas/{all}', function () {return view('admin.dashboard');})->where(['all' => '.*']);
   
   //Home
-  Route::any('pengumuman/{all}', function () {return view('home');})->where(['all' => '.*']);
+  //Route::any('pengumuman/{all}', function () {return view('home');})->where(['all' => '.*']);
   //Route::any('/pegawai/{all}', function () {return view('home');})->where(['all' => '.*']);
   Route::any('penugasan/{all}', function () {return view('home');})->where(['all' => '.*']);
   Route::any('perpustakaan/{all}', function () {return view('home');})->where(['all' => '.*']);
@@ -156,8 +160,7 @@ Route::prefix('spa')->group(function () {
   Route::resource('pages', 'Admin\PageController');
 
 // Pengumuman
-
-  Route::resource('spa/pengumuman', 'Admin\PengumumanController');
+  Route::resource('pengumuman', 'Admin\PengumumanController');
 
 // Bidang
   Route::group(['prefix' => 'bid'], function () {
@@ -177,28 +180,42 @@ Route::prefix('spa')->group(function () {
 */
 
 // CRUD
+Route::get('pegawai/list', 'Data\PegawaiController@list');
 Route::resource('pegawai', 'Data\PegawaiController');
   
 
-/****************************************************************************** ETC */
-// Surat Tugas Resource
-Route::get('tugas/st', 'Data\Penugasan\STController@index')->name('st.index')->middleware(['auth']);
-Route::get('tugas/st/new', 'Data\Penugasan\STController@create')->name('st.new');
-Route::post('tugas/st', 'Data\Penugasan\STController@store')->name('st.store');
-Route::put('tugas/st', 'Data\Penugasan\STController@update')->name('st.update');
-// Export Import
-Route::get('tugas/st/export',  'Data\Penugasan\STController@exportExcel')->name('st.export.excel');
-Route::post('tugas/st/import', 'Data\Penugasan\STController@importExcel')->name('st.import.excel');
+/*******************************************************************************/
+/**** Surat Tugas ****/
+/*******************************************************************************/
 
-Route::get('tugas/st/{id}', 'Data\Penugasan\STController@show')->name('st.show')->middleware('auth');
-
-Route::get('tugas/st/{id}/ubah', 'Data\Penugasan\STController@edit')->name('st.edit')->middleware('auth');
-//Delete
 // Cetak
 Route::get('tugas/st/{id}/cetak', 'Data\Penugasan\STController@cetak')->name('st.cetak');
 // Filter
 Route::get('tugas/st/f','Data\Penugasan\STController@filter')->name('st.filter');
+// Export Import
+Route::get('tugas/st/export',  'Data\Penugasan\STController@exportExcel')->name('st.export.excel');
+Route::post('tugas/st/import', 'Data\Penugasan\STController@importExcel')->name('st.import.excel');
 
+// Index
+Route::get('tugas/st', 'Data\Penugasan\STController@index')->name('st.index')->middleware('auth');
+// New
+Route::get('tugas/st/new', 'Data\Penugasan\STController@create')->name('st.new')->middleware('auth');
+// Store
+Route::post('tugas/st', 'Data\Penugasan\STController@store')->name('st.store');
+// Edit
+Route::get('tugas/st/{id}/edit', 'Data\Penugasan\STController@edit')->name('st.edit')->middleware('auth');
+// Update
+Route::put('tugas/st/{id}', 'Data\Penugasan\STController@update')->name('st.update');
+
+// Show
+Route::get('tugas/st/{id}', 'Data\Penugasan\STController@show')->name('st.show')->middleware('auth');
+
+
+
+/****************************************************************************** ETC */
+// Kendali Mutu Resource
+Route::get('tugas/km','Data\Penugasan\KMController@index')->name('km.index');
+Route::get('tugas/km/new', 'Data\Penugasan\KMController@create')->name('km.new');
 
 
 

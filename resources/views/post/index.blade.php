@@ -25,7 +25,7 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="berita-image">
-                  <img src="http://lorempixel.com/150/150?rand=1" class="img-thumbnail" alt="Image" width="100%">
+                  <img src="/img/no-image.png" class="img-thumbnail" alt="Image" width="100%">
                 </div>
               </div>
               <div class="col-md-8">

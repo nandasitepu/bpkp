@@ -32,7 +32,7 @@
                 
             </div>
         </div>
-        <hr>:
+        <hr>
         <div class="panel panel-default text-center">
             <div class="panel-body">
                 <div class="row text-center">

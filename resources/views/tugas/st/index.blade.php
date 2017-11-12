@@ -1,6 +1,6 @@
 @extends('main')
 @section('title')
-  Daftar Tugas 2017
+  Daftar Tugas
 @endsection
 
 @section('stylesheets')
@@ -47,23 +47,34 @@
     <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-heading">
-       <div class="row" style="background:#0375b4;color:#fff">
-            <div class="col-md-7">
-              <div class="text-center" style="margin:10px; font-size:20px">
-                <b>Daftar Surat Tugas (ST) Tahun 2017</b>
-              </div>
+            <div class="row" style="background:#0375b4;color:#fff">
+                <div class="col-md-4">
+                  <div class="text-center" style="margin:10px; font-size:20px">
+                    <b>Daftar Surat Tugas (ST)</b>
+                  </div>
+                </div>
+              
+                <div class="col-md-5">
+                  <div class="btn-group-sm text-center" style="margin:10px;">
+                      <a href="{{route('st.new')}}" class="btn btn-default btn-sm "><b>ST</b> &nbsp; <i class="fa fa-fw fa-plus-circle"></i></a>
+                      <span class="btn btn-default btn-xs"></span>
+                      <a href="{{route('km.index')}}" class="btn btn-default btn-sm "><b>KM</b> &nbsp; <i class="fa fa-fw fa-file-archive-o"></i></a> 
+                      <a href="{{route('km.index')}}" class="btn btn-default btn-sm "><b>CostSheet</b> &nbsp; <i class="fa fa-fw fa-money"></i></a> 
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="btn-group-sm text-center" style="margin:10px;">
+                      
+                      
+                      <button onclick="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myExport">Export</button> 
+                      <button onclick="" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myImport">Import</button>
+                    
+                  </div>
+                </div>
+
             </div>
-            
-            <div class="col-md-5">
-              <div class="btn-group-sm text-center" style="margin:10px; ">
-                <a href="{{route('st.new')}}" class="btn btn-default btn-sm "><b>ST</b> &nbsp; <i class="fa fa-fw fa-file-o"></i></a>
-                <a href="{{route('st.new')}}" class="btn btn-default btn-sm "><b>KM</b> &nbsp; <i class="fa fa-fw fa-file-archive-o"></i></a> 
-                <a href="{{route('st.new')}}" class="btn btn-default btn-sm "><b>CostSheet</b> &nbsp; <i class="fa fa-fw fa-money"></i></a> 
-                <button onclick="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myExport">Export</button> 
-                <button onclick="" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myImport">Import</button>
-              </div>
-            </div>
-          </div>
+           </div>
         </div>
         <div class="panel-body">
           <div class="row" >
@@ -73,6 +84,7 @@
                     <label for="pegawai_id" class="col-form-label">Nama Pegawai PFA:</label><br>
                     <div class="input-group" style="width:100%">
                       <select class="form-control select2 input-sm" name="pegawai_id" style="width:95%" >
+                          <option></option>
                           @foreach ($pegawai as $kt )
                             <option value="{{ $kt->id }}">{{ $kt->nama }}</option>
                           @endforeach
@@ -99,10 +111,10 @@
                     <label for="pegawai_id" class="col-form-label">Status Laporan:</label><br>
                     <div class="input-group" style="width:100%">
                       <select class="form-control input-sm" name="pegawai_id" style="width:95%" >
-                      
-                      <option value="1">Final</option>
+                      <option></option>
+                      <option value="1">Selesai</option>
                       <option value="2">Proses</option>
-                      <option value="3">Gagal</option>
+                      <option value="3">Batal</option>
                         
                       </select>
                       <span class="input-group-btn">
@@ -115,28 +127,32 @@
           </div>
           <hr>
          
-          <div class="table-responsive"> 
-           <table id="tugas" class="table table-condensed table-responsive" style="width:100%">
-              <colgroup class="hidden-xs">
-                <col class="col-xs-1">
-                <col class="col-xs-2">
-                <col class="col-xs-1">
-                <col class="col-xs-3">
-                <col class="col-xs-2">
-                <col class="col-xs-3">
-              </colgroup>
-              <thead>
-                <tr>
-                  <th>No</th>
-                  <th>ST</th>
-                  <th>Tanggal ST</th>
-                  <th>Uraian</th>
-                  <th>Laporan</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>{{--Data Table--}}</tbody>
-            </table>
+         
+           
+                <div class="table-responsive"> 
+                  <table class="table table-condensed table-bordered display responsive no-wrap" width="100%" id="tugas">
+                    <colgroup class="hidden-xs">
+                      <col class="col-md-1">
+                      <col class="col-md-2">
+                      <col class="col-md-1">
+                      <col class="col-md-3">
+                      <col class="col-md-2">
+                      <col class="col-md-3">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>ST</th>
+                        <th>Tanggal ST</th>
+                        <th>Uraian</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>{{--Data Table--}}</tbody>
+                  </table>
+                </div>
+           
           </div>
         </div>
         
@@ -213,9 +229,7 @@
 @section('bot_scripts')
 
     {{-- dataTables --}}
- 
     <link href="{{ asset('assets/datatables/css/dataTables.bootstrap.min.css') }}" rel="stylesheet">
-  
     <script src="{{ asset('assets/dataTables/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('assets/dataTables/js/dataTables.bootstrap.min.js') }}"></script>
     {{-- Validator --}}
@@ -246,6 +260,7 @@
         
         // Initiate Data Table
         var table = $('#tugas').DataTable({
+            responsive: true,
             processing: true,
             serverSide: true,
             ajax: '{{route('datatable.st')}}',

@@ -8,24 +8,35 @@
       <div class="panel panel-default">
         
         <div class="panel-heading">
-            <div class="col-md-2">
-              <b>URAIAN PENUGASAN:</b>
-              <hr>
-            </div>
-            <div class="col-md-7">
-              <b>{{$st->uraian}}</b><br>
-            </div>
-   
-            <h3 class="text-right"><span class="label label-default text-right">{{$st->bidang}}</span></h3>
+           <div class="row">
+              <div class="col-md-4" style="background:#328cc1;color:#fff">
+                <b>URAIAN PENUGASAN:</b>
+                <h5>
+                  <a href="{{route('st.edit', $st->id) }}" class="label label-default"><i class="fa fa-edit fa-lg"></i>&nbsp; ST</a> &nbsp;
+                  <a href="{{route('st.edit', $st->id) }}" class="label label-danger"><i class="fa fa-edit fa-lg"></i>&nbsp; Laporan</a> &nbsp;
+                </h4>
+              </div>
+
+              <div class="col-md-5 col-md-offset-1" style="border: 1px solid #ccc; padding:5px">
+                <b>{{$st->uraian}}</b><br>
+              </div>
+          
+             <div class="col-md-2">
+                <h3 class="text-right">
+                  <span class="label label-default">{{$st->bidang}}</span>
+                </h3>
+             </div>
+           </div>
+            
         </div>
       
         <br>
         <div class="panel-body">
           <div class="row">
-            <div class="col-md-12 hidden-xs" id="data-penugasan">
+            <div class="hidden-xs" id="data-penugasan">
               <span class="col-md-5">
-                <div class="col-md-6 btn btn-primary btn-sm active">{{$st->no_st_nd}}</div> 
-                <div class="col-md-6 btn btn-primary btn-sm active">{{$st->tanggal_st_nd  === NULL ? "Belum ada tanggal" : $st->tanggal_st_nd }}</div>   
+                <div class="col-md-6 btn btn-primary btn-sm active">{{$st->no_st}}</div> 
+                <div class="col-md-6 btn btn-primary btn-sm active">{{$st->tanggal_st  === NULL ? "Belum ada tanggal" : $st->tanggal_st }}</div>   
                </span>
               <span class="col-md-5 " >
                 <div class="col-md-6 btn btn-success btn-sm active">
@@ -43,8 +54,8 @@
                     @endif
                 </div>  
                </span>
-              <span class="col-md-2 btn btn-default btn-sm active">
-                <div>
+              <span class="col-md-2 ">
+                <div class="btn btn-default btn-sm active">
                   <b>Status : 
                     @if($st->no_laporan === NULL)
                       PROSES
@@ -58,8 +69,8 @@
             {{--Visible XS --}}
             <div class="col-md-12 visible-xs" id="data-penugasan">
               <span class="col-md-5 btn btn-default btn-sm btn-block">
-                <div class="text-primary col-md-6"> <b>{{$st->no_st_nd}}</b></div> 
-                <div class="text-primary col-md-6"> <b>{{$st->tanggal_st_nd}}</b></div>   
+                <div class="text-primary col-md-6"> <b>{{$st->no_st}}</b></div> 
+                <div class="text-primary col-md-6"> <b>{{$st->tanggal_st}}</b></div>   
               </span>
               <span class="col-md-5 btn btn-default btn-sm btn-block" >
                 <div class="text-success col-md-6"> <b>{{$st->no_laporan}}</b></div>

@@ -1,170 +1,124 @@
 @extends('main')
 @section('title')
-  Daftar Pegawai BPKP
+  Pegawai BPKP
 @endsection
 
 @section('stylesheets')
-  {{-- dataTables --}}
-  <link href="{{ asset('assets/datatables/css/dataTables.uikit.min.css') }}" rel="stylesheet">
 
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <link href="{{ asset('assets/bootstrap/css/ie10-viewport-bug-workaround.css') }}" rel="stylesheet">
-
-  <style>
-
-      .table thead, .table th {text-align: center;}
-      .modal {
-          position: absolute;
-          top: 50px;
-          bottom: 0;
-          left: 0;
-          z-index: 10040;
-          overflow: auto;
-          overflow-y: auto;
-        }
-  </style>
- @endsection
+@endsection
 
 @section('content')
-  <div class="row">
-    <div class="col-md-12">
-      <div class="panel panel-default">
-        <div class="panel-heading" style="background:grey; color:#fff">
-          <div class="row">
-            <div class="col-md-9">
-              <div class="text-center" style="margin:10px"><b>Daftar Pegawai BPKP Perwakilan Provinsi Sulawesi Barat</b></div>
-            </div>
-            
-            <div class="col-md-3">
-              <div class="btn-group-sm text-center" style="margin:10px">
-                <a href ="{{route('pegawai.create')}}"> <button class="btn btn-default btn-sm ">Tambah Data</button> </a>
-                <button onclick="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myExport">Export</button> 
-                <button onclick="" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myImport">Import</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="panel-body">
-             <div class="panel-body table-responsive">
-                <table id="pegawai" class="table compact cell-border" style="width:100%">
-                    <thead>
-                      <tr>
-                        <th width="30">No</th>
-                        <th>Nama</th>
-                        <th>NIP</th>
-                        <th>Jabatan</th>
-                        <th>Detail</th>
-                      </tr>
-                    </thead>
-                    <tbody >
+<div class="row"> 
+    {{-- Login  --}} 
+    <div class="col-md-4">
+  
+     
+            <div style="padding:10px; border:1px solid #ccc">@component('_c.login')@endcomponent</div>
+            <br>
+            @component('_c.user_menu')@endcomponent
+            <br>
+            <div>
+              <div class="panel panel-default">
+                <div class="panel-body">
+                    <b>Izin</b>
                     
-                    </tbody>
-                  </table>
+                      <ul class="list-unstyled">
+                        <li>Title</li>
+                        <li>Title</li>
+                        <li>Title</li>
+                      </ul>
+                    <hr>
+                    <b>Kehadiran</b>
+                      <ul class="list-unstyled">
+                        <li>Title</li>
+                        <li>Title</li>
+                        <li>Title</li>
+                      </ul>
+                      <hr>
+                    <b>Kompetensi</b>
+                      <ul class="list-unstyled">
+                        <li>Title</li>
+                        <li>Title</li>
+                        <li>Title</li>
+                      </ul>
+                </div>
               </div>
+            </div>
+         
+    
+    </div>
+    
+    {{-- Menu Penugasan --}}
+    <div class="col-md-8" id="menu-tugas" style="border: 1px solid #ccc; padding:30px">
+      <div>
+          <img src="/img/banner/pegawai-banner.jpg" class="img-thumbnail" style="width: 100%;height:160px" alt="Second slide">
+      </div>
+      <div class="text-center">
+        <h4><span class="label label-default">Menu Kepegawaian</span></h4>
+      </div>
+      <hr>
+      <div class="row text-center">
+          <div class="col-md-4">
+            <h5><b><u>Daftar Pegawai:</u></b> </h5>
+            <button class="btn btn-warning fa fa-users fa-3x"></button>
+          </div>
+          <div class="col-md-4">
+            <h5><b><u>Kompetensi:</u></b> </h5>
+            <a href="{{route('st.index')}}">
+              <button class="btn btn-primary">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-space-shuttle fa-stack-2x"></i>
+                
+                </span>
+              </button>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <h5><b><u>File:</u></b> </h5>
+            <button class="btn btn-success">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-dot-circle-o fa-stack-2x"></i>
+                <strong class="fa-stack-1x fa-stack-text file-text"><small></small></strong>
+              </span>
+            </button>
           </div>
       </div>
-       
-           
+      <hr>
+      <div class="row text-center">
+          <div class="col-md-4">
+            <h5><b><u>DUPAK:</u></b> </h5>
+            <button class="btn btn-danger">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-server fa-stack-2x"></i>
+                <strong class="fa-stack-1x fa-stack-text file-text"><small>D</small></strong>
+              </span>
+            </button>
+          </div>
+          <div class="col-md-4">
+            <h5><b><u>Data Kehadiran:</u></b> </h5>
+            <button class="btn btn-default">
+              <span class="fa-stack">
+                <i class="fa fa-adn fa-stack-2x"></i>
+                
+              </span>
+            </button>
+          </div>
+          <div class="col-md-4">
+            <h5><b><u>Cuti/Izin:</u></b> </h5>
+            <button class="btn btn-info">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-file-text-o fa-stack-2x"></i>
+                <strong class="fa-stack fa-stack-text file-text"><small>I</small></strong>
+              </span>
+            </button>
+          </div>
+      </div>
     </div>
   </div>
-  {{-- MODAL Export --}}
-  <div id="myExport" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <!-- Modal content Export-->
-      <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Export Data</h4>
-          </div>
-          <div class="modal-body">
-      
-                <p><b>Export Pegawai:</b></p>
-                <br>
-                <div> 
-                  <a href="{{route('pegawai.excel')}}" class="btn btn-success btn-sm">Export as Excel</a>
-                  <a href="" class="btn btn-warning btn-sm">Export as PDF</a>
-                </div>
-       
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-      </div>
-
-    </div>
-   </div>
-
-  <div id="myImport" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content Import-->
-      <div class="modal-content">
-        <form method="post" action="{{route('pegawai.import')}}" class="form-horizontal" data-toggle="validator" enctype="multipart/form-data">
-          {{ csrf_field() }}
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Import Data</h4>
-          </div>
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="file" class="col-md-3 control-label">Import Data</label>
-              <div class="col-md-9"> 
-                <input type="file" id="file" name="file" class="form-control" autofocus required>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-default">Submit</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </form>
-      </div>
-
-    </div>
-   </div>
-  <br>
+  
+ 
  @endsection
 
 @section('bot_scripts')
-    {{-- dataTables --}}
-    <script src="{{ asset('assets/dataTables/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('assets/dataTables/js/dataTables.bootstrap.min.js') }}"></script>
-    {{-- Validator --}}
-    <script src="{{ asset('assets/validator/validator.min.js') }}"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="{{ asset('assets/bootstrap/js/ie10-viewport-bug-workaround.js') }}"></script>  
-
-    <script>
-      oTable = $('#pegawai').DataTable({ 
-        processing: true,
-        serverSide: true,
-        ajax: '/api/pegawai/table',
-        columns: [
-          {data: 'id', name: 'id'},
-          {data: 'nama', name: 'nama'},
-          {data: 'nip', name: 'nip'},
-          {data: 'jabatan', name: 'jabatan'},
-          {data: 'action', name: 'action'},
-        ],
-
-        "language": {
-                "sProcessing":   "Proses ...",
-                "sLengthMenu":   "Tampilkan _MENU_ Data",
-                "sZeroRecords":  "Data Tidak Ada",
-                "sInfo":         "Tampilkan  _START_ sampai _END_ dari _TOTAL_ Data",
-                "sInfoEmpty":    "Tampilkan 0 hingga 0 dari 0 Data",
-                "sInfoFiltered": "(disaring dari _MAX_ entri keseluruhan)",
-                "sInfoPostFix":  "",
-                "sSearch":       "Cari:",
-                "sUrl":          "",
-                "oPaginate": {
-                    "sFirst":    "Pertama",
-                    "sPrevious": "<",
-                    "sNext":     ">",
-                    "sLast":     "Terakhir"
-                }
-        } 
-      });
-     </script>
+   
  @endsection

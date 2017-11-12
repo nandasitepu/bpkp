@@ -24,15 +24,16 @@ class ST extends Model
       'total_biaya'
     ];
 
-    // Tugas Punya Satu Cost Sheet
+    // ST Punya Satu Cost Sheet
     public function costsheet() 
       {
         return $this->belongsTo(CostSheet::class, 'costsheet_id');
       }
-
-    public function kendaliMutu() 
+    
+    // ST Punya Satu Cost Sheet
+    public function km() 
       {
-        return $this->belongsTo(KendaliMutu::class, 'kendali_mutu_id');
+        return $this->hasOne(KendaliMutu::class, 'km_id');
       }  
 
     // Tugas Punya Penanggung Jawab, Pengendali Mutu, Pengendali Teknis, Ketua Tim, Anggota Tim

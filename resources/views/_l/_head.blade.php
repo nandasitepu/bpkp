@@ -41,11 +41,9 @@
         left: 50%;
         top: 300px;
         z-index: 1;
-        width: 150px;
-        height: 150px;
         margin: -75px 0 0 -75px;
-        width: 120px;
-        height: 120px;
+        width: 175px;
+        height: 175px;
         background: url(/img/loading.gif) center no-repeat #fff;
         /*
         Originial Spin

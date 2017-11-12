@@ -122,23 +122,23 @@ let routes = [
 
     // Data
         {
-            path: '/data/berita',
+            path: '/spa/berita',
             component: require('./components/berita/index')
         },
         {
-            path: '/data/pegawai',
+            path: '/spa/pegawai',
             component: require('./components/pegawai/index')
         },
         {
-            path: '/data/obrik',
+            path: '/spa/obrik',
             component: require('./components/obrik/index')
         },
         {
-            path: '/data/pengumuman',
+            path: '/spa/pengumuman',
             component: require('./components/pengumuman/index')
         },
         {
-            path: '/data/tugas',
+            path: '/spa/tugas',
             component: require('./components/tugas/index')
         },
 

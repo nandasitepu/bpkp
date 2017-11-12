@@ -1,42 +1,50 @@
 <template>
   <div>
-      <div class="table table-responsive">
-        <table class="table table-condensed table-striped table-bordered" style="background-color:#fff">
-          <thead class="text-center bold">
-            <tr>
-              <td>No</td>
-
-              <td>Pengumuman</td>
-              <td>Tanggal</td>
-    
-              <td>Action</td>
-            </tr>
-          </thead>
-          <tbody class="text-center">
-            <tr v-for="p in pengumuman.data">
-              <td>{{p.id}}</td>
-              <td>{{p.judul}}</td>
-
-              <td>{{p.tanggal | date}}</td>
-         
-              <td class="col-md-2 col-xs-4">
-                <div class="btn-group btn-group-xs">
-                  <button type="button" class="btn btn-default">
-                    <i class="fa fa-eye fa-fw"></i>
-                  </button>
-                  <button type="button" class="btn btn-default">
-                    <i class="fa fa-edit fa-fw"></i>
-                  </button>
-                  <button type="button" class="btn btn-default">
-                    <i class="fa fa-trash-o fa-fw"></i>
-                  </button>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <div class="panel panel-default">
+      <div class="panel panel-body">
+        <hr>
+        <div>
+          <div class="table table-responsive">
+            <table class="table table-condensed table-hover table-bordered" style="background-color:#fff">
+              <thead>
+                <tr class="text-primary bold text-center">
+                  <td>No</td>
+  
+                  <td>Pengumuman</td>
+                  <td>Tanggal</td>
+        
+                  <td>Action</td>
+                </tr>
+              </thead>
+              <tbody class="text-center">
+                <tr v-for="p in pengumuman.data">
+                  <td>{{p.id}}</td>
+                  <td>{{p.judul}}</td>
+  
+                  <td>{{p.tanggal | date}}</td>
+            
+                  <td class="col-md-2 col-xs-4">
+                    <div class="btn-group btn-group-xs">
+                      <button type="button" class="btn btn-default">
+                        <i class="fa fa-eye fa-fw"></i>
+                      </button>
+                      <button type="button" class="btn btn-default">
+                        <i class="fa fa-edit fa-fw"></i>
+                      </button>
+                      <button type="button" class="btn btn-default">
+                        <i class="fa fa-trash-o fa-fw"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
+
     </div>
+  </div>
 </template>
 
 <script>

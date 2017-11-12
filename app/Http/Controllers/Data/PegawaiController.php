@@ -45,6 +45,11 @@ class PegawaiController extends Controller
         })->make(true);
       }
 
+  
+    public function list() 
+    {
+    return view ('pegawai.list');
+    }
     //
     public function index() 
       {

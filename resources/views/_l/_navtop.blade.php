@@ -7,7 +7,7 @@
               <span><img src="/img/web/logo-bpkp.jpg" height="24px" margin-top="1px" /></span>
               <span>
                 <span class="Lato bold" margin-top="5px">
-                  &nbsp;  Sulawesi Barat &nbsp; <i class="fa fa-star-o fa-fw"></i>
+                  &nbsp;  Sulawesi Barat &nbsp; <i class="fa fa-user-secret fa-fw"></i>
                 </span>
               </span>
             </a>
@@ -15,9 +15,7 @@
 
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <span class="fa fa-black-tie fa-lg fa-fw"></span>
           </button>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->

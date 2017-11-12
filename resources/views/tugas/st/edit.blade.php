@@ -24,23 +24,25 @@
          
             <div class="panel panel-default">
                
-                <div class="panel-heading">
-                    <div class="text-center">
-                      <b>
-                        <span class="label label-default">Edit</span>&nbsp; ID: {{$st->id}}  
-                        <p class="text-right"> <span >Surat Tugas : {{$st->no_st_nd}}</span></p>
-                      </b>
-                    </div>
+                <div class="panel-heading" style="background:#66b9bf;color:#fff">
+                   
+                   <div class="text-right">
+                        <h4><b class="label label-default">Surat Tugas : {{$st->no_st}}</b></h4>
+                        <h4><b class="label label-danger">ID : # {{$st->id}}</b></h4>
+                        <h4><b class="label label-success">Ubah ST</b></h4>
+                   </div>
                      
-                 </div>
+                  
+                     
+                </div>
                 <form action="{{route('st.update', $st->id) }}" class="form-horizontal" method="POST" >
                   <div class="panel-body"> 
                       {{ method_field('PUT')}}   
                       {{ csrf_field() }}
                       <div class="row">
                           <div class="col-md-4">
-                              <label for="no_st_nd" class="col-form-label">Nomor ST/ND :</label>
-                              <input name="no_st_nd" class="form-control" type="text" value="{{$st->no_st_nd}}" id="no_st_nd">
+                              <label for="no_st" class="col-form-label">Nomor ST/ND :</label>
+                              <input name="no_st" class="form-control" type="text" value="{{$st->no_st}}" id="no_st">
                               
                               <label for="tipe" class="col-form-label">Tipe Penugasan :</label>
                               <input name="tipe" class="form-control" type="text" value="{{$st->tipe}}" id="tipe">
@@ -48,13 +50,13 @@
                               <label for="bidang" class="col-form-label">Bidang :</label>
                               <input name="bidang" class="form-control" type="text" value="{{$st->bidang}}" id="bidang">
                             </div>
-                          <div class="col-md-8">
+                          <div class="col-md-8 well">
                               <label for="uraian" class="col-form-label">Nama/Uraian Penugasan</label>
                               <textarea name="uraian" class="form-control" type="text"  rows="3" id="uraian">{{$st->uraian}}</textarea>
                               <br>
                                 <div class="col-md-3">
-                                    <label for="tanggal_st_nd" class="col-form-label">Tanggal ST</label>
-                                    <input name="tanggal_st_nd" class="form-control" type="date" value="{{$st->tanggal_st_nd}}" id="tanggal_st_nd">
+                                    <label for="tanggal_st" class="col-form-label">Tanggal ST</label>
+                                    <input name="tanggal_st" class="form-control" type="date" value="{{$st->tanggal_st}}" id="tanggal_st">
                                 </div>
                                 <div class="col-md-3">
                                     <label for="tanggal_mulai" class="col-form-label">Tanggal Mulai</label>
@@ -73,12 +75,12 @@
                       </div>
                       <hr>
                       <div class="row" id="data-tim">
-                          <div class="col-md-4">
+                          <div class="col-md-4 well">
                               <label for="penanggung_jawab_id" class="col-form-label">Kepala Perwakilan/Plh: </label>
                               <div>
                                   <select class="form-control select2-pj" name="penanggung_jawab_id" selected="2" style="width:100%">
                                     @foreach ($pj as $kaper )
-                                        <option value="{{ $kaper->id }}">{{ $kaper->nama }}</option>
+                                        <option value="{{ $kaper->id === NULL ? 1 : $kaper->id }}">{{ $kaper->nama }}</option>
                                     @endforeach
                                   </select>
                               </div>
@@ -96,7 +98,7 @@
                               <div>
                                   <select class="form-control select2-dalnis" name="pengendali_teknis_id" style="width:100%">
                                       @foreach ($dalnis as $dts )
-                                          <option value="{{ $dts->id }}">{{ $dts->nama }}</option>
+                                          <option value="{{ $dts->id === NULL ? 1 : $dts->id }}">{{ $dts->nama }}</option>
                                       @endforeach
                                   </select>
                               </div>
@@ -106,7 +108,7 @@
                                     <select class="form-control select2-kt" name="ketua_tim_id" style="width:100%">
                                     
                                       @foreach ($pegawai as $kt )
-                                          <option value="{{ $kt->id }}">{{ $kt->nama }}</option>
+                                          <option value="{{ $kt->id === NULL ? 1 : $kt->id }}">{{ $kt->nama }}</option>
                                       @endforeach
                                   </select>
                                 </div>
@@ -117,7 +119,7 @@
                               <div>
                                   <select class="form-control select2-anggota-tim" name="anggotaTim[]" multiple="multiple" style="width:100%">
                                       @foreach ($pegawai as $at )
-                                          <option value="{{ $at->id }}">{{ $at->nama }}</option>
+                                          <option value="{{ $at->id === NULL ? 1 : $at->id }}">{{ $at->nama }}</option>
                                       @endforeach
                                   </select>
                               </div>
@@ -126,7 +128,7 @@
                               <div>
                                   <select class="form-control select2-narasumber" name="narasumber[]" multiple="multiple" style="width:100%">
                                       @foreach ($pegawai as $at )
-                                          <option value="{{ $at->id }}">{{ $at->nama }}</option>
+                                          <option value="{{ $at->id === NULL ? 1 : $at->id }}">{{ $at->nama }}</option>
                                       @endforeach
                                   </select>
                               </div>
@@ -135,22 +137,21 @@
                               <div>
                                   <select class="form-control select2-fasilitator" name="fasilitator[]" multiple="multiple" style="width:100%">
                                       @foreach ($pegawai as $at )
-                                          <option value="{{ $at->id }}">{{ $at->nama }}</option>
+                                          <option value="{{ $at->id === NULL ? 1 : $at->id }}">{{ $at->nama }}</option>
                                       @endforeach
                                   </select>
                               </div>
                               
                         
                           </div>
-                          <div class="col-md-4">
+                          <div class="col-md-4 well">
                               <label for="lokasi" class="col-form-label">Lokasi</label>
                               <input name="lokasi" class="form-control" type="text" placeholder="Mamuju/Majene/dll" id="lokasi">
                               <br>
-                              <label for="beban" class="col-form-label">Beban</label>
-                              <input name="beban" class="form-control" type="text" placeholder="BPKP/Pemda Mamuju/dll" id="beban">
-                              <br>
-                              <label for="total_biaya" class="col-form-label">Total Biaya</label>
-                              <input name="total_biaya" class="form-control" type="text" placeholder="10000000" id="total_biaya">
+                              <label for="biaya" class="col-form-label">Biaya</label>
+                              <input name="biaya" class="form-control" type="text" placeholder="BPKP/Pemda Mamuju/dll" id="biaya">
+                              
+                          
                           </div>
                           
                        </div>

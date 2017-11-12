@@ -1,10 +1,12 @@
 <template>
 
   <div>
-
-    <div>
-        <span class="label label-success" style="font-size:14px"><b>Daftar Pegawai</b></span>
-        <ul class="pagination pagination-sm pull-right">
+    <div class="panel panel-default">
+      <div class="panel panel-body">
+    
+        <div>
+          <span class="label label-success" style="font-size:14px"><b>Daftar Pegawai</b></span>
+          <ul class="pagination pagination-sm pull-right">
               <li v-if="pagination.current_page > 1">
                   <a href="#" aria-label="Previous"
                       @click.prevent="changePage(pagination.current_page - 1)">
@@ -23,41 +25,50 @@
                   </a>
               </li>
           </ul>
+        </div>
+
+        <hr>
+
+        <div>
+          <div class="table table-responsive">
+            <table class="table table-condensed table-hover table-bordered" style="background-color:#fff">
+              <thead>
+                <tr class="text-primary bold text-center">
+                  <td>No</td>
+                  <td>Nama</td>
+                  <td>NIP</td>
+                  <td>Pangkat</td>
+                  <td>Jabatan</td>
+                  <td>Foto</td>
+                </tr>
+              </thead>
+              <tbody>
+              
+                <tr v-for="p in pegawai.data">
+                  <td>{{p.id}}</td>
+                  <td>{{p.nama}}</td>
+                  <td>{{p.nip}}</td>
+                  <td>{{p.pangkat}}</td>
+                  <td>{{p.jabatan}}</td>
+                  <td class="text-center">
+                    <div v-if="p.foto === null ">
+                      <img class="img-circle" v-bind:src="'/img/web/profil_img.png'" alt="" style="max-width:24px">
+                    </div>
+                    <div v-else>
+                      <img v-bind:src="'/img/pegawai/all/' + p.foto" alt="" style="max-width:24px">
+                    </div>
+                  </td>
+                </tr>
+              
+            
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
     </div>
-    <div class="table table-responsive">
-      <table class="table table-condensed table-striped table-bordered" style="background-color:#fff">
-        <thead class="text-center bold">
-          <tr>
-            <td>No</td>
-            <td>Nama</td>
-            <td>NIP</td>
-            <td>Pangkat</td>
-            <td>Jabatan</td>
-            <td>Foto</td>
-          </tr>
-        </thead>
-        <tbody>
-        
-          <tr v-for="p in pegawai.data">
-            <td>{{p.id}}</td>
-            <td>{{p.nama}}</td>
-            <td>{{p.nip}}</td>
-            <td>{{p.pangkat}}</td>
-            <td>{{p.jabatan}}</td>
-            <td class="text-center">
-              <div v-if="p.foto === null ">
-                <img class="img-circle" v-bind:src="'/img/web/profil_img.png'" alt="" style="max-width:24px">
-              </div>
-              <div v-else>
-                <img v-bind:src="'/img/pegawai/all/' + p.foto" alt="" style="max-width:24px">
-              </div>
-            </td>
-          </tr>
-         
-       
-        </tbody>
-      </table>
-    </div>
+
   </div>
 
 </template>

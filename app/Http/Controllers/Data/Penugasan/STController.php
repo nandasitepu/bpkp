@@ -6,10 +6,11 @@ namespace App\Http\Controllers\Data\Penugasan;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables;
-
-use App\Models\Tugas\ST;
+//
 use App\Models\Pegawai;
-
+use App\Models\Tugas\ST;
+use App\Models\Tugas\KM;
+//
 use Excel;
 use Alert;
 use Carbon\Carbon;
@@ -24,13 +25,29 @@ class STController extends Controller
             return Datatables::of($st)->addColumn('action', function($st)           
                 {
                     return 
-                        '<a href="st/'.$st->id.'" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-eye-open"></i> Show</a>'. '   ' .
-                        '<a href="st/'.$st->id.'/edit" class="btn btn-xs btn-info"><i class="glyphicon glyphicon-edit"></i> Edit</a>'. '    ' .
-                        '<a href="st/'.$st->id.'/cetak" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-print"></i> Cetak</a>'
+                        '<a href="st/'.$st->id.'" class="btn btn-xs btn-primary cool"><i class="fa fa-eye"></i> Show</a>'. '&nbsp; &nbsp; &nbsp;' .
+                        '<a href="st/'.$st->id.'/edit" class="btn btn-xs btn-info cool"><i class="fa fa-edit"></i> Edit</a>'. '&nbsp; &nbsp; &nbsp;' .
+                        '<a href="st/'.$st->id.'/cetak" class="btn btn-xs btn-default cool"><i class="fa fa-print"></i> Cetak</a>'
                         ;
                 })->make(true);
         }
     
+    public function filter(Request $request)
+        {   
+            // Date Filter
+            $from    = date($request->input('s_tgl_awal'));
+            $to      = date($request->input('s_tgl_akhir'));
+            // Pegawai Filter
+            $pegawai = Pegawai::where('keterangan', 'PFA')->orderBy('nama', 'Asc')->get();
+            
+            
+            //Date Search
+            $st  = ST::whereBetween('tanggal_st', [$from, $to])->get();
+            //
+            return view ('tugas.st.filter')->with('st', $st)->with('pegawai', $pegawai);
+        }
+
+
     public function cetak($id)
         {
             $cetak = ST::find($id);
@@ -67,9 +84,11 @@ class STController extends Controller
             $daltu      = Pegawai::orderBy('nama')->where($pengendalimutu)->get();
             $dalnis     = Pegawai::orderBy('nama')->where($pengendaliteknis)->orWhere($auditormuda)->get();
             $pegawai    = Pegawai::orderBy('nama')->get();
-        
+            
+            $st      = ST::all(); 
 
-            return view ('tugas.st.new')->with('pegawai', $pegawai)
+            return view ('tugas.st.new')->with('st', $st)
+                                        ->with('pegawai', $pegawai)
                                         ->with('daltu', $daltu)
                                         ->with('dalnis', $dalnis)
                                         ->with('pj', $pj);
@@ -141,7 +160,7 @@ class STController extends Controller
     
         
             // Alert Success Message
-            Alert::success('Buat ST Sukses!')->persistent("Tutup");
+            Alert::success('Buat ST Sukses! #ID $')->persistent("Tutup");
     
             // Back to Create Page
             //return redirect()->back()->withInput()->withErrors($validator);
@@ -212,44 +231,50 @@ class STController extends Controller
      */
     public function update(Request $request, $id)
         {
+            // Request Update
+            $st = ST::findOrFail($id);
             // Validasi Update Tugas
             $this->validate($request,[
-                'no_st_nd' => 'required'
+                'no_st' => 'required'
             ]);
 
-            // Request Save
-            $tugas = Tugas::find($id);
+      
             
-            $tugas->no_st_nd = $request->no_st_nd;
-            $tugas->tipe = $request->tipe;
-            $tugas->bidang = $request->bidang;
-            $tugas->uraian = $request->uraian;
+            $st->no_st           = $request->no_st;
+            $st->tipe            = $request->tipe;
+            $st->bidang          = $request->bidang;
+            $st->uraian          = $request->uraian;
             
-            $tugas->tanggal_st_nd = $request->tanggal_st_nd;
-            $tugas->tanggal_mulai = $request->tanggal_mulai;
-            $tugas->tanggal_selesai = $request->tanggal_selesai;
+            $st->tanggal_st      = $request->tanggal_st;
+            $st->tanggal_mulai   = $request->tanggal_mulai;
+            $st->tanggal_selesai = $request->tanggal_selesai;
+            $st->hp              = $request->hp;
             
-            $tugas->penanggung_jawab_id = $request->penanggung_jawab_id;
-            $tugas->pengendali_mutu_id = $request->pengendali_mutu_id;
-            $tugas->pengendali_teknis_id = $request->pengendali_teknis_id ;
-            $tugas->ketua_tim_id = $request->ketua_tim_id;
+            $st->penanggung_jawab_id     = $request->penanggung_jawab_id;
+            $st->pengendali_mutu_id      = $request->pengendali_mutu_id;
+            $st->pengendali_teknis_id    = $request->pengendali_teknis_id;
+            $st->ketua_tim_id            = $request->ketua_tim_id;
             
-            $tugas->lokasi = $request->lokasi;
-            $tugas->beban = $request->beban;
-            $tugas->rencana_biaya = $request->rencana_biaya;
+            // Anggota Tim / Narasumber / Fasilitator Menggunakan Intermediary Table
+
+            $st->lokasi  = $request->lokasi;
+            $st->biaya   = $request->biaya;
             
-            $tugas->save();
+            $st->km_id           = $request->km_id;   
+            $st->costsheet_id    = $request->costsheet_id;
+            
+            $st->save();
             
 
-            $tugas->anggotaTim()->sync($request->anggotaTim);
-            $tugas->narasumber()->sync($request->narasumber);
-            $tugas->fasilitator()->sync($request->fasilitator);
+            $st->anggotaTim()->sync($request->anggotaTim);
+            $st->narasumber()->sync($request->narasumber);
+            $st->fasilitator()->sync($request->fasilitator);
 
             // Alert Success Message
             Alert::success('Update Sukses!')->persistent("Tutup");
 
             // Back to The Index Page
-            return redirect()->route('tugas.index');
+            return redirect()->route('st.index');
 
         }
 

@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div>
+    <div class="panel panel-default">
+      <div class="panel panel-body">
+
+        <div>
         <span class="label label-info" style="font-size:14px"><b>Daftar ST</b></span>
         <ul class="pagination pagination-sm pull-right">
               <li v-if="pagination.current_page > 1">
@@ -34,7 +37,7 @@
     </div>
     <hr>
     <form class="" action="#" method="post">
-      <div class="table table-responsive" >
+      <div class="table table-responsive">
         <table class="table table-condensed table-hover table-bordered" style="background-color:#fff">
           <thead>
           <tr class="text-primary bold text-center">
@@ -93,25 +96,29 @@
     </form>
     <!-- -->
 
-      <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
 
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Modal Header</h4>
-            </div>
-            <div class="modal-body">
-              <p>Some text in the modal.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
           </div>
-
+          <div class="modal-body">
+            <p>Some text in the modal.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
         </div>
+
       </div>
+    </div>
+      </div>
+
+    </div>
+   
   </div>
 </template>
 

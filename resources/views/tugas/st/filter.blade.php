@@ -27,7 +27,7 @@
                 <div class="panel-body">
                     <div class="row well" >
                         <div class="col-md-4">
-                            <form action="{{route('tugas.filter')}}" method="GET" class="form-inline">
+                            <form action="{{route('st.filter')}}" method="GET" class="form-inline">
                                 {{--Filter By Pegawai --}}
                                 <label for="pegawai_id" class="col-form-label">Nama Pegawai PFA:</label><br>
                                 <div class="input-group" style="width:100%">
@@ -43,7 +43,7 @@
                             </form>
                         </div>
                         <div class="col-md-5">
-                            <form action="{{route('tugas.filter')}}" method="GET" class="form-inline">
+                            <form action="{{route('st.filter')}}" method="GET" class="form-inline">
                                 {{--Filter Tanggal ST --}}
                                 <label for="penanggung_jawab_id" class="col-form-label">Range Tanggal ST:</label><br>
                                 <input type="date" id="s_tgl_awal"  name="s_tgl_awal" class="form-control input-sm" required>
@@ -52,7 +52,7 @@
                             </form>
                         </div>
                         <div class="col-md-3">
-                            <form action="{{route('tugas.filter')}}" method="GET" class="form-inline">
+                            <form action="{{route('st.filter')}}" method="GET" class="form-inline">
                                 <label for="pegawai_id" class="col-form-label">Status Laporan:</label><br>
                                 <div class="input-group" style="width:100%">
                                 <select class="form-control input-sm" name="pegawai_id" style="width:95%" >
@@ -86,7 +86,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            @if($tugas->count() === 0)
+                            @if($st->count() === 0)
                                 <tr>
                                     <td>Data Tidak Tersedia</td>
                                     <td>Data Tidak Tersedia</td>
@@ -96,18 +96,18 @@
                                     <td class="text-center">Data Tidak Tersedia</td>
                                 </tr>
                             @else
-                                @foreach($tugas as $tgs)
+                                @foreach($st as $st)
                                 <tr>
                                     <td class="text-center">{{$loop->iteration}}</td>
-                                    <td>{{$tgs->no_st_nd}}</td> 
-                                    <td>{{$tgs->tanggal_st_nd}}</td>   
-                                    <td>{{$tgs->uraian}}</td>   
-                                    <td>{{$tgs->laporan}}</td>
+                                    <td>{{$st->no_st}}</td> 
+                                    <td>{{$st->tanggal_st}}</td>   
+                                    <td>{{$st->uraian}}</td>   
+                                    <td>{{$st->laporan}}</td>
                                     <td class="text-center">
                                         <div class="btn-group-xs ">
-                                            <a href="{{route('tugas.show', $tgs->id)}}" class="btn btn-primary"><i class="fa fa-eye fa-fw"></i>&nbsp;Show</a>
-                                            <a href="{{route('tugas.edit', $tgs->id)}}" class="btn btn-info"><i class="fa fa-edit fa-fw"></i>&nbsp;Edit</a>
-                                            <a href="{{route('cetak.tugas', $tgs->id)}}" class="btn btn-default"><i class="fa fa-print fa-fw"></i>&nbsp;Cetak</a>
+                                            <a href="{{route('st.show', $st->id)}}" class="btn btn-primary"><i class="fa fa-eye fa-fw"></i>&nbsp;Show</a>
+                                            <a href="{{route('st.edit', $st->id)}}" class="btn btn-info"><i class="fa fa-edit fa-fw"></i>&nbsp;Edit</a>
+                                            <a href="{{route('st.cetak', $st->id)}}" class="btn btn-default"><i class="fa fa-print fa-fw"></i>&nbsp;Cetak</a>
                                         </div>
                                     </t>    
                                 </tr>    

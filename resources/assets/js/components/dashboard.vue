@@ -7,7 +7,7 @@
               <div class="panel-body" style="margin:5px">
 
                 <div class="col-md-2">
-                    <small><b><u> Surat:</u></b></small>
+                    <small><b> Surat:</b></small>
                     <a href="#"> 
                         <button class="btn btn-default fa fa-envelope-o fa-2x"></button>
                     </a>
@@ -15,26 +15,26 @@
                 </div>
 
                 <div class="col-md-2">
-                    <small><b><u> ST:</u></b></small>
+                    <small><b> ST:</b></small>
                     <a :href="'/tugas/st'">
                         <button class="btn btn-default fa fa-archive fa-2x"></button>
                     </a>
                 </div>
                 <div class="col-md-2">
-                    <small><b><u> ND:</u></b></small>
+                    <small><b> ND:</b></small>
                     <button class="btn btn-default fa fa-file-archive-o fa-2x"></button>
                 </div>
                 <div class="col-md-2">
-                    <small><b><u>Post:</u></b></small>
+                    <small><b>Post:</b></small>
                     <button class="btn btn-default fa fa-newspaper-o fa-2x"></button>
                 </div>
                 <div class="col-md-2">
-                    <small><b><u>Pustaka:</u></b></small>
+                    <small><b>Pustaka:</b></small>
                     <button class="btn btn-default fa fa-book fa-2x"></button>
                 </div>
 
                 <div class="col-md-2">
-                    <small><b><u>Data:</u></b></small>
+                    <small><b>Data:</b></small>
                     <button class="btn btn-default fa fa-bar-chart fa-2x"></button>
                 </div>
               </div>

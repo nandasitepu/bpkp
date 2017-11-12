@@ -11,79 +11,51 @@
 @endsection
 
 @section('content')
-  <div class="row">  
+  <div class="row"> 
+    {{-- Login  --}} 
     <div class="col-md-4">
   
-          @if(Auth::guest())
-            <div style="padding:30px; border:1px solid #ccc">
-              <div class="text-center">
-                <h4><span class="label label-primary">Login Pegawai</span></h4>
-              </div>
-              <hr>
-              <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
-                  {{ csrf_field() }}
-                  <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                      <div class="col-md-3"><label for="email" class="control-label">E-Mail</label></div>
-                      <div class="col-md-9">
-                          <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
-                          @if ($errors->has('email'))
-                              <span class="help-block">
-                                  <strong>{{ $errors->first('email') }}</strong>
-                              </span>
-                          @endif
-                      </div>
-                  </div>
-
-                  <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                      <label for="password" class="col-md-3 control-label">Password</label>
-
-                      <div class="col-md-9">
-                          <input id="password" type="password" class="form-control" name="password" required>
-
-                          @if ($errors->has('password'))
-                              <span class="help-block">
-                                  <strong>{{ $errors->first('password') }}</strong>
-                              </span>
-                          @endif
-                      </div>
-                  </div>
-
-                  <div class="form-group">
-                      <div class="col-md-12 ">
-                          <div class="checkbox">
-                              <label>
-                                  <input type="checkbox" name="remember"> Remember Me
-                              </label>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="form-group">
-                      <div class="col-md-12">
-                          <button type="submit" class="btn btn-sm btn-primary btn-block">
-                              Login
-                          </button>
-
-                          <a class="btn btn-link pull-right" href="{{ url('/password/reset') }}">
-                            <span class="label label-default"> Forgot Your Password?</span>
-                          </a>
-                      </div>
-                  </div>
-              </form>
-              
-            </div>
-          @endif
-          @if (Auth::guard('web')->check() )
+     
             <div style="padding:10px; border:1px solid #ccc">@component('_c.login')@endcomponent</div>
-           
+            <br>
             @component('_c.user_menu')@endcomponent
+            <br>
+            <div>
+              <div class="panel panel-default">
+                <div class="panel-body">
+                    <b>Surat</b>
+                    
+                      <ul class="list-unstyled">
+                        <li>Title</li>
+                        <li>Title</li>
+                        <li>Title</li>
+                      </ul>
+                    <hr>
+                    <b>Surat Tugas</b>
+                      <ul class="list-unstyled">
+                        <li>Title</li>
+                        <li>Title</li>
+                        <li>Title</li>
+                      </ul>
+                      <hr>
+                    <b>Nota Dinas</b>
+                      <ul class="list-unstyled">
+                        <li>Title</li>
+                        <li>Title</li>
+                        <li>Title</li>
+                      </ul>
+                </div>
+              </div>
+            </div>
          
-          @endif 
     
     </div>
-
-    <div class="col-md-8" id="menu-tugas" style="border: 1px solid #ccc; padding:30px">
     
+    {{-- Menu Penugasan --}}
+    <div class="col-md-8" id="menu-tugas" style="border: 1px solid #ccc; padding:30px">
+      <div>
+          <img src="/img/banner/tugas-banner-ok.jpg" class="img-thumbnail" style="width: 100%;height:160px" alt="Second slide">
+      </div>
       <div class="text-center">
         <h4><span class="label label-default">Menu Penugasan</span></h4>
       </div>

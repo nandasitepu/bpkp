@@ -24,7 +24,10 @@ class PengumumanController extends Controller
 
     public function index()
     {
-        return view('pengumuman.index');
+        
+        $pengumuman  = Pengumuman::orderBy('tanggal', 'desc')->paginate(5);
+        
+        return view('pengumuman.index')->with('pengumuman',$pengumuman);
     }
 
     /**
